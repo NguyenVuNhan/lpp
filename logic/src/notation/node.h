@@ -1,0 +1,45 @@
+#ifndef NODE_H
+#define NODE_H
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <list>
+#include <array>
+#include "../proposition/tableaux/enum.h"
+#include "../proposition/tableaux/stnode.h"
+
+using namespace std;
+
+class Node
+{
+private:
+    int id = -1;
+
+protected:
+    bool isRulesReturned = false;
+
+public:
+    Node *left = nullptr;
+    Node *right = nullptr;
+    list<Node *> variables;
+    string notation = "1";
+
+    explicit Node(Node *left = nullptr, Node *right = nullptr);
+    virtual ~Node();
+
+    /**
+     * @brief travel tree and produce a graph
+     * @param out File output stream
+     * @param rootId Parrent Id, equal to -1 by default if there is no parent
+     */
+    void treeTraveler(ofstream &out, int rootId = -1);
+    string toStringPrefix();
+    virtual string toString();
+    virtual bool getValue(string valList);
+    virtual Node *nandify(bool isNegation = false);
+    virtual RULES getSTRuleName(bool isNegation = false);
+    virtual void getSTNodeChild(STNode *root, long pos, bool isNegation = false);
+    virtual void setVariable(string fromVariable, string toVariable);
+};
+#endif // NODE_H

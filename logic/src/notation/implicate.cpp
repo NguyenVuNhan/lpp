@@ -1,0 +1,58 @@
+#include "implicate.h"
+#include "negate.h"
+#include "nand.h"
+#include "value.h"
+#include "../utils.h"
+
+Implicate::Implicate(Node *left, Node *right)
+    : Node(left, right)
+{
+    notation = '>';
+}
+
+Implicate::~Implicate()
+{
+}
+
+bool Implicate::getValue(string valList)
+{
+    return !left->getValue(valList) | right->getValue(valList);
+}
+
+Node *Implicate::nandify(bool isNegation)
+{
+    Node *notRight = new Negate(right);
+    Node *ret = new NAnd(left->nandify(), notRight->nandify());
+    free(notRight);
+    return ret;
+}
+
+RULES Implicate::getSTRuleName(bool isNegation)
+{
+    if (!isNegation)
+    {
+        return BETA;
+    }
+    else
+    {
+        return ALPHA;
+    }
+}
+
+void Implicate::getSTNodeChild(STNode *root, long pos, bool isNegation)
+{
+    if (!isNegation)
+    {
+        root->right = new STNode(root->nodes);
+
+        listReplaceAt(root->left->nodes, new Negate(left), pos);
+        listReplaceAt(root->right->nodes, right, pos);
+    }
+    else
+    {
+        list<Node *> tmp_list;
+        tmp_list.push_back(left);
+        tmp_list.push_back(new Negate(right));
+        listReplaceAt(root->left->nodes, tmp_list, pos);
+    }
+}
