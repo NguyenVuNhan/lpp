@@ -33,3 +33,8 @@ void Variable::setVariable(string fromVariable, string toVariable)
     if(notation == fromVariable)
         notation = toVariable;
 }
+
+Node *Variable::copy()
+{
+    return new Variable(notation);
+}

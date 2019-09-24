@@ -3,56 +3,41 @@
 #include "../../notation/node.h"
 #include "../../notation/negate.h"
 
-STNode::STNode(STNode *left, STNode *right)
-    : left(left)
-    , right(right)
-{
-    static int _id = 0;
-    id = _id++;
-}
-
 STNode::STNode(Node *root)
 {
-    static int _id = 0;
-    id = _id++;
     left = nullptr;
     right = nullptr;
-
     if(root == nullptr) return;
 
-    nodes.push_back(root);
+    nodes.push_back(new Negate(root->copy()));
+
+    static int _id = 0;
+    id = _id++;
 }
 
 STNode::STNode(list<Node *> &nodeList)
 {
     left = nullptr;
     right = nullptr;
-    nodes = nodeList;
-    static int _id = 0;
-    id = _id++;
-}
+    nodes = copyList(nodeList);
 
-STNode::STNode(list<string> variablesList, list<Node *> &nodeList)
-{
-    nodes = nodeList;
-    listVar = variablesList;
     static int _id = 0;
     id = _id++;
 }
 
 STNode::~STNode()
 {
-    delete left;
-    delete right;
     nodes.remove_if(deleteAll<Node>);
     nodes.clear();
+    delete left;
+    delete right;
 }
 
 string STNode::toString()
 {
     string returnString = "{ ";
     bool first = true;
-    for (auto const &node : nodes)
+    for (Node *node : nodes)
     {
         if(!first)
             returnString += ", ";

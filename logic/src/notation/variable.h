@@ -15,6 +15,7 @@ public:
     bool getValue(string valList);
     string toString();
     void setVariable(string fromVariable, string toVariable);
+    Node *copy();
 };
 
 #endif // VARIABLE_H

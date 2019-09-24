@@ -52,10 +52,27 @@ void Negate::getSTNodeChild(STNode *root, long pos, bool isNegation)
 {
     if (isNegation)
     {
-        listReplaceAt(root->left->nodes, left, pos);
+        listReplaceAt(root->nodes, left->copy(), pos);
     }
     else
     {
-        return left->getSTNodeChild(root, pos, true);
+        left->getSTNodeChild(root, pos, true);
+    }
+}
+
+Node *Negate::copy()
+{
+    return new Negate(left->copy());
+}
+
+Node *Negate::cnfFilter(bool isNegation)
+{
+    if(isNegation)
+    {
+        return left->cnfFilter();
+    }
+    else
+    {
+        return left->cnfFilter(true);
     }
 }

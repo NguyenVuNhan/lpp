@@ -10,12 +10,13 @@ class SemanticTableaux
 {
 public:
     explicit SemanticTableaux(Node *tree = nullptr);
+    ~SemanticTableaux();
     bool ExportProof(string title, string filenname);
     bool isTautology();
 
 private:
-    bool tautology = false;
-    STNode tableaux;
+    bool tautology = true;
+    STNode *tableaux;
     void generateProof(STNode *root);
 
 };

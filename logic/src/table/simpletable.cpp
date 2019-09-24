@@ -43,25 +43,24 @@ list<list<Rows> > SimpleTable::getAllRowsGroup()
 {
     list<list<Rows> > groupRows;
 
-    int nrOfVariable = static_cast<int>(sqrt(table.size()));
-    for (int i = 0; i <= nrOfVariable; i++)
+    uint nrOfVariable = static_cast<uint>(log2(table.size()));
+    for (uint i = 0; i <= nrOfVariable; i++)
     {
         groupRows.push_back(list<Rows>());
     }
-    list<Rows> tmpGroupRows;
 
     for (Rows row : table)
     {
         int count = 0;
-        for (int k = 0; k < nrOfVariable; k++)
+        for (uint k = 0; k < nrOfVariable; k++)
         {
-            if(row.getValue())
+            if(row.elem_str[k] == '1')
             {
                 count++;
             }
         }
 
-        auto it = next(groupRows.begin());
+        auto it = next(groupRows.begin(), count);
         (*it).push_back(row);
     }
     return  groupRows;
@@ -70,7 +69,7 @@ list<list<Rows> > SimpleTable::getAllRowsGroup()
 list<Rows> SimpleTable::getQuineMcCluskey(list<list<Rows> > rowsGroup)
 {
     // in case rowsGroup already epmty
-    if(!(rowsGroup.size() == 0))
+    if(rowsGroup.size() == 0)
     {
         return  list<Rows>();
     }

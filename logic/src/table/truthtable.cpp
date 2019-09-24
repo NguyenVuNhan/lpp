@@ -1,9 +1,10 @@
+#include <iomanip>
 #include "truthtable.h"
-#include "../notation/or.h"
+#include "../notation/multiand.h"
 
 void TruthTable::generateTable()
 {
-    ulong size = varList.size();
+    ulong size = getListVariable().size();
     for (uintmax_t var = 0; var < (uintmax_t(1)<<size); ++var)
     {
         auto it = varList.begin();
@@ -18,20 +19,20 @@ void TruthTable::generateTable()
         }
 
         bool value = getValue(valList);
-        Rows newRow(var, value);
+        Rows newRow = Rows(var, value, size);
 
-        table.push_back(newRow);
         if(value)
             trueRows.push_back(newRow);
         else
             falseRows.push_back(newRow);
+        table.push_back(newRow);
 
         hash += uintmax_t(value) << var;
     }
 }
 
-TruthTable::TruthTable(Tree tree)
-    : Tree(tree.getTree())
+TruthTable::TruthTable(Tree otherTree)
+    : Tree(otherTree.getTree())
 {
     generateTable();
 }
@@ -42,8 +43,8 @@ TruthTable::TruthTable(string prop)
     generateTable();
 }
 
-TruthTable::TruthTable(Node *tree)
-    : Tree(tree)
+TruthTable::TruthTable(Node *otherTree)
+    : Tree(otherTree)
 {
     generateTable();
 }
@@ -60,30 +61,22 @@ list<Rows> TruthTable::getTable()
 
 string TruthTable::getHashCode()
 {
-    return string(hash, 16);
+    stringstream ss;
+    ss << hex << uppercase << hash;
+    return ss.str();
 }
 
 Tree TruthTable::getNormalize()
 {
-    list<Rows>::iterator it = trueRows.begin();
-    Node *left = nullptr,
-         *right = nullptr;
-    do
+    list<Node *> tmpList;
+
+    for(Rows &i : table)
     {
-        Node *newNode = nullptr;
-
-        if(left == nullptr)
-            left = newNode;
-        else
-            right = newNode;
-
-        if(left != nullptr && right != nullptr)
+        if(i.getValue())
         {
-            left = new Or(left, right);
-            right = nullptr;
+            tmpList.push_back(i.toNode(varList));
         }
     }
-    while(++it != trueRows.end());
 
-    return Tree(left);
+    return Tree(new MultiAnd(tmpList));
 }

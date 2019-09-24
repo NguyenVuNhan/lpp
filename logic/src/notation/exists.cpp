@@ -16,7 +16,7 @@ Exists::~Exists()
 
 string Exists::toString()
 {
-    return "(@" + left->toString() + '.' + '(' + right->toString() + "))";
+    return "(@" + left->toString() + '.' + right->toString() + ')';
 }
 
 RULES Exists::getSTRuleName(bool isNegation)
@@ -35,17 +35,15 @@ void Exists::getSTNodeChild(STNode *root, long pos, bool isNegation)
 {
     if(!isRulesReturned)
     {
-        isRulesReturned = true;
-
         root->left = new STNode(root->nodes);
         if (isNegation)
         {
             list<Node *> tmp_list_l;
-            tmp_list_l.push_back(this);
+            tmp_list_l.push_back(this->copy());
 
             for(string var : root->listVar)
             {
-                Node *proposition = new Negate(right);
+                Node *proposition = new Negate(right->copy());
                 proposition->setVariable(left->notation, var);
                 tmp_list_l.push_back(proposition);
             }
@@ -65,12 +63,19 @@ void Exists::getSTNodeChild(STNode *root, long pos, bool isNegation)
             }
             while(contains(root->listVar, newVar));
 
-            Node *proposition = right;
+            Node *proposition = right->copy();
             proposition->setVariable(left->notation, newVar);
             tmp_list_l.push_back(proposition);
 
             listReplaceAt(root->left->nodes, tmp_list_l, pos);
             root->left->listVar.push_back(newVar);
         }
+
+        isRulesReturned = true;
     }
+}
+
+Node *Exists::copy()
+{
+    return new Exists(left->copy(), right->copy());
 }

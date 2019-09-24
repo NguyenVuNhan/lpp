@@ -9,12 +9,13 @@ class Rows
 {
 private:
     uintmax_t elem_byte;
-    string elem_str;
     bool value;
+    string toBinString(uintmax_t i, uintmax_t strLen);
 
 public:
+    string elem_str;
     bool checked = false;
-    Rows(uintmax_t elem_str, bool value);
+    Rows(uintmax_t elem_str, bool value, uintmax_t strLen=2);
     Node *toNode(list<string> label);
     int is_match_pair(const Rows &other);
     bool getValue();

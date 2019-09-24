@@ -1,4 +1,5 @@
 #include "and.h"
+#include "or.h"
 #include "nand.h"
 #include "negate.h"
 #include "value.h"
@@ -30,15 +31,32 @@ void NAnd::getSTNodeChild(STNode *root, long pos, bool isNegation)
     {
         root->right = new STNode(root->nodes);
 
-        listReplaceAt(root->left->nodes, new Negate(left), pos);
-        listReplaceAt(root->right->nodes, new Negate(right), pos);
+        listReplaceAt(root->left->nodes, new Negate(left->copy()), pos);
+        listReplaceAt(root->right->nodes, new Negate(right->copy()), pos);
     }
     else
     {
         list<Node *> tmp_list;
-        tmp_list.push_back(left);
-        tmp_list.push_back(right);
+        tmp_list.push_back(left->copy());
+        tmp_list.push_back(right->copy());
         listReplaceAt(root->left->nodes, tmp_list, pos);
+    }
+}
+
+Node *NAnd::copy()
+{
+    return new NAnd(left->copy(), right->copy());
+}
+
+Node *NAnd::cnfFilter(bool isNegation)
+{
+    if(isNegation)
+    {
+        return andSimplify(left->cnfFilter(), right->cnfFilter());
+    }
+    else
+    {
+        return orSimplify(left->cnfFilter(true), right->cnfFilter(true));
     }
 }
 

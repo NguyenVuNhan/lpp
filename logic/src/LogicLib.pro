@@ -24,9 +24,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cnf/cnf.cpp \
     notation/and.cpp \
     notation/biimplicate.cpp \
     notation/implicate.cpp \
+    notation/multiand.cpp \
+    notation/multior.cpp \
     notation/negate.cpp \
     notation/node.cpp \
     notation/or.cpp \
@@ -45,8 +48,11 @@ SOURCES += \
     table/truthtable.cpp
 
 HEADERS += \
+    cnf/cnf.h \
     notation/biimplicate.h \
     notation/implicate.h \
+    notation/multiand.h \
+    notation/multior.h \
     notation/negate.h \
     notation/value.h \
     notation/and.h \

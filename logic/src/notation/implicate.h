@@ -7,14 +7,16 @@ class Implicate : public Node
 {
 public:
     explicit Implicate(Node *left = nullptr, Node *right = nullptr);
-    ~Implicate();
+    ~Implicate() override;
 
     // Node interface
 public:
-    bool getValue(string valList);
-    Node *nandify(bool isNegation);
-    RULES getSTRuleName(bool isNegation);
-    void getSTNodeChild(STNode *root, long pos, bool isNegation);
+    bool getValue(string valList) override;
+    Node *nandify(bool isNegation) override;
+    RULES getSTRuleName(bool isNegation) override;
+    void getSTNodeChild(STNode *root, long pos, bool isNegation) override;
+    Node *copy() override;
+    Node *cnfFilter(bool isNegation = false) override;
 };
 
 #endif // IMPLICATION_H

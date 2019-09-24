@@ -1,2 +1,1 @@
-# lpp
-Logic in professional practice
+# LPP - Logic in professional practice

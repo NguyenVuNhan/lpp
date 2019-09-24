@@ -1,7 +1,99 @@
 #include "node.h"
 #include "../utils.h"
 #include "nand.h"
+#include "and.h"
+#include "or.h"
+#include "negate.h"
 #include "value.h"
+
+Node *Node::copy()
+{
+    return nullptr;
+}
+
+Node *Node::cnfFilter(bool isNegation)
+{
+    if(isNegation)
+    {
+        return new Negate(this->copy());
+    }
+    else
+    {
+        return this->copy();
+    }
+}
+
+Node *Node::cnfDistribution()
+{
+    return this;
+}
+
+void Node::getLeaf(list<Node *> &listNode)
+{
+    if(right == nullptr)
+        listNode.push_back(this);
+    else
+    {
+        left->getLeaf(listNode);
+        right->getLeaf(listNode);
+        free(this);
+    }
+}
+
+Node *Node::orSimplify(Node *l, Node *r)
+{
+    if(l->notation == "0" && r->notation == "0")
+    {
+        delete l;
+        delete r;
+        return new Value("0");
+    }
+    else if(l->notation == "1" || r->notation == "1")
+    {
+        delete l;
+        delete r;
+        return new Value("1");
+    }
+    else if(l->notation == "0")
+    {
+        delete l;
+        return r;
+    }
+    else if(r->notation == "0")
+    {
+        delete r;
+        return l;
+    }
+    return new Or(l, r);
+}
+
+Node *Node::andSimplify(Node *l, Node *r)
+{
+
+    if(l->notation == "0" || r->notation == "0")
+    {
+        delete l;
+        delete r;
+        return new Value("0");
+    }
+    else if(l->notation == "1" && r->notation == "1")
+    {
+        delete l;
+        delete r;
+        return new Value("1");
+    }
+    else if(l->notation == "1")
+    {
+        delete l;
+        return r;
+    }
+    else if(r->notation == "1")
+    {
+        delete r;
+        return l;
+    }
+    return new And(l, r);
+}
 
 Node::Node(Node *left, Node *right)
     : left(left)
@@ -14,8 +106,10 @@ Node::~Node()
 {
     variables.remove_if(deleteAll<Node>);
     variables.clear();
-    delete left;
-    delete right;
+    if (left != nullptr) delete left;
+    if (right != nullptr) delete right;
+    left = nullptr;
+    right = nullptr;
 }
 
 void Node::treeTraveler(ofstream &out, int rootId)
@@ -65,9 +159,9 @@ bool Node::getValue(string valList)
 Node *Node::nandify(bool isNegation)
 {
     if(isNegation)
-        return new NAnd(this, new Value("1"));
+        return new NAnd(this->copy(), new Value("1"));
     else
-        return this;
+        return this->copy();
 }
 
 RULES Node::getSTRuleName(bool isNegation)

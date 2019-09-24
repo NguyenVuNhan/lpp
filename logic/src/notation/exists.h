@@ -7,13 +7,14 @@ class Exists : public Node
 {
 public:
     Exists(Node *left = nullptr, Node *right = nullptr);
-    ~Exists();
+    ~Exists() override;
 
     // Node interface
 public:
-    string toString();
-    RULES getSTRuleName(bool isNegation);
-    void getSTNodeChild(STNode *root, long pos, bool isNegation);
+    string toString() override;
+    RULES getSTRuleName(bool isNegation) override;
+    void getSTNodeChild(STNode *root, long pos, bool isNegation) override;
+    Node *copy() override;
 };
 
 #endif // EXISTS_H

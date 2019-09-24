@@ -30,3 +30,20 @@ void Value::setVariable(string fromVariable, string toVariable)
 {
     return;
 }
+
+Node *Value::copy()
+{
+    return new Value(notation);
+}
+
+Node *Value::cnfFilter(bool isNegation)
+{
+    if(isNegation)
+    {
+        return new Value(notation == "0" ? "1" : "0");
+    }
+    else
+    {
+        return new Value(notation);
+    }
+}

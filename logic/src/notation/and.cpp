@@ -2,6 +2,7 @@
 #include "negate.h"
 #include "nand.h"
 #include "value.h"
+#include "or.h"
 #include"../utils.h"
 
 And::And(Node *left, Node *right)
@@ -54,14 +55,49 @@ void And::getSTNodeChild(STNode *root, long pos, bool isNegation)
     {
         root->right = new STNode(root->nodes);
 
-        listReplaceAt(root->left->nodes, new Negate(left), pos);
-        listReplaceAt(root->right->nodes, new Negate(right), pos);
+        listReplaceAt(root->left->nodes, new Negate(left->copy()), pos);
+        listReplaceAt(root->right->nodes, new Negate(right->copy()), pos);
     }
     else
     {
         list<Node *> tmp_list;
-        tmp_list.push_back(left);
-        tmp_list.push_back(right);
+        tmp_list.push_back(left->copy());
+        tmp_list.push_back(right->copy());
         listReplaceAt(root->left->nodes, tmp_list, pos);
     }
+}
+
+Node *And::copy()
+{
+    return new And(left->copy(), right->copy());
+}
+
+Node *And::cnfFilter(bool isNegation)
+{
+    if(isNegation)
+    {
+        return orSimplify(left->cnfFilter(true), right->cnfFilter(true));
+    }
+    else
+    {
+        return andSimplify(left->cnfFilter(), right->cnfFilter());
+    }
+}
+
+Node *And::cnfDistribution()
+{
+    Node *l = left->cnfDistribution();
+    Node *r = right->cnfDistribution();
+    if(left->notation == "|")
+    {
+        free(left);
+    }
+    if(right->notation == "|")
+    {
+        free(right);
+    }
+    left = l;
+    right = r;
+
+    return this;
 }

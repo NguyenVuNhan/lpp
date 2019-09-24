@@ -1,16 +1,16 @@
 #include "statement.h"
 
-Statement::Statement(string notate, list<Node *> variables)
+Statement::Statement(string notate, list<Node *> listNodes)
     : Node(nullptr, nullptr)
 {
-    this->variables = variables;
+    variables = listNodes;
     notation = notate;
 }
 
-Statement::Statement(char notate, list<Node *> variables)
+Statement::Statement(char notate, list<Node *> listNodes)
     : Node(nullptr, nullptr)
 {
-    this->variables = variables;
+    variables = listNodes;
     notation = string(&notate, 1);
 }
 
@@ -46,4 +46,12 @@ void Statement::setVariable(string fromVariable, string toVariable)
             return;
         }
     }
+}
+
+Node *Statement::copy()
+{
+    list<Node *> tmplist;
+    for(auto *e : variables)
+        tmplist.push_back(e->copy());
+    return new Statement(notation, tmplist);
 }

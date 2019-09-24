@@ -18,6 +18,8 @@ private:
 
 protected:
     bool isRulesReturned = false;
+    Node *orSimplify(Node *l, Node *r);
+    Node *andSimplify(Node *l, Node *r);
 
 public:
     Node *left = nullptr;
@@ -41,5 +43,9 @@ public:
     virtual RULES getSTRuleName(bool isNegation = false);
     virtual void getSTNodeChild(STNode *root, long pos, bool isNegation = false);
     virtual void setVariable(string fromVariable, string toVariable);
+    virtual Node *copy();
+    virtual Node *cnfFilter(bool isNegation = false);
+    virtual Node *cnfDistribution();
+    virtual void getLeaf(list<Node *> &listNode);
 };
 #endif // NODE_H

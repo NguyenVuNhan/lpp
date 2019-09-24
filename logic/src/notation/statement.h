@@ -6,7 +6,7 @@
 class Statement : public Node
 {
 public:
-    Statement(string notate, list<Node *> variables = list<Node *>());
+    Statement(string notate, list<Node *> listNodes = list<Node *>());
     Statement(char notate, list<Node *> variables = list<Node *>());
     ~Statement();
 
@@ -14,6 +14,7 @@ public:
 public:
     string toString();
     void setVariable(string fromVariable, string toVariable);
+    Node *copy();
 };
 
 #endif // STATEMENT_H

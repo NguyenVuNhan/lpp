@@ -1,53 +1,53 @@
 #include "rows.h"
 #include "../notation/variable.h"
 #include "../notation/negate.h"
-#include "../notation/and.h"
+#include "../notation/multior.h"
 #include "../utils.h"
 
-Rows::Rows(uintmax_t elem, bool value)
+string Rows::toBinString(uintmax_t i, uintmax_t strLen)
+{
+    string bin;
+    uintmax_t mask = 1;
+    for(uintmax_t j = 0; j < strLen; j++)
+    {
+        if((mask&i) >= 1)
+            bin = '1' + bin;
+        else
+            bin = '0' + bin;
+        mask <<= 1;
+    }
+    return bin;
+}
+
+Rows::Rows(uintmax_t elem, bool value, uintmax_t strLen)
 {
     this->elem_byte = elem;
-    this->elem_str = toHexString(elem);
+    this->elem_str = toBinString(elem, strLen);
     this->value = value;
 }
 
 Node *Rows::toNode(list<string> label)
 {
-    list<string>::iterator l_it = label.begin();
-    string::iterator e_it = elem_str.begin();
-    Node *left = nullptr,
-         *right = nullptr;
-    do
+    list<Node *> tmpList;
+
+    for(uint i = 0; i < elem_str.size(); i++)
     {
-        Node *newNode = nullptr;
-        switch(*e_it)
+        char val = elem_str[i];
+        if(val != 'x')
         {
-        case '1':
-        {
-            newNode = new Variable(*l_it);
-            break;
-        }
-        case '0':
-        {
-            newNode = new Negate(new Variable(*l_it));
-            break;
-        }
+            if(val == '0')
+            {
+                tmpList.push_back(new Negate(new Variable(*next(label.begin(), i))));
+            }
+            else
+            {
+                tmpList.push_back(new Variable(*next(label.begin(), i)));
+            }
         }
 
-        if(left == nullptr)
-            left = newNode;
-        else
-            right = newNode;
-
-        if(left != nullptr && right != nullptr)
-        {
-            left = new And(left, right);
-            right = nullptr;
-        }
     }
-    while(++l_it != label.end() && ++e_it != elem_str.end());
 
-    return left;
+    return new MultiOr(tmpList);
 }
 
 int Rows::is_match_pair(const Rows &other)
@@ -55,16 +55,20 @@ int Rows::is_match_pair(const Rows &other)
     if(value == other.value)
     {
         int pos = -1;
-        string::iterator it = elem_str.begin();
-        string::const_iterator o_it = other.elem_str.begin();
-        for (;it != elem_str.end() && o_it != other.elem_str.begin(); ++it, ++o_it)
-            if(*it != *o_it)
+        for (uint i = 0; i < this->elem_str.size(); i++)
+        {
+            if(elem_str[i] != other.elem_str[i])
             {
                 if(pos == -1)
-                    pos = static_cast<int>(distance(elem_str.begin(), it));
+                {
+                    pos = static_cast<int>(i);
+                }
                 else
+                {
                     return -1;
+                }
             }
+        }
         return pos;
     }
     return -1;

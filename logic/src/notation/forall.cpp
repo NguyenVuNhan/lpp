@@ -16,7 +16,7 @@ ForAll::~ForAll()
 
 string ForAll::toString()
 {
-    return "(!" + left->toString() + '.' + '(' + right->toString() + "))";
+    return "(!" + left->toString() + '.' + right->toString() + ')';
 }
 
 RULES ForAll::getSTRuleName(bool isNegation)
@@ -41,11 +41,11 @@ void ForAll::getSTNodeChild(STNode *root, long pos, bool isNegation)
         if (!isNegation)
         {
             list<Node *> tmp_list_l;
-            tmp_list_l.push_back(this);
+            tmp_list_l.push_back(this->copy());
 
             for(string var : root->listVar)
             {
-                Node *proposition = right;
+                Node *proposition = right->copy();
                 proposition->setVariable(left->notation, var);
                 tmp_list_l.push_back(proposition);
             }
@@ -65,7 +65,7 @@ void ForAll::getSTNodeChild(STNode *root, long pos, bool isNegation)
             }
             while(contains(root->listVar, newVar));
 
-            Node *proposition = new Negate(right);
+            Node *proposition = new Negate(right->copy());
             proposition->setVariable(left->notation, newVar);
             tmp_list_l.push_back(proposition);
 
@@ -73,4 +73,9 @@ void ForAll::getSTNodeChild(STNode *root, long pos, bool isNegation)
             root->left->listVar.push_back(newVar);
         }
     }
+}
+
+Node *ForAll::copy()
+{
+    return new ForAll(left->copy(), right->copy());
 }

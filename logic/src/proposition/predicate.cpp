@@ -43,29 +43,7 @@ Node *Predicate::getStatement(string prop, unsigned int &pos)
 {
     Node *node = nullptr;
 
-    int code = prop[pos];
-    if(code >= 65 && code <= 90)
-    {
-        char statementNotate = prop.at(pos);
-        pos++;
 
-        list<Node *> tmpVars;
-        do
-        {
-            tmpVars.push_back(new Variable(prop.at(pos)));
-            pos++;
-
-            code = prop[pos];
-        }
-        while(code >= 97 && code <= 122);
-
-        node = new Statement(statementNotate, tmpVars);
-    }
-    else
-    {
-        node = new Variable(prop.at(pos));
-        pos++;
-    }
 
     return node;
 }
@@ -115,7 +93,29 @@ Node *Predicate::parse(string prop, unsigned int &pos)
     }
     else
     {
-        node = this->getStatement(prop, pos);
+        int code = prop[pos];
+        if(code >= 65 && code <= 90)
+        {
+            char statementNotate = prop.at(pos);
+            pos++;
+
+            list<Node *> tmpVars;
+            do
+            {
+                tmpVars.push_back(new Variable(prop.at(pos)));
+                pos++;
+
+                code = prop[pos];
+            }
+            while(code >= 97 && code <= 122);
+
+            node = new Statement(statementNotate, tmpVars);
+        }
+        else
+        {
+            node = new Variable(prop.at(pos));
+            pos++;
+        }
     }
 
     return node;

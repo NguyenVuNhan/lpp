@@ -17,9 +17,9 @@ protected:
     uintmax_t hash = 0;
 
 public:
-    explicit TruthTable(Tree tree);
+    explicit TruthTable(Tree otherTree);
     explicit TruthTable(string prop="");
-    explicit TruthTable(Node *tree);
+    explicit TruthTable(Node *otherTree);
     ~TruthTable();
 
     list<Rows> getTable();

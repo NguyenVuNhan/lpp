@@ -8,6 +8,8 @@
 #include "../notation/and.h"
 #include "../notation/biimplicate.h"
 #include "../notation/implicate.h"
+#include "../notation/multiand.h"
+#include "../notation/multior.h"
 #include "../notation/nand.h"
 #include "../notation/negate.h"
 #include "../notation/or.h"
@@ -16,6 +18,9 @@
 
 Tree::Tree(string prop)
 {
+    if (prop == "")
+        return;
+
     prop_in = prop;
     prop.erase(remove_if(prop.begin(), prop.end(),
                          [](char c)
@@ -29,7 +34,6 @@ Tree::Tree(string prop)
 }
 
 Tree::Tree(Node *tree)
-    : tableaux(tree)
 {
     this->tree = tree;
     prop_in = tree->toStringPrefix();
@@ -37,8 +41,7 @@ Tree::Tree(Node *tree)
 
 Tree::~Tree()
 {
-    std::cout << tree->toString();
-    delete tree;
+    if(tree != nullptr) delete tree;
 }
 
 Node *Tree::getTree()
@@ -51,16 +54,13 @@ list<string> Tree::getListVariable()
     if(varList.size() == 0)
     {
         string prop = prop_in;
-        prop.erase(remove_if(prop.begin(), prop_in.end(),
-                                  [](char c)
-                                  {
-                                      return !(c >= 65 && c <= 90);
-                                  }),
-                      prop.end());
+        for (uint i = 0; i < prop.size(); ++i) {
+            if(!(prop[i] >= 'A' && prop[i] <= 'Z')) prop.erase(i--, 1);
+        }
         while (prop != "")
         {
-            string currentChar = prop.substr(0, 1);
-            if(!contains(varList, string(currentChar)))
+            string currentChar = string(1, prop.at(0));
+            if(!contains(varList, currentChar))
             {
                 varList.push_back(currentChar);
             }

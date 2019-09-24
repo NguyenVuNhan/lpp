@@ -3,9 +3,14 @@
 #include "enum.h"
 
 SemanticTableaux::SemanticTableaux(Node *tree)
-    : tableaux(STNode(tree))
+    : tableaux(new STNode(tree))
 {
+    generateProof(tableaux);
+}
 
+SemanticTableaux::~SemanticTableaux()
+{
+    delete tableaux;
 }
 
 bool SemanticTableaux::ExportProof(string title, string filenname)
@@ -15,7 +20,7 @@ bool SemanticTableaux::ExportProof(string title, string filenname)
     {
         out << "graph " << title << " {\n";
         out << "\tnode [ fontname = \"Arial\" ]\n";
-        tableaux.treeTraveler(out, -1);
+        tableaux->treeTraveler(out, -1);
         out << '}';
         out.close();
         return true;
@@ -35,13 +40,14 @@ void SemanticTableaux::generateProof(STNode *root)
     RULES rule = NN;
 
     // loop though all node in STNode to find the location of highest piority node
-    for (list<Node *>::iterator it = root->nodes.begin(), total = root->nodes.end();
-         it != total; ++it)
+    for (list<Node *>::iterator it = root->nodes.begin(); it != root->nodes.end(); it++)
     {
         if((*it)->getSTRuleName() < rule)
         {
             pos = it;
             rule = (*it)->getSTRuleName();
+            if (rule == 1)
+                break;
         }
     }
 
@@ -49,6 +55,16 @@ void SemanticTableaux::generateProof(STNode *root)
     if(rule != NN)
     {
         (*pos)->getSTNodeChild(root, distance(root->nodes.begin(), pos));
+        if(root->left != nullptr)
+        {
+            string tmp = root->left->toString();
+            generateProof(root->left);
+        }
+        if(root->right != nullptr)
+        {
+            string tmp = root->right->toString();
+            generateProof(root->right);
+        }
     }
     else
     {

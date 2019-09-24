@@ -152,4 +152,54 @@ TEST(NotationTest, nandify)
     delete node;
 }
 
+void test_cnfFilter(const string &expect, Node *root, const string &msg)
+{
+    Node *tmp = root->cnfFilter();
+    EXPECT_EQ(expect, tmp->toString()) << msg;
+    delete tmp;
+}
+
+TEST(NotationTest, cnfFilter)
+{
+    Node *a = new Value("1");
+    test_cnfFilter("1", a, "\t--> Test class Value");
+    delete a;
+
+    a = new Variable("A");
+    test_cnfFilter("A", a, "\t--> Test class Variable");
+
+    a = new And(a, new Variable("B"));
+    test_cnfFilter("(A&B)", a, "\t--> Test class And");
+
+    a = new BiImplicate(a, new Value("1"));
+    test_cnfFilter("(A&B)", a, "\t--> Test class BiImplicate");
+
+    a = new Implicate(a, new Value("0"));
+    test_cnfFilter("(~A|~B)", a, "\t--> Test class Implication");
+
+    a = new NAnd(new Value("1"), a);
+    test_cnfFilter("(A&B)", a, "\t--> Test class NAnd");
+
+    a = new Negate(a);
+    test_cnfFilter("(~A|~B)", a, "\t--> Test class Negation");
+
+    a = new Or(a, new Value("1"));
+    test_cnfFilter("1", a, "\t--> Test class Or");
+    delete a;
+
+    a = new And(new Variable('E'),
+                new Implicate(new Variable('A'),
+                              new Or(new And(new Variable('B'),
+                                              new Variable('C')
+                                              ),
+                                      new And(new Variable('D'),
+                                              new Negate(new Variable('C'))
+                                              )
+                                      )
+                              )
+                );
+    test_cnfFilter("(E&(~A|((B&C)|(D&~C))))", a, "\t--> Test E&(A>((B&C)&(D&~C)))");
+    delete a;
+}
+
 #endif // TEST_NOTATIONTEST_H

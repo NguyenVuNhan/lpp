@@ -21,10 +21,8 @@ public:
     list<string> listVar;
     list<Node *> nodes;
 
-    explicit STNode(STNode *left = nullptr, STNode *right = nullptr);
     explicit STNode(Node *root = nullptr);
     explicit STNode(list<Node *> &nodeList);
-    explicit STNode(list<string> variablesList, list<Node *> &nodeList);
     ~STNode();
     string toString();
     void treeTraveler(ofstream &out, int rootId = -1);

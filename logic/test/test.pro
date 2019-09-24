@@ -8,11 +8,14 @@ CONFIG -= qt
 
 HEADERS += \
         ../src/SemanticTableaux/enum.h \
+        ../src/cnf/cnf.h \
         ../src/notation/and.h \
         ../src/notation/biimplicate.h \
         ../src/notation/exists.h \
         ../src/notation/forall.h \
         ../src/notation/implicate.h \
+        ../src/notation/multiand.h \
+        ../src/notation/multior.h \
         ../src/notation/nand.h \
         ../src/notation/negate.h \
         ../src/notation/node.h \
@@ -29,15 +32,20 @@ HEADERS += \
         ../src/table/simpletable.h \
         ../src/table/truthtable.h \
         ../src/utils.h \
+        test_cnf.h \
         test_notation.h \
+        test_table.h \
         test_tree.h
 
 SOURCES += \
+        ../src/cnf/cnf.cpp \
         ../src/notation/and.cpp \
         ../src/notation/biimplicate.cpp \
         ../src/notation/exists.cpp \
         ../src/notation/forall.cpp \
         ../src/notation/implicate.cpp \
+        ../src/notation/multiand.cpp \
+        ../src/notation/multior.cpp \
         ../src/notation/nand.cpp \
         ../src/notation/negate.cpp \
         ../src/notation/node.cpp \
