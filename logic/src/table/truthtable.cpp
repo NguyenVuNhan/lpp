@@ -1,6 +1,6 @@
 #include <iomanip>
 #include "truthtable.h"
-#include "../notation/multiand.h"
+#include "../notation/multior.h"
 
 void TruthTable::generateTable()
 {
@@ -78,5 +78,5 @@ Tree TruthTable::getNormalize()
         }
     }
 
-    return Tree(new MultiAnd(tmpList));
+    return Tree(new MultiOrNorm(tmpList));
 }

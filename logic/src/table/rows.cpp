@@ -1,7 +1,7 @@
 #include "rows.h"
 #include "../notation/variable.h"
 #include "../notation/negate.h"
-#include "../notation/multior.h"
+#include "../notation/multiand.h"
 #include "../utils.h"
 
 string Rows::toBinString(uintmax_t i, uintmax_t strLen)
@@ -47,7 +47,7 @@ Node *Rows::toNode(list<string> label)
 
     }
 
-    return new MultiOr(tmpList);
+    return new MultiAndNorm(tmpList);
 }
 
 int Rows::is_match_pair(const Rows &other)
@@ -82,6 +82,11 @@ bool Rows::getValue()
 void Rows::setDontCare(uint pos)
 {
     elem_str.replace(pos, 1, "x");
+}
+
+string Rows::getElem()
+{
+    return elem_str;
 }
 
 void Rows::operator=(const Rows &other)

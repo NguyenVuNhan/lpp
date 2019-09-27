@@ -33,3 +33,43 @@ Node *MultiOr::copy()
         tmplist.push_back(e->copy());
     return new MultiOr(tmplist);
 }
+
+bool MultiOr::getValue(string valList)
+{
+    bool value = false;
+
+    for(auto e : variables)
+        value |= e->getValue(valList);
+
+    return value;
+}
+
+
+MultiOrNorm::MultiOrNorm(list<Node *> listNodes) :
+    MultiOr(listNodes)
+{
+
+}
+
+MultiOrNorm::~MultiOrNorm()
+{
+
+}
+
+string MultiOrNorm::toString()
+{
+    string return_str;
+    bool first = true;
+    for(auto i : variables)
+    {
+        if(!first)
+            return_str += '|';
+        return_str += i->toString();
+        first = false;
+    }
+
+    if(return_str.size() == 1)
+        return return_str;
+    else
+        return '(' + return_str + ')';
+}

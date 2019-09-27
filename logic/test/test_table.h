@@ -46,11 +46,11 @@ TEST(TableTest, testNormalize)
 {
     TruthTable table = TruthTable("=( >(A,B), |( ~(A) ,B) )");
     Tree tree = table.getNormalize();
-    EXPECT_EQ("[ ab, aB, Ab, AB ]", tree.getProposition()) << "Test case =( >(A,B), |( ~(A) ,B) )";
+    EXPECT_EQ("((~A&~B)|(~A&B)|(A&~B)|(A&B))", tree.getProposition()) << "Test case =( >(A,B), |( ~(A) ,B) )";
 
     SimpleTable table2 = SimpleTable("||ABC");
     Tree tree2 = table2.getNormalize();
-    EXPECT_EQ("[ C, B, A ]", tree2.getProposition()) << "Test case ||ABC";
+    EXPECT_EQ("(C|B|A)", tree2.getProposition()) << "Test case ||ABC";
 }
 
 #endif // TEST_TABLE_H

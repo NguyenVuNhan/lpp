@@ -50,6 +50,13 @@ list<T *> copyList(list<T *> &other)
     return tmpList;
 }
 
+template<typename T>
+T readList(list<T> l1, uint pos)
+{
+    auto it = next(l1.begin(), pos);
+    return *it;
+}
+
 static bool isContain(string mainStr, string containedStr)
 {
     return mainStr.find(containedStr) != string::npos;
@@ -58,6 +65,17 @@ static bool isContain(string mainStr, string containedStr)
 static bool isContain(string mainStr, char containedChar)
 {
     return mainStr.find(containedChar) != string::npos;
+}
+
+static bool isContain(string mainStr, list<char> containedChar)
+{
+    for(auto c : mainStr)
+    {
+        for(auto cc : containedChar)
+            if(c == cc)
+                return true;
+    }
+    return false;
 }
 
 static string getUniqueString(string str)

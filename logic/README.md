@@ -3,9 +3,7 @@
 
 ### CNF definition
 
-[Conjunctive normal form - Wikipedia](https://en.wikipedia.org/wiki/Conjunctive_normal_form)
-
-## Step
+[Conjunctive normal form - Wikipedia](https://en.wikipedia.org/wiki/Conjunctive_normal_form) 
 
 1. Remove bi-implicate
 2. remove implicate

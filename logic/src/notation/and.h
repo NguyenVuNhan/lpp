@@ -6,7 +6,7 @@
 class And : public Node
 {
 public:
-    explicit And(Node *left = nullptr, Node *right = nullptr);
+    explicit And(Node *l = nullptr, Node *r = nullptr);
     ~And() override;
 
     // Node interface

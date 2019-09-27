@@ -10,8 +10,6 @@ TARGET = LogicLib
 TEMPLATE = lib
 CONFIG += staticlib
 
-DEFINES += LOGIC_LIBRARY
-
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -25,6 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     cnf/cnf.cpp \
+    logic_manager.cpp \
     notation/and.cpp \
     notation/biimplicate.cpp \
     notation/implicate.cpp \
@@ -49,6 +48,7 @@ SOURCES += \
 
 HEADERS += \
     cnf/cnf.h \
+    logic_manager.h \
     notation/biimplicate.h \
     notation/implicate.h \
     notation/multiand.h \

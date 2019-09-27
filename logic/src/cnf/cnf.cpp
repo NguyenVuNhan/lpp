@@ -1,20 +1,84 @@
+#include <sstream>
+
 #include "cnf.h"
 #include "../utils.h"
+#include "../notation/multior.h"
+#include "../notation/negate.h"
+#include "../notation/variable.h"
 
 CNF::CNF(Node *tree)
 {
-    cnf = generateCNF(tree);
-    cnf = nodeToMultiAnd(cnf);
+    tree = generateCNF(tree);
+    tree = nodeToMultiAnd(tree);
+}
+
+CNF::CNF(string prop)
+{
+    if (prop == "")
+        return;
+    prop_in = prop;
+    tree = parse(prop);
 }
 
 CNF::~CNF()
 {
-    delete cnf;
+    delete tree;
 }
 
 Node *CNF::getCNF()
 {
-    return cnf;
+    return tree;
+}
+
+string CNF::getProposition()
+{
+    if(proposition == "")
+        proposition = tree->toString();
+    return proposition;
+}
+
+Node *CNF::parse(string prop)
+{
+    Node *node = new MultiAnd();
+
+    prop.erase(remove_if(prop.begin(), prop.end(),
+                         [](char c)
+                         {
+                            return c == ' ' || c == '[' || c == ']' || c == '\0'
+                                    || c == '\t' || c == '\n';
+                         }),
+                         prop.end());
+    stringstream ss(prop);
+    string segment;
+
+    while(getline(ss, segment, ','))
+    {
+       node->variables.push_back(getMultiOr(segment));
+    }
+
+    return node;
+}
+
+Node *CNF::getMultiOr(string prop)
+{
+    Node *node = new MultiOr();
+
+    for(char c : prop)
+    {
+        if('a' <= c && c <= 'z')
+            node->variables.push_back(new Negate(new Variable(char(toupper(c)))));
+        else
+            node->variables.push_back(new Variable(char(toupper(c))));
+    }
+
+    return node;
+}
+
+string CNF::getDavidPutnam(Node *tree, uint pos)
+{
+    string variable = readList(varList, pos);
+    tree->variables.remove_if(isUseless);
+
 }
 
 Resolution I_CNF::resolution(list<string> nodes, char v)

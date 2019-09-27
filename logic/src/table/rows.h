@@ -20,6 +20,7 @@ public:
     int is_match_pair(const Rows &other);
     bool getValue();
     void setDontCare(uint pos);
+    string getElem();
     void operator=(const Rows &other);
     bool operator==(const Rows &other);
     bool operator<(const Rows &other);

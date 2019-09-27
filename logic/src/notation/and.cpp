@@ -5,8 +5,8 @@
 #include "or.h"
 #include"../utils.h"
 
-And::And(Node *left, Node *right)
-    : Node(left, right)
+And::And(Node *l, Node *r)
+    : Node(l, r)
 {
     notation = '&';
 }

@@ -7,12 +7,22 @@ class MultiAnd : public Node
 {
 public:
     explicit MultiAnd(list<Node *> listNodes = list<Node *>());
-    ~MultiAnd();
+    ~MultiAnd() override;
 
     // Node interface
 public:
-    string toString();
-    Node *copy();
+    virtual string toString() override;
+    Node *copy() override;
+    bool getValue(string valList) override;
+};
+
+class MultiAndNorm : public MultiAnd
+{
+public:
+    explicit MultiAndNorm(list<Node *> listNodes = list<Node *>());
+    ~MultiAndNorm() override;
+public:
+    string toString() override;
 };
 
 #endif // MULTIAND_H

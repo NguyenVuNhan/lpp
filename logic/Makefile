@@ -7,24 +7,37 @@ BUILDDIR = bin
 
 VPATH = \
 src \
-src/notation
+src/notation \
+src/proposition \
+src/proposition/tableaux \
+src/table \
+src/cnf
 
 # source file
 SRCS = \
+src/cnf/cnf.cpp \
+src/notation/and.cpp \
+src/notation/biimplicate.cpp \
+src/notation/implicate.cpp \
+src/notation/multiand.cpp \
+src/notation/multior.cpp \
+src/notation/negate.cpp \
 src/notation/node.cpp \
-src/notation/nad.cpp \
-src/notation/biimplication.cpp \
-src/notation/exists.cpp \
-src/notation/forall.cpp \
-src/notation/implication.cpp \
-src/notation/nand.cpp \
-src/notation/negation.cpp \
 src/notation/or.cpp \
-src/notation/statement.cpp \
 src/notation/value.cpp \
 src/notation/variable.cpp \
-
-
+src/notation/nand.cpp \
+src/notation/statement.cpp \
+src/notation/forall.cpp \
+src/notation/exists.cpp \
+src/proposition/predicate.cpp \
+src/proposition/tableaux/semantictableaux.cpp \
+src/proposition/tableaux/stnode.cpp \
+src/proposition/tree.cpp \
+src/table/rows.cpp \
+src/table/simpletable.cpp \
+src/table/truthtable.cpp \
+src/logic_manager.cpp
 
 # locatio of the python include files and library
 PYTHON_INC = /usr/include/python3.6m

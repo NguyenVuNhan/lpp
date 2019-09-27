@@ -22,12 +22,20 @@ class CNF : protected I_CNF
 {
 public:
     CNF(Node *tree);
+    CNF(string prop="");
     ~CNF();
 
     Node *getCNF();
+    string getProposition();
 
 private:
-    Node *cnf = nullptr;
+    string proposition = "";
+    string prop_in = "";
+    list<string> varList;
+    Node *tree = nullptr;
+    Node *parse(string prop);
+    Node *getMultiOr(string prop);
+    string getDavidPutnam(Node *tree, uint pos);
 };
 
 #endif // CNF_H
