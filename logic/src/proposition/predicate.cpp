@@ -21,8 +21,7 @@ Predicate::Predicate(string prop)
     prop.erase(remove_if(prop.begin(), prop.end(),
                          [](char c)
                          {
-                             return c == '(' || c == ' ' || c == ')' ||
-                                     c == '\0' || c == '\t' || c == '\n' || c == ',';
+                             return c == '(' || c == ' ' || c == ')' || c == ',';
                          }),
                          prop.end());
     unsigned int pos = 0;

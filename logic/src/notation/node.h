@@ -6,6 +6,7 @@
 #include <string>
 #include <list>
 #include <array>
+#include <memory>
 #include "../proposition/tableaux/enum.h"
 #include "../proposition/tableaux/stnode.h"
 
@@ -22,7 +23,7 @@ protected:
     Node *andSimplify(Node *l, Node *r);
 
 public:
-    Node *left = nullptr;
+    shared_ptr *left = nullptr;
     Node *right = nullptr;
     list<Node *> variables;
     string notation = "1";

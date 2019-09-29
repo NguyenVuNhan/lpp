@@ -64,6 +64,17 @@ TEST_F(testICNF, resolution)
 
     Resolution reso = icnf.resolution(cnfStr, 'c');
     test_list(reso.resolution, {"BaD", "E", "BDa"});
+
+    list<string> tmpCNFlist;
+    tmpCNFlist.push_back("PW");
+    tmpCNFlist.push_back("rV");
+    tmpCNFlist.push_back("pR");
+    tmpCNFlist.push_back("tu");
+    tmpCNFlist.push_back("Uw");
+    tmpCNFlist.push_back("pv");
+    tmpCNFlist.push_back("Ps");
+    tmpCNFlist.push_back("ST");
+    Resolution r2 = icnf.resolution(tmpCNFlist, 'p');
 }
 
 TEST(testCNFClass, parse)

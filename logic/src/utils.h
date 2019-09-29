@@ -72,8 +72,12 @@ static bool isContain(string mainStr, list<char> containedChar)
     for(auto c : mainStr)
     {
         for(auto cc : containedChar)
+        {
             if(c == cc)
+            {
                 return true;
+            }
+        }
     }
     return false;
 }

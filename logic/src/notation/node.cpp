@@ -146,7 +146,7 @@ string Node::toStringPrefix()
 
 string Node::toString()
 {
-    return "(" + left->toString() + notation + right->toString()+ ')';
+    return '(' + left->toString() + notation + right->toString()+ ')';
 }
 
 bool Node::getValue(string valList)

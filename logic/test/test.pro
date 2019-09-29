@@ -9,6 +9,7 @@ CONFIG -= qt
 HEADERS += \
         ../src/SemanticTableaux/enum.h \
         ../src/cnf/cnf.h \
+        ../src/logic_manager.h \
         ../src/notation/and.h \
         ../src/notation/biimplicate.h \
         ../src/notation/exists.h \
@@ -33,12 +34,15 @@ HEADERS += \
         ../src/table/truthtable.h \
         ../src/utils.h \
         test_cnf.h \
+        test_logic_manager.h \
         test_notation.h \
+        test_predicate.h \
         test_table.h \
         test_tree.h
 
 SOURCES += \
         ../src/cnf/cnf.cpp \
+        ../src/logic_manager.cpp \
         ../src/notation/and.cpp \
         ../src/notation/biimplicate.cpp \
         ../src/notation/exists.cpp \
