@@ -7,13 +7,13 @@ class Predicate : public Tree
 {
 public:
     Predicate(string prop="");
-    Predicate(Node *tree=nullptr);
+    Predicate(shared_ptr<Node> tree=nullptr);
     ~Predicate();
 
 protected:
-    Node *getStatement(string prop, unsigned int &pos);
-    Node *getNode(char notation);
-    Node *parse(string prop, unsigned int &pos);
+    shared_ptr<Node> getStatement(string prop, unsigned int &pos);
+    shared_ptr<Node> getNode(char notation);
+    shared_ptr<Node> parse(string prop, unsigned int &pos);
 
 };
 

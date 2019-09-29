@@ -4,31 +4,31 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <list>
 #include <array>
-#include <memory>
+
 #include "../proposition/tableaux/enum.h"
 #include "../proposition/tableaux/stnode.h"
+#include "../utils.h"
 
 using namespace std;
 
-class Node
+class Node : public enable_shared_from_this<Node>
 {
 private:
     int id = -1;
 
 protected:
     bool isRulesReturned = false;
-    Node *orSimplify(Node *l, Node *r);
-    Node *andSimplify(Node *l, Node *r);
+    shared_ptr<Node> orSimplify(shared_ptr<Node> l, shared_ptr<Node> r);
+    shared_ptr<Node> andSimplify(shared_ptr<Node> l, shared_ptr<Node> r);
 
 public:
-    shared_ptr *left = nullptr;
-    Node *right = nullptr;
-    list<Node *> variables;
+    shared_ptr<Node> left = nullptr;
+    shared_ptr<Node> right = nullptr;
+    list<shared_ptr<Node>> variables;
     string notation = "1";
 
-    explicit Node(Node *left = nullptr, Node *right = nullptr);
+    explicit Node(shared_ptr<Node> left = nullptr, shared_ptr<Node> right = nullptr);
     virtual ~Node();
 
     /**
@@ -40,13 +40,12 @@ public:
     string toStringPrefix();
     virtual string toString();
     virtual bool getValue(string valList);
-    virtual Node *nandify(bool isNegation = false);
+    virtual shared_ptr<Node> nandify(bool isNegation = false);
     virtual RULES getSTRuleName(bool isNegation = false);
-    virtual void getSTNodeChild(STNode *root, long pos, bool isNegation = false);
+    virtual void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation = false);
     virtual void setVariable(string fromVariable, string toVariable);
-    virtual Node *copy();
-    virtual Node *cnfFilter(bool isNegation = false);
-    virtual Node *cnfDistribution();
-    virtual void getLeaf(list<Node *> &listNode);
+    virtual shared_ptr<Node> cnfFilter(bool isNegation = false);
+    virtual shared_ptr<Node> cnfDistribution();
+    virtual void getLeaf(list<shared_ptr<Node>> &listNode);
 };
 #endif // NODE_H

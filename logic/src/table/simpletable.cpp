@@ -1,8 +1,8 @@
 #include "simpletable.h"
 #include "../utils.h"
 
-SimpleTable::SimpleTable(Tree tree)
-    : TruthTable(tree)
+SimpleTable::SimpleTable(Tree root)
+    : TruthTable(root)
 {
     simplify();
 }
@@ -13,8 +13,8 @@ SimpleTable::SimpleTable(string prop)
     simplify();
 }
 
-SimpleTable::SimpleTable(Node *tree)
-    : TruthTable(tree)
+SimpleTable::SimpleTable(shared_ptr<Node> root)
+    : TruthTable(root)
 {
     simplify();
 }

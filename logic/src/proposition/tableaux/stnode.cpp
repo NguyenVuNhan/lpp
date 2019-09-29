@@ -1,25 +1,24 @@
 #include "stnode.h"
-#include "../../utils.h"
 #include "../../notation/node.h"
 #include "../../notation/negate.h"
 
-STNode::STNode(Node *root)
+STNode::STNode(shared_ptr<Node> root)
 {
     left = nullptr;
     right = nullptr;
     if(root == nullptr) return;
 
-    nodes.push_back(new Negate(root->copy()));
+    nodes.push_back(make_shared<Negate>(root));
 
     static int _id = 0;
     id = _id++;
 }
 
-STNode::STNode(list<Node *> &nodeList)
+STNode::STNode(list<shared_ptr<Node> > &nodeList)
 {
     left = nullptr;
     right = nullptr;
-    nodes = copyList(nodeList);
+    nodes = copyList<Node>(nodeList);
 
     static int _id = 0;
     id = _id++;
@@ -27,17 +26,14 @@ STNode::STNode(list<Node *> &nodeList)
 
 STNode::~STNode()
 {
-    nodes.remove_if(deleteAll<Node>);
     nodes.clear();
-    delete left;
-    delete right;
 }
 
 string STNode::toString()
 {
     string returnString = "{ ";
     bool first = true;
-    for (Node *node : nodes)
+    for (auto node : nodes)
     {
         if(!first)
             returnString += ", ";

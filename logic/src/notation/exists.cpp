@@ -1,10 +1,9 @@
 #include "exists.h"
 #include "negate.h"
 #include "variable.h"
-#include "../utils.h"
 
-Exists::Exists(Node *left, Node *right) :
-    Node(left, right)
+Exists::Exists(shared_ptr<Node> l, shared_ptr<Node> r) :
+    Node(l, r)
 {
     notation = '@';
 }
@@ -31,28 +30,28 @@ RULES Exists::getSTRuleName(bool isNegation)
     }
 }
 
-void Exists::getSTNodeChild(STNode *root, long pos, bool isNegation)
+void Exists::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
     if(!isRulesReturned)
     {
-        root->left = new STNode(root->nodes);
+        root->left = make_shared<STNode>(root->nodes);
         if (isNegation)
         {
-            list<Node *> tmp_list_l;
-            tmp_list_l.push_back(this->copy());
+            list<shared_ptr<Node> > tmp_list_l;
+            tmp_list_l.push_back(shared_from_this());
 
             for(string var : root->listVar)
             {
-                Node *proposition = new Negate(right->copy());
+                shared_ptr<Node> proposition = make_shared<Negate>(right);
                 proposition->setVariable(left->notation, var);
                 tmp_list_l.push_back(proposition);
             }
 
-            listReplaceAt(root->left->nodes, tmp_list_l, pos);
+            listReplaceAt<Node>(root->left->nodes, tmp_list_l, pos);
         }
         else
         {
-            list<Node *> tmp_list_l;
+            list<shared_ptr<Node> > tmp_list_l;
 
             int i = 1;
             string newVar;
@@ -63,19 +62,14 @@ void Exists::getSTNodeChild(STNode *root, long pos, bool isNegation)
             }
             while(contains(root->listVar, newVar));
 
-            Node *proposition = right->copy();
+            shared_ptr<Node> proposition = right;
             proposition->setVariable(left->notation, newVar);
             tmp_list_l.push_back(proposition);
 
-            listReplaceAt(root->left->nodes, tmp_list_l, pos);
+            listReplaceAt<Node>(root->left->nodes, tmp_list_l, pos);
             root->left->listVar.push_back(newVar);
         }
 
         isRulesReturned = true;
     }
-}
-
-Node *Exists::copy()
-{
-    return new Exists(left->copy(), right->copy());
 }

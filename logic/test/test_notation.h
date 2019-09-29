@@ -19,45 +19,40 @@
 
 TEST(NotationTest, getValue)
 {
-    Node *a = new Value("1");
+    shared_ptr<Node> a = make_shared<Value>("1");
     EXPECT_TRUE(a->getValue("")) << "\t--> Test class Value";
-    delete a;
 
-    a = new Variable("A");
+    a = make_shared<Variable>("A");
     EXPECT_TRUE(a->getValue("A1")) << "\t--> Test class Variable";
 
-    a = new And(a, new Variable("B"));
+    a = make_shared<And>(a, make_shared<Variable>("B"));
     EXPECT_FALSE(a->getValue("A1B0")) << "\t--> Test class And";
 
-    a = new BiImplicate(a, new Value("1"));
+    a = make_shared<BiImplicate>(a, make_shared<Value>("1"));
     EXPECT_FALSE(a->getValue("A1B0")) << "\t--> Test class BiImplicate";
 
-    a = new Implicate(a, new Value("0"));
+    a = make_shared<Implicate>(a, make_shared<Value>("0"));
     EXPECT_TRUE(a->getValue("A1B0")) << "\t--> Test class Implication";
 
-    a = new NAnd(new Value("1"), a);
+    a = make_shared<NAnd>(make_shared<Value>("1"), a);
     EXPECT_FALSE(a->getValue("A1B0")) << "\t--> Test class NAnd";
 
-    a = new Negate(a);
+    a = make_shared<Negate>(a);
     EXPECT_TRUE(a->getValue("A1B0")) << "\t--> Test class Negation";
 
-    a = new Or(a, new Value("1"));
+    a = make_shared<Or>(a, make_shared<Value>("1"));
     EXPECT_TRUE(a->getValue("A1B0")) << "\t--> Test class Or";
-
-    delete a;
 }
 
 TEST(NotationTest, setVariable)
 {
-    Node *a = new Statement("A", list<Node *>({new Variable("c"), new Variable("b")}));
+    shared_ptr<Node> a = make_shared<Statement>("A", list<shared_ptr<Node> >({make_shared<Variable>("c"), make_shared<Variable>("b")}));
     a->setVariable("c", "a");
     EXPECT_EQ("A(a,b)", a->toString());
 
-    a = new And(new Variable("a"), a);
+    a = make_shared<And>(make_shared<Variable>("a"), a);
     a->setVariable("a", "c");
     EXPECT_EQ("(c&A(c,b))", a->toString());
-
-    delete a;
 }
 
 TEST(NotationTest, getSTRuleName)
@@ -65,141 +60,123 @@ TEST(NotationTest, getSTRuleName)
     // -----------------------------------------------------
     //  alpha rule
     // -----------------------------------------------------
-    Node *node = new And(new Variable("P"), new Variable("Q"));
+    shared_ptr<Node> node = make_shared<And>(make_shared<Variable>("P"), make_shared<Variable>("Q"));
     EXPECT_EQ(ALPHA, node->getSTRuleName()) << "Alpha rule - And";
-    delete node;
 
-    node = new Negate(new Or(new Variable("P"), new Variable("Q")));
+    node = make_shared<Negate>(make_shared<Or>(make_shared<Variable>("P"), make_shared<Variable>("Q")));
     EXPECT_EQ(ALPHA, node->getSTRuleName()) << "Alpha rule - Or";
-    delete node;
 
-    node = new Negate(new Implicate(new Variable("P"), new Variable("Q")));
+    node = make_shared<Negate>(make_shared<Implicate>(make_shared<Variable>("P"), make_shared<Variable>("Q")));
     EXPECT_EQ(ALPHA, node->getSTRuleName()) << "Alpha rule - Implication";
-    delete node;
 
     // -----------------------------------------------------
     //  beta rule
     // -----------------------------------------------------
-    node = new Negate(new And(new Variable("P"), new Variable("Q")));
+    node = make_shared<Negate>(make_shared<And>(make_shared<Variable>("P"), make_shared<Variable>("Q")));
     EXPECT_EQ(BETA, node->getSTRuleName()) << "Beta rule - And";
-    delete node;
 
-    node = new Or(new Variable("P"), new Variable("Q"));
+    node = make_shared<Or>(make_shared<Variable>("P"), make_shared<Variable>("Q"));
     EXPECT_EQ(BETA, node->getSTRuleName()) << "Beta rule - Or";
-    delete node;
 
-    node = new Implicate(new Variable("P"), new Variable("Q"));
+    node = make_shared<Implicate>(make_shared<Variable>("P"), make_shared<Variable>("Q"));
     EXPECT_EQ(BETA, node->getSTRuleName()) << "Beta rule - Implication";
-    delete node;
 
-    node = new BiImplicate(new Variable("P"), new Variable("Q"));
+    node = make_shared<BiImplicate>(make_shared<Variable>("P"), make_shared<Variable>("Q"));
     EXPECT_EQ(BETA, node->getSTRuleName()) << "Beta rule - Bi-implicate";
-    delete node;
 
-    node = new Negate(new BiImplicate(new Variable("P"), new Variable("Q")));
+    node = make_shared<Negate>(make_shared<BiImplicate>(make_shared<Variable>("P"), make_shared<Variable>("Q")));
     EXPECT_EQ(BETA, node->getSTRuleName()) << "Beta rule - Bi-implicate";
-    delete node;
 
     // -----------------------------------------------------
     //  delta rule
     // -----------------------------------------------------
-    node = new Exists(new Variable("x"), new Statement("A", {new Variable("x"), new Variable("y")}));
+    node = make_shared<Exists>(make_shared<Variable>("x"), make_shared<Statement>("A", list<shared_ptr<Node>>({make_shared<Variable>("x"), make_shared<Variable>("y")})));
     EXPECT_EQ(DELTA, node->getSTRuleName()) << "Delta rule - Exist";
-    delete node;
 
-    node = new Negate(new ForAll(new Variable("x"), new Statement("A", {new Variable("x"), new Variable("y")})));
+    node = make_shared<Negate>(make_shared<ForAll>(make_shared<Variable>("x"), make_shared<Statement>("A", list<shared_ptr<Node>>({make_shared<Variable>("x"), make_shared<Variable>("y")}))));
     EXPECT_EQ(DELTA, node->getSTRuleName()) << "Delta rule - For all";
-    delete node;
 
     // -----------------------------------------------------
     //  gamma rule
     // -----------------------------------------------------
-    node = new Negate(new Exists(new Variable("x"), new Statement("A", {new Variable("x"), new Variable("y")})));
+    node = make_shared<Negate>(make_shared<Exists>(make_shared<Variable>("x"), make_shared<Statement>("A", list<shared_ptr<Node>>({make_shared<Variable>("x"), make_shared<Variable>("y")}))));
     EXPECT_EQ(GAMMA, node->getSTRuleName()) << "Gamma rule - Exist";
-    delete node;
 
-    node = new ForAll(new Variable("x"), new Statement("A", {new Variable("x"), new Variable("y")}));
+    node = make_shared<ForAll>(make_shared<Variable>("x"), make_shared<Statement>("A", list<shared_ptr<Node>>({make_shared<Variable>("x"), make_shared<Variable>("y")})));
     EXPECT_EQ(GAMMA, node->getSTRuleName()) << "Gamma rule - For all";
-    delete node;
 }
 
 TEST(NotationTest, nandify)
 {
-    Node *node = new And(new Variable("A"), new Variable("B"));
-    Node *nandifiedNode = node->nandify();
+    shared_ptr<Node> node = make_shared<And>(make_shared<Variable>("A"), make_shared<Variable>("B"));
+    shared_ptr<Node> nandifiedNode = node->nandify();
     EXPECT_EQ("((A%B)%1)", nandifiedNode->toString()) << node->toString();
 
-    node = new BiImplicate(node, new Value("1"));
+    node = make_shared<BiImplicate>(node, make_shared<Value>("1"));
     nandifiedNode = node->nandify();
     EXPECT_EQ("((((A%B)%1)%1)%((((A%B)%1)%1)%0))", nandifiedNode->toString()) << node->toString();
 
-    node = new Implicate(node, new Value("0"));
+    node = make_shared<Implicate>(node, make_shared<Value>("0"));
     nandifiedNode = node->nandify();
     EXPECT_EQ("(((((A%B)%1)%1)%((((A%B)%1)%1)%0))%1)", nandifiedNode->toString()) << node->toString();
 
-    node = new NAnd(new Value("1"), node);
+    node = make_shared<NAnd>(make_shared<Value>("1"), node);
     nandifiedNode = node->nandify();
     EXPECT_EQ("(1%(((((A%B)%1)%1)%((((A%B)%1)%1)%0))%1))", nandifiedNode->toString()) << node->toString();
 
-    node = new Negate(node);
+    node = make_shared<Negate>(node);
     nandifiedNode = node->nandify();
     EXPECT_EQ("((1%(((((A%B)%1)%1)%((((A%B)%1)%1)%0))%1))%1)", nandifiedNode->toString()) << node->toString();
 
-    node = new Or(node, new Value("0"));
+    node = make_shared<Or>(node, make_shared<Value>("0"));
     nandifiedNode = node->nandify();
     EXPECT_EQ("((((1%(((((A%B)%1)%1)%((((A%B)%1)%1)%0))%1))%1)%1)%1)", nandifiedNode->toString()) << node->toString();
-
-    delete node;
 }
 
-void test_cnfFilter(const string &expect, Node *root, const string &msg)
+void test_cnfFilter(const string &expect, shared_ptr<Node> root, const string &msg)
 {
-    Node *tmp = root->cnfFilter();
+    shared_ptr<Node> tmp = root->cnfFilter();
     EXPECT_EQ(expect, tmp->toString()) << msg;
-    delete tmp;
 }
 
 TEST(NotationTest, cnfFilter)
 {
-    Node *a = new Value("1");
+    shared_ptr<Node> a = make_shared<Value>("1");
     test_cnfFilter("1", a, "\t--> Test class Value");
-    delete a;
 
-    a = new Variable("A");
+    a = make_shared<Variable>("A");
     test_cnfFilter("A", a, "\t--> Test class Variable");
 
-    a = new And(a, new Variable("B"));
+    a = make_shared<And>(a, make_shared<Variable>("B"));
     test_cnfFilter("(A&B)", a, "\t--> Test class And");
 
-    a = new BiImplicate(a, new Value("1"));
+    a = make_shared<BiImplicate>(a, make_shared<Value>("1"));
     test_cnfFilter("(A&B)", a, "\t--> Test class BiImplicate");
 
-    a = new Implicate(a, new Value("0"));
+    a = make_shared<Implicate>(a, make_shared<Value>("0"));
     test_cnfFilter("(~A|~B)", a, "\t--> Test class Implication");
 
-    a = new NAnd(new Value("1"), a);
+    a = make_shared<NAnd>(make_shared<Value>("1"), a);
     test_cnfFilter("(A&B)", a, "\t--> Test class NAnd");
 
-    a = new Negate(a);
+    a = make_shared<Negate>(a);
     test_cnfFilter("(~A|~B)", a, "\t--> Test class Negation");
 
-    a = new Or(a, new Value("1"));
+    a = make_shared<Or>(a, make_shared<Value>("1"));
     test_cnfFilter("1", a, "\t--> Test class Or");
-    delete a;
 
-    a = new And(new Variable('E'),
-                new Implicate(new Variable('A'),
-                              new Or(new And(new Variable('B'),
-                                              new Variable('C')
+    a = make_shared<And>(make_shared<Variable>('E'),
+                make_shared<Implicate>(make_shared<Variable>('A'),
+                              make_shared<Or>(make_shared<And>(make_shared<Variable>('B'),
+                                              make_shared<Variable>('C')
                                               ),
-                                      new And(new Variable('D'),
-                                              new Negate(new Variable('C'))
+                                      make_shared<And>(make_shared<Variable>('D'),
+                                              make_shared<Negate>(make_shared<Variable>('C'))
                                               )
                                       )
                               )
                 );
     test_cnfFilter("(E&(~A|((B&C)|(D&~C))))", a, "\t--> Test E&(A>((B&C)&(D&~C)))");
-    delete a;
 }
 
 #endif // TEST_NOTATIONTEST_H

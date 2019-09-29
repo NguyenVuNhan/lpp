@@ -11,7 +11,7 @@ class testICNF : public ::testing::Test
     Tree tree = Tree("&(E,>(A,|(&(B,C),&(D,~C))))");
 protected:
     I_CNF icnf;
-    Node *cnf;
+    shared_ptr<Node> cnf;
 
     testICNF()
     {
@@ -20,7 +20,7 @@ protected:
 
     ~testICNF()
     {
-        delete cnf;
+        cnf.reset();
     }
 };
 

@@ -7,21 +7,20 @@
 class Or : public Node
 {
 public:
-    explicit Or(Node *left = nullptr, Node *right = nullptr);
+    explicit Or(shared_ptr<Node> left = nullptr, shared_ptr<Node> right = nullptr);
     ~Or() override;
 
     // Node interface
 public:
     bool getValue(string valList) override;
-    Node *nandify(bool isNegation) override;
+    shared_ptr<Node> nandify(bool isNegation) override;
     RULES getSTRuleName(bool isNegation) override;
-    void getSTNodeChild(STNode *root, long pos, bool isNegation) override;
-    Node *copy() override;
-    Node *cnfFilter(bool isNegation = false) override;
-    Node *cnfDistribution() override;
+    void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation) override;
+    shared_ptr<Node> cnfFilter(bool isNegation = false) override;
+    shared_ptr<Node> cnfDistribution() override;
 
 private:
-    Node *getMultiOr();
+    shared_ptr<Node> getMultiOr();
 };
 
 #endif // OR_H

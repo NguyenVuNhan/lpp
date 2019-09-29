@@ -43,7 +43,7 @@ TruthTable::TruthTable(string prop)
     generateTable();
 }
 
-TruthTable::TruthTable(Node *otherTree)
+TruthTable::TruthTable(shared_ptr<Node> otherTree)
     : Tree(otherTree)
 {
     generateTable();
@@ -68,7 +68,7 @@ string TruthTable::getHashCode()
 
 Tree TruthTable::getNormalize()
 {
-    list<Node *> tmpList;
+    list<shared_ptr<Node> > tmpList;
 
     for(Rows &i : table)
     {
@@ -78,5 +78,5 @@ Tree TruthTable::getNormalize()
         }
     }
 
-    return Tree(new MultiOrNorm(tmpList));
+    return Tree(make_shared<MultiOrNorm>(tmpList));
 }

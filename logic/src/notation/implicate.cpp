@@ -1,12 +1,8 @@
 #include "implicate.h"
 #include "negate.h"
 #include "nand.h"
-#include "value.h"
-#include "and.h"
-#include "or.h"
-#include "../utils.h"
 
-Implicate::Implicate(Node *left, Node *right)
+Implicate::Implicate(shared_ptr<Node> left, shared_ptr<Node> right)
     : Node(left, right)
 {
     notation = '>';
@@ -21,11 +17,10 @@ bool Implicate::getValue(string valList)
     return !left->getValue(valList) | right->getValue(valList);
 }
 
-Node *Implicate::nandify(bool isNegation)
+shared_ptr<Node> Implicate::nandify(bool isNegation)
 {
-    Node *notRight = new Negate(right);
-    Node *ret = new NAnd(left->nandify(), notRight->nandify());
-    free(notRight);
+    shared_ptr<Node> notRight = make_shared<Negate>(right);
+    shared_ptr<Node> ret = make_shared<NAnd>(left->nandify(), notRight->nandify());
     return ret;
 }
 
@@ -41,31 +36,26 @@ RULES Implicate::getSTRuleName(bool isNegation)
     }
 }
 
-void Implicate::getSTNodeChild(STNode *root, long pos, bool isNegation)
+void Implicate::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = new  STNode(root->nodes);
+    root->left = make_shared<STNode>(root->nodes);
     if (!isNegation)
     {
-        root->right = new STNode(root->nodes);
+        root->right = make_shared<STNode>(root->nodes);
 
-        listReplaceAt(root->left->nodes, new Negate(left->copy()), pos);
-        listReplaceAt(root->right->nodes, right->copy(), pos);
+        listReplaceAt<Node>(root->left->nodes, make_shared<Negate>(left), pos);
+        listReplaceAt<Node>(root->right->nodes, right, pos);
     }
     else
     {
-        list<Node *> tmp_list;
-        tmp_list.push_back(left->copy());
-        tmp_list.push_back(new Negate(right->copy()));
-        listReplaceAt(root->left->nodes, tmp_list, pos);
+        list<shared_ptr<Node> > tmp_list;
+        tmp_list.push_back(left);
+        tmp_list.push_back(make_shared<Negate>(right));
+        listReplaceAt<Node>(root->left->nodes, tmp_list, pos);
     }
 }
 
-Node *Implicate::copy()
-{
-    return new Implicate(left->copy(), right->copy());
-}
-
-Node *Implicate::cnfFilter(bool isNegation)
+shared_ptr<Node> Implicate::cnfFilter(bool isNegation)
 {
     if(isNegation)
     {

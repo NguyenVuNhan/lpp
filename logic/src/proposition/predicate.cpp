@@ -28,7 +28,7 @@ Predicate::Predicate(string prop)
     tree = this->parse(prop, pos);
 }
 
-Predicate::Predicate(Node *tree)
+Predicate::Predicate(shared_ptr<Node> tree)
     : Tree(tree)
 {
     prop_in = tree->toStringPrefix();
@@ -38,51 +38,51 @@ Predicate::~Predicate()
 {
 }
 
-Node *Predicate::getStatement(string prop, unsigned int &pos)
+shared_ptr<Node> Predicate::getStatement(string prop, unsigned int &pos)
 {
-    Node *node = nullptr;
+    shared_ptr<Node> node = nullptr;
 
 
 
     return node;
 }
 
-Node *Predicate::getNode(char notation)
+shared_ptr<Node> Predicate::getNode(char notation)
 {
     switch (notation)
     {
     case '~':
-        return new Negate();
+        return make_shared<Negate>();
 
     case '>':
-        return new Implicate();
+        return make_shared<Implicate>();
 
     case '=':
-        return new BiImplicate();
+        return make_shared<BiImplicate>();
 
     case '&':
-        return new And();
+        return make_shared<And>();
 
     case '|':
-        return new Or();
+        return make_shared<Or>();
 
     case '%':
-        return new NAnd();
+        return make_shared<NAnd>();
 
     case '!':
-        return new ForAll();
+        return make_shared<ForAll>();
 
     case '@':
-        return new Exists();
+        return make_shared<Exists>();
 
     default:
         return nullptr;
     }
 }
 
-Node *Predicate::parse(string prop, unsigned int &pos)
+shared_ptr<Node> Predicate::parse(string prop, unsigned int &pos)
 {
-    Node *node = this->getNode(prop[pos]);
+    shared_ptr<Node> node = this->getNode(prop[pos]);
 
     if(node != nullptr)
     {
@@ -98,21 +98,21 @@ Node *Predicate::parse(string prop, unsigned int &pos)
             char statementNotate = prop.at(pos);
             pos++;
 
-            list<Node *> tmpVars;
+            list<shared_ptr<Node> > tmpVars;
             do
             {
-                tmpVars.push_back(new Variable(prop.at(pos)));
+                tmpVars.push_back(make_shared<Variable>(prop.at(pos)));
                 pos++;
 
                 code = prop[pos];
             }
             while(code >= 97 && code <= 122);
 
-            node = new Statement(statementNotate, tmpVars);
+            node = make_shared<Statement>(statementNotate, tmpVars);
         }
         else
         {
-            node = new Variable(prop.at(pos));
+            node = make_shared<Variable>(prop.at(pos));
             pos++;
         }
     }

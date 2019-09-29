@@ -1,6 +1,6 @@
 #include "multior.h"
 
-MultiOr::MultiOr(list<Node *> listNodes) :
+MultiOr::MultiOr(list<shared_ptr<Node> > listNodes) :
     Node(nullptr, nullptr)
 {
     notation = "||";
@@ -26,14 +26,6 @@ string MultiOr::toString()
     return return_str;
 }
 
-Node *MultiOr::copy()
-{
-    list<Node *> tmplist;
-    for(auto *e : variables)
-        tmplist.push_back(e->copy());
-    return new MultiOr(tmplist);
-}
-
 bool MultiOr::getValue(string valList)
 {
     bool value = false;
@@ -45,7 +37,7 @@ bool MultiOr::getValue(string valList)
 }
 
 
-MultiOrNorm::MultiOrNorm(list<Node *> listNodes) :
+MultiOrNorm::MultiOrNorm(list<shared_ptr<Node> > listNodes) :
     MultiOr(listNodes)
 {
 

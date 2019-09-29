@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <list>
+#include "../../utils.h"
 
 using namespace std;
 
@@ -16,13 +17,13 @@ private:
     int id = -1;
 
 public:
-    STNode *left = nullptr;
-    STNode *right = nullptr;
+    shared_ptr<STNode> left = nullptr;
+    shared_ptr<STNode> right = nullptr;
     list<string> listVar;
-    list<Node *> nodes;
+    list<shared_ptr<Node> > nodes;
 
-    explicit STNode(Node *root = nullptr);
-    explicit STNode(list<Node *> &nodeList);
+    explicit STNode(shared_ptr<Node> root = nullptr);
+    explicit STNode(list<shared_ptr<Node> > &nodeList);
     ~STNode();
     string toString();
     void treeTraveler(ofstream &out, int rootId = -1);

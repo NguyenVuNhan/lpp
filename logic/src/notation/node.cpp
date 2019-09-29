@@ -6,96 +6,78 @@
 #include "negate.h"
 #include "value.h"
 
-Node *Node::copy()
-{
-    return nullptr;
-}
-
-Node *Node::cnfFilter(bool isNegation)
+shared_ptr<Node> Node::cnfFilter(bool isNegation)
 {
     if(isNegation)
     {
-        return new Negate(this->copy());
+        return make_shared<Negate>(shared_from_this());
     }
     else
     {
-        return this->copy();
+        return shared_from_this();
     }
 }
 
-Node *Node::cnfDistribution()
+shared_ptr<Node> Node::cnfDistribution()
 {
-    return this;
+    return shared_from_this();
 }
 
-void Node::getLeaf(list<Node *> &listNode)
+void Node::getLeaf(list<shared_ptr<Node>> &listNode)
 {
     if(right == nullptr)
-        listNode.push_back(this);
+        listNode.push_back(shared_from_this());
     else
     {
         left->getLeaf(listNode);
         right->getLeaf(listNode);
-        free(this);
     }
 }
 
-Node *Node::orSimplify(Node *l, Node *r)
+shared_ptr<Node> Node::orSimplify(shared_ptr<Node> l, shared_ptr<Node> r)
 {
     if(l->notation == "0" && r->notation == "0")
     {
-        delete l;
-        delete r;
-        return new Value("0");
+        return make_shared<Value>("0");
     }
     else if(l->notation == "1" || r->notation == "1")
     {
-        delete l;
-        delete r;
-        return new Value("1");
+        return make_shared<Value>("1");
     }
     else if(l->notation == "0")
     {
-        delete l;
         return r;
     }
     else if(r->notation == "0")
     {
-        delete r;
         return l;
     }
-    return new Or(l, r);
+    return make_shared<Or>(l, r);
 }
 
-Node *Node::andSimplify(Node *l, Node *r)
+shared_ptr<Node> Node::andSimplify(shared_ptr<Node> l, shared_ptr<Node> r)
 {
 
     if(l->notation == "0" || r->notation == "0")
     {
-        delete l;
-        delete r;
-        return new Value("0");
+        return make_shared<Value>("0");
     }
     else if(l->notation == "1" && r->notation == "1")
     {
-        delete l;
-        delete r;
-        return new Value("1");
+        return make_shared<Value>("1");
     }
     else if(l->notation == "1")
     {
-        delete l;
         return r;
     }
     else if(r->notation == "1")
     {
-        delete r;
         return l;
     }
-    return new And(l, r);
+    return make_shared<And>(l, r);
 }
 
-Node::Node(Node *left, Node *right)
+Node::Node(shared_ptr<Node> left, shared_ptr<Node> right)
     : left(left)
     , right(right)
 {
@@ -104,10 +86,7 @@ Node::Node(Node *left, Node *right)
 
 Node::~Node()
 {
-    variables.remove_if(deleteAll<Node>);
     variables.clear();
-    if (left != nullptr) delete left;
-    if (right != nullptr) delete right;
     left = nullptr;
     right = nullptr;
 }
@@ -156,12 +135,12 @@ bool Node::getValue(string valList)
     return true;
 }
 
-Node *Node::nandify(bool isNegation)
+shared_ptr<Node> Node::nandify(bool isNegation)
 {
     if(isNegation)
-        return new NAnd(this->copy(), new Value("1"));
+        return make_shared<NAnd>(shared_from_this(), make_shared<Value>("1"));
     else
-        return this->copy();
+        return shared_from_this();
 }
 
 RULES Node::getSTRuleName(bool isNegation)
@@ -169,7 +148,7 @@ RULES Node::getSTRuleName(bool isNegation)
     return NN;
 }
 
-void Node::getSTNodeChild(STNode *root, long pos, bool isNegation)
+void Node::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
     return;
 }

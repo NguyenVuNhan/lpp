@@ -6,15 +6,15 @@
 class Statement : public Node
 {
 public:
-    Statement(string notate, list<Node *> listNodes = list<Node *>());
-    Statement(char notate, list<Node *> variables = list<Node *>());
+    Statement(string notate, list<shared_ptr<Node> > listNodes = list<shared_ptr<Node> >());
+    Statement(char notate, list<shared_ptr<Node> > variables = list<shared_ptr<Node> >());
     ~Statement();
 
     // Node interface
 public:
     string toString();
     void setVariable(string fromVariable, string toVariable);
-    Node *copy();
+    shared_ptr<Node> copy();
 };
 
 #endif // STATEMENT_H

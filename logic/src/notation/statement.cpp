@@ -1,13 +1,13 @@
 #include "statement.h"
 
-Statement::Statement(string notate, list<Node *> listNodes)
+Statement::Statement(string notate, list<shared_ptr<Node> > listNodes)
     : Node(nullptr, nullptr)
 {
     variables = listNodes;
     notation = notate;
 }
 
-Statement::Statement(char notate, list<Node *> listNodes)
+Statement::Statement(char notate, list<shared_ptr<Node> > listNodes)
     : Node(nullptr, nullptr)
 {
     variables = listNodes;
@@ -48,10 +48,10 @@ void Statement::setVariable(string fromVariable, string toVariable)
     }
 }
 
-Node *Statement::copy()
+shared_ptr<Node> Statement::copy()
 {
-    list<Node *> tmplist;
-    for(auto *e : variables)
-        tmplist.push_back(e->copy());
-    return new Statement(notation, tmplist);
+    list<shared_ptr<Node> > tmplist;
+    for(auto e : variables)
+        tmplist.push_back(e);
+    return make_shared<Statement>(notation, tmplist);
 }

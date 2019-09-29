@@ -1,6 +1,6 @@
 #include "multiand.h"
 
-MultiAnd::MultiAnd(list<Node *> listNodes) :
+MultiAnd::MultiAnd(list<shared_ptr<Node> > listNodes) :
     Node(nullptr, nullptr)
 {
     notation = "&&";
@@ -26,14 +26,6 @@ string MultiAnd::toString()
     return "[ " + return_str + " ]";
 }
 
-Node *MultiAnd::copy()
-{
-    list<Node *> tmplist;
-    for(auto *e : variables)
-        tmplist.push_back(e->copy());
-    return new MultiAnd(tmplist);
-}
-
 bool MultiAnd::getValue(string valList)
 {
     bool value = true;
@@ -44,7 +36,7 @@ bool MultiAnd::getValue(string valList)
     return value;
 }
 
-MultiAndNorm::MultiAndNorm(list<Node *> listNodes) :
+MultiAndNorm::MultiAndNorm(list<shared_ptr<Node> > listNodes) :
     MultiAnd(listNodes)
 {
 

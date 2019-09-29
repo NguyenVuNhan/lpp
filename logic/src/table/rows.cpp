@@ -26,9 +26,9 @@ Rows::Rows(uintmax_t elem, bool value, uintmax_t strLen)
     this->value = value;
 }
 
-Node *Rows::toNode(list<string> label)
+shared_ptr<Node> Rows::toNode(list<string> label)
 {
-    list<Node *> tmpList;
+    list<shared_ptr<Node> > tmpList;
 
     for(uint i = 0; i < elem_str.size(); i++)
     {
@@ -37,17 +37,17 @@ Node *Rows::toNode(list<string> label)
         {
             if(val == '0')
             {
-                tmpList.push_back(new Negate(new Variable(*next(label.begin(), i))));
+                tmpList.push_back(make_shared<Negate>(make_shared<Variable>(*next(label.begin(), i))));
             }
             else
             {
-                tmpList.push_back(new Variable(*next(label.begin(), i)));
+                tmpList.push_back(make_shared<Variable>(*next(label.begin(), i)));
             }
         }
 
     }
 
-    return new MultiAndNorm(tmpList);
+    return make_shared<MultiAndNorm>(tmpList);
 }
 
 int Rows::is_match_pair(const Rows &other)

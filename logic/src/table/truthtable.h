@@ -19,7 +19,7 @@ protected:
 public:
     explicit TruthTable(Tree otherTree);
     explicit TruthTable(string prop="");
-    explicit TruthTable(Node *otherTree);
+    explicit TruthTable(shared_ptr<Node> otherTree);
     ~TruthTable();
 
     list<Rows> getTable();

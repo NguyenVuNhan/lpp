@@ -6,20 +6,19 @@
 class MultiAnd : public Node
 {
 public:
-    explicit MultiAnd(list<Node *> listNodes = list<Node *>());
+    explicit MultiAnd(list<shared_ptr<Node> > listNodes = list<shared_ptr<Node> >());
     ~MultiAnd() override;
 
     // Node interface
 public:
     virtual string toString() override;
-    Node *copy() override;
     bool getValue(string valList) override;
 };
 
 class MultiAndNorm : public MultiAnd
 {
 public:
-    explicit MultiAndNorm(list<Node *> listNodes = list<Node *>());
+    explicit MultiAndNorm(list<shared_ptr<Node> > listNodes = list<shared_ptr<Node> >());
     ~MultiAndNorm() override;
 public:
     string toString() override;

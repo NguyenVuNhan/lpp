@@ -11,9 +11,9 @@ private:
     void simplify();
 
 public:
-    explicit SimpleTable(Tree tree);
+    explicit SimpleTable(Tree root);
     explicit SimpleTable(string prop="");
-    explicit SimpleTable(Node *tree);
+    explicit SimpleTable(shared_ptr<Node> root);
     explicit SimpleTable(TruthTable truthTable);
 
 };

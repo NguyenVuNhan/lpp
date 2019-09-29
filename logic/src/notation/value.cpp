@@ -21,9 +21,9 @@ string Value::toString()
     return notation;
 }
 
-Node *Value::nandify(bool isNegation)
+shared_ptr<Node> Value::nandify(bool isNegation)
 {
-    return this;
+    return shared_from_this();
 }
 
 void Value::setVariable(string fromVariable, string toVariable)
@@ -31,19 +31,14 @@ void Value::setVariable(string fromVariable, string toVariable)
     return;
 }
 
-Node *Value::copy()
-{
-    return new Value(notation);
-}
-
-Node *Value::cnfFilter(bool isNegation)
+shared_ptr<Node> Value::cnfFilter(bool isNegation)
 {
     if(isNegation)
     {
-        return new Value(notation == "0" ? "1" : "0");
+        return make_shared<Value>(notation == "0" ? "1" : "0");
     }
     else
     {
-        return new Value(notation);
+        return make_shared<Value>(notation);
     }
 }

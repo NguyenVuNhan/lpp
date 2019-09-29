@@ -16,7 +16,7 @@ public:
     string elem_str;
     bool checked = false;
     Rows(uintmax_t elem_str, bool value, uintmax_t strLen=2);
-    Node *toNode(list<string> label);
+    shared_ptr<Node> toNode(list<string> label);
     int is_match_pair(const Rows &other);
     bool getValue();
     void setDontCare(uint pos);

@@ -5,16 +5,9 @@
 #include <list>
 #include <iomanip>
 #include <list>
+#include <memory>
 
 using namespace std;
-
-template<class T>
-bool deleteAll(T *e)
-{
-    delete e;
-    e = nullptr;
-    return true;
-}
 
 template<typename T = string>
 bool contains(list<T> &listOfElements, const T &element)
@@ -23,16 +16,16 @@ bool contains(list<T> &listOfElements, const T &element)
     return it != listOfElements.end();
 }
 
-template<class T>
-void listReplaceAt(list<T *> &mainList, list<T *> &tmpList, long pos)
+template<typename T>
+void listReplaceAt(list<shared_ptr<T> > &mainList, list<shared_ptr<T>> &tmpList, long pos)
 {
     auto it = next(mainList.begin(), pos);
     it = mainList.erase(it);
     mainList.splice(it, tmpList);
 }
 
-template<class TBase, class TDerrived>
-void listReplaceAt(list<TBase *> &mainList, TDerrived* tmpElem, long pos)
+template<typename T>
+void listReplaceAt(list<shared_ptr<T> > &mainList, shared_ptr<T> tmpElem, long pos)
 {
     auto it = next(mainList.begin(), pos);
     it = mainList.erase(it);
@@ -40,12 +33,12 @@ void listReplaceAt(list<TBase *> &mainList, TDerrived* tmpElem, long pos)
 }
 
 template<class T>
-list<T *> copyList(list<T *> &other)
+list<shared_ptr<T>> copyList(list<shared_ptr<T>> &other)
 {
-    list<T *> tmpList;
-    for(T *e : other)
+    list<shared_ptr<T>> tmpList;
+    for(auto e : other)
     {
-        tmpList.push_back(e->copy());
+        tmpList.push_back(e);
     }
     return tmpList;
 }

@@ -6,20 +6,19 @@
 class MultiOr : public Node
 {
 public:
-    explicit MultiOr(list<Node *> listNodes = list<Node *>());
+    explicit MultiOr(list<shared_ptr<Node> > listNodes = list<shared_ptr<Node> >());
     ~MultiOr() override;
 
     // Node interface
 public:
     string toString() override;
-    Node *copy() override;
     bool getValue(string valList) override;
 };
 
 class MultiOrNorm : public MultiOr
 {
 public:
-    explicit MultiOrNorm(list<Node *> listNodes = list<Node *>());
+    explicit MultiOrNorm(list<shared_ptr<Node> > listNodes = list<shared_ptr<Node> >());
     ~MultiOrNorm() override;
 public:
     string toString() override;

@@ -12,19 +12,19 @@ private:
     SemanticTableaux tableaux;
 
 protected:
-    Node *tree = nullptr;
+    shared_ptr<Node> tree = nullptr;
     list<string> varList;
     string prop_in;
-    virtual Node *getStatement(string prop, unsigned int &pos);
-    virtual Node *getNode(char notation);
-    virtual Node *parse(string prop, unsigned int &pos);
+    virtual shared_ptr<Node> getStatement(string prop, unsigned int &pos);
+    virtual shared_ptr<Node> getNode(char notation);
+    virtual shared_ptr<Node> parse(string prop, unsigned int &pos);
 
 public:
     explicit Tree(string prop="");
-    explicit Tree(Node *tree=nullptr);
+    explicit Tree(shared_ptr<Node> tree=nullptr);
     virtual ~Tree();
     
-    Node *getTree();
+    shared_ptr<Node> getTree();
     list<string> getListVariable();
     string getProposition();
     bool isTautology();

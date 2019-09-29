@@ -1,11 +1,9 @@
-#include "negate.h"
 #include "or.h"
-#include "nand.h"
+#include "negate.h"
 #include "and.h"
-#include "value.h"
-#include"../utils.h"
+#include "nand.h"
 
-Or::Or(Node *left, Node *right)
+Or::Or(shared_ptr<Node> left, shared_ptr<Node> right)
     : Node(left, right)
 {
     notation = '|';
@@ -20,14 +18,12 @@ bool Or::getValue(string valList)
     return left->getValue(valList) || right->getValue(valList);
 }
 
-Node *Or::nandify(bool isNegation)
+shared_ptr<Node> Or::nandify(bool isNegation)
 {
-    Node *notLeft = new Negate(left);
-    Node *notRight = new Negate(right);
+    shared_ptr<Node> notLeft = make_shared<Negate>(left);
+    shared_ptr<Node> notRight = make_shared<Negate>(right);
 
-    Node *ret = new NAnd(notLeft->nandify(), notRight->nandify());
-    free(notLeft);
-    free(notRight);
+    shared_ptr<Node> ret = make_shared<NAnd>(notLeft->nandify(), notRight->nandify());
 
     return ret;
 }
@@ -44,31 +40,26 @@ RULES Or::getSTRuleName(bool isNegation)
     }
 }
 
-void Or::getSTNodeChild(STNode *root, long pos, bool isNegation)
+void Or::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = new STNode(root->nodes);
+    root->left = make_shared<STNode>(root->nodes);
     if (!isNegation)
     {
-        root->right = new STNode(root->nodes);
+        root->right = make_shared<STNode>(root->nodes);
 
-        listReplaceAt(root->left->nodes, left->copy(), pos);
-        listReplaceAt(root->right->nodes, right->copy(), pos);
+        listReplaceAt(root->left->nodes, left, pos);
+        listReplaceAt(root->right->nodes, right, pos);
     }
     else
     {
-        list<Node *> tmp_list;
-        tmp_list.push_back(new Negate(left->copy()));
-        tmp_list.push_back(new Negate(right->copy()));
+        list<shared_ptr<Node> > tmp_list;
+        tmp_list.push_back(make_shared<Negate>(left));
+        tmp_list.push_back(make_shared<Negate>(right));
         listReplaceAt(root->left->nodes, tmp_list, pos);
     }
 }
 
-Node *Or::copy()
-{
-    return new Or(left->copy(), right->copy());
-}
-
-Node *Or::cnfFilter(bool isNegation)
+shared_ptr<Node> Or::cnfFilter(bool isNegation)
 {
     if(isNegation)
     {
@@ -80,61 +71,49 @@ Node *Or::cnfFilter(bool isNegation)
     }
 }
 
-Node *Or::cnfDistribution()
+shared_ptr<Node> Or::cnfDistribution()
 {
-    Node *l = nullptr;
-    Node *r = nullptr;
-    Node *ret = nullptr;
+    shared_ptr<Node> l = nullptr;
+    shared_ptr<Node> r = nullptr;
+    shared_ptr<Node> ret = nullptr;
 
     if(left->notation == "&")
     {
-        l = new Or(left->left, right);
-        r = new Or(left->right, right->copy());
-        free(left);
-        ret = new And(l, r);
+        l = make_shared<Or>(left->left, right);
+        r = make_shared<Or>(left->right, right);
+        ret = make_shared<And>(l, r);
     }
     else if(right->notation == "&")
     {
-        l = new Or(left, right->left);
-        r = new Or(left->copy(), right->right);
-        free(right);
-        ret = new And(l, r);
+        l = make_shared<Or>(left, right->left);
+        r = make_shared<Or>(left, right->right);
+        ret = make_shared<And>(l, r);
     }
     else
     {
-        Node *multiOr = getMultiOr();
+        shared_ptr<Node> multiOr = getMultiOr();
         if(multiOr != nullptr)
             return multiOr;
 
-        l = left->cnfDistribution();
-        r = right->cnfDistribution();
-        if(left->notation == "|")
-        {
-            free(left);
-        }
-        if(right->notation == "|")
-        {
-            free(right);
-        }
-        left = l;
-        right = r;
-        ret = this;
+        left = left->cnfDistribution();
+        right = right->cnfDistribution();
+        ret = shared_from_this();
     }
 
     return ret->cnfDistribution();
 }
 
-Node *Or::getMultiOr()
+shared_ptr<Node> Or::getMultiOr()
 {
     string notationList = "&=>%|&&||";
-    list<Node *> listNodes;
+    list<shared_ptr<Node> > listNodes;
     if(notationList.find(left->notation) == string::npos)
     {
         if(notationList.find(right->notation) == string::npos)
         {
             listNodes.push_back(left);
             listNodes.push_back(right);
-            return new MultiOr(listNodes);
+            return make_shared<MultiOr>(listNodes);
         }
         else if(right->notation == "||")
         {
@@ -148,7 +127,7 @@ Node *Or::getMultiOr()
         {
             listNodes.push_back(left);
             listNodes.push_back(right);
-            return new MultiOr(listNodes);
+            return make_shared<MultiOr>(listNodes);
         }
         else if(left->notation == "||")
         {

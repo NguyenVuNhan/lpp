@@ -2,15 +2,14 @@
 #include "../../notation/negate.h"
 #include "enum.h"
 
-SemanticTableaux::SemanticTableaux(Node *tree)
-    : tableaux(new STNode(tree))
+SemanticTableaux::SemanticTableaux(shared_ptr<Node> tree)
+    : tableaux(make_shared<STNode>(tree))
 {
     generateProof(tableaux);
 }
 
 SemanticTableaux::~SemanticTableaux()
 {
-    delete tableaux;
 }
 
 bool SemanticTableaux::ExportProof(string title, string filenname)
@@ -33,14 +32,14 @@ bool SemanticTableaux::isTautology()
     return tautology;
 }
 
-void SemanticTableaux::generateProof(STNode *root)
+void SemanticTableaux::generateProof(shared_ptr<STNode> root)
 {
     // set default rule to NAN (lowest piority) and rule location to 0
-    list<Node *>::iterator pos = root->nodes.begin();
+    list<shared_ptr<Node>>::iterator pos = root->nodes.begin();
     RULES rule = NN;
 
     // loop though all node in STNode to find the location of highest piority node
-    for (list<Node *>::iterator it = root->nodes.begin(); it != root->nodes.end(); it++)
+    for (auto it = root->nodes.begin(); it != root->nodes.end(); it++)
     {
         if((*it)->getSTRuleName() < rule)
         {

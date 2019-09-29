@@ -9,15 +9,15 @@
 class SemanticTableaux
 {
 public:
-    explicit SemanticTableaux(Node *tree = nullptr);
+    explicit SemanticTableaux(shared_ptr<Node> tree = nullptr);
     ~SemanticTableaux();
     bool ExportProof(string title, string filenname);
     bool isTautology();
 
 private:
     bool tautology = true;
-    STNode *tableaux;
-    void generateProof(STNode *root);
+    shared_ptr<STNode > tableaux;
+    void generateProof(shared_ptr<STNode > root);
 
 };
 

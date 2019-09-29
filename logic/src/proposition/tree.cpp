@@ -32,7 +32,7 @@ Tree::Tree(string prop)
     tree = this->parse(prop, pos);
 }
 
-Tree::Tree(Node *tree)
+Tree::Tree(shared_ptr<Node> tree)
 {
     this->tree = tree;
     prop_in = tree->toStringPrefix();
@@ -40,10 +40,10 @@ Tree::Tree(Node *tree)
 
 Tree::~Tree()
 {
-    if(tree != nullptr) delete tree;
+
 }
 
-Node *Tree::getTree()
+shared_ptr<Node> Tree::getTree()
 {
     return tree;
 }
@@ -108,49 +108,49 @@ bool Tree::exportProof(string title, string filenname)
     return tableaux.ExportProof(title, filenname);
 }
 
-Node *Tree::getStatement(string prop, unsigned int &pos)
+shared_ptr<Node> Tree::getStatement(string prop, unsigned int &pos)
 {
-    Node *node = nullptr;
+    shared_ptr<Node> node = nullptr;
 
     if(prop[pos] >= 48 && prop.data()[pos] <= 57)
-        node = new Value(prop.substr(pos, 1));
+        node = make_shared<Value>(prop.substr(pos, 1));
     else
-        node = new Variable(prop.substr(pos, 1));
+        node = make_shared<Variable>(prop.substr(pos, 1));
 
     pos++;
     return node;
 }
 
-Node *Tree::getNode(char notation)
+shared_ptr<Node> Tree::getNode(char notation)
 {
     switch (notation)
     {
     case '~':
-        return new Negate();
+        return make_shared<Negate>();
 
     case '>':
-        return new Implicate();
+        return make_shared<Implicate>();
 
     case '=':
-        return new BiImplicate();
+        return make_shared<BiImplicate>();
 
     case '&':
-        return new And();
+        return make_shared<And>();
 
     case '|':
-        return new Or();
+        return make_shared<Or>();
 
     case '%':
-        return new NAnd();
+        return make_shared<NAnd>();
 
     default:
         return nullptr;
     }
 }
 
-Node *Tree::parse(string prop, unsigned int &pos)
+shared_ptr<Node> Tree::parse(string prop, unsigned int &pos)
 {
-    Node *node = this->getNode(prop[pos]);
+    shared_ptr<Node> node = this->getNode(prop[pos]);
 
     if(node != nullptr)
     {

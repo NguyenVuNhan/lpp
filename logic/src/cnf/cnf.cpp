@@ -6,7 +6,7 @@
 #include "../notation/negate.h"
 #include "../notation/variable.h"
 
-CNF::CNF(Node *tree)
+CNF::CNF(shared_ptr<Node> tree)
 {
     tree = generateCNF(tree);
     tree = nodeToMultiAnd(tree);
@@ -22,10 +22,9 @@ CNF::CNF(string prop)
 
 CNF::~CNF()
 {
-    delete tree;
 }
 
-Node *CNF::getCNF()
+shared_ptr<Node> CNF::getCNF()
 {
     return tree;
 }
@@ -37,9 +36,9 @@ string CNF::getProposition()
     return proposition;
 }
 
-Node *CNF::parse(string prop)
+shared_ptr<Node> CNF::parse(string prop)
 {
-    Node *node = new MultiAnd();
+    shared_ptr<Node> node = make_shared<MultiAnd>();
 
     prop.erase(remove_if(prop.begin(), prop.end(),
                          [](char c)
@@ -58,22 +57,22 @@ Node *CNF::parse(string prop)
     return node;
 }
 
-Node *CNF::getMultiOr(string prop)
+shared_ptr<Node> CNF::getMultiOr(string prop)
 {
-    Node *node = new MultiOr();
+    shared_ptr<Node> node = make_shared<MultiOr>();
 
     for(char c : prop)
     {
         if('a' <= c && c <= 'z')
-            node->variables.push_back(new Negate(new Variable(char(toupper(c)))));
+            node->variables.push_back(make_shared<Negate>(make_shared<Variable>(char(toupper(c)))));
         else
-            node->variables.push_back(new Variable(char(toupper(c))));
+            node->variables.push_back(make_shared<Variable>(char(toupper(c))));
     }
 
     return node;
 }
 
-string CNF::getDavidPutnam(Node *tree, uint pos)
+string CNF::getDavidPutnam(shared_ptr<Node> tree, uint pos)
 {
     string variable = readList(varList, pos);
     tree->variables.remove_if(isUseless);
@@ -136,7 +135,7 @@ Resolution I_CNF::resolution(list<string> nodes, char v)
     return reso;
 }
 
-bool I_CNF::isUseless(Node *node)
+bool I_CNF::isUseless(shared_ptr<Node> node)
 {
     if(node->notation != "||") return false;
 
@@ -156,17 +155,17 @@ bool I_CNF::isUseless(Node *node)
     return false;
 }
 
-Node *I_CNF::nodeToMultiAnd(Node *node)
+shared_ptr<Node> I_CNF::nodeToMultiAnd(shared_ptr<Node> node)
 {
-    list<Node *> listNode;
+    list<shared_ptr<Node> > listNode;
     node->getLeaf(listNode);
-    return new MultiAnd(listNode);
+    return make_shared<MultiAnd>(listNode);
 }
 
-Node *I_CNF::generateCNF(Node *originTree)
+shared_ptr<Node> I_CNF::generateCNF(shared_ptr<Node> originTree)
 {
-    // New filtered tree will be create as a copy of origin tree
-    Node* tree = originTree->cnfFilter();
+    // make_shared<filtered tree will be create as a copy of origin tree
+    shared_ptr<Node> tree = originTree->cnfFilter();
     tree = tree->cnfDistribution();
     return tree;
 }

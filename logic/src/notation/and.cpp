@@ -3,9 +3,8 @@
 #include "nand.h"
 #include "value.h"
 #include "or.h"
-#include"../utils.h"
 
-And::And(Node *l, Node *r)
+And::And(shared_ptr<Node> l, shared_ptr<Node> r)
     : Node(l, r)
 {
     notation = '&';
@@ -28,51 +27,43 @@ RULES And::getSTRuleName(bool isNegation)
         return ALPHA;
 }
 
-Node *And::nandify(bool isNegation)
+shared_ptr<Node> And::nandify(bool isNegation)
 {
-    Node *ret;
+    shared_ptr<Node> ret;
     if(isNegation)
     {
-        Node *tmp = new NAnd(left, right);
+        shared_ptr<Node> tmp = make_shared<NAnd>(left, right);
         ret = tmp->nandify();
-        free(tmp);
     }
     else
     {
-        Node *tmp_1 = new NAnd(left, right);
-        Node *tmp_2 = new NAnd(tmp_1->nandify(), new Value("1"));
+        shared_ptr<Node> tmp_1 = make_shared<NAnd>(left, right);
+        shared_ptr<Node> tmp_2 = make_shared<NAnd>(tmp_1->nandify(), make_shared<Value>("1"));
         ret = tmp_2->nandify();
-        free(tmp_1);
-        free(tmp_2);
     }
     return ret;
 }
 
-void And::getSTNodeChild(STNode *root, long pos, bool isNegation)
+void And::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = new STNode(root->nodes);
+    root->left = make_shared<STNode>(root->nodes);
     if (isNegation)
     {
-        root->right = new STNode(root->nodes);
+        root->right = make_shared<STNode>(root->nodes);
 
-        listReplaceAt(root->left->nodes, new Negate(left->copy()), pos);
-        listReplaceAt(root->right->nodes, new Negate(right->copy()), pos);
+        listReplaceAt<Node>(root->left->nodes, make_shared<Negate>(left), pos);
+        listReplaceAt<Node>(root->right->nodes, make_shared<Negate>(right), pos);
     }
     else
     {
-        list<Node *> tmp_list;
-        tmp_list.push_back(left->copy());
-        tmp_list.push_back(right->copy());
-        listReplaceAt(root->left->nodes, tmp_list, pos);
+        list<shared_ptr<Node>> tmp_list;
+        tmp_list.push_back(left);
+        tmp_list.push_back(right);
+        listReplaceAt<Node>(root->left->nodes, tmp_list, pos);
     }
 }
 
-Node *And::copy()
-{
-    return new And(left->copy(), right->copy());
-}
-
-Node *And::cnfFilter(bool isNegation)
+shared_ptr<Node> And::cnfFilter(bool isNegation)
 {
     if(isNegation)
     {
@@ -84,20 +75,12 @@ Node *And::cnfFilter(bool isNegation)
     }
 }
 
-Node *And::cnfDistribution()
+shared_ptr<Node> And::cnfDistribution()
 {
-    Node *l = left->cnfDistribution();
-    Node *r = right->cnfDistribution();
-    if(left->notation == "|")
-    {
-        free(left);
-    }
-    if(right->notation == "|")
-    {
-        free(right);
-    }
+    shared_ptr<Node> l = left->cnfDistribution();
+    shared_ptr<Node> r = right->cnfDistribution();
     left = l;
     right = r;
 
-    return this;
+    return shared_from_this();
 }
