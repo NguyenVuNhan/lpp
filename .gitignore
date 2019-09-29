@@ -1,3 +1,9 @@
+# Locally created
+*.dot
+.vscode/
+*Test*
+*test*
+
 # Prerequisites
 *.d
 
