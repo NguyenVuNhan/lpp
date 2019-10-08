@@ -50,7 +50,7 @@ void Negate::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
     if (isNegation)
     {
-        listReplaceAt<Node>(root->nodes, left, pos);
+        left->getSTNodeChild(root, pos);
     }
     else
     {
@@ -68,4 +68,9 @@ shared_ptr<Node> Negate::cnfFilter(bool isNegation)
     {
         return left->cnfFilter(true);
     }
+}
+
+shared_ptr<Node> Negate::copy()
+{
+    return make_shared<Negate>(left->copy());
 }

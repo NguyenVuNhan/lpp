@@ -42,10 +42,10 @@ RULES Or::getSTRuleName(bool isNegation)
 
 void Or::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = make_shared<STNode>(root->nodes);
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
     if (!isNegation)
     {
-        root->right = make_shared<STNode>(root->nodes);
+        root->right = make_shared<STNode>(root->nodes, root->listVar);
 
         listReplaceAt(root->left->nodes, left, pos);
         listReplaceAt(root->right->nodes, right, pos);
@@ -101,6 +101,11 @@ shared_ptr<Node> Or::cnfDistribution()
     }
 
     return ret->cnfDistribution();
+}
+
+shared_ptr<Node> Or::copy()
+{
+    return make_shared<Or>(left->copy(), right->copy());
 }
 
 shared_ptr<Node> Or::getMultiOr()

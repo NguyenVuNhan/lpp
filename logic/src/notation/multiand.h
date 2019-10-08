@@ -12,7 +12,9 @@ public:
     // Node interface
 public:
     virtual string toString() override;
+    string toStringPrefix() override;
     bool getValue(string valList) override;
+    shared_ptr<Node> copy() override;
 };
 
 class MultiAndNorm : public MultiAnd
@@ -22,6 +24,7 @@ public:
     ~MultiAndNorm() override;
 public:
     string toString() override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // MULTIAND_H

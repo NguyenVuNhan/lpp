@@ -33,3 +33,8 @@ void Variable::setVariable(string fromVariable, string toVariable)
     if(notation == fromVariable)
         notation = toVariable;
 }
+
+shared_ptr<Node> Variable::copy()
+{
+    return make_shared<Variable>(notation);
+}

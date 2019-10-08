@@ -2,6 +2,7 @@
 #include <boost/python/make_constructor.hpp>
 
 #include "src/proposition/tree.h"
+#include "src/proposition/predicate.h"
 #include <boost/foreach.hpp>
 #ifndef foreach
     #define foreach BOOST_FOREACH
@@ -35,22 +36,10 @@ BOOST_PYTHON_MODULE(logic)
         .def("isTautology", &Tree::isTautology)
         .def("getListVariable", &Tree::getListVariable)
         .def("getProposition", &Tree::getProposition);
-        
-    // class_<logic>("logic", init<std::string>())
-    //     .def_readonly("proposition", &logic::proposition)
-    //     .def_readonly("variables", &logic::variables)
-    //     .def_readonly("truthTable", &logic::truthTable)
-    //     .def_readonly("simplifiedTable", &logic::simplifiedTable)
-    //     .def_readonly("dnf", &logic::dnf)
-    //     .def_readonly("nandify", &logic::nandify)
-    //     .def_readonly("cnf", &logic::cnf);
-
-    // class_<logic>("logic", init<string>())
-    //     .def("getProposition", &logic::getProposition)
-    //     .def("getVariables", &logic::getVariables)
-    //     .def("getTruthTable", &logic::getTruthTable)
-    //     .def("getSimplifiedTable", &logic::getSimplifiedTable)
-    //     .def("getDNF", &logic::getDNF)
-    //     .def("getNandify", &logic::getNandify)
-    //     .def("getCNF", &logic::getCNF);
+    class_<Predicate>("Predicate", init<std::string>())
+        .def("exportProof", &Tree::exportProof, args("title", "filenname"))
+        .def("exportGraph", &Tree::exportGraph, args("title", "filenname"))
+        .def("isTautology", &Tree::isTautology)
+        .def("getListVariable", &Tree::getListVariable)
+        .def("getProposition", &Tree::getProposition);
 }

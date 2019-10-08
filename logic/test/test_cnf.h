@@ -54,27 +54,46 @@ void test_list(list<T> l1, list<T> l2)
         EXPECT_EQ(*it1, *it2);
 }
 
+void test_resolution(const string &expectReso, const string &expectSubtituReso,
+                     const string &prop, const char &v)
+{
+    I_CNF icnf;
+    CNF cnf(prop);
+    Reso reso = icnf.resolution(cnf.getTree(), v);
+    EXPECT_EQ(expectReso, reso.resolution->toString());
+    EXPECT_EQ(expectSubtituReso, reso.subtituteSolution->toString());
+}
+
 TEST_F(testICNF, resolution)
 {
-    cnf = icnf.nodeToMultiAnd(cnf);
-    cnf->variables.remove_if(I_CNF::isUseless);
-    list<string> cnfStr;
-    for(auto e : cnf->variables)
-        cnfStr.push_back(e->toString());
+    test_resolution("[ bcd, Cbd, Cd ]", "[ A ]", "[Adb,acd,Cbd,Cd]", 'A');
+}
 
-    Resolution reso = icnf.resolution(cnfStr, 'c');
-    test_list(reso.resolution, {"BaD", "E", "BDa"});
+void test_nonJanus(const string &expectNode, const string &expectNonjanus,
+                     const string &prop, const char &v)
+{
+    I_CNF icnf;
+    CNF cnf(prop);
+    string non_janus = icnf.solveNonJanus(cnf.getTree(), v);
+    EXPECT_EQ(expectNode, cnf.getProposition());
+    EXPECT_EQ(expectNonjanus, non_janus);
+}
 
-    list<string> tmpCNFlist;
-    tmpCNFlist.push_back("PW");
-    tmpCNFlist.push_back("rV");
-    tmpCNFlist.push_back("pR");
-    tmpCNFlist.push_back("tu");
-    tmpCNFlist.push_back("Uw");
-    tmpCNFlist.push_back("pv");
-    tmpCNFlist.push_back("Ps");
-    tmpCNFlist.push_back("ST");
-    Resolution r2 = icnf.resolution(tmpCNFlist, 'p');
+TEST_F(testICNF, solveNonJanus)
+{
+
+    test_nonJanus("[ CDE, D, Ef, F ]", "A0", "[CDE, CDEa,D,Ef,F]", 'A');
+}
+
+TEST_F(testICNF, getDavidPutnam)
+{
+    Tree tree("&(E,>(A,|(&(B,C),&(D,~C))))");
+//    CNF cnf(tree.getTree());
+    CNF cnf("[CDE, CDEa,D,Ef,F]");
+//    cout << cnf.getProposition() << endl;
+    string dvpn = cnf.getDavidPutnam();
+    cout << cnf.getDavidPutnam() << endl;
+    EXPECT_TRUE(cnf.getValue(dvpn));
 }
 
 TEST(testCNFClass, parse)

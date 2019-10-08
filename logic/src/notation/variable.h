@@ -8,14 +8,14 @@ class Variable : public Node
 public:
     explicit Variable(string notate);
     explicit Variable(char notate);
-    ~Variable();
+    ~Variable() override;
 
     // Node interface
 public:
-    bool getValue(string valList);
-    string toString();
-    void setVariable(string fromVariable, string toVariable);
-    shared_ptr<Node> copy();
+    bool getValue(string valList) override;
+    string toString() override;
+    void setVariable(string fromVariable, string toVariable) override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // VARIABLE_H

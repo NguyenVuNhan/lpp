@@ -18,6 +18,7 @@ public:
     void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation) override;
     shared_ptr<Node> cnfFilter(bool isNegation = false) override;
     shared_ptr<Node> cnfDistribution() override;
+    shared_ptr<Node> copy() override;
 
 private:
     shared_ptr<Node> getMultiOr();

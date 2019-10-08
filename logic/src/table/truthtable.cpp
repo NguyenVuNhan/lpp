@@ -1,4 +1,5 @@
 #include <iomanip>
+#include <sstream>
 #include "truthtable.h"
 #include "../notation/multior.h"
 
@@ -17,7 +18,6 @@ void TruthTable::generateTable()
             it++;
             i--;
         }
-
         bool value = getValue(valList);
         Rows newRow = Rows(var, value, size);
 

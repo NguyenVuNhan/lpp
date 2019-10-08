@@ -38,10 +38,10 @@ RULES Implicate::getSTRuleName(bool isNegation)
 
 void Implicate::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = make_shared<STNode>(root->nodes);
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
     if (!isNegation)
     {
-        root->right = make_shared<STNode>(root->nodes);
+        root->right = make_shared<STNode>(root->nodes, root->listVar);
 
         listReplaceAt<Node>(root->left->nodes, make_shared<Negate>(left), pos);
         listReplaceAt<Node>(root->right->nodes, right, pos);
@@ -65,4 +65,9 @@ shared_ptr<Node> Implicate::cnfFilter(bool isNegation)
     {
         return orSimplify(left->cnfFilter(true), right->cnfFilter());
     }
+}
+
+shared_ptr<Node> Implicate::copy()
+{
+    return make_shared<Implicate>(left->copy(), right->copy());
 }

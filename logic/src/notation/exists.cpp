@@ -15,14 +15,16 @@ Exists::~Exists()
 
 string Exists::toString()
 {
-    return "(@" + left->toString() + '.' + right->toString() + ')';
+    return "(@" + left->toString() + ".(" + right->toString() + "))";
 }
 
 RULES Exists::getSTRuleName(bool isNegation)
 {
     if (isNegation)
     {
-        return GAMMA;
+        if(!isRulesReturned)
+            return GAMMA;
+        return NN;
     }
     else
     {
@@ -32,44 +34,58 @@ RULES Exists::getSTRuleName(bool isNegation)
 
 void Exists::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    if(!isRulesReturned)
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
+    if (isNegation)
     {
-        root->left = make_shared<STNode>(root->nodes);
-        if (isNegation)
+        if(!isRulesReturned)
         {
-            list<shared_ptr<Node> > tmp_list_l;
-            tmp_list_l.push_back(shared_from_this());
+            list<shared_ptr<Node>> tmp_list_l;
+            shared_ptr<Node> tmp = make_shared<Negate>(copy());
+            tmp->isRulesReturned = true;
+            tmp_list_l.push_back(tmp);
 
             for(string var : root->listVar)
             {
-                shared_ptr<Node> proposition = make_shared<Negate>(right);
+                shared_ptr<Node> proposition = right;
+                if(right->containedSpecialNode())
+                    proposition = make_shared<Negate>(right->copy());
+                else
+                    proposition =  make_shared<Negate>(right);
                 proposition->setVariable(left->notation, var);
                 tmp_list_l.push_back(proposition);
             }
 
             listReplaceAt<Node>(root->left->nodes, tmp_list_l, pos);
         }
-        else
-        {
-            list<shared_ptr<Node> > tmp_list_l;
-
-            int i = 1;
-            string newVar;
-            do
-            {
-                newVar = left->notation;
-                newVar += to_string(i++);
-            }
-            while(contains(root->listVar, newVar));
-
-            shared_ptr<Node> proposition = right;
-            proposition->setVariable(left->notation, newVar);
-            tmp_list_l.push_back(proposition);
-
-            listReplaceAt<Node>(root->left->nodes, tmp_list_l, pos);
-            root->left->listVar.push_back(newVar);
-        }
-
-        isRulesReturned = true;
     }
+    else
+    {
+        list<shared_ptr<Node> > tmp_list_l;
+
+        int i = 1;
+        string newVar;
+        do
+        {
+            newVar = left->notation;
+            newVar += to_string(i++);
+        }
+        while(contains(root->listVar, newVar));
+
+        shared_ptr<Node> proposition;
+        if(right->containedSpecialNode())
+            proposition = right->copy();
+        else
+            proposition = right;
+        proposition->setVariable(left->notation, newVar);
+        tmp_list_l.push_back(proposition);
+
+        listReplaceAt<Node>(root->left->nodes, tmp_list_l, pos);
+        root->left->listVar.push_back(newVar);
+    }
+}
+
+
+shared_ptr<Node> Exists::copy()
+{
+    return make_shared<Exists>(left->copy(), right->copy());
 }

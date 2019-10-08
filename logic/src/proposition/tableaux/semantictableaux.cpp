@@ -34,6 +34,9 @@ bool SemanticTableaux::isTautology()
 
 void SemanticTableaux::generateProof(shared_ptr<STNode> root)
 {
+//    for(auto e : root->nodes)
+//        cout << e->toString() << endl;
+//    cout << endl;
     // set default rule to NAN (lowest piority) and rule location to 0
     list<shared_ptr<Node>>::iterator pos = root->nodes.begin();
     RULES rule = NN;
@@ -41,7 +44,7 @@ void SemanticTableaux::generateProof(shared_ptr<STNode> root)
     // loop though all node in STNode to find the location of highest piority node
     for (auto it = root->nodes.begin(); it != root->nodes.end(); it++)
     {
-        if((*it)->getSTRuleName() < rule)
+        if((*it)->getSTRuleName() < rule && !(*it)->isRulesReturned)
         {
             pos = it;
             rule = (*it)->getSTRuleName();
@@ -56,12 +59,10 @@ void SemanticTableaux::generateProof(shared_ptr<STNode> root)
         (*pos)->getSTNodeChild(root, distance(root->nodes.begin(), pos));
         if(root->left != nullptr)
         {
-            string tmp = root->left->toString();
             generateProof(root->left);
         }
         if(root->right != nullptr)
         {
-            string tmp = root->right->toString();
             generateProof(root->right);
         }
     }
@@ -72,11 +73,13 @@ void SemanticTableaux::generateProof(shared_ptr<STNode> root)
         {
             for(auto i = root->nodes.begin(); i != root->nodes.end(); ++i)
                 for(auto j = i; ++j != root->nodes.end();)
-                    if(((*i)->toString() == ('~' + (*j)->toString())) ||
-                            ((*j)->toString() == ('~' + (*i)->toString())))
+                {
+                    string i_str = (*i)->toString();
+                    string j_str = (*j)->toString();
+                    if((i_str == ('~' + j_str)) || (('~' + i_str) == j_str))
                             return;
+                }
             tautology = false;
         }
-        return;
     }
 }

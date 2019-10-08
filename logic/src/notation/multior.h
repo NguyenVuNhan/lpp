@@ -12,7 +12,9 @@ public:
     // Node interface
 public:
     string toString() override;
+    string toStringPrefix() override;
     bool getValue(string valList) override;
+    shared_ptr<Node> copy() override;
 };
 
 class MultiOrNorm : public MultiOr
@@ -22,6 +24,7 @@ public:
     ~MultiOrNorm() override;
 public:
     string toString() override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // MULTIOR_H

@@ -26,6 +26,11 @@ string MultiOr::toString()
     return return_str;
 }
 
+string MultiOr::toStringPrefix()
+{
+    return toString();
+}
+
 bool MultiOr::getValue(string valList)
 {
     bool value = false;
@@ -34,6 +39,14 @@ bool MultiOr::getValue(string valList)
         value |= e->getValue(valList);
 
     return value;
+}
+
+shared_ptr<Node> MultiOr::copy()
+{
+    list<shared_ptr<Node> > tmplist;
+    for(auto e : variables)
+        tmplist.push_back(e->copy());
+    return make_shared<MultiOr>(tmplist);
 }
 
 
@@ -64,4 +77,12 @@ string MultiOrNorm::toString()
         return return_str;
     else
         return '(' + return_str + ')';
+}
+
+shared_ptr<Node> MultiOrNorm::copy()
+{
+    list<shared_ptr<Node> > tmplist;
+    for(auto e : variables)
+        tmplist.push_back(e->copy());
+    return make_shared<MultiOrNorm>(tmplist);
 }

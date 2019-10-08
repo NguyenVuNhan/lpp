@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <list>
 #include <memory>
+#include <iostream>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ void listReplaceAt(list<shared_ptr<T> > &mainList, list<shared_ptr<T>> &tmpList,
     auto it = next(mainList.begin(), pos);
     it = mainList.erase(it);
     mainList.splice(it, tmpList);
+//    std::cout << (*(++tmpList.begin()))->isRulesReturned ? "T\n" : "F\n";
 }
 
 template<typename T>
@@ -30,17 +32,6 @@ void listReplaceAt(list<shared_ptr<T> > &mainList, shared_ptr<T> tmpElem, long p
     auto it = next(mainList.begin(), pos);
     it = mainList.erase(it);
     mainList.insert(it, tmpElem);
-}
-
-template<class T>
-list<shared_ptr<T>> copyList(list<shared_ptr<T>> &other)
-{
-    list<shared_ptr<T>> tmpList;
-    for(auto e : other)
-    {
-        tmpList.push_back(e);
-    }
-    return tmpList;
 }
 
 template<typename T>

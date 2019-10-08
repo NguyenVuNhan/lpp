@@ -18,11 +18,11 @@ private:
     int id = -1;
 
 protected:
-    bool isRulesReturned = false;
     shared_ptr<Node> orSimplify(shared_ptr<Node> l, shared_ptr<Node> r);
     shared_ptr<Node> andSimplify(shared_ptr<Node> l, shared_ptr<Node> r);
 
 public:
+    bool isRulesReturned = false;
     shared_ptr<Node> left = nullptr;
     shared_ptr<Node> right = nullptr;
     list<shared_ptr<Node>> variables;
@@ -37,7 +37,7 @@ public:
      * @param rootId Parrent Id, equal to -1 by default if there is no parent
      */
     void treeTraveler(ofstream &out, int rootId = -1);
-    string toStringPrefix();
+    virtual string toStringPrefix();
     virtual string toString();
     virtual bool getValue(string valList);
     virtual shared_ptr<Node> nandify(bool isNegation = false);
@@ -47,5 +47,7 @@ public:
     virtual shared_ptr<Node> cnfFilter(bool isNegation = false);
     virtual shared_ptr<Node> cnfDistribution();
     virtual void getLeaf(list<shared_ptr<Node>> &listNode);
+    virtual shared_ptr<Node> copy();
+    virtual bool containedSpecialNode();
 };
 #endif // NODE_H

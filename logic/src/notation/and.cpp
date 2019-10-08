@@ -46,10 +46,10 @@ shared_ptr<Node> And::nandify(bool isNegation)
 
 void And::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = make_shared<STNode>(root->nodes);
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
     if (isNegation)
     {
-        root->right = make_shared<STNode>(root->nodes);
+        root->right = make_shared<STNode>(root->nodes, root->listVar);
 
         listReplaceAt<Node>(root->left->nodes, make_shared<Negate>(left), pos);
         listReplaceAt<Node>(root->right->nodes, make_shared<Negate>(right), pos);
@@ -83,4 +83,9 @@ shared_ptr<Node> And::cnfDistribution()
     right = r;
 
     return shared_from_this();
+}
+
+shared_ptr<Node> And::copy()
+{
+    return make_shared<And>(left->copy(), right->copy());
 }

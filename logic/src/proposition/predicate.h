@@ -14,7 +14,6 @@ protected:
     shared_ptr<Node> getStatement(string prop, unsigned int &pos);
     shared_ptr<Node> getNode(char notation);
     shared_ptr<Node> parse(string prop, unsigned int &pos);
-
 };
 
 #endif // PREDICATE_H

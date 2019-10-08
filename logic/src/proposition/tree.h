@@ -25,7 +25,7 @@ public:
     virtual ~Tree();
     
     shared_ptr<Node> getTree();
-    list<string> getListVariable();
+    virtual list<string> getListVariable();
     string getProposition();
     bool isTautology();
     bool getValue(string valList);

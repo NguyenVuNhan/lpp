@@ -24,10 +24,10 @@ RULES NAnd::getSTRuleName(bool isNegation)
 
 void NAnd::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = make_shared<STNode>(root->nodes);
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
     if (!isNegation)
     {
-        root->right = make_shared<STNode>(root->nodes);
+        root->right = make_shared<STNode>(root->nodes, root->listVar);
 
         listReplaceAt<Node>(root->left->nodes, make_shared<Negate>(left), pos);
         listReplaceAt<Node>(root->right->nodes, make_shared<Negate>(right), pos);
@@ -51,6 +51,11 @@ shared_ptr<Node> NAnd::cnfFilter(bool isNegation)
     {
         return orSimplify(left->cnfFilter(true), right->cnfFilter(true));
     }
+}
+
+shared_ptr<Node> NAnd::copy()
+{
+    return make_shared<NAnd>(left->copy(), right->copy());
 }
 
 bool NAnd::getValue(string valList)

@@ -34,8 +34,8 @@ shared_ptr<Node> BiImplicate::nandify(bool isNegation)
 
 void BiImplicate::getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation)
 {
-    root->left = make_shared<STNode>(root->nodes);
-    root->right = make_shared<STNode>(root->nodes);
+    root->left = make_shared<STNode>(root->nodes, root->listVar);
+    root->right = make_shared<STNode>(root->nodes, root->listVar);
     if (isNegation)
     {
         list<shared_ptr<Node>> tmp_list_l;
@@ -74,4 +74,9 @@ shared_ptr<Node> BiImplicate::cnfFilter(bool isNegation)
         return andSimplify(orSimplify(left->cnfFilter(true), right->cnfFilter()),
                            orSimplify(left->cnfFilter(), right->cnfFilter(true)));
     }
+}
+
+shared_ptr<Node> BiImplicate::copy()
+{
+    return make_shared<BiImplicate>(left->copy(), right->copy());
 }

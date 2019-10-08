@@ -2,23 +2,49 @@
 #include "../../notation/node.h"
 #include "../../notation/negate.h"
 
+void STNode::copyList(list<shared_ptr<Node> > &other)
+{
+    for(auto e : other)
+    {
+        if(e->containedSpecialNode())
+        {
+            if(e->isRulesReturned)
+            {
+                shared_ptr<Node> tmp = e->copy();
+                tmp->isRulesReturned = true;
+                nodes.push_back(tmp);
+            }
+            else
+            {
+                nodes.push_back(e->copy());
+            }
+        }
+        else
+            nodes.push_back(e);
+    }
+}
+
 STNode::STNode(shared_ptr<Node> root)
 {
     left = nullptr;
     right = nullptr;
     if(root == nullptr) return;
 
-    nodes.push_back(make_shared<Negate>(root));
+    if(root->containedSpecialNode())
+        nodes.push_back(make_shared<Negate>(root->copy()));
+    else
+        nodes.push_back(make_shared<Negate>(root));
 
     static int _id = 0;
     id = _id++;
 }
 
-STNode::STNode(list<shared_ptr<Node> > &nodeList)
+STNode::STNode(list<shared_ptr<Node> > &nodeList, list<string> otherListVar)
 {
     left = nullptr;
     right = nullptr;
-    nodes = copyList<Node>(nodeList);
+    copyList(nodeList);
+    listVar = otherListVar;
 
     static int _id = 0;
     id = _id++;
@@ -60,21 +86,18 @@ void STNode::treeTraveler(ofstream &out, int rootId)
     if(rootId != -1)
         out << "\tnode" << rootId << " -- node" << id << endl;
 
+    out << "\tnode" << id << "[label=" << "\"" << this->toString() << "\"]\n";
     if(left == nullptr && right == nullptr)
     {
-        out << "\tnode" << id << "[label=" << "\"" << this->toString() << "\"]\n";
-
-//        int newId = _id++;
-//        out << "\tnode" << id << " -- node" << newId << endl;
-//        out << "\tnode" << newId << "[label=\" X \" fontcolor=\"#F3360D\" color=\"#F3360D\"]\n";
+        static int _id = 0;
+        int newId = _id++;
+        out << "\tnode" << id << " -- node" << newId << endl;
+        out << "\tnode" << newId << "[label=\" X \" fontcolor=\"#F3360D\" color=\"#F3360D\"]\n";
         return;
-    }
-    else
-    {
-        out << "\tnode" << id << "[label=" << "\"" << this->toString() << "\"]\n";
     }
     if(left != nullptr)
         left->treeTraveler(out, id);
     if(right != nullptr)
         right->treeTraveler(out, id);
 }
+

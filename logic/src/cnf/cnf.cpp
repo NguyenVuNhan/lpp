@@ -6,13 +6,15 @@
 #include "../notation/negate.h"
 #include "../notation/variable.h"
 
-CNF::CNF(shared_ptr<Node> tree)
+CNF::CNF(shared_ptr<Node> otherTree)
+    : Tree(otherTree)
 {
     tree = generateCNF(tree);
     tree = nodeToMultiAnd(tree);
 }
 
 CNF::CNF(string prop)
+    : Tree("")
 {
     if (prop == "")
         return;
@@ -24,16 +26,38 @@ CNF::~CNF()
 {
 }
 
-shared_ptr<Node> CNF::getCNF()
+string CNF::getDavidPutnam()
 {
-    return tree;
+    string result = "";
+    getListVariable();
+    getDavidPutnam(tree, 0, result);
+    return result;
 }
 
-string CNF::getProposition()
+list<string> CNF::getListVariable()
 {
-    if(proposition == "")
-        proposition = tree->toString();
-    return proposition;
+    if(varList.size() == 0)
+    {
+        string prop = prop_in;
+        for (uint i = 0; i < prop.size(); ++i) {
+            if(prop[i] >= 'a' && prop[i] <= 'z')
+            {
+                prop[i] = char(toupper(prop[i]));
+            }
+            else if(!(prop[i] >= 'A' && prop[i] <= 'Z')) prop.erase(i--, 1);
+        }
+        while (prop != "")
+        {
+            string currentChar = string(1, prop.at(0));
+            if(!contains(varList, currentChar))
+            {
+                varList.push_back(currentChar);
+            }
+            prop.erase(0,1);
+        }
+        varList.sort();
+    }
+    return varList;
 }
 
 shared_ptr<Node> CNF::parse(string prop)
@@ -72,65 +96,113 @@ shared_ptr<Node> CNF::getMultiOr(string prop)
     return node;
 }
 
-string CNF::getDavidPutnam(shared_ptr<Node> tree, uint pos)
+void CNF::getDavidPutnam(shared_ptr<Node> cnf, uint pos, string &result)
 {
-    string variable = readList(varList, pos);
-    tree->variables.remove_if(isUseless);
-
-}
-
-Resolution I_CNF::resolution(list<string> nodes, char v)
-{
-    Resolution reso;
-    char v_upper = char(toupper(v));
-    char v_lower = char(tolower(v));
-
-    bool resolutionApplied = false;
-    bool remove_i;
-    for(auto i = nodes.begin(), end = nodes.end();
-        i != end; ++i)
+    //Pick next variable
+    char v = readList(varList, pos).at(0);
+    // remove useless
+    cnf->variables.remove_if(isUseless);
+    cout << "Remove useless: " << cnf->toString() << endl;
+    // solve non-janus
+    string non_janus = solveNonJanus(cnf, v);
+    cout << "Solve Non-Janus: " << non_janus << ' ' << cnf->toString() << endl;
+    if(findJanus(cnf))
+        result = "UNSAT";
+    if(result != "UNSAT" && pos+1 < varList.size())
     {
-        remove_i = false;
-        for (auto j = next(i); j != end; ++j)
+        Reso reso = resolution(cnf, v);
+        cout << "Resolution: " << reso.resolution->toString() << endl;
+        getDavidPutnam(reso.resolution, pos+1, result);
+        if(result != "UNSAT")
         {
-            if(isContain(*i, v_upper))
+            if(non_janus != "")
             {
-                if(isContain(*j, v_lower))
-                {
-                    remove((*i).begin(), (*i).end(), v_upper);
-                    remove((*j).begin(), (*j).end(), v_lower);
-                    reso.resolution.push_back(getUniqueString((*i)+(*j)));
-
-                    resolutionApplied = true;
-                    remove_i = true;
-                    j = nodes.erase(j);
-                }
+                result = non_janus + result;
             }
-            else if(isContain(*i, v_lower))
+            else
             {
-                if(isContain(*j, v_upper))
-                {
-                    remove((*i).begin(), (*i).end(), v_lower);
-                    remove((*j).begin(), (*j).end(), v_upper);
-                    reso.resolution.push_back(getUniqueString((*i)+(*j)));
-
-                    resolutionApplied = true;
-                    remove_i = true;
-                    j = nodes.erase(j);
-                }
+                result = '1' + result;
+                result = v + result;
             }
-        }
-        if(remove_i)
-        {
-            i = nodes.erase(i);
         }
     }
-    reso.resolution.splice(reso.resolution.end(), nodes);
+}
 
+string I_CNF::solveNonJanus(shared_ptr<Node> node, char v)
+{
+    string non_janus;
+    string node_str = node->toString();
+
+    char _uv = char(toupper(v));
+    char _lv = char(tolower(v));
+    string _v = "";
+    if(node_str.find(_uv) != string::npos && node_str.find(_lv) == string::npos)
+    {
+        _v += _uv;
+        non_janus += _uv;
+        non_janus += "1";
+    }
+    else if(node_str.find(_uv) == string::npos && node_str.find(_lv) != string::npos)
+    {
+        _v += _lv;
+        non_janus += _uv;
+        non_janus += "0";
+    }
+
+    node->variables.remove_if([_v](shared_ptr<Node> e)
+                              {
+                                  return e->toString().find(_v) != string::npos;
+                              });
+
+    node->variables.sort([](const shared_ptr<Node> &node1, const shared_ptr<Node> &node2)
+    {
+        char node1_chr = node1->notation == "~" ? char(node1->left->notation[0] + 32) : node1->notation.at(0);
+        char node2_chr = node2->notation == "~" ? char(node2->left->notation[0] + 32) : node2->notation.at(0);
+        return node1_chr < node2_chr;
+    });
+    return non_janus;
+}
+
+Reso I_CNF::resolution(shared_ptr<Node> node, char v)
+{
+    Reso reso;
+    string _v = string(1, char(toupper(v)));
+    string _not_v = '~' + _v;
+
+    bool resolutionApplied = false;
+    bool merged;
+    for(auto i = node->variables.begin(), end = node->variables.end();
+        i != end; ++i)
+    {
+        merged = false;
+        for (auto j = next(i); j != end; ++j)
+        {
+            if(isContain(*i, _v) && isContain(*j, _not_v))
+            {
+                reso.resolution->variables.push_back(mergeNode((*i), (*j), _v, _not_v));
+
+                resolutionApplied = true;
+                merged = true;
+                j = node->variables.erase(j);
+            }
+            else if(isContain(*i, _not_v) && isContain(*j, _v))
+            {
+                reso.resolution->variables.push_back(mergeNode((*i), (*j), _v, _not_v));
+
+                resolutionApplied = true;
+                merged = true;
+                j = node->variables.erase(j);
+            }
+        }
+        if(!merged)
+        {
+            reso.resolution->variables.push_back((*i));
+        }
+    }
 
     if(resolutionApplied)
     {
-        reso.subtituteSolution.push_back(string(1, v_lower));
+        reso.subtituteSolution->variables.push_back(make_shared<Variable>(v));
     }
     return reso;
 }
@@ -168,4 +240,58 @@ shared_ptr<Node> I_CNF::generateCNF(shared_ptr<Node> originTree)
     shared_ptr<Node> tree = originTree->cnfFilter();
     tree = tree->cnfDistribution();
     return tree;
+}
+
+bool I_CNF::findJanus(shared_ptr<Node> node)
+{
+    string singleNode = "";
+    for(auto e : node->variables)
+    {
+        if(e->variables.size() == 1)
+            singleNode += e->toString();
+    }
+
+    for(auto c : singleNode)
+        if('a' <= c && c <= 'z')
+        {
+            if(singleNode.find(char(toupper(c))) != string::npos)
+                return true;
+        }
+        else
+        {
+            if(singleNode.find(char(tolower(c))) != string::npos)
+                return true;
+        }
+    return false;
+}
+
+bool I_CNF::isContain(shared_ptr<Node> nodes, string v)
+{
+    for(auto e : nodes->variables)
+        if( e->toString() == v )
+            return true;
+    return false;
+}
+
+shared_ptr<Node> I_CNF::mergeNode(shared_ptr<Node> node1, shared_ptr<Node> node2, string v, string not_v)
+{
+    string tmpStr = "";
+    shared_ptr<Node> retNode = make_shared<MultiOr>();
+
+    for(auto e : node1->variables)
+        if(e->toString() != v && e->toString() != not_v)
+            retNode->variables.push_back(e);
+
+    for(auto e : node2->variables)
+        if(!isContain(retNode, e->toString()) && e->toString() != v && e->toString() != not_v)
+            retNode->variables.push_back(e);
+
+    retNode->variables.sort([](const shared_ptr<Node> &node1, const shared_ptr<Node> &node2)
+    {
+        char node1_chr = node1->notation == "~" ? char(node1->left->notation[0] + 32) : node1->notation.at(0);
+        char node2_chr = node2->notation == "~" ? char(node2->left->notation[0] + 32) : node2->notation.at(0);
+        return node1_chr < node2_chr;
+    });
+
+    return retNode;
 }

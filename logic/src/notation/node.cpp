@@ -34,6 +34,25 @@ void Node::getLeaf(list<shared_ptr<Node>> &listNode)
     }
 }
 
+shared_ptr<Node> Node::copy()
+{
+    cout << notation << endl;
+    return shared_from_this();
+}
+
+bool Node::containedSpecialNode()
+{
+    if(left != nullptr && left->containedSpecialNode())
+    {
+        return true;
+    }
+    else if(right != nullptr && right->containedSpecialNode())
+    {
+        return true;
+    }
+    return false;
+}
+
 shared_ptr<Node> Node::orSimplify(shared_ptr<Node> l, shared_ptr<Node> r)
 {
     if(l->notation == "0" && r->notation == "0")

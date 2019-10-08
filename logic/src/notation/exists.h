@@ -14,6 +14,7 @@ public:
     string toString() override;
     RULES getSTRuleName(bool isNegation) override;
     void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation) override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // EXISTS_H

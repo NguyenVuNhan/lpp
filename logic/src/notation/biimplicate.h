@@ -16,6 +16,7 @@ public:
     shared_ptr<Node> nandify(bool isNegation) override;
     void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation) override;
     shared_ptr<Node> cnfFilter(bool isNegation = false) override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // BIIMPLICATION_H

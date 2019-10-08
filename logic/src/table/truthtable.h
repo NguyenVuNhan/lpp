@@ -25,6 +25,7 @@ public:
     list<Rows> getTable();
     string getHashCode();
     Tree getNormalize();
+
 };
 
 #endif // TRUTHTABLE_H

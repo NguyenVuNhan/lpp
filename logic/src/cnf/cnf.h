@@ -4,38 +4,46 @@
 #include "../notation/multiand.h"
 #include "../proposition/tree.h"
 
-struct Resolution
+struct Reso
 {
-    list<string> resolution;
-    list<string> subtituteSolution;
+    shared_ptr<Node> resolution = make_shared<MultiAnd>();
+    shared_ptr<Node> subtituteSolution = make_shared<MultiAnd>();
+};
+
+struct Janus
+{
+    shared_ptr<Node> cnf = make_shared<MultiAnd>();
+    string non_janus = "";
 };
 
 struct I_CNF
 {
-    Resolution resolution(list<string> nodes, char v);
+    string solveNonJanus(shared_ptr<Node> node, char v);
+    Reso resolution(shared_ptr<Node> node, char v);
     static bool isUseless(shared_ptr<Node> node);
     shared_ptr<Node> nodeToMultiAnd(shared_ptr<Node> node);
     shared_ptr<Node> generateCNF(shared_ptr<Node> originTree);
+protected:
+    bool findJanus(shared_ptr<Node> node);
+private:
+    bool isContain(shared_ptr<Node> nodes, string v);
+    shared_ptr<Node> mergeNode(shared_ptr<Node> node1, shared_ptr<Node> node2, string v, string not_v);
 };
 
-class CNF : protected I_CNF
+class CNF : protected I_CNF,
+            public Tree
 {
 public:
-    CNF(shared_ptr<Node> tree);
+    CNF(shared_ptr<Node> otherTree);
     CNF(string prop="");
-    ~CNF();
-
-    shared_ptr<Node> getCNF();
-    string getProposition();
+    ~CNF() override;
+    string getDavidPutnam();
+    list<string> getListVariable() override;
 
 private:
-    string proposition = "";
-    string prop_in = "";
-    list<string> varList;
-    shared_ptr<Node> tree = nullptr;
     shared_ptr<Node> parse(string prop);
     shared_ptr<Node> getMultiOr(string prop);
-    string getDavidPutnam(shared_ptr<Node> tree, uint pos);
+    void getDavidPutnam(shared_ptr<Node> tree, uint pos, string &result);
 };
 
 #endif // CNF_H

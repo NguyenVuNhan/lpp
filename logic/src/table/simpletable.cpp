@@ -22,6 +22,8 @@ SimpleTable::SimpleTable(shared_ptr<Node> root)
 SimpleTable::SimpleTable(TruthTable truthTable)
 {
     table = truthTable.getTable();
+    tree = truthTable.getTree();
+    prop_in = tree->toStringPrefix();
     simplify();
 }
 
@@ -43,8 +45,8 @@ list<list<Rows> > SimpleTable::getAllRowsGroup()
 {
     list<list<Rows> > groupRows;
 
-    uint nrOfVariable = static_cast<uint>(log2(table.size()));
-    for (uint i = 0; i <= nrOfVariable; i++)
+    ulong nrOfVariable = getListVariable().size();
+    for (ulong i = 0; i <= nrOfVariable; i++)
     {
         groupRows.push_back(list<Rows>());
     }
@@ -52,7 +54,7 @@ list<list<Rows> > SimpleTable::getAllRowsGroup()
     for (Rows row : table)
     {
         int count = 0;
-        for (uint k = 0; k < nrOfVariable; k++)
+        for (ulong k = 0; k < nrOfVariable; k++)
         {
             if(row.elem_str[k] == '1')
             {

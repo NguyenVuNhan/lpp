@@ -16,6 +16,8 @@
 #include "../src/notation/value.h"
 #include "../src/notation/variable.h"
 #include "../src/notation/statement.h"
+#include "../src/notation/multiand.h"
+#include "../src/notation/multior.h"
 
 TEST(NotationTest, getValue)
 {
@@ -24,6 +26,19 @@ TEST(NotationTest, getValue)
 
     a = make_shared<Variable>("A");
     EXPECT_TRUE(a->getValue("A1")) << "\t--> Test class Variable";
+
+    list<shared_ptr<Node>> variables;
+    variables.push_back(a);
+    variables.push_back(make_shared<Variable>("B"));
+    variables.push_back(make_shared<Variable>("C"));
+    variables.push_back(make_shared<Variable>("D"));
+    variables.push_back(make_shared<Variable>("E"));
+    variables.push_back(make_shared<Variable>("F"));
+    variables.push_back(make_shared<Variable>("G"));
+    variables.push_back(make_shared<Variable>("H"));
+    shared_ptr<Node> multiAnd = make_shared<MultiAnd>(variables);
+    EXPECT_TRUE(multiAnd->getValue("A1B1C1D1E1F1G1H1")) << "\t--> Test class MultiAnd";
+
 
     a = make_shared<And>(a, make_shared<Variable>("B"));
     EXPECT_FALSE(a->getValue("A1B0")) << "\t--> Test class And";
@@ -48,11 +63,11 @@ TEST(NotationTest, setVariable)
 {
     shared_ptr<Node> a = make_shared<Statement>("A", list<shared_ptr<Node> >({make_shared<Variable>("c"), make_shared<Variable>("b")}));
     a->setVariable("c", "a");
-    EXPECT_EQ("A(a,b)", a->toString());
+    EXPECT_EQ("Aab", a->toString());
 
     a = make_shared<And>(make_shared<Variable>("a"), a);
     a->setVariable("a", "c");
-    EXPECT_EQ("(c&A(c,b))", a->toString());
+    EXPECT_EQ("(c&Acb)", a->toString());
 }
 
 TEST(NotationTest, getSTRuleName)
@@ -104,6 +119,27 @@ TEST(NotationTest, getSTRuleName)
 
     node = make_shared<ForAll>(make_shared<Variable>("x"), make_shared<Statement>("A", list<shared_ptr<Node>>({make_shared<Variable>("x"), make_shared<Variable>("y")})));
     EXPECT_EQ(GAMMA, node->getSTRuleName()) << "Gamma rule - For all";
+}
+
+void test_getSTNodeChild(shared_ptr<Node> node, string expect_1, string expect_2,
+                         string expect_3, string expect_4, string msg)
+{
+    shared_ptr<STNode> stnode = make_shared<STNode>(node);
+    (*stnode->nodes.begin())->getSTNodeChild(stnode, 0);
+    if(stnode->left != nullptr) ASSERT_EQ(expect_1, stnode->left->toString()) << msg;
+    if(stnode->right != nullptr) ASSERT_EQ(expect_2, stnode->right->toString()) << msg;
+    shared_ptr<STNode> neg_stnode = make_shared<STNode>(make_shared<Negate>(node));
+    (*neg_stnode->nodes.begin())->getSTNodeChild(neg_stnode, 0);
+    if(neg_stnode->left != nullptr) ASSERT_EQ(expect_3, neg_stnode->left->toString()) << msg + " - negated";
+    if(neg_stnode->right != nullptr) ASSERT_EQ(expect_4, neg_stnode->right->toString()) << msg + " - negated";
+}
+
+TEST(NotationTest, getSTNodeChild)
+{
+    shared_ptr<Variable> A = make_shared<Variable>('A');
+    shared_ptr<Variable> B = make_shared<Variable>('B');
+    test_getSTNodeChild(make_shared<And>(A, B),
+                        "{ ~A }", "{ ~B }", "{ A, B }", "", "A&B");
 }
 
 TEST(NotationTest, nandify)

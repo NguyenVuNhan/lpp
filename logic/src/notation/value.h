@@ -16,6 +16,7 @@ public:
     shared_ptr<Node> nandify(bool isNegation) override;
     void setVariable(string fromVariable, string toVariable) override;
     shared_ptr<Node> cnfFilter(bool isNegation = false) override;
+    shared_ptr<Node> copy() override;
 };
 
 #endif // VALUE_H

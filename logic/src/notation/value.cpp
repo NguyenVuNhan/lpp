@@ -42,3 +42,8 @@ shared_ptr<Node> Value::cnfFilter(bool isNegation)
         return make_shared<Value>(notation);
     }
 }
+
+shared_ptr<Node> Value::copy()
+{
+    return make_shared<Value>(notation);
+}
