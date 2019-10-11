@@ -9,6 +9,8 @@
 CNF::CNF(shared_ptr<Node> otherTree)
     : Tree(otherTree)
 {
+    if(otherTree->notation == "&&")
+        return;
     tree = generateCNF(tree);
     tree = nodeToMultiAnd(tree);
 }
@@ -46,6 +48,7 @@ list<string> CNF::getListVariable()
             }
             else if(!(prop[i] >= 'A' && prop[i] <= 'Z')) prop.erase(i--, 1);
         }
+        cout << prop << endl;
         while (prop != "")
         {
             string currentChar = string(1, prop.at(0));
@@ -100,6 +103,13 @@ void CNF::getDavidPutnam(shared_ptr<Node> cnf, uint pos, string &result)
 {
     //Pick next variable
     char v = readList(varList, pos).at(0);
+    if(cnf->variables.size() == 0 && pos+1 < varList.size())
+    {
+        getDavidPutnam(cnf, pos+1, result);
+        result = '1' + result;
+        result = v + result;
+        return;
+    }
     // remove useless
     cnf->variables.remove_if(isUseless);
     cout << "Remove useless: " << cnf->toString() << endl;
@@ -108,22 +118,22 @@ void CNF::getDavidPutnam(shared_ptr<Node> cnf, uint pos, string &result)
     cout << "Solve Non-Janus: " << non_janus << ' ' << cnf->toString() << endl;
     if(findJanus(cnf))
         result = "UNSAT";
-    if(result != "UNSAT" && pos+1 < varList.size())
+    if(result != "UNSAT")
     {
-        Reso reso = resolution(cnf, v);
-        cout << "Resolution: " << reso.resolution->toString() << endl;
-        getDavidPutnam(reso.resolution, pos+1, result);
-        if(result != "UNSAT")
+        if(pos+1 < varList.size())
         {
-            if(non_janus != "")
-            {
-                result = non_janus + result;
-            }
-            else
-            {
-                result = '1' + result;
-                result = v + result;
-            }
+            Reso reso = resolution(cnf, v);
+            cout << "Resolution: " << reso.resolution->toString() << endl;
+            getDavidPutnam(reso.resolution, pos+1, result);
+        }
+        if(non_janus != "")
+        {
+            result = non_janus + result;
+        }
+        else
+        {
+            result = '1' + result;
+            result = v + result;
         }
     }
 }

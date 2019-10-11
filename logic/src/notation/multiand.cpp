@@ -36,7 +36,7 @@ bool MultiAnd::getValue(string valList)
     bool value = true;
 
     for(auto e : variables)
-        value &= e->getValue(valList);
+        value = (value && e->getValue(valList));
 
     return value;
 }

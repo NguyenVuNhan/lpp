@@ -34,7 +34,8 @@ Tree::Tree(string prop)
 
 Tree::Tree(shared_ptr<Node> tree)
 {
-    this->tree = tree;
+    if(tree != nullptr)
+        this->tree = tree->copy();
     prop_in = tree->toStringPrefix();
 }
 
@@ -54,7 +55,11 @@ list<string> Tree::getListVariable()
     {
         string prop = prop_in;
         for (uint i = 0; i < prop.size(); ++i) {
-            if(!(prop[i] >= 'A' && prop[i] <= 'Z')) prop.erase(i--, 1);
+            if(prop[i] >= 'a' && prop[i] <= 'z')
+            {
+                prop[i] = char(toupper(prop[i]));
+            }
+            else if(!(prop[i] >= 'A' && prop[i] <= 'Z')) prop.erase(i--, 1);
         }
         while (prop != "")
         {
@@ -106,6 +111,11 @@ bool Tree::exportGraph(string title, string filenname)
 bool Tree::exportProof(string title, string filenname)
 {
     return tableaux.ExportProof(title, filenname);
+}
+
+string Tree::getDavidPutnam()
+{
+    return "Can not use on this type of proposition";
 }
 
 shared_ptr<Node> Tree::getStatement(string prop, unsigned int &pos)

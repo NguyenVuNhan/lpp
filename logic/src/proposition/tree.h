@@ -31,6 +31,7 @@ public:
     bool getValue(string valList);
     bool exportGraph(string title, string filenname);
     bool exportProof(string title, string filenname);
+    virtual string getDavidPutnam();
 };
 
 #endif // TREE_H

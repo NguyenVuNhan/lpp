@@ -20,10 +20,8 @@ SimpleTable::SimpleTable(shared_ptr<Node> root)
 }
 
 SimpleTable::SimpleTable(TruthTable truthTable)
+    : TruthTable(truthTable.getTree())
 {
-    table = truthTable.getTable();
-    tree = truthTable.getTree();
-    prop_in = tree->toStringPrefix();
     simplify();
 }
 

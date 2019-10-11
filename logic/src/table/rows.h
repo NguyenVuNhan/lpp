@@ -21,6 +21,7 @@ public:
     bool getValue();
     void setDontCare(uint pos);
     string getElem();
+    string toString();
     void operator=(const Rows &other);
     bool operator==(const Rows &other);
     bool operator<(const Rows &other);

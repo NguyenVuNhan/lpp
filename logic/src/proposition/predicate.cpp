@@ -120,3 +120,25 @@ shared_ptr<Node> Predicate::parse(string prop, unsigned int &pos)
 
     return node;
 }
+
+list<string> Predicate::getListVariable()
+{
+    if(varList.size() == 0)
+    {
+        string prop = prop_in;
+        for (uint i = 0; i < prop.size(); ++i) {
+            if(!(prop[i] >= 'a' && prop[i] <= 'z')) prop.erase(i--, 1);
+        }
+        while (prop != "")
+        {
+            string currentChar = string(1, prop.at(0));
+            if(!contains(varList, currentChar))
+            {
+                varList.push_back(currentChar);
+            }
+            prop.erase(0,1);
+        }
+        varList.sort();
+    }
+    return varList;
+}

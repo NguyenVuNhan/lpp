@@ -16,7 +16,7 @@ Step 1,2 and 3 will be handle by function
 
     Node *cnfFilter(bool isNegation = false);
 
-This function will be overrided in each base class.
+This function will be override id in each base class.
 To protect memory on heep, cnfFilter will return new deep copied tree.
 
 For the distribution, I have used function

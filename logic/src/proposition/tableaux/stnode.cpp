@@ -87,14 +87,6 @@ void STNode::treeTraveler(ofstream &out, int rootId)
         out << "\tnode" << rootId << " -- node" << id << endl;
 
     out << "\tnode" << id << "[label=" << "\"" << this->toString() << "\"]\n";
-    if(left == nullptr && right == nullptr)
-    {
-        static int _id = 0;
-        int newId = _id++;
-        out << "\tnode" << id << " -- node" << newId << endl;
-        out << "\tnode" << newId << "[label=\" X \" fontcolor=\"#F3360D\" color=\"#F3360D\"]\n";
-        return;
-    }
     if(left != nullptr)
         left->treeTraveler(out, id);
     if(right != nullptr)

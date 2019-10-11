@@ -37,7 +37,7 @@ public:
     CNF(shared_ptr<Node> otherTree);
     CNF(string prop="");
     ~CNF() override;
-    string getDavidPutnam();
+    string getDavidPutnam() override;
     list<string> getListVariable() override;
 
 private:

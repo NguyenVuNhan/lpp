@@ -39,6 +39,19 @@ TEST(NotationTest, getValue)
     shared_ptr<Node> multiAnd = make_shared<MultiAnd>(variables);
     EXPECT_TRUE(multiAnd->getValue("A1B1C1D1E1F1G1H1")) << "\t--> Test class MultiAnd";
 
+    list<shared_ptr<Node>> variables_2;
+    variables.push_back(a);
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("B")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("C")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("D")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("E")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("F")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("G")));
+    variables.push_back(make_shared<Negate>(make_shared<Variable>("H")));
+    shared_ptr<Node> multiAnd_2 = make_shared<MultiAnd>(variables);
+    EXPECT_FALSE(multiAnd_2->getValue("A1B1C1D1E1F1G1H1")) << "\t--> Test class MultiAnd";
+
+
 
     a = make_shared<And>(a, make_shared<Variable>("B"));
     EXPECT_FALSE(a->getValue("A1B0")) << "\t--> Test class And";

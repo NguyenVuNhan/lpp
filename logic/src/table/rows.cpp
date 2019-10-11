@@ -89,6 +89,18 @@ string Rows::getElem()
     return elem_str;
 }
 
+string Rows::toString()
+{
+    string tmpString = "";
+    for(char c : elem_str)
+    {
+        tmpString += c;
+        tmpString += ' ';
+    }
+    tmpString += value ? '1' : '0';
+    return tmpString;
+}
+
 void Rows::operator=(const Rows &other)
 {
     this->elem_str = other.elem_str;

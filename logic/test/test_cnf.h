@@ -81,18 +81,20 @@ void test_nonJanus(const string &expectNode, const string &expectNonjanus,
 
 TEST_F(testICNF, solveNonJanus)
 {
-
     test_nonJanus("[ CDE, D, Ef, F ]", "A0", "[CDE, CDEa,D,Ef,F]", 'A');
 }
 
 TEST_F(testICNF, getDavidPutnam)
 {
     Tree tree("&(E,>(A,|(&(B,C),&(D,~C))))");
-//    CNF cnf(tree.getTree());
-    CNF cnf("[CDE, CDEa,D,Ef,F]");
-//    cout << cnf.getProposition() << endl;
+    CNF cnf(tree.getTree());
     string dvpn = cnf.getDavidPutnam();
-    cout << cnf.getDavidPutnam() << endl;
+    cout << dvpn << endl;
+    EXPECT_TRUE(cnf.getValue(dvpn));
+
+    cnf = CNF("[CDE, CDEa,D,Ef,F]");
+    dvpn = cnf.getDavidPutnam();
+    cout << dvpn << endl;
     EXPECT_TRUE(cnf.getValue(dvpn));
 }
 
@@ -100,6 +102,9 @@ TEST(testCNFClass, parse)
 {
     CNF cnf("[ E, BDa, Bca, CDa, Cca ]");
     EXPECT_EQ("[ E, BDa, Bca, CDa, Cca ]", cnf.getProposition());
+    Tree cnf_2 = CNF("[A,B]");
+
+    EXPECT_EQ("[ A, B ]", cnf_2.getTree()->toString());
 
 }
 #endif // TEST_CNF_H
