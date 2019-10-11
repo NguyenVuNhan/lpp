@@ -1,8 +1,11 @@
 # Locally created
 *.dot
+*.dot.png
+*.so.*
 .vscode/
 *Test*
 *test*
+
 
 # Prerequisites
 *.d
