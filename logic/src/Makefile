@@ -53,6 +53,7 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = cnf/cnf.cpp \
+		logging.cpp \
 		notation/and.cpp \
 		notation/biimplicate.cpp \
 		notation/exists.cpp \
@@ -75,6 +76,7 @@ SOURCES       = cnf/cnf.cpp \
 		table/simpletable.cpp \
 		table/truthtable.cpp 
 OBJECTS       = cnf.o \
+		logging.o \
 		and.o \
 		biimplicate.o \
 		exists.o \
@@ -293,6 +295,7 @@ DIST          = /home/nvn/.Qt/5.13.0/gcc_64/mkspecs/features/spec_pre.prf \
 		src.pro SemanticTableaux/enum.h \
 		Struct/variable.h \
 		cnf/cnf.h \
+		logging.h \
 		notation/and.h \
 		notation/biimplicate.h \
 		notation/exists.h \
@@ -316,6 +319,7 @@ DIST          = /home/nvn/.Qt/5.13.0/gcc_64/mkspecs/features/spec_pre.prf \
 		table/simpletable.h \
 		table/truthtable.h \
 		utils.h cnf/cnf.cpp \
+		logging.cpp \
 		notation/and.cpp \
 		notation/biimplicate.cpp \
 		notation/exists.cpp \
@@ -771,8 +775,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/nvn/.Qt/5.13.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents SemanticTableaux/enum.h Struct/variable.h cnf/cnf.h notation/and.h notation/biimplicate.h notation/exists.h notation/forall.h notation/implicate.h notation/multiand.h notation/multior.h notation/nand.h notation/negate.h notation/node.h notation/or.h notation/statement.h notation/value.h notation/variable.h proposition/predicate.h proposition/tableaux/enum.h proposition/tableaux/semantictableaux.h proposition/tableaux/stnode.h proposition/tree.h table/rows.h table/simpletable.h table/truthtable.h utils.h $(DISTDIR)/
-	$(COPY_FILE) --parents cnf/cnf.cpp notation/and.cpp notation/biimplicate.cpp notation/exists.cpp notation/forall.cpp notation/implicate.cpp notation/multiand.cpp notation/multior.cpp notation/nand.cpp notation/negate.cpp notation/node.cpp notation/or.cpp notation/statement.cpp notation/value.cpp notation/variable.cpp proposition/predicate.cpp proposition/tableaux/semantictableaux.cpp proposition/tableaux/stnode.cpp proposition/tree.cpp table/rows.cpp table/simpletable.cpp table/truthtable.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents SemanticTableaux/enum.h Struct/variable.h cnf/cnf.h logging.h notation/and.h notation/biimplicate.h notation/exists.h notation/forall.h notation/implicate.h notation/multiand.h notation/multior.h notation/nand.h notation/negate.h notation/node.h notation/or.h notation/statement.h notation/value.h notation/variable.h proposition/predicate.h proposition/tableaux/enum.h proposition/tableaux/semantictableaux.h proposition/tableaux/stnode.h proposition/tree.h table/rows.h table/simpletable.h table/truthtable.h utils.h $(DISTDIR)/
+	$(COPY_FILE) --parents cnf/cnf.cpp logging.cpp notation/and.cpp notation/biimplicate.cpp notation/exists.cpp notation/forall.cpp notation/implicate.cpp notation/multiand.cpp notation/multior.cpp notation/nand.cpp notation/negate.cpp notation/node.cpp notation/or.cpp notation/statement.cpp notation/value.cpp notation/variable.cpp proposition/predicate.cpp proposition/tableaux/semantictableaux.cpp proposition/tableaux/stnode.cpp proposition/tree.cpp table/rows.cpp table/simpletable.cpp table/truthtable.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -832,6 +836,9 @@ cnf.o: cnf/cnf.cpp cnf/cnf.h \
 		notation/negate.h \
 		notation/variable.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cnf.o cnf/cnf.cpp
+
+logging.o: logging.cpp logging.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o logging.o logging.cpp
 
 and.o: notation/and.cpp notation/and.h \
 		notation/node.h \

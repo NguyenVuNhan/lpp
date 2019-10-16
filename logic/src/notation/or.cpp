@@ -93,7 +93,9 @@ shared_ptr<Node> Or::cnfDistribution()
     {
         shared_ptr<Node> multiOr = getMultiOr();
         if(multiOr != nullptr)
+        {
             return multiOr;
+        }
 
         left = left->cnfDistribution();
         right = right->cnfDistribution();
@@ -110,7 +112,7 @@ shared_ptr<Node> Or::copy()
 
 shared_ptr<Node> Or::getMultiOr()
 {
-    string notationList = "&=>%|&&||";
+    string notationList = "!@=>%&&||";
     list<shared_ptr<Node> > listNodes;
     if(notationList.find(left->notation) == string::npos)
     {
@@ -139,6 +141,12 @@ shared_ptr<Node> Or::getMultiOr()
             left->variables.push_back(right);
             return left;
         }
+    }
+    else if(left->notation =="||" &&  right->notation == "||")
+    {
+        listNodes.insert(listNodes.end(), left->variables.begin(), left->variables.end());
+        listNodes.insert(listNodes.end(), right->variables.begin(), right->variables.end());
+        return make_shared<MultiOr>(listNodes);
     }
 
     return nullptr;

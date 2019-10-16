@@ -25,8 +25,16 @@ shared_ptr<Node> Node::cnfDistribution()
 
 void Node::getLeaf(list<shared_ptr<Node>> &listNode)
 {
-    if(right == nullptr)
+    if(left == nullptr && notation == "||")
+    {
         listNode.push_back(shared_from_this());
+    }
+    else if(right == nullptr)
+    {
+        list<shared_ptr<Node>> tmpList;
+        tmpList.push_back(shared_from_this());
+        listNode.push_back(make_shared<MultiOr>(tmpList));
+    }
     else
     {
         left->getLeaf(listNode);

@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     cnf/cnf.cpp \
+    logging.cpp \
     notation/and.cpp \
     notation/biimplicate.cpp \
     notation/exists.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     SemanticTableaux/enum.h \
     Struct/variable.h \
     cnf/cnf.h \
+    logging.h \
     notation/and.h \
     notation/biimplicate.h \
     notation/exists.h \

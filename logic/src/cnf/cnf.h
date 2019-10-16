@@ -3,6 +3,7 @@
 
 #include "../notation/multiand.h"
 #include "../proposition/tree.h"
+#include "../src/logging.h"
 
 struct Reso
 {
@@ -25,6 +26,7 @@ struct I_CNF
     shared_ptr<Node> generateCNF(shared_ptr<Node> originTree);
 protected:
     bool findJanus(shared_ptr<Node> node);
+    void getUniqueList(list<shared_ptr<Node> > &l);
 private:
     bool isContain(shared_ptr<Node> nodes, string v);
     shared_ptr<Node> mergeNode(shared_ptr<Node> node1, shared_ptr<Node> node2, string v, string not_v);

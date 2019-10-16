@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    SET_LOGGING_HANDLER(new appHandler("logic.log", this))
+    INFO("Initiallize")
+
     ui->tb_prefix->setReadOnly(true);
     ui->tb_variables->setReadOnly(true);
     ui->btn_showProof->setVisible(false);
@@ -20,8 +24,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::addStatus(string message)
+{
+    ui->te_log->appendPlainText(QString::fromStdString(message));
+}
+
 void MainWindow::on_btnParse_clicked()
 {
+    this->setEnabled(false);
     ui->btnParse->setEnabled(false);
     string tmpInput = ui->tb_input->toPlainText().toStdString();
     if(input == tmpInput)
@@ -32,6 +42,7 @@ void MainWindow::on_btnParse_clicked()
     reset();
 
     input = tmpInput;
+    INFO(input)
 
     if (input.find('!') != string::npos || input.find('@') != string::npos)
     {
@@ -61,16 +72,11 @@ void MainWindow::on_btnParse_clicked()
             Tree nand(tree->getTree()->nandify());
             ui->tb_nand->setText(QString::fromStdString(nand.getProposition()));
             TruthTable nand_table(nand);
-            ui->te_hex->appendPlainText("Nand norm hash\t: " + QString::fromStdString(nand_table.getHashCode()));
+            ui->te_hex->appendPlainText("Nand norm hash\t\t: " + QString::fromStdString(nand_table.getHashCode()));
             SimpleTable nand_simple_table(nand_table);
-            ui->te_hex->appendPlainText("Nand simple hash\t: " + QString::fromStdString(nand_simple_table.getHashCode()));
+            ui->te_hex->appendPlainText("Nand simple hash\t\t: " + QString::fromStdString(nand_simple_table.getHashCode()));
             ui->te_hex->appendPlainText("------------------------------------------------");
         }
-        // -------------------------------------------------------------------
-        CNF cnf(tree->getTree());
-        ui->tb_cnf->setText(QString::fromStdString(cnf.getProposition()));
-        ui->tb_satisfiable->setText(QString::fromStdString(cnf.getDavidPutnam()));
-        ui->tb_prefix->setText(QString::fromStdString(tree->getProposition()));
         // -------------------------------------------------------------------
         string tmpStr = "";
         for(string str : tree->getListVariable())
@@ -79,6 +85,15 @@ void MainWindow::on_btnParse_clicked()
         }
         ui->tb_variables->setText(QString::fromStdString(tmpStr));
         // -------------------------------------------------------------------
+        CNF cnf(tree->getTree());
+        ui->tb_cnf->setText(QString::fromStdString(cnf.getProposition()));
+        TruthTable cnf_table(cnf.getTree());
+        ui->te_hex->appendPlainText("CNF table hash\t\t: " + QString::fromStdString(cnf_table.getHashCode()));
+        TruthTable cnf_simplified_table(cnf_table);
+        ui->te_hex->appendPlainText("CNF simple table hash\t: " + QString::fromStdString(cnf_simplified_table.getHashCode()));
+        ui->tb_satisfiable->setText(QString::fromStdString(cnf.getDavidPutnam()));
+        ui->tb_prefix->setText(QString::fromStdString(tree->getProposition()));
+        // -------------------------------------------------------------------
         if(tree->isTautology())
         {
             ui->btn_showProof->setVisible(true);
@@ -86,23 +101,24 @@ void MainWindow::on_btnParse_clicked()
         // -------------------------------------------------------------------
         TruthTable table(tree->getTree());
         showTable(*ui->te_truthtable, table.getTable());
-        ui->te_hex->appendPlainText("Truth table hash\t: " + QString::fromStdString(table.getHashCode()));
+        ui->te_hex->appendPlainText("Truth table hash\t\t: " + QString::fromStdString(table.getHashCode()));
         SimpleTable s_table(table);
         showTable(*ui->te_simpletable, s_table.getTable());
-        ui->te_hex->appendPlainText("Simplified table hash\t: " + QString::fromStdString(s_table.getHashCode()));
+        ui->te_hex->appendPlainText("Simplified table hash\t\t: " + QString::fromStdString(s_table.getHashCode()));
         ui->te_hex->appendPlainText("------------------------------------------------");
         // -------------------------------------------------------------------
         Tree dnf_normal = table.getNormalize();
         ui->tb_dnf_normal->setText(QString::fromStdString(dnf_normal.getProposition()));
         TruthTable dnf_normal_table(dnf_normal);
-        ui->te_hex->appendPlainText("DNF norm hash\t: " + QString::fromStdString(dnf_normal_table.getHashCode()));
+        ui->te_hex->appendPlainText("DNF norm hash\t\t: " + QString::fromStdString(dnf_normal_table.getHashCode()));
         Tree dnf_simple = s_table.getNormalize();
         ui->tb_dnf_simple->setText(QString::fromStdString(dnf_simple.getProposition()));
         TruthTable dnf_simple_table(dnf_simple);
-        ui->te_hex->appendPlainText("DNF simplified hash\t: " + QString::fromStdString(dnf_simple_table.getHashCode()));
-
+        ui->te_hex->appendPlainText("DNF simplified hash\t\t: " + QString::fromStdString(dnf_simple_table.getHashCode()));
     }
+
     ui->btnParse->setEnabled(true);
+    this->setEnabled(true);
 }
 
 string MainWindow::QStringtoString(QString str)
@@ -151,3 +167,17 @@ void MainWindow::on_btn_exportGraph_clicked()
     system("dot -Tpng -O ../LPP.dot");
     system("eog ../LPP.dot.png");
 }
+
+appHandler::appHandler(string fn, MainWindow *w)
+    : handler(fn)
+    , _w(w)
+{
+
+}
+
+void appHandler::write(string msg)
+{
+    _w->addStatus(msg);
+    ofs << msg;
+}
+

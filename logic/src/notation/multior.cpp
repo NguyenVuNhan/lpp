@@ -1,10 +1,17 @@
 #include "multior.h"
 
-MultiOr::MultiOr(list<shared_ptr<Node> > listNodes) :
-    Node(nullptr, nullptr)
+MultiOr::MultiOr(list<shared_ptr<Node> > listNodes)
+    : Node(nullptr, nullptr)
 {
     notation = "||";
     variables = listNodes;
+}
+
+MultiOr::MultiOr(shared_ptr<Node> node)
+    : Node(nullptr, nullptr)
+{
+    notation = "||";
+    variables.push_back(node);
 }
 
 MultiOr::~MultiOr()
@@ -50,8 +57,14 @@ shared_ptr<Node> MultiOr::copy()
 }
 
 
-MultiOrNorm::MultiOrNorm(list<shared_ptr<Node> > listNodes) :
-    MultiOr(listNodes)
+MultiOrNorm::MultiOrNorm(list<shared_ptr<Node> > listNodes)
+    : MultiOr(listNodes)
+{
+
+}
+
+MultiOrNorm::MultiOrNorm(shared_ptr<Node> node)
+    : MultiOr(node)
 {
 
 }
