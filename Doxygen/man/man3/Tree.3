@@ -1,0 +1,157 @@
+.TH "Tree" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tree
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tree\&.h>\fP
+.PP
+Inherited by \fBCNF\fP, \fBPredicate\fP, and \fBTruthTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTree\fP (string prop='')"
+.br
+.ti -1c
+.RI "\fBTree\fP (shared_ptr< \fBNode\fP > \fBtree\fP=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~Tree\fP ()"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBgetTree\fP ()"
+.br
+.ti -1c
+.RI "virtual list< string > \fBgetListVariable\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetProposition\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisTautology\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgetValue\fP (string valList)"
+.br
+.ti -1c
+.RI "bool \fBexportGraph\fP (string title, string filenname)"
+.br
+.ti -1c
+.RI "bool \fBexportProof\fP (string title, string filenname)"
+.br
+.ti -1c
+.RI "virtual string \fBgetDavidPutnam\fP ()"
+.br
+.RI "get David Putnam "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBgetStatement\fP (string prop, unsigned int &pos)"
+.br
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBgetNode\fP (char notation)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBtree\fP = nullptr"
+.br
+.ti -1c
+.RI "list< string > \fBvarList\fP"
+.br
+.ti -1c
+.RI "string \fBprop_in\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBparse\fP (string prop, unsigned int &pos)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBproposition\fP = ''"
+.br
+.ti -1c
+.RI "\fBSemanticTableaux\fP \fBtableaux\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Tree::Tree (string prop = \fC''\fP)\fC [explicit]\fP"
+
+.SS "Tree::Tree (shared_ptr< \fBNode\fP > tree = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "Tree::~Tree ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Tree::exportGraph (string title, string filenname)"
+
+.SS "bool Tree::exportProof (string title, string filenname)"
+
+.SS "string Tree::getDavidPutnam ()\fC [virtual]\fP"
+
+.PP
+get David Putnam 
+.PP
+\fBReturns:\fP
+.RS 4
+string, showing David Putnam result 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBCNF\fP\&.
+.SS "list< string > Tree::getListVariable ()\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBCNF\fP, and \fBPredicate\fP\&.
+.SS "shared_ptr< \fBNode\fP > Tree::getNode (char notation)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPredicate\fP\&.
+.SS "string Tree::getProposition ()"
+
+.SS "shared_ptr< \fBNode\fP > Tree::getStatement (string prop, unsigned int & pos)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPredicate\fP\&.
+.SS "shared_ptr< \fBNode\fP > Tree::getTree ()"
+
+.SS "bool Tree::getValue (string valList)"
+
+.SS "bool Tree::isTautology ()"
+
+.SS "shared_ptr< \fBNode\fP > Tree::parse (string prop, unsigned int & pos)\fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPredicate\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "string Tree::prop_in\fC [protected]\fP"
+
+.SS "string Tree::proposition = ''\fC [private]\fP"
+
+.SS "\fBSemanticTableaux\fP Tree::tableaux\fC [private]\fP"
+
+.SS "shared_ptr<\fBNode\fP> Tree::tree = nullptr\fC [protected]\fP"
+
+.SS "list<string> Tree::varList\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

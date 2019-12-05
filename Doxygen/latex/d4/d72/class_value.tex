@@ -1,0 +1,195 @@
+\hypertarget{class_value}{}\section{Value Class Reference}
+\label{class_value}\index{Value@{Value}}
+
+
+{\ttfamily \#include $<$value.\+h$>$}
+
+
+
+Inheritance diagram for Value\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d0/d12/class_value__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Value\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{db/d2d/class_value__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_value_a98e1dd185ea30f4e9343de03008fd622}{Value} (string value)
+\item 
+\hyperlink{class_value_a73578eb3c2fa9af8c62f836d1a3b0063}{$\sim$\+Value} () override
+\item 
+bool \hyperlink{class_value_ac956d02a49c773f5249cc31fb4293337}{get\+Value} (string val\+List) override
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+string \hyperlink{class_value_aa774521b29b4f0c77eb6d57b5a6fb3a0}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_value_aaa2ddacd71ab25b50b06eee47e21289d}{nandify} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em nandify proposition \end{DoxyCompactList}\item 
+void \hyperlink{class_value_a807844066d6d76e9b9f3eda03cef37b1}{set\+Variable} (string from\+Variable, string to\+Variable) override
+\begin{DoxyCompactList}\small\item\em change variable name recursively \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_value_a56c458de6a68b9a25233e6fdcfa67760}{cnf\+Filter} (bool is\+Negation=false) override
+\begin{DoxyCompactList}\small\item\em in this function node will be \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_value_a45518c11045a76300ad02cc93a0150c9}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_value_a98e1dd185ea30f4e9343de03008fd622}\label{class_value_a98e1dd185ea30f4e9343de03008fd622}} 
+\index{Value@{Value}!Value@{Value}}
+\index{Value@{Value}!Value@{Value}}
+\subsubsection{\texorpdfstring{Value()}{Value()}}
+{\footnotesize\ttfamily Value\+::\+Value (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_value_a73578eb3c2fa9af8c62f836d1a3b0063}\label{class_value_a73578eb3c2fa9af8c62f836d1a3b0063}} 
+\index{Value@{Value}!````~Value@{$\sim$\+Value}}
+\index{````~Value@{$\sim$\+Value}!Value@{Value}}
+\subsubsection{\texorpdfstring{$\sim$\+Value()}{~Value()}}
+{\footnotesize\ttfamily Value\+::$\sim$\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_value_a56c458de6a68b9a25233e6fdcfa67760}\label{class_value_a56c458de6a68b9a25233e6fdcfa67760}} 
+\index{Value@{Value}!cnf\+Filter@{cnf\+Filter}}
+\index{cnf\+Filter@{cnf\+Filter}!Value@{Value}}
+\subsubsection{\texorpdfstring{cnf\+Filter()}{cnfFilter()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Value\+::cnf\+Filter (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+in this function node will be 
+
+
+\begin{DoxyItemize}
+\item Remove bi-\/implicate
+\item Remove implicate
+\item Doing the morgan 
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node has been cnf filtered 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}{Node}.
+
+\mbox{\Hypertarget{class_value_a45518c11045a76300ad02cc93a0150c9}\label{class_value_a45518c11045a76300ad02cc93a0150c9}} 
+\index{Value@{Value}!copy@{copy}}
+\index{copy@{copy}!Value@{Value}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Value\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+\mbox{\Hypertarget{class_value_ac956d02a49c773f5249cc31fb4293337}\label{class_value_ac956d02a49c773f5249cc31fb4293337}} 
+\index{Value@{Value}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Value@{Value}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Value\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{Node}.
+
+\mbox{\Hypertarget{class_value_aaa2ddacd71ab25b50b06eee47e21289d}\label{class_value_aaa2ddacd71ab25b50b06eee47e21289d}} 
+\index{Value@{Value}!nandify@{nandify}}
+\index{nandify@{nandify}!Value@{Value}}
+\subsubsection{\texorpdfstring{nandify()}{nandify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Value\+::nandify (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+nandify proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nandified tree 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}{Node}.
+
+\mbox{\Hypertarget{class_value_a807844066d6d76e9b9f3eda03cef37b1}\label{class_value_a807844066d6d76e9b9f3eda03cef37b1}} 
+\index{Value@{Value}!set\+Variable@{set\+Variable}}
+\index{set\+Variable@{set\+Variable}!Value@{Value}}
+\subsubsection{\texorpdfstring{set\+Variable()}{setVariable()}}
+{\footnotesize\ttfamily void Value\+::set\+Variable (\begin{DoxyParamCaption}\item[{string}]{from\+Variable,  }\item[{string}]{to\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+change variable name recursively 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Variable} & -\/ variable name to change \\
+\hline
+{\em to\+Variable} & -\/ new variable name \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}{Node}.
+
+\mbox{\Hypertarget{class_value_aa774521b29b4f0c77eb6d57b5a6fb3a0}\label{class_value_aa774521b29b4f0c77eb6d57b5a6fb3a0}} 
+\index{Value@{Value}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Value@{Value}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Value\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{value_8h}{value.\+h}\item 
+src/notation/\hyperlink{value_8cpp}{value.\+cpp}\end{DoxyCompactItemize}

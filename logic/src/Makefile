@@ -832,6 +832,7 @@ cnf.o: cnf/cnf.cpp cnf/cnf.h \
 		utils.h \
 		proposition/tree.h \
 		proposition/tableaux/semantictableaux.h \
+		../src/logging.h \
 		notation/multior.h \
 		notation/negate.h \
 		notation/variable.h

@@ -1,0 +1,64 @@
+.TH "SimpleTable" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimpleTable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <simpletable\&.h>\fP
+.PP
+Inherits \fBTruthTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimpleTable\fP (\fBTree\fP root)"
+.br
+.ti -1c
+.RI "\fBSimpleTable\fP (string prop='')"
+.br
+.ti -1c
+.RI "\fBSimpleTable\fP (shared_ptr< \fBNode\fP > root)"
+.br
+.ti -1c
+.RI "\fBSimpleTable\fP (\fBTruthTable\fP truthTable)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "list< list< \fBRows\fP > > \fBgetAllRowsGroup\fP ()"
+.br
+.ti -1c
+.RI "list< \fBRows\fP > \fBgetQuineMcCluskey\fP (list< list< \fBRows\fP >> rowsGroup)"
+.br
+.ti -1c
+.RI "void \fBsimplify\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SimpleTable::SimpleTable (\fBTree\fP root)\fC [explicit]\fP"
+
+.SS "SimpleTable::SimpleTable (string prop = \fC''\fP)\fC [explicit]\fP"
+
+.SS "SimpleTable::SimpleTable (shared_ptr< \fBNode\fP > root)\fC [explicit]\fP"
+
+.SS "SimpleTable::SimpleTable (\fBTruthTable\fP truthTable)\fC [explicit]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "list< list< \fBRows\fP > > SimpleTable::getAllRowsGroup ()\fC [private]\fP"
+
+.SS "list< \fBRows\fP > SimpleTable::getQuineMcCluskey (list< list< \fBRows\fP >> rowsGroup)\fC [private]\fP"
+
+.SS "void SimpleTable::simplify ()\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

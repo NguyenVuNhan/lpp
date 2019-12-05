@@ -1,0 +1,48 @@
+.TH "src/utils.h" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/utils.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <algorithm>\fP
+.br
+\fC#include <list>\fP
+.br
+\fC#include <iomanip>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T  = string> bool \fBcontains\fP (list< T > &listOfElements, const T &element)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBlistReplaceAt\fP (list< shared_ptr< T > > &mainList, list< shared_ptr< T >> &tmpList, long pos)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBlistReplaceAt\fP (list< shared_ptr< T > > &mainList, shared_ptr< T > tmpElem, long pos)"
+.br
+.ti -1c
+.RI "template<typename T > T \fBreadList\fP (list< T > l1, uint pos)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T  = string> bool contains (list< T > & listOfElements, const T & element)"
+
+.SS "template<typename T > void listReplaceAt (list< shared_ptr< T > > & mainList, list< shared_ptr< T >> & tmpList, long pos)"
+
+.SS "template<typename T > void listReplaceAt (list< shared_ptr< T > > & mainList, shared_ptr< T > tmpElem, long pos)"
+
+.SS "template<typename T > T readList (list< T > l1, uint pos)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

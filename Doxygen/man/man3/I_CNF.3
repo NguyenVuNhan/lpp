@@ -1,0 +1,247 @@
+.TH "I_CNF" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I_CNF \- The Public interface of \fBCNF\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cnf\&.h>\fP
+.PP
+Inherited by \fBCNF\fP\fC [protected]\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBsolveNonJanus\fP (shared_ptr< \fBNode\fP > node, char v)"
+.br
+.RI "Solve non-janus based on MulitiAnd node and variable v\&. "
+.ti -1c
+.RI "\fBReso\fP \fBresolution\fP (shared_ptr< \fBNode\fP > node, char v)"
+.br
+.RI "Resolution based on MulitiAnd node and variable v\&. "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBnodeToMultiAnd\fP (shared_ptr< \fBNode\fP > node)"
+.br
+.RI "Convert node to \fBMultiAnd\fP, remove douplicate element and sort element This function are being used after generateCNF\&. "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBgenerateCNF\fP (shared_ptr< \fBNode\fP > originTree)"
+.br
+.RI "generate \fBCNF\fP form based on originTree, originTree will be changed, to prevent lost data, use deep copy of \fBNode\fP "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBisUseless\fP (shared_ptr< \fBNode\fP > node)"
+.br
+.RI "Check if node is useless\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBfindJanus\fP (shared_ptr< \fBNode\fP > node)"
+.br
+.RI "Check if \fBNode\fP contains Janus\&. "
+.ti -1c
+.RI "void \fBgetUniqueList\fP (list< shared_ptr< \fBNode\fP > > &l)"
+.br
+.RI "get unique list of node "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisContain\fP (shared_ptr< \fBNode\fP > nodes, string v)"
+.br
+.RI "check if node contain variable v "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBmergeNode\fP (shared_ptr< \fBNode\fP > node1, shared_ptr< \fBNode\fP > node2, string v, string not_v)"
+.br
+.RI "merge two \fBNode::variables\fP list\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The Public interface of \fBCNF\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool I_CNF::findJanus (shared_ptr< \fBNode\fP > node)\fC [protected]\fP"
+
+.PP
+Check if \fBNode\fP contains Janus\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP - \fBNode\fP pointer to check for Janus 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True - If Janus found 
+.br
+ False - If Janus not found 
+.RE
+.PP
+
+.SS "shared_ptr< \fBNode\fP > I_CNF::generateCNF (shared_ptr< \fBNode\fP > originTree)"
+
+.PP
+generate \fBCNF\fP form based on originTree, originTree will be changed, to prevent lost data, use deep copy of \fBNode\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoriginTree\fP - \fBNode\fP pointer, origin tree to convert to \fBCNF\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBCNF\fP tree 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBNode::copy\fP 
+.RE
+.PP
+
+.SS "void I_CNF::getUniqueList (list< shared_ptr< \fBNode\fP > > & l)\fC [protected]\fP"
+
+.PP
+get unique list of node 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIl\fP - list of node contains douplicate member 
+.br
+\fIl\fP - list of node contains unique member only 
+.RE
+.PP
+
+.SS "bool I_CNF::isContain (shared_ptr< \fBNode\fP > nodes, string v)\fC [private]\fP"
+
+.PP
+check if node contain variable v 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInodes\fP - \fBNode\fP, node to check 
+.br
+\fIv\fP - String, variable v 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True - if node contains variable v 
+.br
+ False - if node does not contains variable v 
+.RE
+.PP
+
+.SS "bool I_CNF::isUseless (shared_ptr< \fBNode\fP > node)\fC [static]\fP"
+
+.PP
+Check if node is useless\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP - \fBMultiOr\fP node 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True - if node is useless 
+.br
+ False - if node is not useless 
+.RE
+.PP
+
+.SS "shared_ptr< \fBNode\fP > I_CNF::mergeNode (shared_ptr< \fBNode\fP > node1, shared_ptr< \fBNode\fP > node2, string v, string not_v)\fC [private]\fP"
+
+.PP
+merge two \fBNode::variables\fP list\&. This function use for \fBMultiOr\fP, used by \fBI_CNF::resolution\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode1\fP - first node 
+.br
+\fInode2\fP - second node 
+.br
+\fIv\fP - string of variable v, upper case 
+.br
+\fInot_v\fP - string of variable v, lowercase 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+merged \fBNode\fP 
+.RE
+.PP
+
+.SS "shared_ptr< \fBNode\fP > I_CNF::nodeToMultiAnd (shared_ptr< \fBNode\fP > node)"
+
+.PP
+Convert node to \fBMultiAnd\fP, remove douplicate element and sort element This function are being used after generateCNF\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP - node to convert 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMultiAnd\fP node, with deep of 3 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBNode::getLeaf\fP, \fBI_CNF::generateCNF\fP 
+.RE
+.PP
+
+.SS "\fBReso\fP I_CNF::resolution (shared_ptr< \fBNode\fP > node, char v)"
+
+.PP
+Resolution based on MulitiAnd node and variable v\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP 
+.br
+\fIv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBReso\fP, contain node Resolution and Subtitute Resolution 
+.RE
+.PP
+
+.SS "string I_CNF::solveNonJanus (shared_ptr< \fBNode\fP > node, char v)"
+
+.PP
+Solve non-janus based on MulitiAnd node and variable v\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInode\fP - \fBMultiAnd\fP \fBNode\fP pointer to find janus 
+.br
+\fInode\fP - node will be filter out if janus have found 
+.br
+\fIv\fP - String represent for current variable 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+String contains founded janus 
+.br
+ Emplty string if janus not found 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

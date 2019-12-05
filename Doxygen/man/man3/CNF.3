@@ -1,0 +1,151 @@
+.TH "CNF" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CNF \- The \fBCNF\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cnf\&.h>\fP
+.PP
+Inherits \fBI_CNF\fP, and \fBTree\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCNF\fP (shared_ptr< \fBNode\fP > otherTree)"
+.br
+.RI "\fBCNF\fP constructor, generate \fBCNF\fP of normal tree\&. "
+.ti -1c
+.RI "\fBCNF\fP (string prop='')"
+.br
+.RI "\fBCNF\fP constructor, parse a \fBCNF\fP tree\&. "
+.ti -1c
+.RI "\fB~CNF\fP () override"
+.br
+.ti -1c
+.RI "string \fBgetDavidPutnam\fP () override"
+.br
+.RI "get David Putnam "
+.ti -1c
+.RI "list< string > \fBgetListVariable\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBparse\fP (string prop)"
+.br
+.RI "parse cnf proposition "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBgetMultiOr\fP (string prop)"
+.br
+.RI "get \fBMultiOr\fP base on proposition "
+.ti -1c
+.RI "void \fBgetDavidPutnam\fP (shared_ptr< \fBNode\fP > \fBtree\fP, uint pos, string &result)"
+.br
+.RI "get David Putnam, this function is used by a public function "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBCNF\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CNF::CNF (shared_ptr< \fBNode\fP > otherTree)"
+
+.PP
+\fBCNF\fP constructor, generate \fBCNF\fP of normal tree\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIotherTree\fP - tree to be convert to cnf form 
+.RE
+.PP
+
+.SS "CNF::CNF (string prop = \fC''\fP)"
+
+.PP
+\fBCNF\fP constructor, parse a \fBCNF\fP tree\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprop\fP - proposition 
+.RE
+.PP
+
+.SS "CNF::~CNF ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "string CNF::getDavidPutnam ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+get David Putnam 
+.PP
+\fBReturns:\fP
+.RS 4
+string, showing David Putnam result 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTree\fP\&.
+.SS "void CNF::getDavidPutnam (shared_ptr< \fBNode\fP > tree, uint pos, string & result)\fC [private]\fP"
+
+.PP
+get David Putnam, this function is used by a public function 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItree\fP - cnf tree 
+.br
+\fIpos\fP - current variable position 
+.br
+\fIresult\fP - string, represent Devaid Putname result 
+.RE
+.PP
+
+.SS "list< string > CNF::getListVariable ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTree\fP\&.
+.SS "shared_ptr< \fBNode\fP > CNF::getMultiOr (string prop)\fC [private]\fP"
+
+.PP
+get \fBMultiOr\fP base on proposition 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprop\fP - cnf string of proposition 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMultiOr\fP represent proposition 
+.RE
+.PP
+
+.SS "shared_ptr< \fBNode\fP > CNF::parse (string prop)\fC [private]\fP"
+
+.PP
+parse cnf proposition 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIprop\fP - cnf string of proposition 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBMultiAnd\fP represent proposition 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

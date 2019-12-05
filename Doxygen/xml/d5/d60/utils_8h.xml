@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d5/d60/utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">list</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="d6/d13/stnode_8h" local="yes">src/proposition/tableaux/stnode.h</includedby>
+    <includedby refid="d1/d77/node_8h" local="yes">src/notation/node.h</includedby>
+    <includedby refid="d6/d79/cnf_8cpp" local="yes">src/cnf/cnf.cpp</includedby>
+    <includedby refid="d7/d70/node_8cpp" local="yes">src/notation/node.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <includedby refid="d0/d0c/rows_8cpp" local="yes">src/table/rows.cpp</includedby>
+    <includedby refid="dd/dcd/simpletable_8cpp" local="yes">src/table/simpletable.cpp</includedby>
+    <incdepgraph>
+      <node id="1006">
+        <label>list</label>
+      </node>
+      <node id="1007">
+        <label>iomanip</label>
+      </node>
+      <node id="1004">
+        <label>src/utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="1005" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>iostream</label>
+      </node>
+      <node id="1005">
+        <label>algorithm</label>
+      </node>
+      <node id="1008">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1034">
+        <label>src/notation/multior.cpp</label>
+        <link refid="df/db6/multior_8cpp"/>
+      </node>
+      <node id="1036">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="1019">
+        <label>src/proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1020" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+      </node>
+      <node id="1033">
+        <label>src/notation/or.cpp</label>
+        <link refid="d1/da4/or_8cpp"/>
+      </node>
+      <node id="1022">
+        <label>src/table/rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1023" relation="include">
+        </childnode>
+      </node>
+      <node id="1030">
+        <label>src/notation/or.h</label>
+        <link refid="df/d34/or_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1028">
+        <label>src/proposition/tableaux/semantictableaux.cpp</label>
+        <link refid="de/d3e/semantictableaux_8cpp"/>
+      </node>
+      <node id="1029">
+        <label>src/notation/multior.h</label>
+        <link refid="da/d4e/multior_8h"/>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+      </node>
+      <node id="1035">
+        <label>src/notation/negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+      <node id="1025">
+        <label>src/table/simpletable.cpp</label>
+        <link refid="dd/dcd/simpletable_8cpp"/>
+      </node>
+      <node id="1023">
+        <label>src/table/truthtable.h</label>
+        <link refid="d5/dbf/truthtable_8h"/>
+        <childnode refid="1024" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+      </node>
+      <node id="1053">
+        <label>src/notation/statement.h</label>
+        <link refid="de/d93/statement_8h"/>
+        <childnode refid="1054" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+      </node>
+      <node id="1038">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+      </node>
+      <node id="1048">
+        <label>src/notation/value.cpp</label>
+        <link refid="d2/dc0/value_8cpp"/>
+      </node>
+      <node id="1027">
+        <label>src/proposition/tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1028" relation="include">
+        </childnode>
+      </node>
+      <node id="1031">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="1043">
+        <label>src/notation/variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>src/notation/multiand.h</label>
+        <link refid="d9/d1d/multiand_8h"/>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+      <node id="1020">
+        <label>src/proposition/predicate.h</label>
+        <link refid="df/da5/predicate_8h"/>
+        <childnode refid="1021" relation="include">
+        </childnode>
+      </node>
+      <node id="1026">
+        <label>src/table/truthtable.cpp</label>
+        <link refid="d9/d67/truthtable_8cpp"/>
+      </node>
+      <node id="1010">
+        <label>src/utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+      </node>
+      <node id="1014">
+        <label>src/cnf/cnf.h</label>
+        <link refid="d1/d47/cnf_8h"/>
+        <childnode refid="1015" relation="include">
+        </childnode>
+      </node>
+      <node id="1015">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+      <node id="1011">
+        <label>src/proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+      </node>
+      <node id="1045">
+        <label>src/notation/and.h</label>
+        <link refid="d5/d25/and_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1054">
+        <label>src/notation/statement.cpp</label>
+        <link refid="d1/d48/statement_8cpp"/>
+      </node>
+      <node id="1032">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="1044">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="1016">
+        <label>src/notation/multiand.cpp</label>
+        <link refid="db/d9c/multiand_8cpp"/>
+      </node>
+      <node id="1042">
+        <label>src/proposition/tableaux/stnode.cpp</label>
+        <link refid="d6/db6/stnode_8cpp"/>
+      </node>
+      <node id="1052">
+        <label>src/notation/implicate.h</label>
+        <link refid="d0/d93/implicate_8h"/>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1037">
+        <label>src/notation/exists.cpp</label>
+        <link refid="da/d46/exists_8cpp"/>
+      </node>
+      <node id="1041">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="1021">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="1051">
+        <label>src/notation/forall.h</label>
+        <link refid="d2/dee/forall_8h"/>
+        <childnode refid="1038" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+      </node>
+      <node id="1017">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="1049">
+        <label>src/notation/biimplicate.h</label>
+        <link refid="dd/d69/biimplicate_8h"/>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1050">
+        <label>src/notation/exists.h</label>
+        <link refid="d1/dc4/exists_8h"/>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+      </node>
+      <node id="1047">
+        <label>src/notation/value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1048" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1024">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="1025" relation="include">
+        </childnode>
+      </node>
+      <node id="1018">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+      <node id="1040">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+      <node id="1046">
+        <label>src/notation/nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1040" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1012">
+        <label>src/notation/node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1029" relation="include">
+        </childnode>
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+        <childnode refid="1045" relation="include">
+        </childnode>
+        <childnode refid="1046" relation="include">
+        </childnode>
+        <childnode refid="1047" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1050" relation="include">
+        </childnode>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1053" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+      </node>
+      <node id="1039">
+        <label>src/notation/implicate.cpp</label>
+        <link refid="dc/d93/implicate_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>string</defval>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool contains</definition>
+        <argsstring>(list&lt; T &gt; &amp;listOfElements, const T &amp;element)</argsstring>
+        <name>contains</name>
+        <param>
+          <type>list&lt; T &gt; &amp;</type>
+          <declname>listOfElements</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="14" column="1" bodyfile="src/utils.h" bodystart="14" bodyend="18"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1abb762bfe4bc7bbccda81f8db332bafe3" compoundref="d6/d79/cnf_8cpp" startline="39" endline="63">CNF::getListVariable</referencedby>
+        <referencedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" compoundref="da/d46/exists_8cpp" startline="35" endline="85">Exists::getSTNodeChild</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" compoundref="da/d09/forall_8cpp" startline="35" endline="82">ForAll::getSTNodeChild</referencedby>
+        <referencedby refid="d5/d30/class_predicate_1ae2524ae4cd1e71a00984f6a49d717469" compoundref="db/d07/predicate_8cpp" startline="124" endline="144">Predicate::getListVariable</referencedby>
+        <referencedby refid="dd/df8/class_tree_1a525967d14a17de0ad9c9072b025af1c3" compoundref="d1/d12/tree_8cpp" startline="52" endline="76">Tree::getListVariable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void listReplaceAt</definition>
+        <argsstring>(list&lt; shared_ptr&lt; T &gt; &gt; &amp;mainList, list&lt; shared_ptr&lt; T &gt;&gt; &amp;tmpList, long pos)</argsstring>
+        <name>listReplaceAt</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; T &gt; &gt; &amp;</type>
+          <declname>mainList</declname>
+        </param>
+        <param>
+          <type>list&lt; shared_ptr&lt; T &gt;&gt; &amp;</type>
+          <declname>tmpList</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="21" column="1" bodyfile="src/utils.h" bodystart="21" bodyend="27"/>
+        <referencedby refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" compoundref="d1/da4/or_8cpp" startline="43" endline="60">Or::getSTNodeChild</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1abbb1158ccd7df4b617ce295a96f5ad09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void listReplaceAt</definition>
+        <argsstring>(list&lt; shared_ptr&lt; T &gt; &gt; &amp;mainList, shared_ptr&lt; T &gt; tmpElem, long pos)</argsstring>
+        <name>listReplaceAt</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; T &gt; &gt; &amp;</type>
+          <declname>mainList</declname>
+        </param>
+        <param>
+          <type>shared_ptr&lt; T &gt;</type>
+          <declname>tmpElem</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="30" column="1" bodyfile="src/utils.h" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1acbda3100e3c2692062ae38f95d108b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T readList</definition>
+        <argsstring>(list&lt; T &gt; l1, uint pos)</argsstring>
+        <name>readList</name>
+        <param>
+          <type>list&lt; T &gt;</type>
+          <declname>l1</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="38" column="1" bodyfile="src/utils.h" bodystart="38" bodyend="42"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">CNF::getDavidPutnam</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1a6942e9ea7cd4b662731c77a44696c436" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool isContain</definition>
+        <argsstring>(string mainStr, string containedStr)</argsstring>
+        <name>isContain</name>
+        <param>
+          <type>string</type>
+          <declname>mainStr</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>containedStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="44" column="1" bodyfile="src/utils.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1a8d71663d0b75489bddd5398bb2ea5b20" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool isContain</definition>
+        <argsstring>(string mainStr, char containedChar)</argsstring>
+        <name>isContain</name>
+        <param>
+          <type>string</type>
+          <declname>mainStr</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>containedChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="49" column="1" bodyfile="src/utils.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1a82be88eefa252118106514b0d0898648" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool isContain</definition>
+        <argsstring>(string mainStr, list&lt; char &gt; containedChar)</argsstring>
+        <name>isContain</name>
+        <param>
+          <type>string</type>
+          <declname>mainStr</declname>
+        </param>
+        <param>
+          <type>list&lt; char &gt;</type>
+          <declname>containedChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="54" column="1" bodyfile="src/utils.h" bodystart="54" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d60/utils_8h_1a73a7b79a907c8abaab30ba094b1fd683" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>static string getUniqueString</definition>
+        <argsstring>(string str)</argsstring>
+        <name>getUniqueString</name>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils.h" line="69" column="1" bodyfile="src/utils.h" bodystart="69" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T<sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="14" refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" kindref="member">contains</ref>(list&lt;T&gt;<sp/>&amp;listOfElements,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;element)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>find(listOfElements.begin(),<sp/>listOfElements.end(),<sp/>element);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it<sp/>!=<sp/>listOfElements.end();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="21" refid="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" kindref="member">listReplaceAt</ref>(list&lt;shared_ptr&lt;T&gt;<sp/>&gt;<sp/>&amp;mainList,<sp/>list&lt;shared_ptr&lt;T&gt;&gt;<sp/>&amp;tmpList,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>next(mainList.begin(),<sp/>pos);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>mainList.erase(it);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>mainList.splice(it,<sp/>tmpList);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>(*(++tmpList.begin()))-&gt;isRulesReturned<sp/>?<sp/>&quot;T\n&quot;<sp/>:<sp/>&quot;F\n&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="30" refid="d5/d60/utils_8h_1abbb1158ccd7df4b617ce295a96f5ad09" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" kindref="member">listReplaceAt</ref>(list&lt;shared_ptr&lt;T&gt;<sp/>&gt;<sp/>&amp;mainList,<sp/>shared_ptr&lt;T&gt;<sp/>tmpElem,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>next(mainList.begin(),<sp/>pos);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/>mainList.erase(it);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>mainList.insert(it,<sp/>tmpElem);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="38" refid="d5/d60/utils_8h_1acbda3100e3c2692062ae38f95d108b7b" refkind="member"><highlight class="normal">T<sp/><ref refid="d5/d60/utils_8h_1acbda3100e3c2692062ae38f95d108b7b" kindref="member">readList</ref>(list&lt;T&gt;<sp/>l1,<sp/>uint<sp/>pos)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>next(l1.begin(),<sp/>pos);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*it;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isContain(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mainStr,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>containedStr)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mainStr.find(containedStr)<sp/>!=<sp/>string::npos;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isContain(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mainStr,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>containedChar)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mainStr.find(containedChar)<sp/>!=<sp/>string::npos;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isContain(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mainStr,<sp/>list&lt;char&gt;<sp/>containedChar)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>:<sp/>mainStr)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cc<sp/>:<sp/>containedChar)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/>cc)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getUniqueString(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>:<sp/>str)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!isContain(tmp,<sp/>c))</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>+=<sp/>c;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>UTILS_H</highlight></codeline>
+    </programlisting>
+    <location file="src/utils.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d2/d2a/class_multi_and" kind="class" language="C++" prot="public">
+    <compoundname>MultiAnd</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <derivedcompoundref refid="d6/da5/class_multi_and_norm" prot="public" virt="non-virtual">MultiAndNorm</derivedcompoundref>
+    <includes refid="d9/d1d/multiand_8h" local="no">multiand.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1af78c9976d483175359a7c372231b2ac3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiAnd::MultiAnd</definition>
+        <argsstring>(list&lt; shared_ptr&lt; Node &gt; &gt; listNodes=list&lt; shared_ptr&lt; Node &gt; &gt;())</argsstring>
+        <name>MultiAnd</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;</type>
+          <declname>listNodes</declname>
+          <defval>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="9" column="1" bodyfile="src/notation/multiand.cpp" bodystart="3" bodyend="8"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1a2fe5c4c9809102fc779016d608e3f57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiAnd::~MultiAnd</definition>
+        <argsstring>() override</argsstring>
+        <name>~MultiAnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="10" column="1" bodyfile="src/notation/multiand.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string MultiAnd::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0">toString</reimplements>
+        <reimplementedby refid="d6/da5/class_multi_and_norm_1a84940789d331007c430096a38f60d124">toString</reimplementedby>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="14" column="1" bodyfile="src/notation/multiand.cpp" bodystart="15" bodyend="27"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+        <referencedby refid="d2/d2a/class_multi_and_1a00dd6431f647c88e28d702dd2afb1c57" compoundref="db/d9c/multiand_8cpp" startline="29" endline="32">toStringPrefix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1a00dd6431f647c88e28d702dd2afb1c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string MultiAnd::toStringPrefix</definition>
+        <argsstring>() override</argsstring>
+        <name>toStringPrefix</name>
+        <reimplements refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27">toStringPrefix</reimplements>
+        <briefdescription>
+<para>get proposition prefix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of prefix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="15" column="1" bodyfile="src/notation/multiand.cpp" bodystart="29" bodyend="32"/>
+        <references refid="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178" compoundref="db/d9c/multiand_8cpp" startline="15" endline="27">toString</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1a7730036f89cf27cddcf6d2efc293dd9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool MultiAnd::getValue</definition>
+        <argsstring>(string valList) override</argsstring>
+        <name>getValue</name>
+        <reimplements refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2">getValue</reimplements>
+        <param>
+          <type>string</type>
+          <declname>valList</declname>
+        </param>
+        <briefdescription>
+<para>get proposition value </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string contains proposition variable and their value. <linebreak/>
+ e.g. &quot;A1B0C1&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proposition value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="16" column="1" bodyfile="src/notation/multiand.cpp" bodystart="34" bodyend="42"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2a/class_multi_and_1ad89e8cb08fe1e0793e2e16e837992de2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; MultiAnd::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <reimplementedby refid="d6/da5/class_multi_and_norm_1a77cbaf6920daa86d9ddc80b2a839a84f">copy</reimplementedby>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multiand.h" line="17" column="1" bodyfile="src/notation/multiand.cpp" bodystart="44" bodyend="50"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>MultiAndNorm</label>
+        <link refid="d6/da5/class_multi_and_norm"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="46">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>MultiAnd</label>
+        <link refid="d2/d2a/class_multi_and"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="51">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="50">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>MultiAnd</label>
+        <link refid="d2/d2a/class_multi_and"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/multiand.h" line="7" column="1" bodyfile="src/notation/multiand.h" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>MultiAnd</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>MultiAnd</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>MultiAnd</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>MultiAnd</scope><name>containedSpecialNode</name></member>
+      <member refid="d2/d2a/class_multi_and_1ad89e8cb08fe1e0793e2e16e837992de2" prot="public" virt="virtual"><scope>MultiAnd</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>MultiAnd</scope><name>getLeaf</name></member>
+      <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" virt="virtual"><scope>MultiAnd</scope><name>getSTNodeChild</name></member>
+      <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" virt="virtual"><scope>MultiAnd</scope><name>getSTRuleName</name></member>
+      <member refid="d2/d2a/class_multi_and_1a7730036f89cf27cddcf6d2efc293dd9d" prot="public" virt="virtual"><scope>MultiAnd</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>left</name></member>
+      <member refid="d2/d2a/class_multi_and_1af78c9976d483175359a7c372231b2ac3" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>MultiAnd</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>MultiAnd</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>MultiAnd</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>MultiAnd</scope><name>setVariable</name></member>
+      <member refid="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178" prot="public" virt="virtual"><scope>MultiAnd</scope><name>toString</name></member>
+      <member refid="d2/d2a/class_multi_and_1a00dd6431f647c88e28d702dd2afb1c57" prot="public" virt="virtual"><scope>MultiAnd</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>variables</name></member>
+      <member refid="d2/d2a/class_multi_and_1a2fe5c4c9809102fc779016d608e3f57d" prot="public" virt="non-virtual"><scope>MultiAnd</scope><name>~MultiAnd</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>MultiAnd</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

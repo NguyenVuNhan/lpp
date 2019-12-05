@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d4/d8d/classlogging" kind="class" language="C++" prot="public">
+    <compoundname>logging</compoundname>
+    <includes refid="d5/d77/logging_8h" local="no">logging.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" prot="private" static="no" mutable="no">
+        <type><ref refid="d1/df0/classhandler" kindref="compound">handler</ref> *</type>
+        <definition>handler* logging::myHandler</definition>
+        <argsstring></argsstring>
+        <name>myHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="38" column="1" bodyfile="src/logging.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="d4/d8d/classlogging_1a9fc3278b328fdec4922315d85f772489" compoundref="dd/daf/logging_8cpp" startline="5" endline="9">logging</referencedby>
+        <referencedby refid="d4/d8d/classlogging_1aa50e430d72fd366e7f906b61242c658f" compoundref="dd/daf/logging_8cpp" startline="17" endline="20">~logging</referencedby>
+        <referencedby refid="d4/d8d/classlogging_1aa15fabd099ea702ad39a8bb82e56d56c" compoundref="dd/daf/logging_8cpp" startline="22" endline="26">info</referencedby>
+        <referencedby refid="d4/d8d/classlogging_1a3df699bc82c58695050e68f28fa4bf39" compoundref="dd/daf/logging_8cpp" startline="28" endline="32">setHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d8d/classlogging_1a9fc3278b328fdec4922315d85f772489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>logging::logging</definition>
+        <argsstring>()</argsstring>
+        <name>logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="32" column="1" bodyfile="src/logging.cpp" bodystart="5" bodyend="9"/>
+        <references refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" compoundref="d5/d77/logging_8h" startline="38">myHandler</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/d8d/classlogging_1a38300200148601f298e30b8a84ad686c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>logging::logging</definition>
+        <argsstring>(handler *h)</argsstring>
+        <name>logging</name>
+        <param>
+          <type><ref refid="d1/df0/classhandler" kindref="compound">handler</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="33" column="1" bodyfile="src/logging.cpp" bodystart="11" bodyend="15"/>
+        <references refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" compoundref="d5/d77/logging_8h" startline="38">myHandler</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/d8d/classlogging_1aa50e430d72fd366e7f906b61242c658f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>logging::~logging</definition>
+        <argsstring>()</argsstring>
+        <name>~logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="34" column="1" bodyfile="src/logging.cpp" bodystart="17" bodyend="20"/>
+        <references refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" compoundref="d5/d77/logging_8h" startline="38">myHandler</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/d8d/classlogging_1a3df699bc82c58695050e68f28fa4bf39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logging::setHandler</definition>
+        <argsstring>(handler *newHandler)</argsstring>
+        <name>setHandler</name>
+        <param>
+          <type><ref refid="d1/df0/classhandler" kindref="compound">handler</ref> *</type>
+          <declname>newHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="35" column="1" bodyfile="src/logging.cpp" bodystart="28" bodyend="32"/>
+        <references refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" compoundref="d5/d77/logging_8h" startline="38">myHandler</references>
+      </memberdef>
+      <memberdef kind="function" id="d4/d8d/classlogging_1aa15fabd099ea702ad39a8bb82e56d56c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logging::info</definition>
+        <argsstring>(std::string message)</argsstring>
+        <name>info</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="36" column="1" bodyfile="src/logging.cpp" bodystart="22" bodyend="26"/>
+        <references refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" compoundref="d5/d77/logging_8h" startline="38">myHandler</references>
+        <references refid="d1/df0/classhandler_1ae4a74a6e7ba909279833759b4cab2bcc" compoundref="dd/daf/logging_8cpp" startline="55" endline="58">handler::write</references>
+        <references refid="dd/daf/logging_8cpp_1af90a9d943a7fb800048cdfb29a177f30" compoundref="dd/daf/logging_8cpp" startline="92" endline="104">NowTime</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="43">
+        <label>logging</label>
+        <link refid="d4/d8d/classlogging"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>myHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>handler</label>
+        <link refid="d1/df0/classhandler"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/logging.h" line="30" column="1" bodyfile="src/logging.h" bodystart="29" bodyend="39"/>
+    <listofallmembers>
+      <member refid="d4/d8d/classlogging_1aa15fabd099ea702ad39a8bb82e56d56c" prot="public" virt="non-virtual"><scope>logging</scope><name>info</name></member>
+      <member refid="d4/d8d/classlogging_1a9fc3278b328fdec4922315d85f772489" prot="public" virt="non-virtual"><scope>logging</scope><name>logging</name></member>
+      <member refid="d4/d8d/classlogging_1a38300200148601f298e30b8a84ad686c" prot="public" virt="non-virtual"><scope>logging</scope><name>logging</name></member>
+      <member refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" prot="private" virt="non-virtual"><scope>logging</scope><name>myHandler</name></member>
+      <member refid="d4/d8d/classlogging_1a3df699bc82c58695050e68f28fa4bf39" prot="public" virt="non-virtual"><scope>logging</scope><name>setHandler</name></member>
+      <member refid="d4/d8d/classlogging_1aa50e430d72fd366e7f906b61242c658f" prot="public" virt="non-virtual"><scope>logging</scope><name>~logging</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

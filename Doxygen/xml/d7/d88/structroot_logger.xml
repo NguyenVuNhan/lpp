@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d7/d88/structroot_logger" kind="struct" language="C++" prot="public">
+    <compoundname>rootLogger</compoundname>
+    <includes refid="d5/d77/logging_8h" local="no">logging.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d7/d88/structroot_logger_1a91e51e01c8b12e95891d79807b93a6f0" prot="private" static="yes" mutable="no">
+        <type><ref refid="d4/d8d/classlogging" kindref="compound">logging</ref></type>
+        <definition>logging rootLogger::log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <initializer>= <ref refid="d4/d8d/classlogging" kindref="compound">logging</ref>(new <ref refid="d1/df0/classhandler" kindref="compound">handler</ref>(&quot;root.log&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="46" column="1" bodyfile="src/logging.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d7/d88/structroot_logger_1a2b12bc69ec8a404d513d7db3ea856be5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rootLogger::setHandler</definition>
+        <argsstring>(handler *newHandler)</argsstring>
+        <name>setHandler</name>
+        <param>
+          <type><ref refid="d1/df0/classhandler" kindref="compound">handler</ref> *</type>
+          <declname>newHandler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="43" column="1" bodyfile="src/logging.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d88/structroot_logger_1af163fa3b8e6f1c7d4a2d1dd9fe1594ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rootLogger::info</definition>
+        <argsstring>(std::string message)</argsstring>
+        <name>info</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="44" column="1" bodyfile="src/logging.cpp" bodystart="65" bodyend="68"/>
+        <references refid="dd/daf/logging_8cpp_1af90a9d943a7fb800048cdfb29a177f30" compoundref="dd/daf/logging_8cpp" startline="92" endline="104">NowTime</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="121">
+        <label>logging</label>
+        <link refid="d4/d8d/classlogging"/>
+        <childnode refid="122" relation="usage">
+          <edgelabel>myHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="122">
+        <label>handler</label>
+        <link refid="d1/df0/classhandler"/>
+      </node>
+      <node id="120">
+        <label>rootLogger</label>
+        <link refid="d7/d88/structroot_logger"/>
+        <childnode refid="121" relation="usage">
+          <edgelabel>log</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/logging.h" line="42" column="1" bodyfile="src/logging.h" bodystart="41" bodyend="47"/>
+    <listofallmembers>
+      <member refid="d7/d88/structroot_logger_1af163fa3b8e6f1c7d4a2d1dd9fe1594ce" prot="public" virt="non-virtual"><scope>rootLogger</scope><name>info</name></member>
+      <member refid="d7/d88/structroot_logger_1a91e51e01c8b12e95891d79807b93a6f0" prot="private" virt="non-virtual"><scope>rootLogger</scope><name>log</name></member>
+      <member refid="d7/d88/structroot_logger_1a2b12bc69ec8a404d513d7db3ea856be5" prot="public" virt="non-virtual"><scope>rootLogger</scope><name>setHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

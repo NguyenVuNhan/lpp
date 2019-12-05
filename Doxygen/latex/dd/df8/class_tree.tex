@@ -1,0 +1,310 @@
+\hypertarget{class_tree}{}\section{Tree Class Reference}
+\label{class_tree}\index{Tree@{Tree}}
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+
+
+Inheritance diagram for Tree\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d2/d0b/class_tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tree\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{de/dda/class_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tree_a114a18872bc2535a73ceb0719cde7945}{Tree} (string prop=\char`\"{}\char`\"{})
+\item 
+\hyperlink{class_tree_a6515b810a36ab46fa79b9dc9d426a8ff}{Tree} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a9c0875a8767528453814b8e3daf8f9af}{tree}=nullptr)
+\item 
+virtual \hyperlink{class_tree_abdc38545cf3f588725b5d8b8075b3866}{$\sim$\+Tree} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_ad9bd7cd558397f596703e92fc47aa91f}{get\+Tree} ()
+\item 
+virtual list$<$ string $>$ \hyperlink{class_tree_a525967d14a17de0ad9c9072b025af1c3}{get\+List\+Variable} ()
+\item 
+string \hyperlink{class_tree_a7d2c78122409858b2516b52514bd7fe8}{get\+Proposition} ()
+\item 
+bool \hyperlink{class_tree_a22efa22748fa8d8a598e05ceb327dfd4}{is\+Tautology} ()
+\item 
+bool \hyperlink{class_tree_abde731a55b92d402fbbd166a577cbe91}{get\+Value} (string val\+List)
+\item 
+bool \hyperlink{class_tree_ae19f22cfa4b782b5c0a048592ea3e95f}{export\+Graph} (string title, string filenname)
+\item 
+bool \hyperlink{class_tree_ae235cdb84985c90fa56697a28b0a8d9e}{export\+Proof} (string title, string filenname)
+\item 
+virtual string \hyperlink{class_tree_a9d7b51cc207222de02ccb59192454de5}{get\+David\+Putnam} ()
+\begin{DoxyCompactList}\small\item\em get David Putnam \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a016c2300dfa5444a52e6e6db7be850d2}{get\+Statement} (string prop, unsigned int \&pos)
+\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a60a9b7d65fc663d2db005b01119efa73}{get\+Node} (char notation)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a9c0875a8767528453814b8e3daf8f9af}{tree} = nullptr
+\item 
+list$<$ string $>$ \hyperlink{class_tree_a38bca58f3aef44e939f69f092037af50}{var\+List}
+\item 
+string \hyperlink{class_tree_a2a8e8236ffc2a6ba0ba580f4f0b01128}{prop\+\_\+in}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_ad05978c3b3aaa0eefed672a5129c00a1}{parse} (string prop, unsigned int \&pos)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_tree_a43a26e394162774b0e0614e6567f5fe1}{proposition} = \char`\"{}\char`\"{}
+\item 
+\hyperlink{class_semantic_tableaux}{Semantic\+Tableaux} \hyperlink{class_tree_ae9dd5a4ebbf36cd6a952c78139221cad}{tableaux}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tree_a114a18872bc2535a73ceb0719cde7945}\label{class_tree_a114a18872bc2535a73ceb0719cde7945}} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{string}]{prop = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_a114a18872bc2535a73ceb0719cde7945_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{dd/df8/class_tree_a114a18872bc2535a73ceb0719cde7945_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a6515b810a36ab46fa79b9dc9d426a8ff}\label{class_tree_a6515b810a36ab46fa79b9dc9d426a8ff}} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{tree = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_tree_abdc38545cf3f588725b5d8b8075b3866}\label{class_tree_abdc38545cf3f588725b5d8b8075b3866}} 
+\index{Tree@{Tree}!````~Tree@{$\sim$\+Tree}}
+\index{````~Tree@{$\sim$\+Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Tree()}{~Tree()}}
+{\footnotesize\ttfamily Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tree_ae19f22cfa4b782b5c0a048592ea3e95f}\label{class_tree_ae19f22cfa4b782b5c0a048592ea3e95f}} 
+\index{Tree@{Tree}!export\+Graph@{export\+Graph}}
+\index{export\+Graph@{export\+Graph}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{export\+Graph()}{exportGraph()}}
+{\footnotesize\ttfamily bool Tree\+::export\+Graph (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{string}]{filenname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_ae235cdb84985c90fa56697a28b0a8d9e}\label{class_tree_ae235cdb84985c90fa56697a28b0a8d9e}} 
+\index{Tree@{Tree}!export\+Proof@{export\+Proof}}
+\index{export\+Proof@{export\+Proof}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{export\+Proof()}{exportProof()}}
+{\footnotesize\ttfamily bool Tree\+::export\+Proof (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{string}]{filenname }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{dd/df8/class_tree_ae235cdb84985c90fa56697a28b0a8d9e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a9d7b51cc207222de02ccb59192454de5}\label{class_tree_a9d7b51cc207222de02ccb59192454de5}} 
+\index{Tree@{Tree}!get\+David\+Putnam@{get\+David\+Putnam}}
+\index{get\+David\+Putnam@{get\+David\+Putnam}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+David\+Putnam()}{getDavidPutnam()}}
+{\footnotesize\ttfamily string Tree\+::get\+David\+Putnam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get David Putnam 
+
+\begin{DoxyReturn}{Returns}
+string, showing David Putnam result 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_c_n_f_a029535415f1d5cf92c8023693ce7b40e}{C\+NF}.
+
+\mbox{\Hypertarget{class_tree_a525967d14a17de0ad9c9072b025af1c3}\label{class_tree_a525967d14a17de0ad9c9072b025af1c3}} 
+\index{Tree@{Tree}!get\+List\+Variable@{get\+List\+Variable}}
+\index{get\+List\+Variable@{get\+List\+Variable}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+List\+Variable()}{getListVariable()}}
+{\footnotesize\ttfamily list$<$ string $>$ Tree\+::get\+List\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3}{C\+NF}, and \hyperlink{class_predicate_ae2524ae4cd1e71a00984f6a49d717469}{Predicate}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{dd/df8/class_tree_a525967d14a17de0ad9c9072b025af1c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_a525967d14a17de0ad9c9072b025af1c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a60a9b7d65fc663d2db005b01119efa73}\label{class_tree_a60a9b7d65fc663d2db005b01119efa73}} 
+\index{Tree@{Tree}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Tree\+::get\+Node (\begin{DoxyParamCaption}\item[{char}]{notation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_predicate_a68cb341b481a973037db8d4b369bd73f}{Predicate}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_a60a9b7d65fc663d2db005b01119efa73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a7d2c78122409858b2516b52514bd7fe8}\label{class_tree_a7d2c78122409858b2516b52514bd7fe8}} 
+\index{Tree@{Tree}!get\+Proposition@{get\+Proposition}}
+\index{get\+Proposition@{get\+Proposition}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+Proposition()}{getProposition()}}
+{\footnotesize\ttfamily string Tree\+::get\+Proposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_a016c2300dfa5444a52e6e6db7be850d2}\label{class_tree_a016c2300dfa5444a52e6e6db7be850d2}} 
+\index{Tree@{Tree}!get\+Statement@{get\+Statement}}
+\index{get\+Statement@{get\+Statement}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+Statement()}{getStatement()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Tree\+::get\+Statement (\begin{DoxyParamCaption}\item[{string}]{prop,  }\item[{unsigned int \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_predicate_a0572df9e18344e95ca1ce521d551a0ea}{Predicate}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_a016c2300dfa5444a52e6e6db7be850d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_ad9bd7cd558397f596703e92fc47aa91f}\label{class_tree_ad9bd7cd558397f596703e92fc47aa91f}} 
+\index{Tree@{Tree}!get\+Tree@{get\+Tree}}
+\index{get\+Tree@{get\+Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+Tree()}{getTree()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Tree\+::get\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_abde731a55b92d402fbbd166a577cbe91}\label{class_tree_abde731a55b92d402fbbd166a577cbe91}} 
+\index{Tree@{Tree}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Tree\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_abde731a55b92d402fbbd166a577cbe91_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a22efa22748fa8d8a598e05ceb327dfd4}\label{class_tree_a22efa22748fa8d8a598e05ceb327dfd4}} 
+\index{Tree@{Tree}!is\+Tautology@{is\+Tautology}}
+\index{is\+Tautology@{is\+Tautology}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{is\+Tautology()}{isTautology()}}
+{\footnotesize\ttfamily bool Tree\+::is\+Tautology (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_a22efa22748fa8d8a598e05ceb327dfd4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_ad05978c3b3aaa0eefed672a5129c00a1}\label{class_tree_ad05978c3b3aaa0eefed672a5129c00a1}} 
+\index{Tree@{Tree}!parse@{parse}}
+\index{parse@{parse}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Tree\+::parse (\begin{DoxyParamCaption}\item[{string}]{prop,  }\item[{unsigned int \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb}{Predicate}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{dd/df8/class_tree_ad05978c3b3aaa0eefed672a5129c00a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df8/class_tree_ad05978c3b3aaa0eefed672a5129c00a1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tree_a2a8e8236ffc2a6ba0ba580f4f0b01128}\label{class_tree_a2a8e8236ffc2a6ba0ba580f4f0b01128}} 
+\index{Tree@{Tree}!prop\+\_\+in@{prop\+\_\+in}}
+\index{prop\+\_\+in@{prop\+\_\+in}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{prop\+\_\+in}{prop\_in}}
+{\footnotesize\ttfamily string Tree\+::prop\+\_\+in\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_tree_a43a26e394162774b0e0614e6567f5fe1}\label{class_tree_a43a26e394162774b0e0614e6567f5fe1}} 
+\index{Tree@{Tree}!proposition@{proposition}}
+\index{proposition@{proposition}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{proposition}{proposition}}
+{\footnotesize\ttfamily string Tree\+::proposition = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tree_ae9dd5a4ebbf36cd6a952c78139221cad}\label{class_tree_ae9dd5a4ebbf36cd6a952c78139221cad}} 
+\index{Tree@{Tree}!tableaux@{tableaux}}
+\index{tableaux@{tableaux}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{tableaux}{tableaux}}
+{\footnotesize\ttfamily \hyperlink{class_semantic_tableaux}{Semantic\+Tableaux} Tree\+::tableaux\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_tree_a9c0875a8767528453814b8e3daf8f9af}\label{class_tree_a9c0875a8767528453814b8e3daf8f9af}} 
+\index{Tree@{Tree}!tree@{tree}}
+\index{tree@{tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$ Tree\+::tree = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_tree_a38bca58f3aef44e939f69f092037af50}\label{class_tree_a38bca58f3aef44e939f69f092037af50}} 
+\index{Tree@{Tree}!var\+List@{var\+List}}
+\index{var\+List@{var\+List}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{var\+List}{varList}}
+{\footnotesize\ttfamily list$<$string$>$ Tree\+::var\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/proposition/\hyperlink{tree_8h}{tree.\+h}\item 
+src/proposition/\hyperlink{tree_8cpp}{tree.\+cpp}\end{DoxyCompactItemize}

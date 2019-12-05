@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7d80c2fda53c1b45d1b78d30ae14e8d9" kind="dir">
+    <compoundname>src/SemanticTableaux</compoundname>
+    <innerfile refid="d7/d37/_semantic_tableaux_2enum_8h">enum.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/SemanticTableaux/"/>
+  </compounddef>
+</doxygen>

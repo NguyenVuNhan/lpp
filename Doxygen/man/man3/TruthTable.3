@@ -1,0 +1,101 @@
+.TH "TruthTable" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TruthTable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <truthtable\&.h>\fP
+.PP
+Inherits \fBTree\fP\&.
+.PP
+Inherited by \fBSimpleTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTruthTable\fP (\fBTree\fP otherTree)"
+.br
+.ti -1c
+.RI "\fBTruthTable\fP (string prop='')"
+.br
+.ti -1c
+.RI "\fBTruthTable\fP (shared_ptr< \fBNode\fP > otherTree)"
+.br
+.ti -1c
+.RI "\fB~TruthTable\fP ()"
+.br
+.ti -1c
+.RI "list< \fBRows\fP > \fBgetTable\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetHashCode\fP ()"
+.br
+.ti -1c
+.RI "\fBTree\fP \fBgetNormalize\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "list< \fBRows\fP > \fBtable\fP"
+.br
+.ti -1c
+.RI "uintmax_t \fBhash\fP = 0"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgenerateTable\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "list< \fBRows\fP > \fBtrueRows\fP"
+.br
+.ti -1c
+.RI "list< \fBRows\fP > \fBfalseRows\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TruthTable::TruthTable (\fBTree\fP otherTree)\fC [explicit]\fP"
+
+.SS "TruthTable::TruthTable (string prop = \fC''\fP)\fC [explicit]\fP"
+
+.SS "TruthTable::TruthTable (shared_ptr< \fBNode\fP > otherTree)\fC [explicit]\fP"
+
+.SS "TruthTable::~TruthTable ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TruthTable::generateTable ()\fC [private]\fP"
+
+.SS "string TruthTable::getHashCode ()"
+
+.SS "\fBTree\fP TruthTable::getNormalize ()"
+
+.SS "list< \fBRows\fP > TruthTable::getTable ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "list<\fBRows\fP> TruthTable::falseRows\fC [private]\fP"
+
+.SS "uintmax_t TruthTable::hash = 0\fC [protected]\fP"
+
+.SS "list<\fBRows\fP> TruthTable::table\fC [protected]\fP"
+
+.SS "list<\fBRows\fP> TruthTable::trueRows\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

@@ -1,0 +1,174 @@
+\hypertarget{class_rows}{}\section{Rows Class Reference}
+\label{class_rows}\index{Rows@{Rows}}
+
+
+{\ttfamily \#include $<$rows.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rows_a6c48a7781d187ab7908a772cd0df1a28}{Rows} (uintmax\+\_\+t \hyperlink{class_rows_a0bae45d3eb178a0b8fe253a9c447bbc1}{elem\+\_\+str}, bool \hyperlink{class_rows_a2b3d2fabf2107acdce437f8896a9d999}{value}, uintmax\+\_\+t str\+Len=2)
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_rows_a22f5ff0d92c58ac650fd337d8f0a7894}{to\+Node} (list$<$ string $>$ label)
+\item 
+int \hyperlink{class_rows_a0c7d1d2c3af24b8de6c88885ad90d68e}{is\+\_\+match\+\_\+pair} (const \hyperlink{class_rows}{Rows} \&other)
+\item 
+bool \hyperlink{class_rows_a1c7fca7d12a6195f1c68ca7f7b40559d}{get\+Value} ()
+\item 
+void \hyperlink{class_rows_a7f0b421443b1c6141c8816a7bfd1ac75}{set\+Dont\+Care} (uint pos)
+\item 
+string \hyperlink{class_rows_ae448dbf8255ceeea29a21125433f9e42}{get\+Elem} ()
+\item 
+string \hyperlink{class_rows_af097985562c1e8137014839519898494}{to\+String} ()
+\item 
+void \hyperlink{class_rows_a050e6e5b47e4096f1cdea7f7325fac8e}{operator=} (const \hyperlink{class_rows}{Rows} \&other)
+\item 
+bool \hyperlink{class_rows_a234bd8fcbb772dad8a6e129c2ccd0e8b}{operator==} (const \hyperlink{class_rows}{Rows} \&other)
+\item 
+bool \hyperlink{class_rows_ae8eb3bed11f3a6ac4721aa27e1489106}{operator$<$} (const \hyperlink{class_rows}{Rows} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_rows_a0bae45d3eb178a0b8fe253a9c447bbc1}{elem\+\_\+str}
+\item 
+bool \hyperlink{class_rows_acf35a12cc4ce4e4b0c61af3757321803}{checked} = false
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_rows_aa610ff44d051eededf3c25928987bb81}{to\+Bin\+String} (uintmax\+\_\+t i, uintmax\+\_\+t str\+Len)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uintmax\+\_\+t \hyperlink{class_rows_ac2cf1184df80a0fdab7da08e13c050ba}{elem\+\_\+byte}
+\item 
+bool \hyperlink{class_rows_a2b3d2fabf2107acdce437f8896a9d999}{value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rows_a6c48a7781d187ab7908a772cd0df1a28}\label{class_rows_a6c48a7781d187ab7908a772cd0df1a28}} 
+\index{Rows@{Rows}!Rows@{Rows}}
+\index{Rows@{Rows}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{Rows()}{Rows()}}
+{\footnotesize\ttfamily Rows\+::\+Rows (\begin{DoxyParamCaption}\item[{uintmax\+\_\+t}]{elem\+\_\+str,  }\item[{bool}]{value,  }\item[{uintmax\+\_\+t}]{str\+Len = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d6/d54/class_rows_a6c48a7781d187ab7908a772cd0df1a28_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rows_ae448dbf8255ceeea29a21125433f9e42}\label{class_rows_ae448dbf8255ceeea29a21125433f9e42}} 
+\index{Rows@{Rows}!get\+Elem@{get\+Elem}}
+\index{get\+Elem@{get\+Elem}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{get\+Elem()}{getElem()}}
+{\footnotesize\ttfamily string Rows\+::get\+Elem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_a1c7fca7d12a6195f1c68ca7f7b40559d}\label{class_rows_a1c7fca7d12a6195f1c68ca7f7b40559d}} 
+\index{Rows@{Rows}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Rows\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_a0c7d1d2c3af24b8de6c88885ad90d68e}\label{class_rows_a0c7d1d2c3af24b8de6c88885ad90d68e}} 
+\index{Rows@{Rows}!is\+\_\+match\+\_\+pair@{is\+\_\+match\+\_\+pair}}
+\index{is\+\_\+match\+\_\+pair@{is\+\_\+match\+\_\+pair}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{is\+\_\+match\+\_\+pair()}{is\_match\_pair()}}
+{\footnotesize\ttfamily int Rows\+::is\+\_\+match\+\_\+pair (\begin{DoxyParamCaption}\item[{const \hyperlink{class_rows}{Rows} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_ae8eb3bed11f3a6ac4721aa27e1489106}\label{class_rows_ae8eb3bed11f3a6ac4721aa27e1489106}} 
+\index{Rows@{Rows}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Rows\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_rows}{Rows} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_a050e6e5b47e4096f1cdea7f7325fac8e}\label{class_rows_a050e6e5b47e4096f1cdea7f7325fac8e}} 
+\index{Rows@{Rows}!operator=@{operator=}}
+\index{operator=@{operator=}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Rows\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_rows}{Rows} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_a234bd8fcbb772dad8a6e129c2ccd0e8b}\label{class_rows_a234bd8fcbb772dad8a6e129c2ccd0e8b}} 
+\index{Rows@{Rows}!operator==@{operator==}}
+\index{operator==@{operator==}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Rows\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_rows}{Rows} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_a7f0b421443b1c6141c8816a7bfd1ac75}\label{class_rows_a7f0b421443b1c6141c8816a7bfd1ac75}} 
+\index{Rows@{Rows}!set\+Dont\+Care@{set\+Dont\+Care}}
+\index{set\+Dont\+Care@{set\+Dont\+Care}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{set\+Dont\+Care()}{setDontCare()}}
+{\footnotesize\ttfamily void Rows\+::set\+Dont\+Care (\begin{DoxyParamCaption}\item[{uint}]{pos }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d54/class_rows_a7f0b421443b1c6141c8816a7bfd1ac75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rows_aa610ff44d051eededf3c25928987bb81}\label{class_rows_aa610ff44d051eededf3c25928987bb81}} 
+\index{Rows@{Rows}!to\+Bin\+String@{to\+Bin\+String}}
+\index{to\+Bin\+String@{to\+Bin\+String}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{to\+Bin\+String()}{toBinString()}}
+{\footnotesize\ttfamily string Rows\+::to\+Bin\+String (\begin{DoxyParamCaption}\item[{uintmax\+\_\+t}]{i,  }\item[{uintmax\+\_\+t}]{str\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d6/d54/class_rows_aa610ff44d051eededf3c25928987bb81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rows_a22f5ff0d92c58ac650fd337d8f0a7894}\label{class_rows_a22f5ff0d92c58ac650fd337d8f0a7894}} 
+\index{Rows@{Rows}!to\+Node@{to\+Node}}
+\index{to\+Node@{to\+Node}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{to\+Node()}{toNode()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Rows\+::to\+Node (\begin{DoxyParamCaption}\item[{list$<$ string $>$}]{label }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_rows_af097985562c1e8137014839519898494}\label{class_rows_af097985562c1e8137014839519898494}} 
+\index{Rows@{Rows}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Rows\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_rows_acf35a12cc4ce4e4b0c61af3757321803}\label{class_rows_acf35a12cc4ce4e4b0c61af3757321803}} 
+\index{Rows@{Rows}!checked@{checked}}
+\index{checked@{checked}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{checked}{checked}}
+{\footnotesize\ttfamily bool Rows\+::checked = false}
+
+\mbox{\Hypertarget{class_rows_ac2cf1184df80a0fdab7da08e13c050ba}\label{class_rows_ac2cf1184df80a0fdab7da08e13c050ba}} 
+\index{Rows@{Rows}!elem\+\_\+byte@{elem\+\_\+byte}}
+\index{elem\+\_\+byte@{elem\+\_\+byte}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{elem\+\_\+byte}{elem\_byte}}
+{\footnotesize\ttfamily uintmax\+\_\+t Rows\+::elem\+\_\+byte\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_rows_a0bae45d3eb178a0b8fe253a9c447bbc1}\label{class_rows_a0bae45d3eb178a0b8fe253a9c447bbc1}} 
+\index{Rows@{Rows}!elem\+\_\+str@{elem\+\_\+str}}
+\index{elem\+\_\+str@{elem\+\_\+str}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{elem\+\_\+str}{elem\_str}}
+{\footnotesize\ttfamily string Rows\+::elem\+\_\+str}
+
+\mbox{\Hypertarget{class_rows_a2b3d2fabf2107acdce437f8896a9d999}\label{class_rows_a2b3d2fabf2107acdce437f8896a9d999}} 
+\index{Rows@{Rows}!value@{value}}
+\index{value@{value}!Rows@{Rows}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily bool Rows\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/table/\hyperlink{rows_8h}{rows.\+h}\item 
+src/table/\hyperlink{rows_8cpp}{rows.\+cpp}\end{DoxyCompactItemize}

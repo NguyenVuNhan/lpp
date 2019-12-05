@@ -1,0 +1,331 @@
+\hypertarget{struct_i___c_n_f}{}\section{I\+\_\+\+C\+NF Struct Reference}
+\label{struct_i___c_n_f}\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+
+
+The Public interface of \hyperlink{class_c_n_f}{C\+NF}.  
+
+
+
+
+{\ttfamily \#include $<$cnf.\+h$>$}
+
+
+
+Inheritance diagram for I\+\_\+\+C\+NF\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{da/dda/struct_i___c_n_f__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{struct_i___c_n_f_aa7adb25b5dbb1f4dcddaf56dab338add}{solve\+Non\+Janus} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node, char v)
+\begin{DoxyCompactList}\small\item\em Solve non-\/janus based on Muliti\+And node and variable v. \end{DoxyCompactList}\item 
+\hyperlink{struct_reso}{Reso} \hyperlink{struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1}{resolution} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node, char v)
+\begin{DoxyCompactList}\small\item\em Resolution based on Muliti\+And node and variable v. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{struct_i___c_n_f_ac0c5ce2bd3edadb60de923b4259cc10b}{node\+To\+Multi\+And} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node)
+\begin{DoxyCompactList}\small\item\em Convert node to \hyperlink{class_multi_and}{Multi\+And}, remove douplicate element and sort element This function are being used after generate\+C\+NF. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{struct_i___c_n_f_afedf64bb258fd48ea0f811a9f571f0f0}{generate\+C\+NF} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ origin\+Tree)
+\begin{DoxyCompactList}\small\item\em generate \hyperlink{class_c_n_f}{C\+NF} form based on origin\+Tree, origin\+Tree will be changed, to prevent lost data, use deep copy of \hyperlink{class_node}{Node} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{struct_i___c_n_f_ae9f978965edae4ab57c692544cb72d01}{is\+Useless} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node)
+\begin{DoxyCompactList}\small\item\em Check if node is useless. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_i___c_n_f_ac9fd631eda1871653b2d1fdcd55f18a5}{find\+Janus} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node)
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{class_node}{Node} contains Janus. \end{DoxyCompactList}\item 
+void \hyperlink{struct_i___c_n_f_ad417af0f07b5e7035c3671dcc3e9f798}{get\+Unique\+List} (list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \&l)
+\begin{DoxyCompactList}\small\item\em get unique list of node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{struct_i___c_n_f_a41a7be439cae3ed577a30b3f2742218e}{is\+Contain} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ nodes, string v)
+\begin{DoxyCompactList}\small\item\em check if node contain variable v \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{struct_i___c_n_f_a62586e691ebfb00696be6bf9710f4da4}{merge\+Node} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node1, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ node2, string v, string not\+\_\+v)
+\begin{DoxyCompactList}\small\item\em merge two \hyperlink{class_node_a350b631f3a9192bfa23bc266f6b8da02}{Node\+::variables} list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Public interface of \hyperlink{class_c_n_f}{C\+NF}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_i___c_n_f_ac9fd631eda1871653b2d1fdcd55f18a5}\label{struct_i___c_n_f_ac9fd631eda1871653b2d1fdcd55f18a5}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!find\+Janus@{find\+Janus}}
+\index{find\+Janus@{find\+Janus}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{find\+Janus()}{findJanus()}}
+{\footnotesize\ttfamily bool I\+\_\+\+C\+N\+F\+::find\+Janus (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Check if \hyperlink{class_node}{Node} contains Janus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ \hyperlink{class_node}{Node} pointer to check for Janus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ If Janus found ~\newline
+ False -\/ If Janus not found 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{d5/d80/struct_i___c_n_f_ac9fd631eda1871653b2d1fdcd55f18a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_afedf64bb258fd48ea0f811a9f571f0f0}\label{struct_i___c_n_f_afedf64bb258fd48ea0f811a9f571f0f0}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!generate\+C\+NF@{generate\+C\+NF}}
+\index{generate\+C\+NF@{generate\+C\+NF}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{generate\+C\+N\+F()}{generateCNF()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ I\+\_\+\+C\+N\+F\+::generate\+C\+NF (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{origin\+Tree }\end{DoxyParamCaption})}
+
+
+
+generate \hyperlink{class_c_n_f}{C\+NF} form based on origin\+Tree, origin\+Tree will be changed, to prevent lost data, use deep copy of \hyperlink{class_node}{Node} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin\+Tree} & -\/ \hyperlink{class_node}{Node} pointer, origin tree to convert to \hyperlink{class_c_n_f}{C\+NF} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_c_n_f}{C\+NF} tree 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node\+::copy} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d5/d80/struct_i___c_n_f_afedf64bb258fd48ea0f811a9f571f0f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_ad417af0f07b5e7035c3671dcc3e9f798}\label{struct_i___c_n_f_ad417af0f07b5e7035c3671dcc3e9f798}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!get\+Unique\+List@{get\+Unique\+List}}
+\index{get\+Unique\+List@{get\+Unique\+List}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{get\+Unique\+List()}{getUniqueList()}}
+{\footnotesize\ttfamily void I\+\_\+\+C\+N\+F\+::get\+Unique\+List (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+get unique list of node 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l} & -\/ list of node contains douplicate member \\
+\hline
+\mbox{\tt out}  & {\em l} & -\/ list of node contains unique member only \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_ad417af0f07b5e7035c3671dcc3e9f798_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_a41a7be439cae3ed577a30b3f2742218e}\label{struct_i___c_n_f_a41a7be439cae3ed577a30b3f2742218e}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!is\+Contain@{is\+Contain}}
+\index{is\+Contain@{is\+Contain}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{is\+Contain()}{isContain()}}
+{\footnotesize\ttfamily bool I\+\_\+\+C\+N\+F\+::is\+Contain (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{nodes,  }\item[{string}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if node contain variable v 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & -\/ \hyperlink{class_node}{Node}, node to check \\
+\hline
+{\em v} & -\/ String, variable v \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ if node contains variable v ~\newline
+ False -\/ if node does not contains variable v 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_a41a7be439cae3ed577a30b3f2742218e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_ae9f978965edae4ab57c692544cb72d01}\label{struct_i___c_n_f_ae9f978965edae4ab57c692544cb72d01}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!is\+Useless@{is\+Useless}}
+\index{is\+Useless@{is\+Useless}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{is\+Useless()}{isUseless()}}
+{\footnotesize\ttfamily bool I\+\_\+\+C\+N\+F\+::is\+Useless (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if node is useless. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ \hyperlink{class_multi_or}{Multi\+Or} node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ if node is useless ~\newline
+ False -\/ if node is not useless 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d5/d80/struct_i___c_n_f_ae9f978965edae4ab57c692544cb72d01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_a62586e691ebfb00696be6bf9710f4da4}\label{struct_i___c_n_f_a62586e691ebfb00696be6bf9710f4da4}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!merge\+Node@{merge\+Node}}
+\index{merge\+Node@{merge\+Node}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{merge\+Node()}{mergeNode()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ I\+\_\+\+C\+N\+F\+::merge\+Node (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node1,  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node2,  }\item[{string}]{v,  }\item[{string}]{not\+\_\+v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+merge two \hyperlink{class_node_a350b631f3a9192bfa23bc266f6b8da02}{Node\+::variables} list. 
+
+This function use for \hyperlink{class_multi_or}{Multi\+Or}, used by \hyperlink{struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1}{I\+\_\+\+C\+N\+F\+::resolution} 
+\begin{DoxyParams}{Parameters}
+{\em node1} & -\/ first node \\
+\hline
+{\em node2} & -\/ second node \\
+\hline
+{\em v} & -\/ string of variable v, upper case \\
+\hline
+{\em not\+\_\+v} & -\/ string of variable v, lowercase \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+merged \hyperlink{class_node}{Node} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d5/d80/struct_i___c_n_f_a62586e691ebfb00696be6bf9710f4da4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_a62586e691ebfb00696be6bf9710f4da4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_ac0c5ce2bd3edadb60de923b4259cc10b}\label{struct_i___c_n_f_ac0c5ce2bd3edadb60de923b4259cc10b}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!node\+To\+Multi\+And@{node\+To\+Multi\+And}}
+\index{node\+To\+Multi\+And@{node\+To\+Multi\+And}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{node\+To\+Multi\+And()}{nodeToMultiAnd()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ I\+\_\+\+C\+N\+F\+::node\+To\+Multi\+And (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node }\end{DoxyParamCaption})}
+
+
+
+Convert node to \hyperlink{class_multi_and}{Multi\+And}, remove douplicate element and sort element This function are being used after generate\+C\+NF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & -\/ node to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_multi_and}{Multi\+And} node, with deep of 3 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_node_a73ccf66e577caa428163477f3b4cfe4d}{Node\+::get\+Leaf}, \hyperlink{struct_i___c_n_f_afedf64bb258fd48ea0f811a9f571f0f0}{I\+\_\+\+C\+N\+F\+::generate\+C\+NF} 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_ac0c5ce2bd3edadb60de923b4259cc10b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{d5/d80/struct_i___c_n_f_ac0c5ce2bd3edadb60de923b4259cc10b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1}\label{struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!resolution@{resolution}}
+\index{resolution@{resolution}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{resolution()}{resolution()}}
+{\footnotesize\ttfamily \hyperlink{struct_reso}{Reso} I\+\_\+\+C\+N\+F\+::resolution (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node,  }\item[{char}]{v }\end{DoxyParamCaption})}
+
+
+
+Resolution based on Muliti\+And node and variable v. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_reso}{Reso}, contain node Resolution and Subtitute Resolution 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{d5/d80/struct_i___c_n_f_a1b3282ebd2d998f5fe3aa3e192346ac1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_i___c_n_f_aa7adb25b5dbb1f4dcddaf56dab338add}\label{struct_i___c_n_f_aa7adb25b5dbb1f4dcddaf56dab338add}} 
+\index{I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}!solve\+Non\+Janus@{solve\+Non\+Janus}}
+\index{solve\+Non\+Janus@{solve\+Non\+Janus}!I\+\_\+\+C\+NF@{I\+\_\+\+C\+NF}}
+\subsubsection{\texorpdfstring{solve\+Non\+Janus()}{solveNonJanus()}}
+{\footnotesize\ttfamily string I\+\_\+\+C\+N\+F\+::solve\+Non\+Janus (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{node,  }\item[{char}]{v }\end{DoxyParamCaption})}
+
+
+
+Solve non-\/janus based on Muliti\+And node and variable v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & -\/ \hyperlink{class_multi_and}{Multi\+And} \hyperlink{class_node}{Node} pointer to find janus \\
+\hline
+\mbox{\tt out}  & {\em node} & -\/ node will be filter out if janus have found \\
+\hline
+ & {\em v} & -\/ String represent for current variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String contains founded janus ~\newline
+ Emplty string if janus not found 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d80/struct_i___c_n_f_aa7adb25b5dbb1f4dcddaf56dab338add_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cnf/\hyperlink{cnf_8h}{cnf.\+h}\item 
+src/cnf/\hyperlink{cnf_8cpp}{cnf.\+cpp}\end{DoxyCompactItemize}

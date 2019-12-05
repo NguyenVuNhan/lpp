@@ -1,0 +1,67 @@
+.TH "SemanticTableaux" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SemanticTableaux
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <semantictableaux\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSemanticTableaux\fP (shared_ptr< \fBNode\fP > tree=nullptr)"
+.br
+.ti -1c
+.RI "\fB~SemanticTableaux\fP ()"
+.br
+.ti -1c
+.RI "bool \fBExportProof\fP (string title, string filenname)"
+.br
+.ti -1c
+.RI "bool \fBisTautology\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgenerateProof\fP (shared_ptr< \fBSTNode\fP > root)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBtautology\fP = true"
+.br
+.ti -1c
+.RI "shared_ptr< \fBSTNode\fP > \fBtableaux\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SemanticTableaux::SemanticTableaux (shared_ptr< \fBNode\fP > tree = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "SemanticTableaux::~SemanticTableaux ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SemanticTableaux::ExportProof (string title, string filenname)"
+
+.SS "void SemanticTableaux::generateProof (shared_ptr< \fBSTNode\fP > root)\fC [private]\fP"
+
+.SS "bool SemanticTableaux::isTautology ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "shared_ptr<\fBSTNode\fP > SemanticTableaux::tableaux\fC [private]\fP"
+
+.SS "bool SemanticTableaux::tautology = true\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

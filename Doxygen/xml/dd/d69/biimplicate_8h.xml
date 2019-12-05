@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dd/d69/biimplicate_8h" kind="file" language="C++">
+    <compoundname>biimplicate.h</compoundname>
+    <includes refid="d1/d77/node_8h" local="yes">node.h</includes>
+    <includedby refid="d0/dbf/biimplicate_8cpp" local="yes">src/notation/biimplicate.cpp</includedby>
+    <includedby refid="db/d07/predicate_8cpp" local="yes">src/proposition/predicate.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <incdepgraph>
+      <node id="126">
+        <label>list</label>
+      </node>
+      <node id="129">
+        <label>iomanip</label>
+      </node>
+      <node id="122">
+        <label>string</label>
+      </node>
+      <node id="121">
+        <label>fstream</label>
+      </node>
+      <node id="127">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="123">
+        <label>array</label>
+      </node>
+      <node id="120">
+        <label>iostream</label>
+      </node>
+      <node id="124">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="118">
+        <label>src/notation/biimplicate.h</label>
+        <link refid="dd/d69/biimplicate_8h"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>algorithm</label>
+      </node>
+      <node id="119">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="132">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="133">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="134">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="131">
+        <label>src/notation/biimplicate.h</label>
+        <link refid="dd/d69/biimplicate_8h"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/da3/class_bi_implicate" prot="public">BiImplicate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BIIMPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIIMPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d77/node_8h" kindref="compound">node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d5/da3/class_bi_implicate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d5/da3/class_bi_implicate" kindref="compound">BiImplicate</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d5/da3/class_bi_implicate_1acd402fb9b2eef1b44361448038f20ddc" kindref="member">BiImplicate</ref>(shared_ptr&lt;Node&gt;<sp/>l<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>shared_ptr&lt;Node&gt;<sp/>r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/da3/class_bi_implicate_1ad3f12180788d7d207b2e385c2a89c35b" kindref="member">~BiImplicate</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Node<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" kindref="member">getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref><sp/><ref refid="d5/da3/class_bi_implicate_1a3ca1a9b3fd1805b56b72def494179ea3" kindref="member">getSTRuleName</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" kindref="member">nandify</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" kindref="member">getSTNodeChild</ref>(shared_ptr&lt;STNode&gt;<sp/>root,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" kindref="member">cnfFilter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BIIMPLICATION_H</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/biimplicate.h"/>
+  </compounddef>
+</doxygen>

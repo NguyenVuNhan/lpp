@@ -1,0 +1,211 @@
+\hypertarget{class_implicate}{}\section{Implicate Class Reference}
+\label{class_implicate}\index{Implicate@{Implicate}}
+
+
+{\ttfamily \#include $<$implicate.\+h$>$}
+
+
+
+Inheritance diagram for Implicate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{db/dcd/class_implicate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Implicate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d4/d97/class_implicate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_implicate_a7386039d72650d3da8562144b1868722}{Implicate} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a978574f2c08939cfef1041041eb9c5be}{left}=nullptr, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_af68a851484bce64ed9463a50025df424}{right}=nullptr)
+\item 
+\hyperlink{class_implicate_a8339c7a4895d95f6c06d7db5714ab8b3}{$\sim$\+Implicate} () override
+\item 
+bool \hyperlink{class_implicate_a331e1a1fcbe378ef15a3a7f04b7034d5}{get\+Value} (string val\+List) override
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_implicate_a9f3b5d35f552a62ca4a98b4f608a2968}{nandify} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em nandify proposition \end{DoxyCompactList}\item 
+\hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} \hyperlink{class_implicate_aa425e8cb25aec8dd2935346f61ebaefa}{get\+S\+T\+Rule\+Name} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleux rule name \end{DoxyCompactList}\item 
+void \hyperlink{class_implicate_aca5eae3d47c318ba413787c7c3a674ce}{get\+S\+T\+Node\+Child} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root, long pos, bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_implicate_a84e18887eae8891eec583aafaf2bf63d}{cnf\+Filter} (bool is\+Negation=false) override
+\begin{DoxyCompactList}\small\item\em in this function node will be \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_implicate_a08cf8aa03589f7a34400a5f636f1256a}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_implicate_a7386039d72650d3da8562144b1868722}\label{class_implicate_a7386039d72650d3da8562144b1868722}} 
+\index{Implicate@{Implicate}!Implicate@{Implicate}}
+\index{Implicate@{Implicate}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{Implicate()}{Implicate()}}
+{\footnotesize\ttfamily Implicate\+::\+Implicate (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{left = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_implicate_a8339c7a4895d95f6c06d7db5714ab8b3}\label{class_implicate_a8339c7a4895d95f6c06d7db5714ab8b3}} 
+\index{Implicate@{Implicate}!````~Implicate@{$\sim$\+Implicate}}
+\index{````~Implicate@{$\sim$\+Implicate}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{$\sim$\+Implicate()}{~Implicate()}}
+{\footnotesize\ttfamily Implicate\+::$\sim$\+Implicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_implicate_a84e18887eae8891eec583aafaf2bf63d}\label{class_implicate_a84e18887eae8891eec583aafaf2bf63d}} 
+\index{Implicate@{Implicate}!cnf\+Filter@{cnf\+Filter}}
+\index{cnf\+Filter@{cnf\+Filter}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{cnf\+Filter()}{cnfFilter()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Implicate\+::cnf\+Filter (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+in this function node will be 
+
+
+\begin{DoxyItemize}
+\item Remove bi-\/implicate
+\item Remove implicate
+\item Doing the morgan 
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node has been cnf filtered 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}{Node}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{de/d28/class_implicate_a84e18887eae8891eec583aafaf2bf63d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_implicate_a08cf8aa03589f7a34400a5f636f1256a}\label{class_implicate_a08cf8aa03589f7a34400a5f636f1256a}} 
+\index{Implicate@{Implicate}!copy@{copy}}
+\index{copy@{copy}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Implicate\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+\mbox{\Hypertarget{class_implicate_aca5eae3d47c318ba413787c7c3a674ce}\label{class_implicate_aca5eae3d47c318ba413787c7c3a674ce}} 
+\index{Implicate@{Implicate}!get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}}
+\index{get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Node\+Child()}{getSTNodeChild()}}
+{\footnotesize\ttfamily void Implicate\+::get\+S\+T\+Node\+Child (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root,  }\item[{long}]{pos,  }\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} \\
+\hline
+\mbox{\tt out}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} contains child \\
+\hline
+ & {\em pos} & -\/ position of child \hyperlink{class_node}{Node} of \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{S\+T\+Node\+::nodes} list \\
+\hline
+ & {\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_a1009cb6d84206c2b5eaa86580da59a7c}{Node}.
+
+\mbox{\Hypertarget{class_implicate_aa425e8cb25aec8dd2935346f61ebaefa}\label{class_implicate_aa425e8cb25aec8dd2935346f61ebaefa}} 
+\index{Implicate@{Implicate}!get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}}
+\index{get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Rule\+Name()}{getSTRuleName()}}
+{\footnotesize\ttfamily \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} Implicate\+::get\+S\+T\+Rule\+Name (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleux rule name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+U\+L\+ES -\/ semantic taubleaux rule name 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a25b6581950988c2536a392a6874c8072}{Node}.
+
+\mbox{\Hypertarget{class_implicate_a331e1a1fcbe378ef15a3a7f04b7034d5}\label{class_implicate_a331e1a1fcbe378ef15a3a7f04b7034d5}} 
+\index{Implicate@{Implicate}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Implicate\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{Node}.
+
+\mbox{\Hypertarget{class_implicate_a9f3b5d35f552a62ca4a98b4f608a2968}\label{class_implicate_a9f3b5d35f552a62ca4a98b4f608a2968}} 
+\index{Implicate@{Implicate}!nandify@{nandify}}
+\index{nandify@{nandify}!Implicate@{Implicate}}
+\subsubsection{\texorpdfstring{nandify()}{nandify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Implicate\+::nandify (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+nandify proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nandified tree 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{implicate_8h}{implicate.\+h}\item 
+src/notation/\hyperlink{implicate_8cpp}{implicate.\+cpp}\end{DoxyCompactItemize}

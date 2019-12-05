@@ -1,0 +1,121 @@
+.TH "MultiOr" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MultiOr
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <multior\&.h>\fP
+.PP
+Inherits \fBNode\fP\&.
+.PP
+Inherited by \fBMultiOrNorm\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMultiOr\fP (list< shared_ptr< \fBNode\fP > > listNodes=list< shared_ptr< \fBNode\fP > >())"
+.br
+.ti -1c
+.RI "\fBMultiOr\fP (shared_ptr< \fBNode\fP > node)"
+.br
+.ti -1c
+.RI "\fB~MultiOr\fP () override"
+.br
+.ti -1c
+.RI "string \fBtoString\fP () override"
+.br
+.RI "get proposition infix formular "
+.ti -1c
+.RI "string \fBtoStringPrefix\fP () override"
+.br
+.RI "get proposition prefix formular "
+.ti -1c
+.RI "bool \fBgetValue\fP (string valList) override"
+.br
+.RI "get proposition value "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBcopy\fP () override"
+.br
+.RI "deep copy node "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MultiOr::MultiOr (list< shared_ptr< \fBNode\fP > > listNodes = \fClist<shared_ptr<\fBNode\fP> >()\fP)\fC [explicit]\fP"
+
+.SS "MultiOr::MultiOr (shared_ptr< \fBNode\fP > node)\fC [explicit]\fP"
+
+.SS "MultiOr::~MultiOr ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "shared_ptr< \fBNode\fP > MultiOr::copy ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+deep copy node 
+.PP
+\fBReturns:\fP
+.RS 4
+a deep copy of node 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.PP
+Reimplemented in \fBMultiOrNorm\fP\&.
+.SS "bool MultiOr::getValue (string valList)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+get proposition value 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalList\fP - string contains proposition variable and their value\&. 
+.br
+ e\&.g\&. 'A1B0C1' 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+proposition value 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.SS "string MultiOr::toString ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+get proposition infix formular 
+.PP
+\fBReturns:\fP
+.RS 4
+string of infix proposition 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.PP
+Reimplemented in \fBMultiOrNorm\fP\&.
+.SS "string MultiOr::toStringPrefix ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+get proposition prefix formular 
+.PP
+\fBReturns:\fP
+.RS 4
+string of prefix proposition 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d1/d47/cnf_8h" kind="file" language="C++">
+    <compoundname>cnf.h</compoundname>
+    <includes refid="d9/d1d/multiand_8h" local="yes">../notation/multiand.h</includes>
+    <includes refid="d3/d09/tree_8h" local="yes">../proposition/tree.h</includes>
+    <includes local="yes">../src/logging.h</includes>
+    <includedby refid="d6/d79/cnf_8cpp" local="yes">src/cnf/cnf.cpp</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>list</label>
+      </node>
+      <node id="37">
+        <label>../proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>iomanip</label>
+      </node>
+      <node id="28">
+        <label>string</label>
+      </node>
+      <node id="27">
+        <label>fstream</label>
+      </node>
+      <node id="39">
+        <label>../src/logging.h</label>
+      </node>
+      <node id="38">
+        <label>tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../notation/multiand.h</label>
+        <link refid="d9/d1d/multiand_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>src/cnf/cnf.h</label>
+        <link refid="d1/d47/cnf_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>array</label>
+      </node>
+      <node id="26">
+        <label>iostream</label>
+      </node>
+      <node id="30">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="34">
+        <label>algorithm</label>
+      </node>
+      <node id="25">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="40">
+        <label>src/cnf/cnf.h</label>
+        <link refid="d1/d47/cnf_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d1/dde/struct_reso" prot="public">Reso</innerclass>
+    <innerclass refid="d5/d80/struct_i___c_n_f" prot="public">I_CNF</innerclass>
+    <innerclass refid="dc/d0e/class_c_n_f" prot="public">CNF</innerclass>
+    <briefdescription>
+<para>Conjunction normal form solver. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CNF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CNF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;../notation/multiand.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../proposition/tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../src/logging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d1/dde/struct_reso" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/dde/struct_reso" kindref="compound">Reso</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19" refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" kindref="member">resolution</ref><sp/>=<sp/>make_shared&lt;MultiAnd&gt;();</highlight></codeline>
+<codeline lineno="23" refid="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" kindref="member">subtituteSolution</ref><sp/>=<sp/>make_shared&lt;MultiAnd&gt;();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d5/d80/struct_i___c_n_f" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d80/struct_i___c_n_f" kindref="compound">I_CNF</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>solveNonJanus(shared_ptr&lt;Node&gt;<sp/>node,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/dde/struct_reso" kindref="compound">Reso</ref><sp/><ref refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" kindref="member">resolution</ref>(shared_ptr&lt;Node&gt;<sp/>node,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isUseless(shared_ptr&lt;Node&gt;<sp/>node);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>nodeToMultiAnd(shared_ptr&lt;Node&gt;<sp/>node);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>generateCNF(shared_ptr&lt;Node&gt;<sp/>originTree);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>findJanus(shared_ptr&lt;Node&gt;<sp/>node);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getUniqueList(list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>&amp;l);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isContain(shared_ptr&lt;Node&gt;<sp/>nodes,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>mergeNode(shared_ptr&lt;Node&gt;<sp/>node1,<sp/>shared_ptr&lt;Node&gt;<sp/>node2,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>v,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>not_v);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="dc/d0e/class_c_n_f" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref><sp/>:<sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="d5/d80/struct_i___c_n_f" kindref="compound">I_CNF</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dd/df8/class_tree" kindref="compound">Tree</ref></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref>(shared_ptr&lt;Node&gt;<sp/>otherTree);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>prop=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>getDavidPutnam()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;string&gt;<sp/>getListVariable()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>parse(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>prop);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>getMultiOr(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>prop);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getDavidPutnam(shared_ptr&lt;Node&gt;<sp/>tree,<sp/>uint<sp/>pos,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;result);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CNF_H</highlight></codeline>
+    </programlisting>
+    <location file="src/cnf/cnf.h"/>
+  </compounddef>
+</doxygen>

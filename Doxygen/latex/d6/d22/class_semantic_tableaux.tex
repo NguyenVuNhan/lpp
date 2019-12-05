@@ -1,0 +1,114 @@
+\hypertarget{class_semantic_tableaux}{}\section{Semantic\+Tableaux Class Reference}
+\label{class_semantic_tableaux}\index{Semantic\+Tableaux@{Semantic\+Tableaux}}
+
+
+{\ttfamily \#include $<$semantictableaux.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_semantic_tableaux_a10b854a82ce27c588d45d82895aa7a45}{Semantic\+Tableaux} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ tree=nullptr)
+\item 
+\hyperlink{class_semantic_tableaux_a6c03c9108f2552c3756a5bdd6b6116f1}{$\sim$\+Semantic\+Tableaux} ()
+\item 
+bool \hyperlink{class_semantic_tableaux_a78039805239590cd2c8bc411158f2b2d}{Export\+Proof} (string title, string filenname)
+\item 
+bool \hyperlink{class_semantic_tableaux_a18a9f8fc5dce074c040564454fd710c3}{is\+Tautology} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_semantic_tableaux_ab41b0fa5d87d29ad807b410f18ce93a7}{generate\+Proof} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_semantic_tableaux_a9fd70e5435a0fed98339fd3dad868e71}{tautology} = true
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ \hyperlink{class_semantic_tableaux_aff7d804483776b8517694f308a3071df}{tableaux}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_semantic_tableaux_a10b854a82ce27c588d45d82895aa7a45}\label{class_semantic_tableaux_a10b854a82ce27c588d45d82895aa7a45}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{Semantic\+Tableaux()}{SemanticTableaux()}}
+{\footnotesize\ttfamily Semantic\+Tableaux\+::\+Semantic\+Tableaux (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{tree = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d22/class_semantic_tableaux_a10b854a82ce27c588d45d82895aa7a45_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_semantic_tableaux_a6c03c9108f2552c3756a5bdd6b6116f1}\label{class_semantic_tableaux_a6c03c9108f2552c3756a5bdd6b6116f1}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!````~Semantic\+Tableaux@{$\sim$\+Semantic\+Tableaux}}
+\index{````~Semantic\+Tableaux@{$\sim$\+Semantic\+Tableaux}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{$\sim$\+Semantic\+Tableaux()}{~SemanticTableaux()}}
+{\footnotesize\ttfamily Semantic\+Tableaux\+::$\sim$\+Semantic\+Tableaux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_semantic_tableaux_a78039805239590cd2c8bc411158f2b2d}\label{class_semantic_tableaux_a78039805239590cd2c8bc411158f2b2d}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!Export\+Proof@{Export\+Proof}}
+\index{Export\+Proof@{Export\+Proof}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{Export\+Proof()}{ExportProof()}}
+{\footnotesize\ttfamily bool Semantic\+Tableaux\+::\+Export\+Proof (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{string}]{filenname }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{d6/d22/class_semantic_tableaux_a78039805239590cd2c8bc411158f2b2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_semantic_tableaux_ab41b0fa5d87d29ad807b410f18ce93a7}\label{class_semantic_tableaux_ab41b0fa5d87d29ad807b410f18ce93a7}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!generate\+Proof@{generate\+Proof}}
+\index{generate\+Proof@{generate\+Proof}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{generate\+Proof()}{generateProof()}}
+{\footnotesize\ttfamily void Semantic\+Tableaux\+::generate\+Proof (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d22/class_semantic_tableaux_ab41b0fa5d87d29ad807b410f18ce93a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_semantic_tableaux_a18a9f8fc5dce074c040564454fd710c3}\label{class_semantic_tableaux_a18a9f8fc5dce074c040564454fd710c3}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!is\+Tautology@{is\+Tautology}}
+\index{is\+Tautology@{is\+Tautology}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{is\+Tautology()}{isTautology()}}
+{\footnotesize\ttfamily bool Semantic\+Tableaux\+::is\+Tautology (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d22/class_semantic_tableaux_a18a9f8fc5dce074c040564454fd710c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_semantic_tableaux_aff7d804483776b8517694f308a3071df}\label{class_semantic_tableaux_aff7d804483776b8517694f308a3071df}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!tableaux@{tableaux}}
+\index{tableaux@{tableaux}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{tableaux}{tableaux}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_s_t_node}{S\+T\+Node} $>$ Semantic\+Tableaux\+::tableaux\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_semantic_tableaux_a9fd70e5435a0fed98339fd3dad868e71}\label{class_semantic_tableaux_a9fd70e5435a0fed98339fd3dad868e71}} 
+\index{Semantic\+Tableaux@{Semantic\+Tableaux}!tautology@{tautology}}
+\index{tautology@{tautology}!Semantic\+Tableaux@{Semantic\+Tableaux}}
+\subsubsection{\texorpdfstring{tautology}{tautology}}
+{\footnotesize\ttfamily bool Semantic\+Tableaux\+::tautology = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/proposition/tableaux/\hyperlink{semantictableaux_8h}{semantictableaux.\+h}\item 
+src/proposition/tableaux/\hyperlink{semantictableaux_8cpp}{semantictableaux.\+cpp}\end{DoxyCompactItemize}

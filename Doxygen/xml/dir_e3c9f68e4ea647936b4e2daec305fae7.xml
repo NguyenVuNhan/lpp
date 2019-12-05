@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_e3c9f68e4ea647936b4e2daec305fae7" kind="dir">
+    <compoundname>src/proposition</compoundname>
+    <innerdir refid="dir_f4afe086f098c4a9e1dcccec2ac89983">src/proposition/tableaux</innerdir>
+    <innerfile refid="db/d07/predicate_8cpp">predicate.cpp</innerfile>
+    <innerfile refid="df/da5/predicate_8h">predicate.h</innerfile>
+    <innerfile refid="d1/d12/tree_8cpp">tree.cpp</innerfile>
+    <innerfile refid="d3/d09/tree_8h">tree.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/proposition/"/>
+  </compounddef>
+</doxygen>

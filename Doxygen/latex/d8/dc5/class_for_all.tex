@@ -1,0 +1,159 @@
+\hypertarget{class_for_all}{}\section{For\+All Class Reference}
+\label{class_for_all}\index{For\+All@{For\+All}}
+
+
+{\ttfamily \#include $<$forall.\+h$>$}
+
+
+
+Inheritance diagram for For\+All\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d8/d15/class_for_all__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for For\+All\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{df/da8/class_for_all__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_for_all_a2f654f00f8d997a89699dff8f1efd759}{For\+All} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ l=nullptr, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ r=nullptr)
+\item 
+\hyperlink{class_for_all_a0c63e42814329a95378fe95f41a369fa}{$\sim$\+For\+All} () override
+\item 
+string \hyperlink{class_for_all_a086dc15d85fe4874c477c72a40577b85}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+\hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} \hyperlink{class_for_all_a97e03dcd8f51824fe629487847b7c4dc}{get\+S\+T\+Rule\+Name} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleux rule name \end{DoxyCompactList}\item 
+void \hyperlink{class_for_all_a847b6ce62d4e04ce7487b2cc1b49164f}{get\+S\+T\+Node\+Child} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root, long pos, bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_for_all_ae9b3918a9cd0870a20b80db2288fe402}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_for_all_a2f654f00f8d997a89699dff8f1efd759}\label{class_for_all_a2f654f00f8d997a89699dff8f1efd759}} 
+\index{For\+All@{For\+All}!For\+All@{For\+All}}
+\index{For\+All@{For\+All}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{For\+All()}{ForAll()}}
+{\footnotesize\ttfamily For\+All\+::\+For\+All (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{l = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{r = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_for_all_a0c63e42814329a95378fe95f41a369fa}\label{class_for_all_a0c63e42814329a95378fe95f41a369fa}} 
+\index{For\+All@{For\+All}!````~For\+All@{$\sim$\+For\+All}}
+\index{````~For\+All@{$\sim$\+For\+All}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{$\sim$\+For\+All()}{~ForAll()}}
+{\footnotesize\ttfamily For\+All\+::$\sim$\+For\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_for_all_ae9b3918a9cd0870a20b80db2288fe402}\label{class_for_all_ae9b3918a9cd0870a20b80db2288fe402}} 
+\index{For\+All@{For\+All}!copy@{copy}}
+\index{copy@{copy}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ For\+All\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d8/dc5/class_for_all_ae9b3918a9cd0870a20b80db2288fe402_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_for_all_a847b6ce62d4e04ce7487b2cc1b49164f}\label{class_for_all_a847b6ce62d4e04ce7487b2cc1b49164f}} 
+\index{For\+All@{For\+All}!get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}}
+\index{get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Node\+Child()}{getSTNodeChild()}}
+{\footnotesize\ttfamily void For\+All\+::get\+S\+T\+Node\+Child (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root,  }\item[{long}]{pos,  }\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} \\
+\hline
+\mbox{\tt out}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} contains child \\
+\hline
+ & {\em pos} & -\/ position of child \hyperlink{class_node}{Node} of \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{S\+T\+Node\+::nodes} list \\
+\hline
+ & {\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_a1009cb6d84206c2b5eaa86580da59a7c}{Node}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d8/dc5/class_for_all_a847b6ce62d4e04ce7487b2cc1b49164f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_for_all_a97e03dcd8f51824fe629487847b7c4dc}\label{class_for_all_a97e03dcd8f51824fe629487847b7c4dc}} 
+\index{For\+All@{For\+All}!get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}}
+\index{get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Rule\+Name()}{getSTRuleName()}}
+{\footnotesize\ttfamily \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} For\+All\+::get\+S\+T\+Rule\+Name (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleux rule name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+U\+L\+ES -\/ semantic taubleaux rule name 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a25b6581950988c2536a392a6874c8072}{Node}.
+
+\mbox{\Hypertarget{class_for_all_a086dc15d85fe4874c477c72a40577b85}\label{class_for_all_a086dc15d85fe4874c477c72a40577b85}} 
+\index{For\+All@{For\+All}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!For\+All@{For\+All}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string For\+All\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{forall_8h}{forall.\+h}\item 
+src/notation/\hyperlink{forall_8cpp}{forall.\+cpp}\end{DoxyCompactItemize}

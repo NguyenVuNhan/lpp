@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="de/d24/struct_variable__v" kind="struct" language="C++" prot="public">
+    <compoundname>Variable_v</compoundname>
+    <includes refid="de/d99/_struct_2variable_8h" local="no">variable.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d24/struct_variable__v_1a52b714aff65f56f7e874e93b9467af98" prot="public" static="no" mutable="no">
+        <type>QChar</type>
+        <definition>QChar Variable_v::varName</definition>
+        <argsstring></argsstring>
+        <name>varName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Struct/variable.h" line="8" column="1" bodyfile="src/Struct/variable.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d24/struct_variable__v_1abc7c0bc4aba6731c69007d7982d4f57a" prot="public" static="no" mutable="no">
+        <type>QChar</type>
+        <definition>QChar Variable_v::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Struct/variable.h" line="9" column="1" bodyfile="src/Struct/variable.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Struct/variable.h" line="7" column="1" bodyfile="src/Struct/variable.h" bodystart="6" bodyend="10"/>
+    <listofallmembers>
+      <member refid="de/d24/struct_variable__v_1abc7c0bc4aba6731c69007d7982d4f57a" prot="public" virt="non-virtual"><scope>Variable_v</scope><name>value</name></member>
+      <member refid="de/d24/struct_variable__v_1a52b714aff65f56f7e874e93b9467af98" prot="public" virt="non-virtual"><scope>Variable_v</scope><name>varName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

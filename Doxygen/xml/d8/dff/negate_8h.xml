@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d8/dff/negate_8h" kind="file" language="C++">
+    <compoundname>negate.h</compoundname>
+    <includes refid="d1/d77/node_8h" local="yes">node.h</includes>
+    <includedby refid="d6/d79/cnf_8cpp" local="yes">src/cnf/cnf.cpp</includedby>
+    <includedby refid="dc/d62/and_8cpp" local="yes">src/notation/and.cpp</includedby>
+    <includedby refid="d0/dbf/biimplicate_8cpp" local="yes">src/notation/biimplicate.cpp</includedby>
+    <includedby refid="da/d46/exists_8cpp" local="yes">src/notation/exists.cpp</includedby>
+    <includedby refid="da/d09/forall_8cpp" local="yes">src/notation/forall.cpp</includedby>
+    <includedby refid="dc/d93/implicate_8cpp" local="yes">src/notation/implicate.cpp</includedby>
+    <includedby refid="db/d7a/nand_8cpp" local="yes">src/notation/nand.cpp</includedby>
+    <includedby refid="df/db4/negate_8cpp" local="yes">src/notation/negate.cpp</includedby>
+    <includedby refid="d7/d70/node_8cpp" local="yes">src/notation/node.cpp</includedby>
+    <includedby refid="d1/da4/or_8cpp" local="yes">src/notation/or.cpp</includedby>
+    <includedby refid="db/d07/predicate_8cpp" local="yes">src/proposition/predicate.cpp</includedby>
+    <includedby refid="de/d3e/semantictableaux_8cpp" local="yes">src/proposition/tableaux/semantictableaux.cpp</includedby>
+    <includedby refid="d6/db6/stnode_8cpp" local="yes">src/proposition/tableaux/stnode.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <includedby refid="d0/d0c/rows_8cpp" local="yes">src/table/rows.cpp</includedby>
+    <incdepgraph>
+      <node id="374">
+        <label>list</label>
+      </node>
+      <node id="377">
+        <label>iomanip</label>
+      </node>
+      <node id="366">
+        <label>src/notation/negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>string</label>
+      </node>
+      <node id="369">
+        <label>fstream</label>
+      </node>
+      <node id="375">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+        <childnode refid="378" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+      </node>
+      <node id="373">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>array</label>
+      </node>
+      <node id="368">
+        <label>iostream</label>
+      </node>
+      <node id="372">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="376">
+        <label>algorithm</label>
+      </node>
+      <node id="367">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+        <childnode refid="370" relation="include">
+        </childnode>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="372" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="382">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="389">
+        <label>src/notation/or.cpp</label>
+        <link refid="d1/da4/or_8cpp"/>
+      </node>
+      <node id="391">
+        <label>src/proposition/tableaux/semantictableaux.cpp</label>
+        <link refid="de/d3e/semantictableaux_8cpp"/>
+      </node>
+      <node id="379">
+        <label>src/notation/negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+        <childnode refid="384" relation="include">
+        </childnode>
+        <childnode refid="385" relation="include">
+        </childnode>
+        <childnode refid="386" relation="include">
+        </childnode>
+        <childnode refid="387" relation="include">
+        </childnode>
+        <childnode refid="388" relation="include">
+        </childnode>
+        <childnode refid="389" relation="include">
+        </childnode>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+      </node>
+      <node id="381">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="380">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+      <node id="388">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="392">
+        <label>src/proposition/tableaux/stnode.cpp</label>
+        <link refid="d6/db6/stnode_8cpp"/>
+      </node>
+      <node id="383">
+        <label>src/notation/exists.cpp</label>
+        <link refid="da/d46/exists_8cpp"/>
+      </node>
+      <node id="390">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="387">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="393">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="394">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+      <node id="386">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+      <node id="385">
+        <label>src/notation/implicate.cpp</label>
+        <link refid="dc/d93/implicate_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="df/d45/class_negate" prot="public">Negate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>NEGATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEGATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d77/node_8h" kindref="compound">node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="df/d45/class_negate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="df/d45/class_negate" kindref="compound">Negate</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="df/d45/class_negate_1adb1a956d1f152e24fada7b1a33b0331e" kindref="member">Negate</ref>(shared_ptr&lt;Node&gt;<sp/>l<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d45/class_negate_1a04d4e89273d5fcbfaad144df52e40041" kindref="member">~Negate</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Node<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="df/d45/class_negate_1adc2bf29215e329e60e44dbf6bf8a4c85" kindref="member">getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="df/d45/class_negate_1a2dd4cada504739fea3583a5729044c71" kindref="member">nandify</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="df/d45/class_negate_1aab87b217ffd5c8ba404022a5f4cec220" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref><sp/><ref refid="df/d45/class_negate_1ac881a233c5a1e6f7669ea8ff70eda8f7" kindref="member">getSTRuleName</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="df/d45/class_negate_1ad06cf6b9c1070a001919c58084990c0d" kindref="member">getSTNodeChild</ref>(shared_ptr&lt;STNode&gt;<sp/>root,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="df/d45/class_negate_1a6aa803fea460f0a2a52399b778bfd268" kindref="member">cnfFilter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="df/d45/class_negate_1a7cdd545814e819ef6b6ec735dda357aa" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>NEGATION_H</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/negate.h"/>
+  </compounddef>
+</doxygen>

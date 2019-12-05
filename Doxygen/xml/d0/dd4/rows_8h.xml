@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d0/dd4/rows_8h" kind="file" language="C++">
+    <compoundname>rows.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="d3/d09/tree_8h" local="yes">../proposition/tree.h</includes>
+    <includedby refid="d0/d0c/rows_8cpp" local="yes">src/table/rows.cpp</includedby>
+    <includedby refid="d5/dbf/truthtable_8h" local="yes">src/table/truthtable.h</includedby>
+    <incdepgraph>
+      <node id="906">
+        <label>list</label>
+      </node>
+      <node id="898">
+        <label>../proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+      </node>
+      <node id="909">
+        <label>iomanip</label>
+      </node>
+      <node id="895">
+        <label>src/table/rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+      </node>
+      <node id="896">
+        <label>stdint.h</label>
+      </node>
+      <node id="902">
+        <label>string</label>
+      </node>
+      <node id="901">
+        <label>fstream</label>
+      </node>
+      <node id="911">
+        <label>tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+      </node>
+      <node id="907">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="909" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+      </node>
+      <node id="905">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="903">
+        <label>array</label>
+      </node>
+      <node id="897">
+        <label>math.h</label>
+      </node>
+      <node id="900">
+        <label>iostream</label>
+      </node>
+      <node id="904">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="908">
+        <label>algorithm</label>
+      </node>
+      <node id="899">
+        <label>../notation/node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="910">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="912">
+        <label>src/table/rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="913" relation="include">
+        </childnode>
+        <childnode refid="914" relation="include">
+        </childnode>
+      </node>
+      <node id="916">
+        <label>src/table/simpletable.cpp</label>
+        <link refid="dd/dcd/simpletable_8cpp"/>
+      </node>
+      <node id="914">
+        <label>src/table/truthtable.h</label>
+        <link refid="d5/dbf/truthtable_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+      </node>
+      <node id="917">
+        <label>src/table/truthtable.cpp</label>
+        <link refid="d9/d67/truthtable_8cpp"/>
+      </node>
+      <node id="915">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="916" relation="include">
+        </childnode>
+      </node>
+      <node id="913">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d6/d54/class_rows" prot="public">Rows</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ROWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>type<sp/>uint16_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>ulong</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../proposition/tree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d6/d54/class_rows" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d6/d54/class_rows" kindref="compound">Rows</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uintmax_t<sp/><ref refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" kindref="member">elem_byte</ref>;</highlight></codeline>
+<codeline lineno="12" refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1aa610ff44d051eededf3c25928987bb81" kindref="member">toBinString</ref>(uintmax_t<sp/>i,<sp/>uintmax_t<sp/>strLen);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" kindref="member">elem_str</ref>;</highlight></codeline>
+<codeline lineno="17" refid="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" kindref="member">checked</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" kindref="member">Rows</ref>(uintmax_t<sp/>elem_str,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value,<sp/>uintmax_t<sp/>strLen=2);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d6/d54/class_rows_1a22f5ff0d92c58ac650fd337d8f0a7894" kindref="member">toNode</ref>(list&lt;string&gt;<sp/>label);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" kindref="member">is_match_pair</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows" kindref="compound">Rows</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a1c7fca7d12a6195f1c68ca7f7b40559d" kindref="member">getValue</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a7f0b421443b1c6141c8816a7bfd1ac75" kindref="member">setDontCare</ref>(uint<sp/>pos);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1ae448dbf8255ceeea29a21125433f9e42" kindref="member">getElem</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1af097985562c1e8137014839519898494" kindref="member">toString</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows" kindref="compound">Rows</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows" kindref="compound">Rows</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows_1ae8eb3bed11f3a6ac4721aa27e1489106" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d6/d54/class_rows" kindref="compound">Rows</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ROWS_H</highlight></codeline>
+    </programlisting>
+    <location file="src/table/rows.h"/>
+  </compounddef>
+</doxygen>

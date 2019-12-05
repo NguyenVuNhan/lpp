@@ -1,0 +1,72 @@
+.TH "Predicate" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Predicate
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <predicate\&.h>\fP
+.PP
+Inherits \fBTree\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPredicate\fP (string prop='')"
+.br
+.ti -1c
+.RI "\fBPredicate\fP (shared_ptr< \fBNode\fP > \fBtree\fP=nullptr)"
+.br
+.ti -1c
+.RI "\fB~Predicate\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBgetStatement\fP (string prop, unsigned int &pos) override"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBgetNode\fP (char notation) override"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBparse\fP (string prop, unsigned int &pos) override"
+.br
+.ti -1c
+.RI "list< string > \fBgetListVariable\fP () override"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Predicate::Predicate (string prop = \fC''\fP)"
+
+.SS "Predicate::Predicate (shared_ptr< \fBNode\fP > tree = \fCnullptr\fP)"
+
+.SS "Predicate::~Predicate ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "list< string > Predicate::getListVariable ()\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTree\fP\&.
+.SS "shared_ptr< \fBNode\fP > Predicate::getNode (char notation)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTree\fP\&.
+.SS "shared_ptr< \fBNode\fP > Predicate::getStatement (string prop, unsigned int & pos)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTree\fP\&.
+.SS "shared_ptr< \fBNode\fP > Predicate::parse (string prop, unsigned int & pos)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTree\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

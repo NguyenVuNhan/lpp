@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d6/d54/class_rows" kind="class" language="C++" prot="public">
+    <compoundname>Rows</compoundname>
+    <includes refid="d0/dd4/rows_8h" local="no">rows.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" prot="private" static="no" mutable="no">
+        <type>uintmax_t</type>
+        <definition>uintmax_t Rows::elem_byte</definition>
+        <argsstring></argsstring>
+        <name>elem_byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="11" column="1" bodyfile="src/table/rows.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" compoundref="d0/d0c/rows_8cpp" startline="22" endline="27">Rows</referencedby>
+        <referencedby refid="d6/d54/class_rows_1ae8eb3bed11f3a6ac4721aa27e1489106" compoundref="d0/d0c/rows_8cpp" startline="116" endline="119">operator&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Rows::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="12" column="1" bodyfile="src/table/rows.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" compoundref="d0/d0c/rows_8cpp" startline="22" endline="27">Rows</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" compoundref="d0/d0c/rows_8cpp" startline="53" endline="75">is_match_pair</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a1c7fca7d12a6195f1c68ca7f7b40559d" compoundref="d0/d0c/rows_8cpp" startline="77" endline="80">getValue</referencedby>
+        <referencedby refid="d6/d54/class_rows_1af097985562c1e8137014839519898494" compoundref="d0/d0c/rows_8cpp" startline="92" endline="102">toString</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" compoundref="d0/d0c/rows_8cpp" startline="104" endline="109">operator=</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" compoundref="d0/d0c/rows_8cpp" startline="111" endline="114">operator==</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Rows::elem_str</definition>
+        <argsstring></argsstring>
+        <name>elem_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="16" column="1" bodyfile="src/table/rows.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" compoundref="d0/d0c/rows_8cpp" startline="22" endline="27">Rows</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a22f5ff0d92c58ac650fd337d8f0a7894" compoundref="d0/d0c/rows_8cpp" startline="29" endline="51">toNode</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" compoundref="d0/d0c/rows_8cpp" startline="53" endline="75">is_match_pair</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a7f0b421443b1c6141c8816a7bfd1ac75" compoundref="d0/d0c/rows_8cpp" startline="82" endline="85">setDontCare</referencedby>
+        <referencedby refid="d6/d54/class_rows_1ae448dbf8255ceeea29a21125433f9e42" compoundref="d0/d0c/rows_8cpp" startline="87" endline="90">getElem</referencedby>
+        <referencedby refid="d6/d54/class_rows_1af097985562c1e8137014839519898494" compoundref="d0/d0c/rows_8cpp" startline="92" endline="102">toString</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" compoundref="d0/d0c/rows_8cpp" startline="104" endline="109">operator=</referencedby>
+        <referencedby refid="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" compoundref="d0/d0c/rows_8cpp" startline="111" endline="114">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Rows::checked</definition>
+        <argsstring></argsstring>
+        <name>checked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="17" column="1" bodyfile="src/table/rows.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" compoundref="d0/d0c/rows_8cpp" startline="104" endline="109">operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d54/class_rows_1aa610ff44d051eededf3c25928987bb81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Rows::toBinString</definition>
+        <argsstring>(uintmax_t i, uintmax_t strLen)</argsstring>
+        <name>toBinString</name>
+        <param>
+          <type>uintmax_t</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>uintmax_t</type>
+          <declname>strLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="13" column="1" bodyfile="src/table/rows.cpp" bodystart="7" bodyend="20"/>
+        <referencedby refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" compoundref="d0/d0c/rows_8cpp" startline="22" endline="27">Rows</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rows::Rows</definition>
+        <argsstring>(uintmax_t elem_str, bool value, uintmax_t strLen=2)</argsstring>
+        <name>Rows</name>
+        <param>
+          <type>uintmax_t</type>
+          <declname>elem_str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uintmax_t</type>
+          <declname>strLen</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="18" column="1" bodyfile="src/table/rows.cpp" bodystart="22" bodyend="27"/>
+        <references refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" compoundref="d0/dd4/rows_8h" startline="11">elem_byte</references>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+        <references refid="d6/d54/class_rows_1aa610ff44d051eededf3c25928987bb81" compoundref="d0/d0c/rows_8cpp" startline="7" endline="20">toBinString</references>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a22f5ff0d92c58ac650fd337d8f0a7894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Rows::toNode</definition>
+        <argsstring>(list&lt; string &gt; label)</argsstring>
+        <name>toNode</name>
+        <param>
+          <type>list&lt; string &gt;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="19" column="1" bodyfile="src/table/rows.cpp" bodystart="29" bodyend="51"/>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Rows::is_match_pair</definition>
+        <argsstring>(const Rows &amp;other)</argsstring>
+        <name>is_match_pair</name>
+        <param>
+          <type>const <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="20" column="1" bodyfile="src/table/rows.cpp" bodystart="53" bodyend="75"/>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a1c7fca7d12a6195f1c68ca7f7b40559d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rows::getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="21" column="1" bodyfile="src/table/rows.cpp" bodystart="77" bodyend="80"/>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a7f0b421443b1c6141c8816a7bfd1ac75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rows::setDontCare</definition>
+        <argsstring>(uint pos)</argsstring>
+        <name>setDontCare</name>
+        <param>
+          <type>uint</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="22" column="1" bodyfile="src/table/rows.cpp" bodystart="82" bodyend="85"/>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+        <referencedby refid="d0/d52/class_simple_table_1a4d4e552c725f1306708a5918365f7d26" compoundref="dd/dcd/simpletable_8cpp" startline="69" endline="139">SimpleTable::getQuineMcCluskey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1ae448dbf8255ceeea29a21125433f9e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Rows::getElem</definition>
+        <argsstring>()</argsstring>
+        <name>getElem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="23" column="1" bodyfile="src/table/rows.cpp" bodystart="87" bodyend="90"/>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1af097985562c1e8137014839519898494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Rows::toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="24" column="1" bodyfile="src/table/rows.cpp" bodystart="92" bodyend="102"/>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rows::operator=</definition>
+        <argsstring>(const Rows &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="25" column="1" bodyfile="src/table/rows.cpp" bodystart="104" bodyend="109"/>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+        <references refid="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" compoundref="d0/dd4/rows_8h" startline="17">checked</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rows::operator==</definition>
+        <argsstring>(const Rows &amp;other)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="26" column="1" bodyfile="src/table/rows.cpp" bodystart="111" bodyend="114"/>
+        <references refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" compoundref="d0/dd4/rows_8h" startline="12">value</references>
+        <references refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" compoundref="d0/dd4/rows_8h" startline="16">elem_str</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d54/class_rows_1ae8eb3bed11f3a6ac4721aa27e1489106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rows::operator&lt;</definition>
+        <argsstring>(const Rows &amp;other)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/rows.h" line="27" column="1" bodyfile="src/table/rows.cpp" bodystart="116" bodyend="119"/>
+        <references refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" compoundref="d0/dd4/rows_8h" startline="11">elem_byte</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/table/rows.h" line="9" column="1" bodyfile="src/table/rows.h" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" prot="public" virt="non-virtual"><scope>Rows</scope><name>checked</name></member>
+      <member refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" prot="private" virt="non-virtual"><scope>Rows</scope><name>elem_byte</name></member>
+      <member refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" prot="public" virt="non-virtual"><scope>Rows</scope><name>elem_str</name></member>
+      <member refid="d6/d54/class_rows_1ae448dbf8255ceeea29a21125433f9e42" prot="public" virt="non-virtual"><scope>Rows</scope><name>getElem</name></member>
+      <member refid="d6/d54/class_rows_1a1c7fca7d12a6195f1c68ca7f7b40559d" prot="public" virt="non-virtual"><scope>Rows</scope><name>getValue</name></member>
+      <member refid="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" prot="public" virt="non-virtual"><scope>Rows</scope><name>is_match_pair</name></member>
+      <member refid="d6/d54/class_rows_1ae8eb3bed11f3a6ac4721aa27e1489106" prot="public" virt="non-virtual"><scope>Rows</scope><name>operator&lt;</name></member>
+      <member refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" prot="public" virt="non-virtual"><scope>Rows</scope><name>operator=</name></member>
+      <member refid="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" prot="public" virt="non-virtual"><scope>Rows</scope><name>operator==</name></member>
+      <member refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" prot="public" virt="non-virtual"><scope>Rows</scope><name>Rows</name></member>
+      <member refid="d6/d54/class_rows_1a7f0b421443b1c6141c8816a7bfd1ac75" prot="public" virt="non-virtual"><scope>Rows</scope><name>setDontCare</name></member>
+      <member refid="d6/d54/class_rows_1aa610ff44d051eededf3c25928987bb81" prot="private" virt="non-virtual"><scope>Rows</scope><name>toBinString</name></member>
+      <member refid="d6/d54/class_rows_1a22f5ff0d92c58ac650fd337d8f0a7894" prot="public" virt="non-virtual"><scope>Rows</scope><name>toNode</name></member>
+      <member refid="d6/d54/class_rows_1af097985562c1e8137014839519898494" prot="public" virt="non-virtual"><scope>Rows</scope><name>toString</name></member>
+      <member refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" prot="private" virt="non-virtual"><scope>Rows</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

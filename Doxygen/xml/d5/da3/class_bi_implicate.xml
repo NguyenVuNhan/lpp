@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d5/da3/class_bi_implicate" kind="class" language="C++" prot="public">
+    <compoundname>BiImplicate</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes refid="dd/d69/biimplicate_8h" local="no">biimplicate.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1acd402fb9b2eef1b44361448038f20ddc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BiImplicate::BiImplicate</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; l=nullptr, shared_ptr&lt; Node &gt; r=nullptr)</argsstring>
+        <name>BiImplicate</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>l</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>r</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="9" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="5" bodyend="9"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1ad3f12180788d7d207b2e385c2a89c35b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BiImplicate::~BiImplicate</definition>
+        <argsstring>() override</argsstring>
+        <name>~BiImplicate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="10" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool BiImplicate::getValue</definition>
+        <argsstring>(string valList) override</argsstring>
+        <name>getValue</name>
+        <reimplements refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2">getValue</reimplements>
+        <param>
+          <type>string</type>
+          <declname>valList</declname>
+        </param>
+        <briefdescription>
+<para>get proposition value </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string contains proposition variable and their value. <linebreak/>
+ e.g. &quot;A1B0C1&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proposition value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="14" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="15" bodyend="18"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1a3ca1a9b3fd1805b56b72def494179ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref></type>
+        <definition>RULES BiImplicate::getSTRuleName</definition>
+        <argsstring>(bool isNegation) override</argsstring>
+        <name>getSTRuleName</name>
+        <reimplements refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072">getSTRuleName</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleux rule name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RULES - semantic taubleaux rule name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="15" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="20" bodyend="23"/>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="8">BETA</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; BiImplicate::nandify</definition>
+        <argsstring>(bool isNegation) override</argsstring>
+        <name>nandify</name>
+        <reimplements refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1">nandify</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>nandify proposition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>nandified tree </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="16" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="25" bodyend="33"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BiImplicate::getSTNodeChild</definition>
+        <argsstring>(shared_ptr&lt; STNode &gt; root, long pos, bool isNegation) override</argsstring>
+        <name>getSTNodeChild</name>
+        <reimplements refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c">getSTNodeChild</reimplements>
+        <param>
+          <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleaux node child (<ref refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kindref="member">STNode.left</ref> and <ref refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kindref="member">STNode.right</ref>) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> contains child </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- position of child <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> of <ref refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kindref="member">STNode::nodes</ref> list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="17" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="35" bodyend="63"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; BiImplicate::cnfFilter</definition>
+        <argsstring>(bool isNegation=false) override</argsstring>
+        <name>cnfFilter</name>
+        <reimplements refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7">cnfFilter</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>in this function node will be </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Remove bi-implicate</para></listitem><listitem><para>Remove implicate</para></listitem><listitem><para>Doing the morgan <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node has been cnf filtered </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="18" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="65" bodyend="77"/>
+        <references refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" compoundref="d7/d70/node_8cpp" startline="64" endline="83">Node::orSimplify</references>
+        <references refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" compoundref="d7/d70/node_8cpp" startline="85" endline="105">Node::andSimplify</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; BiImplicate::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/biimplicate.h" line="19" column="1" bodyfile="src/notation/biimplicate.cpp" bodystart="79" bodyend="82"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="7">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BiImplicate</label>
+        <link refid="d5/da3/class_bi_implicate"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="10">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BiImplicate</label>
+        <link refid="d5/da3/class_bi_implicate"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/biimplicate.h" line="7" column="1" bodyfile="src/notation/biimplicate.h" bodystart="6" bodyend="20"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>BiImplicate</scope><name>andSimplify</name></member>
+      <member refid="d5/da3/class_bi_implicate_1acd402fb9b2eef1b44361448038f20ddc" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>BiImplicate</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>BiImplicate</scope><name>cnfDistribution</name></member>
+      <member refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" prot="public" virt="virtual"><scope>BiImplicate</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>BiImplicate</scope><name>containedSpecialNode</name></member>
+      <member refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" prot="public" virt="virtual"><scope>BiImplicate</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>BiImplicate</scope><name>getLeaf</name></member>
+      <member refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" prot="public" virt="virtual"><scope>BiImplicate</scope><name>getSTNodeChild</name></member>
+      <member refid="d5/da3/class_bi_implicate_1a3ca1a9b3fd1805b56b72def494179ea3" prot="public" virt="virtual"><scope>BiImplicate</scope><name>getSTRuleName</name></member>
+      <member refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" prot="public" virt="virtual"><scope>BiImplicate</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>left</name></member>
+      <member refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" prot="public" virt="virtual"><scope>BiImplicate</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>BiImplicate</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>BiImplicate</scope><name>setVariable</name></member>
+      <member refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" prot="public" virt="virtual"><scope>BiImplicate</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>BiImplicate</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>variables</name></member>
+      <member refid="d5/da3/class_bi_implicate_1ad3f12180788d7d207b2e385c2a89c35b" prot="public" virt="non-virtual"><scope>BiImplicate</scope><name>~BiImplicate</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>BiImplicate</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

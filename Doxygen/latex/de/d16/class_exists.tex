@@ -1,0 +1,159 @@
+\hypertarget{class_exists}{}\section{Exists Class Reference}
+\label{class_exists}\index{Exists@{Exists}}
+
+
+{\ttfamily \#include $<$exists.\+h$>$}
+
+
+
+Inheritance diagram for Exists\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d0/d4c/class_exists__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Exists\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d2/d90/class_exists__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exists_ae51931aa14079e565a7b700b8f1d1fb1}{Exists} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ l=nullptr, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ r=nullptr)
+\item 
+\hyperlink{class_exists_a12ebe07a95afddca068d6cbdd67508f2}{$\sim$\+Exists} () override
+\item 
+string \hyperlink{class_exists_a8eda64d4fd60158c15b38f64a4596068}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+\hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} \hyperlink{class_exists_aff7b8694345884d06bdd751e88fae041}{get\+S\+T\+Rule\+Name} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleux rule name \end{DoxyCompactList}\item 
+void \hyperlink{class_exists_ad60177b343503d1ee8bdda801c2d32d6}{get\+S\+T\+Node\+Child} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root, long pos, bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_exists_a135277d9bfed780d4ea493ef355055d4}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_exists_ae51931aa14079e565a7b700b8f1d1fb1}\label{class_exists_ae51931aa14079e565a7b700b8f1d1fb1}} 
+\index{Exists@{Exists}!Exists@{Exists}}
+\index{Exists@{Exists}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily Exists\+::\+Exists (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{l = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{r = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_exists_a12ebe07a95afddca068d6cbdd67508f2}\label{class_exists_a12ebe07a95afddca068d6cbdd67508f2}} 
+\index{Exists@{Exists}!````~Exists@{$\sim$\+Exists}}
+\index{````~Exists@{$\sim$\+Exists}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{$\sim$\+Exists()}{~Exists()}}
+{\footnotesize\ttfamily Exists\+::$\sim$\+Exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exists_a135277d9bfed780d4ea493ef355055d4}\label{class_exists_a135277d9bfed780d4ea493ef355055d4}} 
+\index{Exists@{Exists}!copy@{copy}}
+\index{copy@{copy}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Exists\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{de/d16/class_exists_a135277d9bfed780d4ea493ef355055d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_exists_ad60177b343503d1ee8bdda801c2d32d6}\label{class_exists_ad60177b343503d1ee8bdda801c2d32d6}} 
+\index{Exists@{Exists}!get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}}
+\index{get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Node\+Child()}{getSTNodeChild()}}
+{\footnotesize\ttfamily void Exists\+::get\+S\+T\+Node\+Child (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root,  }\item[{long}]{pos,  }\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} \\
+\hline
+\mbox{\tt out}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} contains child \\
+\hline
+ & {\em pos} & -\/ position of child \hyperlink{class_node}{Node} of \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{S\+T\+Node\+::nodes} list \\
+\hline
+ & {\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_a1009cb6d84206c2b5eaa86580da59a7c}{Node}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{de/d16/class_exists_ad60177b343503d1ee8bdda801c2d32d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_exists_aff7b8694345884d06bdd751e88fae041}\label{class_exists_aff7b8694345884d06bdd751e88fae041}} 
+\index{Exists@{Exists}!get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}}
+\index{get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Rule\+Name()}{getSTRuleName()}}
+{\footnotesize\ttfamily \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} Exists\+::get\+S\+T\+Rule\+Name (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleux rule name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+U\+L\+ES -\/ semantic taubleaux rule name 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a25b6581950988c2536a392a6874c8072}{Node}.
+
+\mbox{\Hypertarget{class_exists_a8eda64d4fd60158c15b38f64a4596068}\label{class_exists_a8eda64d4fd60158c15b38f64a4596068}} 
+\index{Exists@{Exists}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Exists@{Exists}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Exists\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{exists_8h}{exists.\+h}\item 
+src/notation/\hyperlink{exists_8cpp}{exists.\+cpp}\end{DoxyCompactItemize}

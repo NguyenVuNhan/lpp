@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d2/d3c/class_variable" kind="class" language="C++" prot="public">
+    <compoundname>Variable</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes refid="d0/d30/notation_2variable_8h" local="no">variable.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Variable::Variable</definition>
+        <argsstring>(string notate)</argsstring>
+        <name>Variable</name>
+        <param>
+          <type>string</type>
+          <declname>notate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="9" column="1" bodyfile="src/notation/variable.cpp" bodystart="5" bodyend="9"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1af836f63543807d77dfca8caacd54b1a5" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Variable::Variable</definition>
+        <argsstring>(char notate)</argsstring>
+        <name>Variable</name>
+        <param>
+          <type>char</type>
+          <declname>notate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="10" column="1" bodyfile="src/notation/variable.cpp" bodystart="11" bodyend="15"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Variable::~Variable</definition>
+        <argsstring>() override</argsstring>
+        <name>~Variable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="11" column="1" bodyfile="src/notation/variable.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Variable::getValue</definition>
+        <argsstring>(string valList) override</argsstring>
+        <name>getValue</name>
+        <reimplements refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2">getValue</reimplements>
+        <param>
+          <type>string</type>
+          <declname>valList</declname>
+        </param>
+        <briefdescription>
+<para>get proposition value </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string contains proposition variable and their value. <linebreak/>
+ e.g. &quot;A1B0C1&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proposition value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="15" column="1" bodyfile="src/notation/variable.cpp" bodystart="21" bodyend="24"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Variable::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0">toString</reimplements>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="16" column="1" bodyfile="src/notation/variable.cpp" bodystart="26" bodyend="29"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Variable::setVariable</definition>
+        <argsstring>(string fromVariable, string toVariable) override</argsstring>
+        <name>setVariable</name>
+        <reimplements refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f">setVariable</reimplements>
+        <param>
+          <type>string</type>
+          <declname>fromVariable</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>toVariable</declname>
+        </param>
+        <briefdescription>
+<para>change variable name recursively </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fromVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- variable name to change </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new variable name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="17" column="1" bodyfile="src/notation/variable.cpp" bodystart="31" bodyend="35"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Variable::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/variable.h" line="18" column="1" bodyfile="src/notation/variable.cpp" bodystart="37" bodyend="40"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="163">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="162">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="163" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>Variable</label>
+        <link refid="d2/d3c/class_variable"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="166">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="165">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="166" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>Variable</label>
+        <link refid="d2/d3c/class_variable"/>
+        <childnode refid="165" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/variable.h" line="7" column="1" bodyfile="src/notation/variable.h" bodystart="6" bodyend="19"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>Variable</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>Variable</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>Variable</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>Variable</scope><name>containedSpecialNode</name></member>
+      <member refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" prot="public" virt="virtual"><scope>Variable</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>Variable</scope><name>getLeaf</name></member>
+      <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" virt="virtual"><scope>Variable</scope><name>getSTNodeChild</name></member>
+      <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" virt="virtual"><scope>Variable</scope><name>getSTRuleName</name></member>
+      <member refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" prot="public" virt="virtual"><scope>Variable</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>Variable</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>Variable</scope><name>left</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>Variable</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>Variable</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>Variable</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>Variable</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>Variable</scope><name>right</name></member>
+      <member refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" prot="public" virt="virtual"><scope>Variable</scope><name>setVariable</name></member>
+      <member refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" prot="public" virt="virtual"><scope>Variable</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>Variable</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>Variable</scope><name>treeTraveler</name></member>
+      <member refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" prot="public" virt="non-virtual"><scope>Variable</scope><name>Variable</name></member>
+      <member refid="d2/d3c/class_variable_1af836f63543807d77dfca8caacd54b1a5" prot="public" virt="non-virtual"><scope>Variable</scope><name>Variable</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>Variable</scope><name>variables</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>Variable</scope><name>~Node</name></member>
+      <member refid="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" prot="public" virt="non-virtual"><scope>Variable</scope><name>~Variable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

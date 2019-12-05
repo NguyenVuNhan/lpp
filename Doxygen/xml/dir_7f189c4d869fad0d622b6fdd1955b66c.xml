@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7f189c4d869fad0d622b6fdd1955b66c" kind="dir">
+    <compoundname>cnf</compoundname>
+    <innerfile refid="d6/d79/cnf_8cpp">cnf.cpp</innerfile>
+    <innerfile refid="d1/d47/cnf_8h">cnf.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cnf/"/>
+  </compounddef>
+</doxygen>

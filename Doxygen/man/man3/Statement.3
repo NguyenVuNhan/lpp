@@ -1,0 +1,110 @@
+.TH "Statement" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Statement
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <statement\&.h>\fP
+.PP
+Inherits \fBNode\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStatement\fP (string notate, list< shared_ptr< \fBNode\fP > > listNodes)"
+.br
+.ti -1c
+.RI "\fBStatement\fP (char notate, list< shared_ptr< \fBNode\fP > > listNodes)"
+.br
+.ti -1c
+.RI "\fB~Statement\fP () override"
+.br
+.ti -1c
+.RI "string \fBtoString\fP () override"
+.br
+.RI "get proposition infix formular "
+.ti -1c
+.RI "void \fBsetVariable\fP (string fromVariable, string toVariable) override"
+.br
+.RI "change variable name recursively "
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBcopy\fP () override"
+.br
+.RI "deep copy node "
+.ti -1c
+.RI "bool \fBcontainedSpecialNode\fP () override"
+.br
+.RI "containedSpecialNode "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Statement::Statement (string notate, list< shared_ptr< \fBNode\fP > > listNodes)"
+
+.SS "Statement::Statement (char notate, list< shared_ptr< \fBNode\fP > > listNodes)"
+
+.SS "Statement::~Statement ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Statement::containedSpecialNode ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+containedSpecialNode 
+.PP
+\fBReturns:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.SS "shared_ptr< \fBNode\fP > Statement::copy ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+deep copy node 
+.PP
+\fBReturns:\fP
+.RS 4
+a deep copy of node 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.SS "void Statement::setVariable (string fromVariable, string toVariable)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+change variable name recursively 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfromVariable\fP - variable name to change 
+.br
+\fItoVariable\fP - new variable name 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+.SS "string Statement::toString ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+get proposition infix formular 
+.PP
+\fBReturns:\fP
+.RS 4
+string of infix proposition 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBNode\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

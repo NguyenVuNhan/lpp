@@ -1,0 +1,432 @@
+\hypertarget{class_node}{}\section{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+
+
+Inheritance diagram for Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/db9/class_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d5/dbd/class_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_node_aade5a3c528aedf9de57dd1efc83d76cb}{Node} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a978574f2c08939cfef1041041eb9c5be}{left}=nullptr, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_af68a851484bce64ed9463a50025df424}{right}=nullptr)
+\item 
+virtual \hyperlink{class_node_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node} ()
+\item 
+void \hyperlink{class_node_a068e821ecc21903e5b3430e36493f390}{tree\+Traveler} (ofstream \&out, int root\+Id=-\/1)
+\begin{DoxyCompactList}\small\item\em travel tree and produce a graph \end{DoxyCompactList}\item 
+virtual string \hyperlink{class_node_a815b062345cf2bb42717bd16dc99ea27}{to\+String\+Prefix} ()
+\begin{DoxyCompactList}\small\item\em get proposition prefix formular \end{DoxyCompactList}\item 
+virtual string \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{get\+Value} (string val\+List)
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}{nandify} (bool is\+Negation=false)
+\begin{DoxyCompactList}\small\item\em nandify proposition \end{DoxyCompactList}\item 
+virtual \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} \hyperlink{class_node_a25b6581950988c2536a392a6874c8072}{get\+S\+T\+Rule\+Name} (bool is\+Negation=false)
+\begin{DoxyCompactList}\small\item\em get semantic taubleux rule name \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_node_a1009cb6d84206c2b5eaa86580da59a7c}{get\+S\+T\+Node\+Child} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root, long pos, bool is\+Negation=false)
+\begin{DoxyCompactList}\small\item\em get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}{set\+Variable} (string from\+Variable, string to\+Variable)
+\begin{DoxyCompactList}\small\item\em change variable name recursively \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}{cnf\+Filter} (bool is\+Negation=false)
+\begin{DoxyCompactList}\small\item\em in this function node will be \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_ae68e5138f0c1a6c79912e21bc8f39d48}{cnf\+Distribution} ()
+\begin{DoxyCompactList}\small\item\em cnf distribution -\/ this function will be called after set\+Variable \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_node_a73ccf66e577caa428163477f3b4cfe4d}{get\+Leaf} (list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$$>$ \&list\+Node)
+\begin{DoxyCompactList}\small\item\em get leaf of current \hyperlink{class_node}{Node} \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{copy} ()
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_node_ac76ac1cc0fd7376ca329f3e8279ebe1e}{contained\+Special\+Node} ()
+\begin{DoxyCompactList}\small\item\em contained\+Special\+Node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_node_a9b7777ab2a657b4a901b3578bbf68831}{is\+Rules\+Returned} = false
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a978574f2c08939cfef1041041eb9c5be}{left} = nullptr
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_af68a851484bce64ed9463a50025df424}{right} = nullptr
+\item 
+list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \hyperlink{class_node_a350b631f3a9192bfa23bc266f6b8da02}{variables}
+\item 
+string \hyperlink{class_node_a0178acf2d687a5535122e4cdb1e8e079}{notation} = \char`\"{}1\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_a92e887aab236cfc28d81bdf0fdb9379f}{or\+Simplify} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ l, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ r)
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_node_afd9769d942984448aa8e541ada73b289}{and\+Simplify} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ l, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ r)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_node_a59a543130a10c95f1e8642cf8c5645e8}{id} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_aade5a3c528aedf9de57dd1efc83d76cb}\label{class_node_aade5a3c528aedf9de57dd1efc83d76cb}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{left = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_node_aa0840c3cb5c7159be6d992adecd2097c}\label{class_node_aa0840c3cb5c7159be6d992adecd2097c}} 
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{$\sim$\+Node()}{~Node()}}
+{\footnotesize\ttfamily Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_afd9769d942984448aa8e541ada73b289}\label{class_node_afd9769d942984448aa8e541ada73b289}} 
+\index{Node@{Node}!and\+Simplify@{and\+Simplify}}
+\index{and\+Simplify@{and\+Simplify}!Node@{Node}}
+\subsubsection{\texorpdfstring{and\+Simplify()}{andSimplify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::and\+Simplify (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{l,  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{dc/d8f/class_node_afd9769d942984448aa8e541ada73b289_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_node_ae68e5138f0c1a6c79912e21bc8f39d48}\label{class_node_ae68e5138f0c1a6c79912e21bc8f39d48}} 
+\index{Node@{Node}!cnf\+Distribution@{cnf\+Distribution}}
+\index{cnf\+Distribution@{cnf\+Distribution}!Node@{Node}}
+\subsubsection{\texorpdfstring{cnf\+Distribution()}{cnfDistribution()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::cnf\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+cnf distribution -\/ this function will be called after set\+Variable 
+
+\begin{DoxyReturn}{Returns}
+node that applied distribution rule 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_and_a370c86f44ee17b22208cdbc1f17a7b3f}{And}, and \hyperlink{class_or_ae49bee04503f31d32750ecf8671e5552}{Or}.
+
+\mbox{\Hypertarget{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}\label{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}} 
+\index{Node@{Node}!cnf\+Filter@{cnf\+Filter}}
+\index{cnf\+Filter@{cnf\+Filter}!Node@{Node}}
+\subsubsection{\texorpdfstring{cnf\+Filter()}{cnfFilter()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::cnf\+Filter (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+in this function node will be 
+
+
+\begin{DoxyItemize}
+\item Remove bi-\/implicate
+\item Remove implicate
+\item Doing the morgan 
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node has been cnf filtered 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented in \hyperlink{class_and_a18ea23cd682dce93808c34ea0243897f}{And}, \hyperlink{class_negate_a6aa803fea460f0a2a52399b778bfd268}{Negate}, \hyperlink{class_or_ad8a208aee185d567ede5c92f39796faa}{Or}, \hyperlink{class_bi_implicate_a3f79e7340ff831b0bb927d8a70414ac3}{Bi\+Implicate}, \hyperlink{class_implicate_a84e18887eae8891eec583aafaf2bf63d}{Implicate}, \hyperlink{class_n_and_a2df64f0858e90841201a2acaf50ac587}{N\+And}, and \hyperlink{class_value_a56c458de6a68b9a25233e6fdcfa67760}{Value}.
+
+\mbox{\Hypertarget{class_node_ac76ac1cc0fd7376ca329f3e8279ebe1e}\label{class_node_ac76ac1cc0fd7376ca329f3e8279ebe1e}} 
+\index{Node@{Node}!contained\+Special\+Node@{contained\+Special\+Node}}
+\index{contained\+Special\+Node@{contained\+Special\+Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{contained\+Special\+Node()}{containedSpecialNode()}}
+{\footnotesize\ttfamily bool Node\+::contained\+Special\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+contained\+Special\+Node 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_statement_a482a663d073d2601fa1759a5e651c240}{Statement}.
+
+\mbox{\Hypertarget{class_node_a0d22a418a622a24852610fd51910c5eb}\label{class_node_a0d22a418a622a24852610fd51910c5eb}} 
+\index{Node@{Node}!copy@{copy}}
+\index{copy@{copy}!Node@{Node}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_multi_or_norm_a030bc7807678c834b467daa7a3a8dab5}{Multi\+Or\+Norm}, \hyperlink{class_and_a7560a861ae68050c2aa22e2392a46a15}{And}, \hyperlink{class_multi_and_norm_a77cbaf6920daa86d9ddc80b2a839a84f}{Multi\+And\+Norm}, \hyperlink{class_or_a35728ed23db1ec805267d8d244629a62}{Or}, \hyperlink{class_negate_a7cdd545814e819ef6b6ec735dda357aa}{Negate}, \hyperlink{class_bi_implicate_a41c9d9c53bf05cdde330ec8df07fde31}{Bi\+Implicate}, \hyperlink{class_implicate_a08cf8aa03589f7a34400a5f636f1256a}{Implicate}, \hyperlink{class_n_and_a3756b0f2696bf06664100c0b5c9d67b3}{N\+And}, \hyperlink{class_value_a45518c11045a76300ad02cc93a0150c9}{Value}, \hyperlink{class_multi_or_a9a81647d40f86c825fdb1513f1b3f30c}{Multi\+Or}, \hyperlink{class_variable_af8d66ea58702db286b80632de320eafe}{Variable}, \hyperlink{class_exists_a135277d9bfed780d4ea493ef355055d4}{Exists}, \hyperlink{class_for_all_ae9b3918a9cd0870a20b80db2288fe402}{For\+All}, \hyperlink{class_multi_and_ad89e8cb08fe1e0793e2e16e837992de2}{Multi\+And}, and \hyperlink{class_statement_a7d8bac78c76a6cf7265495da5b16935d}{Statement}.
+
+\mbox{\Hypertarget{class_node_a73ccf66e577caa428163477f3b4cfe4d}\label{class_node_a73ccf66e577caa428163477f3b4cfe4d}} 
+\index{Node@{Node}!get\+Leaf@{get\+Leaf}}
+\index{get\+Leaf@{get\+Leaf}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Leaf()}{getLeaf()}}
+{\footnotesize\ttfamily void Node\+::get\+Leaf (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$$>$ \&}]{list\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get leaf of current \hyperlink{class_node}{Node} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list\+Node} & -\/ empty list of shared\+\_\+ptr$<$\+Node$>$ \\
+\hline
+\mbox{\tt out}  & {\em list\+Node} & -\/ list of shared\+\_\+ptr$<$\+Node$>$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a1009cb6d84206c2b5eaa86580da59a7c}\label{class_node_a1009cb6d84206c2b5eaa86580da59a7c}} 
+\index{Node@{Node}!get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}}
+\index{get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Node\+Child()}{getSTNodeChild()}}
+{\footnotesize\ttfamily void Node\+::get\+S\+T\+Node\+Child (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root,  }\item[{long}]{pos,  }\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} \\
+\hline
+\mbox{\tt out}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} contains child \\
+\hline
+ & {\em pos} & -\/ position of child \hyperlink{class_node}{Node} of \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{S\+T\+Node\+::nodes} list \\
+\hline
+ & {\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_and_a081ebf199fb2388773a19d2c2044e574}{And}, \hyperlink{class_negate_ad06cf6b9c1070a001919c58084990c0d}{Negate}, \hyperlink{class_or_aeedae2f08d30d4e9dcae30916aa27c59}{Or}, \hyperlink{class_bi_implicate_a7ecc298b799d533b4bf19b3912932fc7}{Bi\+Implicate}, \hyperlink{class_implicate_aca5eae3d47c318ba413787c7c3a674ce}{Implicate}, \hyperlink{class_n_and_a3ccedba07752a2457a593035b33535e1}{N\+And}, \hyperlink{class_exists_ad60177b343503d1ee8bdda801c2d32d6}{Exists}, and \hyperlink{class_for_all_a847b6ce62d4e04ce7487b2cc1b49164f}{For\+All}.
+
+\mbox{\Hypertarget{class_node_a25b6581950988c2536a392a6874c8072}\label{class_node_a25b6581950988c2536a392a6874c8072}} 
+\index{Node@{Node}!get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}}
+\index{get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Rule\+Name()}{getSTRuleName()}}
+{\footnotesize\ttfamily \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} Node\+::get\+S\+T\+Rule\+Name (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get semantic taubleux rule name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+U\+L\+ES -\/ semantic taubleaux rule name 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_and_a9b62ef9a38c6fe9ac96c958d46e30f7b}{And}, \hyperlink{class_negate_ac881a233c5a1e6f7669ea8ff70eda8f7}{Negate}, \hyperlink{class_or_a0fd1f6086987f7b1fe9fab9a196c1839}{Or}, \hyperlink{class_implicate_aa425e8cb25aec8dd2935346f61ebaefa}{Implicate}, \hyperlink{class_n_and_a8570a747f7f4aec32bb962227749566f}{N\+And}, \hyperlink{class_bi_implicate_a3ca1a9b3fd1805b56b72def494179ea3}{Bi\+Implicate}, \hyperlink{class_exists_aff7b8694345884d06bdd751e88fae041}{Exists}, and \hyperlink{class_for_all_a97e03dcd8f51824fe629487847b7c4dc}{For\+All}.
+
+\mbox{\Hypertarget{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}\label{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}} 
+\index{Node@{Node}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Node\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_multi_or_a7146240d304444ee0da5c949c584971e}{Multi\+Or}, \hyperlink{class_multi_and_a7730036f89cf27cddcf6d2efc293dd9d}{Multi\+And}, \hyperlink{class_and_a9d2b965d8a1b80d0e2da9d6537601e14}{And}, \hyperlink{class_or_a9ede00ef8120ad4aee9f69049628ead9}{Or}, \hyperlink{class_variable_a2830553ab8b852a004c613a626fa6eb2}{Variable}, \hyperlink{class_bi_implicate_ac7cb17f1414705f9a1d9df83793b0d58}{Bi\+Implicate}, \hyperlink{class_implicate_a331e1a1fcbe378ef15a3a7f04b7034d5}{Implicate}, \hyperlink{class_n_and_a9eb3a117e8d30f11ebe25e932d387265}{N\+And}, \hyperlink{class_negate_adc2bf29215e329e60e44dbf6bf8a4c85}{Negate}, and \hyperlink{class_value_ac956d02a49c773f5249cc31fb4293337}{Value}.
+
+\mbox{\Hypertarget{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}\label{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}} 
+\index{Node@{Node}!nandify@{nandify}}
+\index{nandify@{nandify}!Node@{Node}}
+\subsubsection{\texorpdfstring{nandify()}{nandify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::nandify (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+nandify proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nandified tree 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_and_a790a8f5b095f664f0a879d2bf96c972d}{And}, \hyperlink{class_bi_implicate_aa77f25616aa7a47ae4007d661ad60518}{Bi\+Implicate}, \hyperlink{class_or_a1fc17643b67383ec7be340d278c8e60a}{Or}, \hyperlink{class_value_aaa2ddacd71ab25b50b06eee47e21289d}{Value}, \hyperlink{class_implicate_a9f3b5d35f552a62ca4a98b4f608a2968}{Implicate}, \hyperlink{class_n_and_ae60ecc244dd83bfdcc7eada4957890d8}{N\+And}, and \hyperlink{class_negate_a2dd4cada504739fea3583a5729044c71}{Negate}.
+
+\mbox{\Hypertarget{class_node_a92e887aab236cfc28d81bdf0fdb9379f}\label{class_node_a92e887aab236cfc28d81bdf0fdb9379f}} 
+\index{Node@{Node}!or\+Simplify@{or\+Simplify}}
+\index{or\+Simplify@{or\+Simplify}!Node@{Node}}
+\subsubsection{\texorpdfstring{or\+Simplify()}{orSimplify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Node\+::or\+Simplify (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{l,  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{dc/d8f/class_node_a92e887aab236cfc28d81bdf0fdb9379f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}\label{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}} 
+\index{Node@{Node}!set\+Variable@{set\+Variable}}
+\index{set\+Variable@{set\+Variable}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Variable()}{setVariable()}}
+{\footnotesize\ttfamily void Node\+::set\+Variable (\begin{DoxyParamCaption}\item[{string}]{from\+Variable,  }\item[{string}]{to\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+change variable name recursively 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Variable} & -\/ variable name to change \\
+\hline
+{\em to\+Variable} & -\/ new variable name \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_value_a807844066d6d76e9b9f3eda03cef37b1}{Value}, \hyperlink{class_variable_a6290fe9c9e63b4c0a980de1333902557}{Variable}, and \hyperlink{class_statement_a96d67118f27e64d72b189d837103a126}{Statement}.
+
+\mbox{\Hypertarget{class_node_a0746502074a232243dcac3b96f3ce2d0}\label{class_node_a0746502074a232243dcac3b96f3ce2d0}} 
+\index{Node@{Node}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Node@{Node}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Node\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_multi_or_norm_ad70e2ca31478183da21ee1995964c2c3}{Multi\+Or\+Norm}, \hyperlink{class_multi_and_norm_a84940789d331007c430096a38f60d124}{Multi\+And\+Norm}, \hyperlink{class_negate_aab87b217ffd5c8ba404022a5f4cec220}{Negate}, \hyperlink{class_variable_a5b0b0e25200631521dc5bbc8df22acdc}{Variable}, \hyperlink{class_multi_or_ade4d5f7db13aca1020dba2396ef00dd7}{Multi\+Or}, \hyperlink{class_statement_a0e9ec611dc39c53ed01cf0f877db9881}{Statement}, \hyperlink{class_value_aa774521b29b4f0c77eb6d57b5a6fb3a0}{Value}, \hyperlink{class_exists_a8eda64d4fd60158c15b38f64a4596068}{Exists}, \hyperlink{class_for_all_a086dc15d85fe4874c477c72a40577b85}{For\+All}, and \hyperlink{class_multi_and_a035299de4f81beb44a9a5df63b0d5178}{Multi\+And}.
+
+\mbox{\Hypertarget{class_node_a815b062345cf2bb42717bd16dc99ea27}\label{class_node_a815b062345cf2bb42717bd16dc99ea27}} 
+\index{Node@{Node}!to\+String\+Prefix@{to\+String\+Prefix}}
+\index{to\+String\+Prefix@{to\+String\+Prefix}!Node@{Node}}
+\subsubsection{\texorpdfstring{to\+String\+Prefix()}{toStringPrefix()}}
+{\footnotesize\ttfamily string Node\+::to\+String\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get proposition prefix formular 
+
+\begin{DoxyReturn}{Returns}
+string of prefix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_multi_or_a80405614a8a8db0992c35a70f36aa025}{Multi\+Or}, and \hyperlink{class_multi_and_a00dd6431f647c88e28d702dd2afb1c57}{Multi\+And}.
+
+\mbox{\Hypertarget{class_node_a068e821ecc21903e5b3430e36493f390}\label{class_node_a068e821ecc21903e5b3430e36493f390}} 
+\index{Node@{Node}!tree\+Traveler@{tree\+Traveler}}
+\index{tree\+Traveler@{tree\+Traveler}!Node@{Node}}
+\subsubsection{\texorpdfstring{tree\+Traveler()}{treeTraveler()}}
+{\footnotesize\ttfamily void Node\+::tree\+Traveler (\begin{DoxyParamCaption}\item[{ofstream \&}]{out,  }\item[{int}]{root\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+travel tree and produce a graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & File output stream \\
+\hline
+{\em root\+Id} & Parrent Id, equal to -\/1 by default if there is no parent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_node_a59a543130a10c95f1e8642cf8c5645e8}\label{class_node_a59a543130a10c95f1e8642cf8c5645e8}} 
+\index{Node@{Node}!id@{id}}
+\index{id@{id}!Node@{Node}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Node\+::id = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_node_a9b7777ab2a657b4a901b3578bbf68831}\label{class_node_a9b7777ab2a657b4a901b3578bbf68831}} 
+\index{Node@{Node}!is\+Rules\+Returned@{is\+Rules\+Returned}}
+\index{is\+Rules\+Returned@{is\+Rules\+Returned}!Node@{Node}}
+\subsubsection{\texorpdfstring{is\+Rules\+Returned}{isRulesReturned}}
+{\footnotesize\ttfamily bool Node\+::is\+Rules\+Returned = false}
+
+\mbox{\Hypertarget{class_node_a978574f2c08939cfef1041041eb9c5be}\label{class_node_a978574f2c08939cfef1041041eb9c5be}} 
+\index{Node@{Node}!left@{left}}
+\index{left@{left}!Node@{Node}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$ Node\+::left = nullptr}
+
+\mbox{\Hypertarget{class_node_a0178acf2d687a5535122e4cdb1e8e079}\label{class_node_a0178acf2d687a5535122e4cdb1e8e079}} 
+\index{Node@{Node}!notation@{notation}}
+\index{notation@{notation}!Node@{Node}}
+\subsubsection{\texorpdfstring{notation}{notation}}
+{\footnotesize\ttfamily string Node\+::notation = \char`\"{}1\char`\"{}}
+
+\mbox{\Hypertarget{class_node_af68a851484bce64ed9463a50025df424}\label{class_node_af68a851484bce64ed9463a50025df424}} 
+\index{Node@{Node}!right@{right}}
+\index{right@{right}!Node@{Node}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$ Node\+::right = nullptr}
+
+\mbox{\Hypertarget{class_node_a350b631f3a9192bfa23bc266f6b8da02}\label{class_node_a350b631f3a9192bfa23bc266f6b8da02}} 
+\index{Node@{Node}!variables@{variables}}
+\index{variables@{variables}!Node@{Node}}
+\subsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily list$<$shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$ $>$ Node\+::variables}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{node_8h}{node.\+h}\item 
+src/notation/\hyperlink{node_8cpp}{node.\+cpp}\end{DoxyCompactItemize}

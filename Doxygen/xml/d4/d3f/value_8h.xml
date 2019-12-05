@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d4/d3f/value_8h" kind="file" language="C++">
+    <compoundname>value.h</compoundname>
+    <includes refid="d1/d77/node_8h" local="yes">node.h</includes>
+    <includedby refid="dc/d62/and_8cpp" local="yes">src/notation/and.cpp</includedby>
+    <includedby refid="db/d7a/nand_8cpp" local="yes">src/notation/nand.cpp</includedby>
+    <includedby refid="df/db4/negate_8cpp" local="yes">src/notation/negate.cpp</includedby>
+    <includedby refid="d7/d70/node_8cpp" local="yes">src/notation/node.cpp</includedby>
+    <includedby refid="d2/dc0/value_8cpp" local="yes">src/notation/value.cpp</includedby>
+    <includedby refid="d0/d27/variable_8cpp" local="yes">src/notation/variable.cpp</includedby>
+    <includedby refid="db/d07/predicate_8cpp" local="yes">src/proposition/predicate.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <incdepgraph>
+      <node id="563">
+        <label>list</label>
+      </node>
+      <node id="566">
+        <label>iomanip</label>
+      </node>
+      <node id="559">
+        <label>string</label>
+      </node>
+      <node id="558">
+        <label>fstream</label>
+      </node>
+      <node id="564">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="557" relation="include">
+        </childnode>
+      </node>
+      <node id="562">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="557" relation="include">
+        </childnode>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+      </node>
+      <node id="560">
+        <label>array</label>
+      </node>
+      <node id="557">
+        <label>iostream</label>
+      </node>
+      <node id="561">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="555">
+        <label>src/notation/value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="556" relation="include">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>algorithm</label>
+      </node>
+      <node id="556">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="557" relation="include">
+        </childnode>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+        <childnode refid="560" relation="include">
+        </childnode>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="573">
+        <label>src/notation/value.cpp</label>
+        <link refid="d2/dc0/value_8cpp"/>
+      </node>
+      <node id="569">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="572">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="574">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="575">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="571">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="576">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="568">
+        <label>src/notation/value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d4/d72/class_value" prot="public">Value</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VALUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d77/node_8h" kindref="compound">node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d4/d72/class_value" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d4/d72/class_value" kindref="compound">Value</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d4/d72/class_value_1a98e1dd185ea30f4e9343de03008fd622" kindref="member">Value</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d72/class_value_1a73578eb3c2fa9af8c62f836d1a3b0063" kindref="member">~Value</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Node<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d4/d72/class_value_1ac956d02a49c773f5249cc31fb4293337" kindref="member">getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d4/d72/class_value_1aa774521b29b4f0c77eb6d57b5a6fb3a0" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d4/d72/class_value_1aaa2ddacd71ab25b50b06eee47e21289d" kindref="member">nandify</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d72/class_value_1a807844066d6d76e9b9f3eda03cef37b1" kindref="member">setVariable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fromVariable,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>toVariable)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d4/d72/class_value_1a56c458de6a68b9a25233e6fdcfa67760" kindref="member">cnfFilter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d4/d72/class_value_1a45518c11045a76300ad02cc93a0150c9" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>VALUE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/value.h"/>
+  </compounddef>
+</doxygen>

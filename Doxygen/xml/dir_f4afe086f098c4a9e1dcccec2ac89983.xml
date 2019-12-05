@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_f4afe086f098c4a9e1dcccec2ac89983" kind="dir">
+    <compoundname>src/proposition/tableaux</compoundname>
+    <innerfile refid="d5/d32/proposition_2tableaux_2enum_8h">enum.h</innerfile>
+    <innerfile refid="de/d3e/semantictableaux_8cpp">semantictableaux.cpp</innerfile>
+    <innerfile refid="d3/d01/semantictableaux_8h">semantictableaux.h</innerfile>
+    <innerfile refid="d6/db6/stnode_8cpp">stnode.cpp</innerfile>
+    <innerfile refid="d6/d13/stnode_8h">stnode.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/proposition/tableaux/"/>
+  </compounddef>
+</doxygen>

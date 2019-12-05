@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_f7a7b8bdce8a0736a2eda0342bf34836">src/cnf</innerdir>
+    <innerdir refid="dir_35ffec897c6b624b34b271f28510180f">src/notation</innerdir>
+    <innerdir refid="dir_e3c9f68e4ea647936b4e2daec305fae7">src/proposition</innerdir>
+    <innerdir refid="dir_7d80c2fda53c1b45d1b78d30ae14e8d9">src/SemanticTableaux</innerdir>
+    <innerdir refid="dir_d93a34de34a574cf430f2bf2140b6780">src/Struct</innerdir>
+    <innerdir refid="dir_20706930dc76f634e133f76dc3cfb728">src/table</innerdir>
+    <innerfile refid="dd/daf/logging_8cpp">logging.cpp</innerfile>
+    <innerfile refid="d5/d77/logging_8h">logging.h</innerfile>
+    <innerfile refid="d5/d60/utils_8h">utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

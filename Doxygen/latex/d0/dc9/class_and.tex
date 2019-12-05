@@ -1,0 +1,230 @@
+\hypertarget{class_and}{}\section{And Class Reference}
+\label{class_and}\index{And@{And}}
+
+
+{\ttfamily \#include $<$and.\+h$>$}
+
+
+
+Inheritance diagram for And\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{dc/d54/class_and__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for And\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d7/d3e/class_and__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_and_a6058f4ed6168568b529e1e0750df8cf8}{And} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ l=nullptr, shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ r=nullptr)
+\item 
+\hyperlink{class_and_af7bc87f11ac21a32c28c194f3eb94650}{$\sim$\+And} () override
+\item 
+bool \hyperlink{class_and_a9d2b965d8a1b80d0e2da9d6537601e14}{get\+Value} (string val\+List) override
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+\hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} \hyperlink{class_and_a9b62ef9a38c6fe9ac96c958d46e30f7b}{get\+S\+T\+Rule\+Name} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleux rule name \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_and_a790a8f5b095f664f0a879d2bf96c972d}{nandify} (bool is\+Negation) override
+\begin{DoxyCompactList}\small\item\em nandify proposition \end{DoxyCompactList}\item 
+void \hyperlink{class_and_a081ebf199fb2388773a19d2c2044e574}{get\+S\+T\+Node\+Child} (shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ root, long pos, bool is\+Negation=false) override
+\begin{DoxyCompactList}\small\item\em get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_and_a18ea23cd682dce93808c34ea0243897f}{cnf\+Filter} (bool is\+Negation=false) override
+\begin{DoxyCompactList}\small\item\em in this function node will be \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_and_a370c86f44ee17b22208cdbc1f17a7b3f}{cnf\+Distribution} () override
+\begin{DoxyCompactList}\small\item\em cnf distribution -\/ this function will be called after set\+Variable \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_and_a7560a861ae68050c2aa22e2392a46a15}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_and_a6058f4ed6168568b529e1e0750df8cf8}\label{class_and_a6058f4ed6168568b529e1e0750df8cf8}} 
+\index{And@{And}!And@{And}}
+\index{And@{And}!And@{And}}
+\subsubsection{\texorpdfstring{And()}{And()}}
+{\footnotesize\ttfamily And\+::\+And (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{l = {\ttfamily nullptr},  }\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{r = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_and_af7bc87f11ac21a32c28c194f3eb94650}\label{class_and_af7bc87f11ac21a32c28c194f3eb94650}} 
+\index{And@{And}!````~And@{$\sim$\+And}}
+\index{````~And@{$\sim$\+And}!And@{And}}
+\subsubsection{\texorpdfstring{$\sim$\+And()}{~And()}}
+{\footnotesize\ttfamily And\+::$\sim$\+And (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_and_a370c86f44ee17b22208cdbc1f17a7b3f}\label{class_and_a370c86f44ee17b22208cdbc1f17a7b3f}} 
+\index{And@{And}!cnf\+Distribution@{cnf\+Distribution}}
+\index{cnf\+Distribution@{cnf\+Distribution}!And@{And}}
+\subsubsection{\texorpdfstring{cnf\+Distribution()}{cnfDistribution()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ And\+::cnf\+Distribution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+cnf distribution -\/ this function will be called after set\+Variable 
+
+\begin{DoxyReturn}{Returns}
+node that applied distribution rule 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_ae68e5138f0c1a6c79912e21bc8f39d48}{Node}.
+
+\mbox{\Hypertarget{class_and_a18ea23cd682dce93808c34ea0243897f}\label{class_and_a18ea23cd682dce93808c34ea0243897f}} 
+\index{And@{And}!cnf\+Filter@{cnf\+Filter}}
+\index{cnf\+Filter@{cnf\+Filter}!And@{And}}
+\subsubsection{\texorpdfstring{cnf\+Filter()}{cnfFilter()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ And\+::cnf\+Filter (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+in this function node will be 
+
+
+\begin{DoxyItemize}
+\item Remove bi-\/implicate
+\item Remove implicate
+\item Doing the morgan 
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node has been cnf filtered 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{class_node_ab5b01fd3c4efe0f2eaf7fc41653359b7}{Node}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d0/dc9/class_and_a18ea23cd682dce93808c34ea0243897f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_and_a7560a861ae68050c2aa22e2392a46a15}\label{class_and_a7560a861ae68050c2aa22e2392a46a15}} 
+\index{And@{And}!copy@{copy}}
+\index{copy@{copy}!And@{And}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ And\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+\mbox{\Hypertarget{class_and_a081ebf199fb2388773a19d2c2044e574}\label{class_and_a081ebf199fb2388773a19d2c2044e574}} 
+\index{And@{And}!get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}}
+\index{get\+S\+T\+Node\+Child@{get\+S\+T\+Node\+Child}!And@{And}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Node\+Child()}{getSTNodeChild()}}
+{\footnotesize\ttfamily void And\+::get\+S\+T\+Node\+Child (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$}]{root,  }\item[{long}]{pos,  }\item[{bool}]{is\+Negation = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleaux node child (\hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{S\+T\+Node.\+left} and \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{S\+T\+Node.\+right}) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} \\
+\hline
+\mbox{\tt out}  & {\em root} & -\/ \hyperlink{class_s_t_node}{S\+T\+Node} contains child \\
+\hline
+ & {\em pos} & -\/ position of child \hyperlink{class_node}{Node} of \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{S\+T\+Node\+::nodes} list \\
+\hline
+ & {\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_a1009cb6d84206c2b5eaa86580da59a7c}{Node}.
+
+\mbox{\Hypertarget{class_and_a9b62ef9a38c6fe9ac96c958d46e30f7b}\label{class_and_a9b62ef9a38c6fe9ac96c958d46e30f7b}} 
+\index{And@{And}!get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}}
+\index{get\+S\+T\+Rule\+Name@{get\+S\+T\+Rule\+Name}!And@{And}}
+\subsubsection{\texorpdfstring{get\+S\+T\+Rule\+Name()}{getSTRuleName()}}
+{\footnotesize\ttfamily \hyperlink{proposition_2tableaux_2enum_8h_a70c93904c6a27d228050f922eb4fc3b8}{R\+U\+L\+ES} And\+::get\+S\+T\+Rule\+Name (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get semantic taubleux rule name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+U\+L\+ES -\/ semantic taubleaux rule name 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a25b6581950988c2536a392a6874c8072}{Node}.
+
+\mbox{\Hypertarget{class_and_a9d2b965d8a1b80d0e2da9d6537601e14}\label{class_and_a9d2b965d8a1b80d0e2da9d6537601e14}} 
+\index{And@{And}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!And@{And}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool And\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{Node}.
+
+\mbox{\Hypertarget{class_and_a790a8f5b095f664f0a879d2bf96c972d}\label{class_and_a790a8f5b095f664f0a879d2bf96c972d}} 
+\index{And@{And}!nandify@{nandify}}
+\index{nandify@{nandify}!And@{And}}
+\subsubsection{\texorpdfstring{nandify()}{nandify()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ And\+::nandify (\begin{DoxyParamCaption}\item[{bool}]{is\+Negation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+nandify proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Negation} & -\/ check if this node parent is Negation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nandified tree 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a3b2e192b59b7e72908af7903c5a4e5c1}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{and_8h}{and.\+h}\item 
+src/notation/\hyperlink{and_8cpp}{and.\+cpp}\end{DoxyCompactItemize}

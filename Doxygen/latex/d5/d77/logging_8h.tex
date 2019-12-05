@@ -1,0 +1,74 @@
+\hypertarget{logging_8h}{}\section{src/logging.h File Reference}
+\label{logging_8h}\index{src/logging.\+h@{src/logging.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for logging.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d60/logging_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{d6/dcc/logging_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classhandler}{handler}
+\item 
+class \hyperlink{classlogging}{logging}
+\item 
+struct \hyperlink{structroot_logger}{root\+Logger}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{logging_8h_a809f816dd6df4e17499413cff1926fd4}{I\+N\+FO}(message)~\hyperlink{structroot_logger_af163fa3b8e6f1c7d4a2d1dd9fe1594ce}{root\+Logger\+::info}(message);
+\item 
+\#define \hyperlink{logging_8h_a9b7950453a79cd338475905367cb10c0}{S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER}(new\+Handler)~\hyperlink{structroot_logger_a2b12bc69ec8a404d513d7db3ea856be5}{root\+Logger\+::set\+Handler}(new\+Handler);
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{logging_8h_af90a9d943a7fb800048cdfb29a177f30}{Now\+Time} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logging_8h_a809f816dd6df4e17499413cff1926fd4}\label{logging_8h_a809f816dd6df4e17499413cff1926fd4}} 
+\index{logging.\+h@{logging.\+h}!I\+N\+FO@{I\+N\+FO}}
+\index{I\+N\+FO@{I\+N\+FO}!logging.\+h@{logging.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+FO}{INFO}}
+{\footnotesize\ttfamily \#define I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})~\hyperlink{structroot_logger_af163fa3b8e6f1c7d4a2d1dd9fe1594ce}{root\+Logger\+::info}(message);}
+
+\mbox{\Hypertarget{logging_8h_a9b7950453a79cd338475905367cb10c0}\label{logging_8h_a9b7950453a79cd338475905367cb10c0}} 
+\index{logging.\+h@{logging.\+h}!S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER@{S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER}}
+\index{S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER@{S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER}!logging.\+h@{logging.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER}{SET\_LOGGING\_HANDLER}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+L\+O\+G\+G\+I\+N\+G\+\_\+\+H\+A\+N\+D\+L\+ER(\begin{DoxyParamCaption}\item[{}]{new\+Handler }\end{DoxyParamCaption})~\hyperlink{structroot_logger_a2b12bc69ec8a404d513d7db3ea856be5}{root\+Logger\+::set\+Handler}(new\+Handler);}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logging_8h_af90a9d943a7fb800048cdfb29a177f30}\label{logging_8h_af90a9d943a7fb800048cdfb29a177f30}} 
+\index{logging.\+h@{logging.\+h}!Now\+Time@{Now\+Time}}
+\index{Now\+Time@{Now\+Time}!logging.\+h@{logging.\+h}}
+\subsubsection{\texorpdfstring{Now\+Time()}{NowTime()}}
+{\footnotesize\ttfamily std\+::string Now\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{d5/d77/logging_8h_af90a9d943a7fb800048cdfb29a177f30_icgraph}
+\end{center}
+\end{figure}

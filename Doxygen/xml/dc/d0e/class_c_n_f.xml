@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dc/d0e/class_c_n_f" kind="class" language="C++" prot="public">
+    <compoundname>CNF</compoundname>
+    <basecompoundref refid="d5/d80/struct_i___c_n_f" prot="protected" virt="non-virtual">I_CNF</basecompoundref>
+    <basecompoundref refid="dd/df8/class_tree" prot="public" virt="non-virtual">Tree</basecompoundref>
+    <includes refid="d1/d47/cnf_8h" local="no">cnf.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1af775e3be36e475027355d21e9ba43166" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNF::CNF</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; otherTree)</argsstring>
+        <name>CNF</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>otherTree</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> constructor, generate <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> of normal tree. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otherTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- tree to be convert to cnf form </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="116" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="9" bodyend="16"/>
+        <references refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" compoundref="d3/d09/tree_8h" startline="16">Tree::tree</references>
+        <references refid="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" compoundref="d6/d79/cnf_8cpp" startline="287" endline="292">I_CNF::generateCNF</references>
+        <references refid="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" compoundref="d6/d79/cnf_8cpp" startline="264" endline="285">I_CNF::nodeToMultiAnd</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1acb13869409764d8abbea2e50910fd7bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNF::CNF</definition>
+        <argsstring>(string prop=&quot;&quot;)</argsstring>
+        <name>CNF</name>
+        <param>
+          <type>string</type>
+          <declname>prop</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> constructor, parse a <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> tree. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- proposition </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="121" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="18" bodyend="25"/>
+        <references refid="dd/df8/class_tree_1a2a8e8236ffc2a6ba0ba580f4f0b01128" compoundref="d3/d09/tree_8h" startline="18">Tree::prop_in</references>
+        <references refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" compoundref="d3/d09/tree_8h" startline="16">Tree::tree</references>
+        <references refid="dc/d0e/class_c_n_f_1a5232071e600e1bfbb76ad7d0e10d7d92" compoundref="d6/d79/cnf_8cpp" startline="65" endline="84">parse</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1a7bce39709f41a431d486f988b32646de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNF::~CNF</definition>
+        <argsstring>() override</argsstring>
+        <name>~CNF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="122" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1a029535415f1d5cf92c8023693ce7b40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string CNF::getDavidPutnam</definition>
+        <argsstring>() override</argsstring>
+        <name>getDavidPutnam</name>
+        <reimplements refid="dd/df8/class_tree_1a9d7b51cc207222de02ccb59192454de5">getDavidPutnam</reimplements>
+        <briefdescription>
+<para>get David Putnam </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string, showing David Putnam result </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="124" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="31" bodyend="37"/>
+        <references refid="dc/d0e/class_c_n_f_1abb762bfe4bc7bbccda81f8db332bafe3" compoundref="d6/d79/cnf_8cpp" startline="39" endline="63">getListVariable</references>
+        <references refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" compoundref="d3/d09/tree_8h" startline="16">Tree::tree</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">getDavidPutnam</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1abb762bfe4bc7bbccda81f8db332bafe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>list&lt; string &gt;</type>
+        <definition>list&lt; string &gt; CNF::getListVariable</definition>
+        <argsstring>() override</argsstring>
+        <name>getListVariable</name>
+        <reimplements refid="dd/df8/class_tree_1a525967d14a17de0ad9c9072b025af1c3">getListVariable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="125" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="39" bodyend="63"/>
+        <references refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" compoundref="d3/d09/tree_8h" startline="17">Tree::varList</references>
+        <references refid="dd/df8/class_tree_1a2a8e8236ffc2a6ba0ba580f4f0b01128" compoundref="d3/d09/tree_8h" startline="18">Tree::prop_in</references>
+        <references refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" compoundref="d5/d60/utils_8h" startline="14" endline="18">contains</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1a029535415f1d5cf92c8023693ce7b40e" compoundref="d6/d79/cnf_8cpp" startline="31" endline="37">getDavidPutnam</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1a5232071e600e1bfbb76ad7d0e10d7d92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; CNF::parse</definition>
+        <argsstring>(string prop)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>string</type>
+          <declname>prop</declname>
+        </param>
+        <briefdescription>
+<para>parse cnf proposition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cnf string of proposition </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref> represent proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="133" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="65" bodyend="84"/>
+        <references refid="dc/d0e/class_c_n_f_1af2c396e921388daa2e99b6fef25b6697" compoundref="d6/d79/cnf_8cpp" startline="86" endline="99">getMultiOr</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1acb13869409764d8abbea2e50910fd7bc" compoundref="d6/d79/cnf_8cpp" startline="18" endline="25">CNF</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1af2c396e921388daa2e99b6fef25b6697" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; CNF::getMultiOr</definition>
+        <argsstring>(string prop)</argsstring>
+        <name>getMultiOr</name>
+        <param>
+          <type>string</type>
+          <declname>prop</declname>
+        </param>
+        <briefdescription>
+<para>get <ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref> base on proposition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cnf string of proposition </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref> represent proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="139" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="86" bodyend="99"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1a5232071e600e1bfbb76ad7d0e10d7d92" compoundref="d6/d79/cnf_8cpp" startline="65" endline="84">parse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNF::getDavidPutnam</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; tree, uint pos, string &amp;result)</argsstring>
+        <name>getDavidPutnam</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>get David Putnam, this function is used by a public function </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cnf tree </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- current variable position </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string, represent Devaid Putname result </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="146" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="101" bodyend="157"/>
+        <references refid="d5/d80/struct_i___c_n_f_1ac9fd631eda1871653b2d1fdcd55f18a5" compoundref="d6/d79/cnf_8cpp" startline="294" endline="315">I_CNF::findJanus</references>
+        <references refid="d5/d77/logging_8h_1a809f816dd6df4e17499413cff1926fd4" compoundref="d5/d77/logging_8h" startline="50">INFO</references>
+        <references refid="d5/d60/utils_8h_1acbda3100e3c2692062ae38f95d108b7b" compoundref="d5/d60/utils_8h" startline="38" endline="42">readList</references>
+        <references refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" compoundref="d3/d09/tree_8h" startline="17">Tree::varList</references>
+        <references refid="dc/d0e/class_c_n_f_1a029535415f1d5cf92c8023693ce7b40e" compoundref="d6/d79/cnf_8cpp" startline="31" endline="37">getDavidPutnam</references>
+        <references refid="d5/d80/struct_i___c_n_f_1ae9f978965edae4ab57c692544cb72d01" compoundref="d6/d79/cnf_8cpp" startline="244" endline="262">I_CNF::isUseless</references>
+        <references refid="d5/d80/struct_i___c_n_f_1aa7adb25b5dbb1f4dcddaf56dab338add" compoundref="d6/d79/cnf_8cpp" startline="159" endline="194">I_CNF::solveNonJanus</references>
+        <references refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">I_CNF::resolution</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>CNF</label>
+        <link refid="dc/d0e/class_c_n_f"/>
+        <childnode refid="13" relation="protected-inheritance">
+        </childnode>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>I_CNF</label>
+        <link refid="d5/d80/struct_i___c_n_f"/>
+      </node>
+      <node id="14">
+        <label>Tree</label>
+        <link refid="dd/df8/class_tree"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>CNF</label>
+        <link refid="dc/d0e/class_c_n_f"/>
+        <childnode refid="16" relation="protected-inheritance">
+        </childnode>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>I_CNF</label>
+        <link refid="d5/d80/struct_i___c_n_f"/>
+      </node>
+      <node id="17">
+        <label>Tree</label>
+        <link refid="dd/df8/class_tree"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>tableaux</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SemanticTableaux</label>
+        <link refid="d6/d22/class_semantic_tableaux"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/cnf/cnf.h" line="110" column="1" bodyfile="src/cnf/cnf.h" bodystart="108" bodyend="147"/>
+    <listofallmembers>
+      <member refid="dc/d0e/class_c_n_f_1af775e3be36e475027355d21e9ba43166" prot="public" virt="non-virtual"><scope>CNF</scope><name>CNF</name></member>
+      <member refid="dc/d0e/class_c_n_f_1acb13869409764d8abbea2e50910fd7bc" prot="public" virt="non-virtual"><scope>CNF</scope><name>CNF</name></member>
+      <member refid="dd/df8/class_tree_1ae19f22cfa4b782b5c0a048592ea3e95f" prot="public" virt="non-virtual"><scope>CNF</scope><name>exportGraph</name></member>
+      <member refid="dd/df8/class_tree_1ae235cdb84985c90fa56697a28b0a8d9e" prot="public" virt="non-virtual"><scope>CNF</scope><name>exportProof</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ac9fd631eda1871653b2d1fdcd55f18a5" prot="protected" virt="non-virtual"><scope>CNF</scope><name>findJanus</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" prot="protected" virt="non-virtual"><scope>CNF</scope><name>generateCNF</name></member>
+      <member refid="dc/d0e/class_c_n_f_1a029535415f1d5cf92c8023693ce7b40e" prot="public" virt="virtual"><scope>CNF</scope><name>getDavidPutnam</name></member>
+      <member refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" prot="private" virt="non-virtual"><scope>CNF</scope><name>getDavidPutnam</name></member>
+      <member refid="dc/d0e/class_c_n_f_1abb762bfe4bc7bbccda81f8db332bafe3" prot="public" virt="virtual"><scope>CNF</scope><name>getListVariable</name></member>
+      <member refid="dc/d0e/class_c_n_f_1af2c396e921388daa2e99b6fef25b6697" prot="private" virt="non-virtual"><scope>CNF</scope><name>getMultiOr</name></member>
+      <member refid="dd/df8/class_tree_1a60a9b7d65fc663d2db005b01119efa73" prot="protected" virt="virtual"><scope>CNF</scope><name>getNode</name></member>
+      <member refid="dd/df8/class_tree_1a7d2c78122409858b2516b52514bd7fe8" prot="public" virt="non-virtual"><scope>CNF</scope><name>getProposition</name></member>
+      <member refid="dd/df8/class_tree_1a016c2300dfa5444a52e6e6db7be850d2" prot="protected" virt="virtual"><scope>CNF</scope><name>getStatement</name></member>
+      <member refid="dd/df8/class_tree_1ad9bd7cd558397f596703e92fc47aa91f" prot="public" virt="non-virtual"><scope>CNF</scope><name>getTree</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" prot="protected" virt="non-virtual"><scope>CNF</scope><name>getUniqueList</name></member>
+      <member refid="dd/df8/class_tree_1abde731a55b92d402fbbd166a577cbe91" prot="public" virt="non-virtual"><scope>CNF</scope><name>getValue</name></member>
+      <member refid="dd/df8/class_tree_1a22efa22748fa8d8a598e05ceb327dfd4" prot="public" virt="non-virtual"><scope>CNF</scope><name>isTautology</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ae9f978965edae4ab57c692544cb72d01" prot="protected" virt="non-virtual"><scope>CNF</scope><name>isUseless</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" prot="protected" virt="non-virtual"><scope>CNF</scope><name>nodeToMultiAnd</name></member>
+      <member refid="dc/d0e/class_c_n_f_1a5232071e600e1bfbb76ad7d0e10d7d92" prot="private" virt="non-virtual"><scope>CNF</scope><name>parse</name></member>
+      <member refid="dd/df8/class_tree_1a2a8e8236ffc2a6ba0ba580f4f0b01128" prot="protected" virt="non-virtual"><scope>CNF</scope><name>prop_in</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" prot="protected" virt="non-virtual"><scope>CNF</scope><name>resolution</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1aa7adb25b5dbb1f4dcddaf56dab338add" prot="protected" virt="non-virtual"><scope>CNF</scope><name>solveNonJanus</name></member>
+      <member refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" prot="protected" virt="non-virtual"><scope>CNF</scope><name>tree</name></member>
+      <member refid="dd/df8/class_tree_1a114a18872bc2535a73ceb0719cde7945" prot="public" virt="non-virtual"><scope>CNF</scope><name>Tree</name></member>
+      <member refid="dd/df8/class_tree_1a6515b810a36ab46fa79b9dc9d426a8ff" prot="public" virt="non-virtual"><scope>CNF</scope><name>Tree</name></member>
+      <member refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" prot="protected" virt="non-virtual"><scope>CNF</scope><name>varList</name></member>
+      <member refid="dc/d0e/class_c_n_f_1a7bce39709f41a431d486f988b32646de" prot="public" virt="non-virtual"><scope>CNF</scope><name>~CNF</name></member>
+      <member refid="dd/df8/class_tree_1abdc38545cf3f588725b5d8b8075b3866" prot="public" virt="virtual"><scope>CNF</scope><name>~Tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

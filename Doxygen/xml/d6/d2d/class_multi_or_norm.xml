@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d6/d2d/class_multi_or_norm" kind="class" language="C++" prot="public">
+    <compoundname>MultiOrNorm</compoundname>
+    <basecompoundref refid="dd/d61/class_multi_or" prot="public" virt="non-virtual">MultiOr</basecompoundref>
+    <includes refid="da/d4e/multior_8h" local="no">multior.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiOrNorm::MultiOrNorm</definition>
+        <argsstring>(list&lt; shared_ptr&lt; Node &gt; &gt; listNodes=list&lt; shared_ptr&lt; Node &gt; &gt;())</argsstring>
+        <name>MultiOrNorm</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;</type>
+          <declname>listNodes</declname>
+          <defval>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multior.h" line="24" column="1" bodyfile="src/notation/multior.cpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d2d/class_multi_or_norm_1a43f3ee64ab919f4c85ecdda2a92bef00" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiOrNorm::MultiOrNorm</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node=nullptr)</argsstring>
+        <name>MultiOrNorm</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multior.h" line="25" column="1" bodyfile="src/notation/multior.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d2d/class_multi_or_norm_1a8de0c4794574f93dd2131075943f4209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiOrNorm::~MultiOrNorm</definition>
+        <argsstring>() override</argsstring>
+        <name>~MultiOrNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multior.h" line="26" column="1" bodyfile="src/notation/multior.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string MultiOrNorm::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7">toString</reimplements>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multior.h" line="28" column="1" bodyfile="src/notation/multior.cpp" bodystart="77" bodyend="93"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; MultiOrNorm::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/multior.h" line="29" column="1" bodyfile="src/notation/multior.cpp" bodystart="95" bodyend="101"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="70">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="67">
+        <label>MultiOrNorm</label>
+        <link refid="d6/d2d/class_multi_or_norm"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>MultiOr</label>
+        <link refid="dd/d61/class_multi_or"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="74">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="71">
+        <label>MultiOrNorm</label>
+        <link refid="d6/d2d/class_multi_or_norm"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>MultiOr</label>
+        <link refid="dd/d61/class_multi_or"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/multior.h" line="22" column="1" bodyfile="src/notation/multior.h" bodystart="21" bodyend="30"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>MultiOrNorm</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>containedSpecialNode</name></member>
+      <member refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>getLeaf</name></member>
+      <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>getSTNodeChild</name></member>
+      <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>getSTRuleName</name></member>
+      <member refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>left</name></member>
+      <member refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>MultiOr</name></member>
+      <member refid="dd/d61/class_multi_or_1a17ce7a33d4fe548dca2db45a59202057" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>MultiOr</name></member>
+      <member refid="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>MultiOrNorm</name></member>
+      <member refid="d6/d2d/class_multi_or_norm_1a43f3ee64ab919f4c85ecdda2a92bef00" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>MultiOrNorm</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>MultiOrNorm</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>setVariable</name></member>
+      <member refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>toString</name></member>
+      <member refid="dd/d61/class_multi_or_1a80405614a8a8db0992c35a70f36aa025" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>variables</name></member>
+      <member refid="dd/d61/class_multi_or_1a4f0161febe9e9fe9d4fc44708369de51" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>~MultiOr</name></member>
+      <member refid="d6/d2d/class_multi_or_norm_1a8de0c4794574f93dd2131075943f4209" prot="public" virt="non-virtual"><scope>MultiOrNorm</scope><name>~MultiOrNorm</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>MultiOrNorm</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

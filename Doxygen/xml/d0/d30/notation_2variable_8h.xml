@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d0/d30/notation_2variable_8h" kind="file" language="C++">
+    <compoundname>variable.h</compoundname>
+    <includes refid="d1/d77/node_8h" local="yes">node.h</includes>
+    <includedby refid="d6/d79/cnf_8cpp" local="yes">src/cnf/cnf.cpp</includedby>
+    <includedby refid="da/d46/exists_8cpp" local="yes">src/notation/exists.cpp</includedby>
+    <includedby refid="da/d09/forall_8cpp" local="yes">src/notation/forall.cpp</includedby>
+    <includedby refid="d0/d27/variable_8cpp" local="yes">src/notation/variable.cpp</includedby>
+    <includedby refid="db/d07/predicate_8cpp" local="yes">src/proposition/predicate.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <includedby refid="d0/d0c/rows_8cpp" local="yes">src/table/rows.cpp</includedby>
+    <incdepgraph>
+      <node id="602">
+        <label>list</label>
+      </node>
+      <node id="605">
+        <label>iomanip</label>
+      </node>
+      <node id="598">
+        <label>string</label>
+      </node>
+      <node id="597">
+        <label>fstream</label>
+      </node>
+      <node id="594">
+        <label>src/notation/variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="595" relation="include">
+        </childnode>
+      </node>
+      <node id="603">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="604" relation="include">
+        </childnode>
+        <childnode refid="602" relation="include">
+        </childnode>
+        <childnode refid="605" relation="include">
+        </childnode>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+      <node id="601">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="596" relation="include">
+        </childnode>
+        <childnode refid="597" relation="include">
+        </childnode>
+        <childnode refid="602" relation="include">
+        </childnode>
+        <childnode refid="603" relation="include">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>array</label>
+      </node>
+      <node id="596">
+        <label>iostream</label>
+      </node>
+      <node id="600">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="604">
+        <label>algorithm</label>
+      </node>
+      <node id="595">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="596" relation="include">
+        </childnode>
+        <childnode refid="597" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="600" relation="include">
+        </childnode>
+        <childnode refid="601" relation="include">
+        </childnode>
+        <childnode refid="603" relation="include">
+        </childnode>
+      </node>
+      <node id="606">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="610">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+      </node>
+      <node id="607">
+        <label>src/notation/variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="608" relation="include">
+        </childnode>
+        <childnode refid="609" relation="include">
+        </childnode>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+        <childnode refid="612" relation="include">
+        </childnode>
+        <childnode refid="613" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+      </node>
+      <node id="608">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+      <node id="611">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="609">
+        <label>src/notation/exists.cpp</label>
+        <link refid="da/d46/exists_8cpp"/>
+      </node>
+      <node id="612">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="613">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="614">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d2/d3c/class_variable" prot="public">Variable</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VARIABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VARIABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d77/node_8h" kindref="compound">node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d2/d3c/class_variable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d2/d3c/class_variable" kindref="compound">Variable</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" kindref="member">Variable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>notate);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" kindref="member">Variable</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>notate);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" kindref="member">~Variable</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Node<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" kindref="member">getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" kindref="member">setVariable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fromVariable,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>toVariable)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>VARIABLE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/variable.h"/>
+  </compounddef>
+</doxygen>

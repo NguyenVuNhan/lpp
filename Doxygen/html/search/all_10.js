@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['table',['table',['../dc/d49/class_truth_table.html#a6b3635efcbbc292d0dc62406fbdbe9e5',1,'TruthTable']]],
+  ['tableaux',['tableaux',['../d6/d22/class_semantic_tableaux.html#aff7d804483776b8517694f308a3071df',1,'SemanticTableaux::tableaux()'],['../dd/df8/class_tree.html#ae9dd5a4ebbf36cd6a952c78139221cad',1,'Tree::tableaux()']]],
+  ['tautology',['tautology',['../d6/d22/class_semantic_tableaux.html#a9fd70e5435a0fed98339fd3dad868e71',1,'SemanticTableaux']]],
+  ['tobinstring',['toBinString',['../d6/d54/class_rows.html#aa610ff44d051eededf3c25928987bb81',1,'Rows']]],
+  ['tonode',['toNode',['../d6/d54/class_rows.html#a22f5ff0d92c58ac650fd337d8f0a7894',1,'Rows']]],
+  ['tostring',['toString',['../de/d16/class_exists.html#a8eda64d4fd60158c15b38f64a4596068',1,'Exists::toString()'],['../d8/dc5/class_for_all.html#a086dc15d85fe4874c477c72a40577b85',1,'ForAll::toString()'],['../d2/d2a/class_multi_and.html#a035299de4f81beb44a9a5df63b0d5178',1,'MultiAnd::toString()'],['../d6/da5/class_multi_and_norm.html#a84940789d331007c430096a38f60d124',1,'MultiAndNorm::toString()'],['../dd/d61/class_multi_or.html#ade4d5f7db13aca1020dba2396ef00dd7',1,'MultiOr::toString()'],['../d6/d2d/class_multi_or_norm.html#ad70e2ca31478183da21ee1995964c2c3',1,'MultiOrNorm::toString()'],['../df/d45/class_negate.html#aab87b217ffd5c8ba404022a5f4cec220',1,'Negate::toString()'],['../dc/d8f/class_node.html#a0746502074a232243dcac3b96f3ce2d0',1,'Node::toString()'],['../d7/da3/class_statement.html#a0e9ec611dc39c53ed01cf0f877db9881',1,'Statement::toString()'],['../d4/d72/class_value.html#aa774521b29b4f0c77eb6d57b5a6fb3a0',1,'Value::toString()'],['../d2/d3c/class_variable.html#a5b0b0e25200631521dc5bbc8df22acdc',1,'Variable::toString()'],['../d0/d75/class_s_t_node.html#acb631ef4448c8faf7c88c9c61568ca0a',1,'STNode::toString()'],['../d6/d54/class_rows.html#af097985562c1e8137014839519898494',1,'Rows::toString()']]],
+  ['tostringprefix',['toStringPrefix',['../d2/d2a/class_multi_and.html#a00dd6431f647c88e28d702dd2afb1c57',1,'MultiAnd::toStringPrefix()'],['../dd/d61/class_multi_or.html#a80405614a8a8db0992c35a70f36aa025',1,'MultiOr::toStringPrefix()'],['../dc/d8f/class_node.html#a815b062345cf2bb42717bd16dc99ea27',1,'Node::toStringPrefix()']]],
+  ['tree',['Tree',['../dd/df8/class_tree.html',1,'Tree'],['../dd/df8/class_tree.html#a9c0875a8767528453814b8e3daf8f9af',1,'Tree::tree()'],['../dd/df8/class_tree.html#a114a18872bc2535a73ceb0719cde7945',1,'Tree::Tree(string prop=&quot;&quot;)'],['../dd/df8/class_tree.html#a6515b810a36ab46fa79b9dc9d426a8ff',1,'Tree::Tree(shared_ptr&lt; Node &gt; tree=nullptr)']]],
+  ['tree_2ecpp',['tree.cpp',['../d1/d12/tree_8cpp.html',1,'']]],
+  ['tree_2eh',['tree.h',['../d3/d09/tree_8h.html',1,'']]],
+  ['treetraveler',['treeTraveler',['../dc/d8f/class_node.html#a068e821ecc21903e5b3430e36493f390',1,'Node::treeTraveler()'],['../d0/d75/class_s_t_node.html#a1850972d568af9275b19b828522df434',1,'STNode::treeTraveler()']]],
+  ['truerows',['trueRows',['../dc/d49/class_truth_table.html#a39ed5bd7c7af143af2bdc1d48eee669f',1,'TruthTable']]],
+  ['truthtable',['TruthTable',['../dc/d49/class_truth_table.html',1,'TruthTable'],['../dc/d49/class_truth_table.html#a1d7d8e978c1ab80e94f5433efc914f49',1,'TruthTable::TruthTable(Tree otherTree)'],['../dc/d49/class_truth_table.html#abab023791b3a72496ff56434fc0e02b4',1,'TruthTable::TruthTable(string prop=&quot;&quot;)'],['../dc/d49/class_truth_table.html#afe78a848779c34a2c0eb23ecf1e6db6f',1,'TruthTable::TruthTable(shared_ptr&lt; Node &gt; otherTree)']]],
+  ['truthtable_2ecpp',['truthtable.cpp',['../d9/d67/truthtable_8cpp.html',1,'']]],
+  ['truthtable_2eh',['truthtable.h',['../d5/dbf/truthtable_8h.html',1,'']]]
+];

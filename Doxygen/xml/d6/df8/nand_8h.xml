@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d6/df8/nand_8h" kind="file" language="C++">
+    <compoundname>nand.h</compoundname>
+    <includes refid="d1/d77/node_8h" local="yes">node.h</includes>
+    <includedby refid="dc/d62/and_8cpp" local="yes">src/notation/and.cpp</includedby>
+    <includedby refid="d0/dbf/biimplicate_8cpp" local="yes">src/notation/biimplicate.cpp</includedby>
+    <includedby refid="dc/d93/implicate_8cpp" local="yes">src/notation/implicate.cpp</includedby>
+    <includedby refid="db/d7a/nand_8cpp" local="yes">src/notation/nand.cpp</includedby>
+    <includedby refid="df/db4/negate_8cpp" local="yes">src/notation/negate.cpp</includedby>
+    <includedby refid="d7/d70/node_8cpp" local="yes">src/notation/node.cpp</includedby>
+    <includedby refid="d1/da4/or_8cpp" local="yes">src/notation/or.cpp</includedby>
+    <includedby refid="d0/d27/variable_8cpp" local="yes">src/notation/variable.cpp</includedby>
+    <includedby refid="db/d07/predicate_8cpp" local="yes">src/proposition/predicate.cpp</includedby>
+    <includedby refid="d1/d12/tree_8cpp" local="yes">src/proposition/tree.cpp</includedby>
+    <incdepgraph>
+      <node id="333">
+        <label>list</label>
+      </node>
+      <node id="336">
+        <label>iomanip</label>
+      </node>
+      <node id="329">
+        <label>string</label>
+      </node>
+      <node id="328">
+        <label>fstream</label>
+      </node>
+      <node id="334">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>array</label>
+      </node>
+      <node id="327">
+        <label>iostream</label>
+      </node>
+      <node id="331">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="325">
+        <label>src/notation/nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>algorithm</label>
+      </node>
+      <node id="326">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="340">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="345">
+        <label>src/notation/or.cpp</label>
+        <link refid="d1/da4/or_8cpp"/>
+      </node>
+      <node id="339">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="344">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="346">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="347">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="343">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="348">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="342">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+      <node id="338">
+        <label>src/notation/nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+        <childnode refid="343" relation="include">
+        </childnode>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>src/notation/implicate.cpp</label>
+        <link refid="dc/d93/implicate_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d9/d44/class_n_and" prot="public">NAnd</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>NAND_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NAND_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d77/node_8h" kindref="compound">node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d9/d44/class_n_and" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d44/class_n_and" kindref="compound">NAnd</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d9/d44/class_n_and_1a5e73ac719f793d02a10cd0fc6931808f" kindref="member">NAnd</ref>(shared_ptr&lt;Node&gt;<sp/>l<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>shared_ptr&lt;Node&gt;<sp/>r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d44/class_n_and_1a472d8c586ec989b998d6b182ed581a96" kindref="member">~NAnd</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Node<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d44/class_n_and_1a9eb3a117e8d30f11ebe25e932d387265" kindref="member">getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d9/d44/class_n_and_1ae60ecc244dd83bfdcc7eada4957890d8" kindref="member">nandify</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref><sp/><ref refid="d9/d44/class_n_and_1a8570a747f7f4aec32bb962227749566f" kindref="member">getSTRuleName</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/d44/class_n_and_1a3ccedba07752a2457a593035b33535e1" kindref="member">getSTNodeChild</ref>(shared_ptr&lt;STNode&gt;<sp/>root,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" kindref="member">cnfFilter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/><ref refid="d9/d44/class_n_and_1a3756b0f2696bf06664100c0b5c9d67b3" kindref="member">copy</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>NAND_H</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/nand.h"/>
+  </compounddef>
+</doxygen>

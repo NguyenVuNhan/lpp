@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d8/d1b/class_or" kind="class" language="C++" prot="public">
+    <compoundname>Or</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes refid="df/d34/or_8h" local="no">or.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d1b/class_or_1a3247e4bae89e48da60037469ba896128" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Or::Or</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; left=nullptr, shared_ptr&lt; Node &gt; right=nullptr)</argsstring>
+        <name>Or</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>left</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>right</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="10" column="1" bodyfile="src/notation/or.cpp" bodystart="6" bodyend="10"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1aea3ecd177d77f4478464d2def9c5618b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Or::~Or</definition>
+        <argsstring>() override</argsstring>
+        <name>~Or</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="11" column="1" bodyfile="src/notation/or.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Or::getValue</definition>
+        <argsstring>(string valList) override</argsstring>
+        <name>getValue</name>
+        <reimplements refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2">getValue</reimplements>
+        <param>
+          <type>string</type>
+          <declname>valList</declname>
+        </param>
+        <briefdescription>
+<para>get proposition value </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string contains proposition variable and their value. <linebreak/>
+ e.g. &quot;A1B0C1&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proposition value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="15" column="1" bodyfile="src/notation/or.cpp" bodystart="16" bodyend="19"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Or::nandify</definition>
+        <argsstring>(bool isNegation) override</argsstring>
+        <name>nandify</name>
+        <reimplements refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1">nandify</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>nandify proposition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>nandified tree </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="16" column="1" bodyfile="src/notation/or.cpp" bodystart="21" bodyend="29"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1a0fd1f6086987f7b1fe9fab9a196c1839" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref></type>
+        <definition>RULES Or::getSTRuleName</definition>
+        <argsstring>(bool isNegation) override</argsstring>
+        <name>getSTRuleName</name>
+        <reimplements refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072">getSTRuleName</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleux rule name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RULES - semantic taubleaux rule name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="17" column="1" bodyfile="src/notation/or.cpp" bodystart="31" bodyend="41"/>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="8">BETA</references>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="6">ALPHA</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Or::getSTNodeChild</definition>
+        <argsstring>(shared_ptr&lt; STNode &gt; root, long pos, bool isNegation) override</argsstring>
+        <name>getSTNodeChild</name>
+        <reimplements refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c">getSTNodeChild</reimplements>
+        <param>
+          <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleaux node child (<ref refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kindref="member">STNode.left</ref> and <ref refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kindref="member">STNode.right</ref>) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> contains child </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- position of child <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> of <ref refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kindref="member">STNode::nodes</ref> list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="18" column="1" bodyfile="src/notation/or.cpp" bodystart="43" bodyend="60"/>
+        <references refid="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" compoundref="d5/d60/utils_8h" startline="21" endline="27">listReplaceAt</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Or::cnfFilter</definition>
+        <argsstring>(bool isNegation=false) override</argsstring>
+        <name>cnfFilter</name>
+        <reimplements refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7">cnfFilter</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>in this function node will be </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Remove bi-implicate</para></listitem><listitem><para>Remove implicate</para></listitem><listitem><para>Doing the morgan <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node has been cnf filtered </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="19" column="1" bodyfile="src/notation/or.cpp" bodystart="62" bodyend="72"/>
+        <references refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" compoundref="d7/d70/node_8cpp" startline="85" endline="105">Node::andSimplify</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+        <references refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" compoundref="d7/d70/node_8cpp" startline="64" endline="83">Node::orSimplify</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Or::cnfDistribution</definition>
+        <argsstring>() override</argsstring>
+        <name>cnfDistribution</name>
+        <reimplements refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48">cnfDistribution</reimplements>
+        <briefdescription>
+<para>cnf distribution - this function will be called after setVariable </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>node that applied distribution rule </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="20" column="1" bodyfile="src/notation/or.cpp" bodystart="74" bodyend="106"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+        <references refid="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" compoundref="d1/da4/or_8cpp" startline="113" endline="153">getMultiOr</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Or::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="21" column="1" bodyfile="src/notation/or.cpp" bodystart="108" bodyend="111"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Or::getMultiOr</definition>
+        <argsstring>()</argsstring>
+        <name>getMultiOr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/or.h" line="24" column="1" bodyfile="src/notation/or.cpp" bodystart="113" bodyend="153"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+        <referencedby refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" compoundref="d1/da4/or_8cpp" startline="74" endline="106">cnfDistribution</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="108">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="106">
+        <label>Or</label>
+        <link refid="d8/d1b/class_or"/>
+        <childnode refid="107" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="108" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="111">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="109">
+        <label>Or</label>
+        <link refid="d8/d1b/class_or"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/or.h" line="8" column="1" bodyfile="src/notation/or.h" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>Or</scope><name>andSimplify</name></member>
+      <member refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" prot="public" virt="virtual"><scope>Or</scope><name>cnfDistribution</name></member>
+      <member refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" prot="public" virt="virtual"><scope>Or</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>Or</scope><name>containedSpecialNode</name></member>
+      <member refid="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62" prot="public" virt="virtual"><scope>Or</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>Or</scope><name>getLeaf</name></member>
+      <member refid="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" prot="private" virt="non-virtual"><scope>Or</scope><name>getMultiOr</name></member>
+      <member refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" prot="public" virt="virtual"><scope>Or</scope><name>getSTNodeChild</name></member>
+      <member refid="d8/d1b/class_or_1a0fd1f6086987f7b1fe9fab9a196c1839" prot="public" virt="virtual"><scope>Or</scope><name>getSTRuleName</name></member>
+      <member refid="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9" prot="public" virt="virtual"><scope>Or</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>Or</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>Or</scope><name>left</name></member>
+      <member refid="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a" prot="public" virt="virtual"><scope>Or</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>Or</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>Or</scope><name>notation</name></member>
+      <member refid="d8/d1b/class_or_1a3247e4bae89e48da60037469ba896128" prot="public" virt="non-virtual"><scope>Or</scope><name>Or</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>Or</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>Or</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>Or</scope><name>setVariable</name></member>
+      <member refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" prot="public" virt="virtual"><scope>Or</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>Or</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>Or</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>Or</scope><name>variables</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>Or</scope><name>~Node</name></member>
+      <member refid="d8/d1b/class_or_1aea3ecd177d77f4478464d2def9c5618b" prot="public" virt="non-virtual"><scope>Or</scope><name>~Or</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

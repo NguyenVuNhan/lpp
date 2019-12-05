@@ -1,0 +1,144 @@
+\hypertarget{class_statement}{}\section{Statement Class Reference}
+\label{class_statement}\index{Statement@{Statement}}
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+
+
+Inheritance diagram for Statement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{df/dcf/class_statement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Statement\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d0/ded/class_statement__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_statement_a63f078944310c19057bdd7c25aa1b5a3}{Statement} (string notate, list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ list\+Nodes)
+\item 
+\hyperlink{class_statement_a6f4d56b4180183819b76f01209acb3d1}{Statement} (char notate, list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ list\+Nodes)
+\item 
+\hyperlink{class_statement_a4ca9db7feff843e91b1f2200fc77a784}{$\sim$\+Statement} () override
+\item 
+string \hyperlink{class_statement_a0e9ec611dc39c53ed01cf0f877db9881}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+void \hyperlink{class_statement_a96d67118f27e64d72b189d837103a126}{set\+Variable} (string from\+Variable, string to\+Variable) override
+\begin{DoxyCompactList}\small\item\em change variable name recursively \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_statement_a7d8bac78c76a6cf7265495da5b16935d}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\item 
+bool \hyperlink{class_statement_a482a663d073d2601fa1759a5e651c240}{contained\+Special\+Node} () override
+\begin{DoxyCompactList}\small\item\em contained\+Special\+Node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_statement_a63f078944310c19057bdd7c25aa1b5a3}\label{class_statement_a63f078944310c19057bdd7c25aa1b5a3}} 
+\index{Statement@{Statement}!Statement@{Statement}}
+\index{Statement@{Statement}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{Statement()}{Statement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Statement\+::\+Statement (\begin{DoxyParamCaption}\item[{string}]{notate,  }\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$}]{list\+Nodes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_statement_a6f4d56b4180183819b76f01209acb3d1}\label{class_statement_a6f4d56b4180183819b76f01209acb3d1}} 
+\index{Statement@{Statement}!Statement@{Statement}}
+\index{Statement@{Statement}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{Statement()}{Statement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Statement\+::\+Statement (\begin{DoxyParamCaption}\item[{char}]{notate,  }\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$}]{list\+Nodes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_statement_a4ca9db7feff843e91b1f2200fc77a784}\label{class_statement_a4ca9db7feff843e91b1f2200fc77a784}} 
+\index{Statement@{Statement}!````~Statement@{$\sim$\+Statement}}
+\index{````~Statement@{$\sim$\+Statement}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{$\sim$\+Statement()}{~Statement()}}
+{\footnotesize\ttfamily Statement\+::$\sim$\+Statement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_statement_a482a663d073d2601fa1759a5e651c240}\label{class_statement_a482a663d073d2601fa1759a5e651c240}} 
+\index{Statement@{Statement}!contained\+Special\+Node@{contained\+Special\+Node}}
+\index{contained\+Special\+Node@{contained\+Special\+Node}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{contained\+Special\+Node()}{containedSpecialNode()}}
+{\footnotesize\ttfamily bool Statement\+::contained\+Special\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+contained\+Special\+Node 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_ac76ac1cc0fd7376ca329f3e8279ebe1e}{Node}.
+
+\mbox{\Hypertarget{class_statement_a7d8bac78c76a6cf7265495da5b16935d}\label{class_statement_a7d8bac78c76a6cf7265495da5b16935d}} 
+\index{Statement@{Statement}!copy@{copy}}
+\index{copy@{copy}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Statement\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+\mbox{\Hypertarget{class_statement_a96d67118f27e64d72b189d837103a126}\label{class_statement_a96d67118f27e64d72b189d837103a126}} 
+\index{Statement@{Statement}!set\+Variable@{set\+Variable}}
+\index{set\+Variable@{set\+Variable}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{set\+Variable()}{setVariable()}}
+{\footnotesize\ttfamily void Statement\+::set\+Variable (\begin{DoxyParamCaption}\item[{string}]{from\+Variable,  }\item[{string}]{to\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+change variable name recursively 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Variable} & -\/ variable name to change \\
+\hline
+{\em to\+Variable} & -\/ new variable name \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}{Node}.
+
+\mbox{\Hypertarget{class_statement_a0e9ec611dc39c53ed01cf0f877db9881}\label{class_statement_a0e9ec611dc39c53ed01cf0f877db9881}} 
+\index{Statement@{Statement}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Statement@{Statement}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Statement\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{statement_8h}{statement.\+h}\item 
+src/notation/\hyperlink{statement_8cpp}{statement.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="Or::cnfFilter" name="Or::cnfFilter">
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#afd9769d942984448aa8e541ada73b289" title="Node::andSimplify" alt="" coords="144,5,273,32"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a92e887aab236cfc28d81bdf0fdb9379f" title="Node::orSimplify" alt="" coords="149,56,268,83"/>
+</map>

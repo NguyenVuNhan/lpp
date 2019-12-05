@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d5/d32/proposition_2tableaux_2enum_8h" kind="file" language="C++">
+    <compoundname>enum.h</compoundname>
+    <includedby refid="d1/d77/node_8h" local="yes">src/notation/node.h</includedby>
+    <includedby refid="de/d3e/semantictableaux_8cpp" local="yes">src/proposition/tableaux/semantictableaux.cpp</includedby>
+    <invincdepgraph>
+      <node id="688">
+        <label>src/notation/multior.cpp</label>
+        <link refid="df/db6/multior_8cpp"/>
+      </node>
+      <node id="690">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="673">
+        <label>src/proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="687">
+        <label>src/notation/or.cpp</label>
+        <link refid="d1/da4/or_8cpp"/>
+      </node>
+      <node id="676">
+        <label>src/table/rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="672" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>src/notation/or.h</label>
+        <link refid="df/d34/or_8h"/>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="682">
+        <label>src/proposition/tableaux/semantictableaux.cpp</label>
+        <link refid="de/d3e/semantictableaux_8cpp"/>
+      </node>
+      <node id="683">
+        <label>src/notation/multior.h</label>
+        <link refid="da/d4e/multior_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="684" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+      </node>
+      <node id="689">
+        <label>src/notation/negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+      </node>
+      <node id="679">
+        <label>src/table/simpletable.cpp</label>
+        <link refid="dd/dcd/simpletable_8cpp"/>
+      </node>
+      <node id="677">
+        <label>src/table/truthtable.h</label>
+        <link refid="d5/dbf/truthtable_8h"/>
+        <childnode refid="678" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+      </node>
+      <node id="707">
+        <label>src/notation/statement.h</label>
+        <link refid="de/d93/statement_8h"/>
+        <childnode refid="708" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+      </node>
+      <node id="702">
+        <label>src/notation/value.cpp</label>
+        <link refid="d2/dc0/value_8cpp"/>
+      </node>
+      <node id="681">
+        <label>src/proposition/tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="673" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+      </node>
+      <node id="685">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="697">
+        <label>src/notation/variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+      </node>
+      <node id="667">
+        <label>src/notation/multiand.h</label>
+        <link refid="d9/d1d/multiand_8h"/>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="670" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+      </node>
+      <node id="674">
+        <label>src/proposition/predicate.h</label>
+        <link refid="df/da5/predicate_8h"/>
+        <childnode refid="675" relation="include">
+        </childnode>
+      </node>
+      <node id="680">
+        <label>src/table/truthtable.cpp</label>
+        <link refid="d9/d67/truthtable_8cpp"/>
+      </node>
+      <node id="668">
+        <label>src/cnf/cnf.h</label>
+        <link refid="d1/d47/cnf_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+      <node id="699">
+        <label>src/notation/and.h</label>
+        <link refid="d5/d25/and_8h"/>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="708">
+        <label>src/notation/statement.cpp</label>
+        <link refid="d1/d48/statement_8cpp"/>
+      </node>
+      <node id="686">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="698">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="670">
+        <label>src/notation/multiand.cpp</label>
+        <link refid="db/d9c/multiand_8cpp"/>
+      </node>
+      <node id="696">
+        <label>src/proposition/tableaux/stnode.cpp</label>
+        <link refid="d6/db6/stnode_8cpp"/>
+      </node>
+      <node id="706">
+        <label>src/notation/implicate.h</label>
+        <link refid="d0/d93/implicate_8h"/>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="691">
+        <label>src/notation/exists.cpp</label>
+        <link refid="da/d46/exists_8cpp"/>
+      </node>
+      <node id="695">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="675">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="665">
+        <label>src/proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>src/notation/forall.h</label>
+        <link refid="d2/dee/forall_8h"/>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+      </node>
+      <node id="671">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="703">
+        <label>src/notation/biimplicate.h</label>
+        <link refid="dd/d69/biimplicate_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="704">
+        <label>src/notation/exists.h</label>
+        <link refid="d1/dc4/exists_8h"/>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>src/notation/value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="678">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="679" relation="include">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+      <node id="694">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+      <node id="700">
+        <label>src/notation/nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="666">
+        <label>src/notation/node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+        <childnode refid="673" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="684" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+        <childnode refid="706" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="707" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+      </node>
+      <node id="693">
+        <label>src/notation/implicate.cpp</label>
+        <link refid="dc/d93/implicate_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" prot="public" static="no">
+        <name>RULES</name>
+        <enumvalue id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" prot="public">
+          <name>ALPHA</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" prot="public">
+          <name>DELTA</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" prot="public">
+          <name>BETA</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" prot="public">
+          <name>GAMMA</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" prot="public">
+          <name>NN</name>
+          <initializer>=5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" prot="public">
+          <name>ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" prot="public">
+          <name>BETA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" prot="public">
+          <name>GAMMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" prot="public">
+          <name>DELTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a75bee44ae49a0cecbbab062cc74f53a7" prot="public">
+          <name>NAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/enum.h" line="5" column="1" bodyfile="src/proposition/tableaux/enum.h" bodystart="4" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SEMANTICTABLEAUXRULE_ENUM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEMANTICTABLEAUXRULE_ENUM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" kindref="member">ALPHA</ref>=1,</highlight></codeline>
+<codeline lineno="7" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kindref="member">DELTA</ref>=2,</highlight></codeline>
+<codeline lineno="8" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" kindref="member">BETA</ref>=3,</highlight></codeline>
+<codeline lineno="9" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kindref="member">GAMMA</ref>=4,</highlight></codeline>
+<codeline lineno="10" refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" kindref="member">NN</ref>=5,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>ENUM_SEMANTICTABLEAUXRULES</highlight></codeline>
+    </programlisting>
+    <location file="src/proposition/tableaux/enum.h"/>
+  </compounddef>
+</doxygen>

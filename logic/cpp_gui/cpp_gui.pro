@@ -16,11 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    logicworkerpool.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    mythread.cpp
 
 HEADERS += \
-    mainwindow.h
+    logicworkerpool.h \
+    mainwindow.h \
+    mythread.h \
+    resulthandler.h
 
 FORMS += \
     mainwindow.ui

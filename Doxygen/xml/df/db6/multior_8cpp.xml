@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="df/db6/multior_8cpp" kind="file" language="C++">
+    <compoundname>multior.cpp</compoundname>
+    <includes refid="da/d4e/multior_8h" local="yes">multior.h</includes>
+    <incdepgraph>
+      <node id="278">
+        <label>list</label>
+      </node>
+      <node id="269">
+        <label>src/notation/multior.cpp</label>
+        <link refid="df/db6/multior_8cpp"/>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>iomanip</label>
+      </node>
+      <node id="270">
+        <label>multior.h</label>
+        <link refid="da/d4e/multior_8h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="274">
+        <label>string</label>
+      </node>
+      <node id="273">
+        <label>fstream</label>
+      </node>
+      <node id="279">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>array</label>
+      </node>
+      <node id="272">
+        <label>iostream</label>
+      </node>
+      <node id="276">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="280">
+        <label>algorithm</label>
+      </node>
+      <node id="271">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d4e/multior_8h" kindref="compound">multior.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" refkind="member"><highlight class="normal"><ref refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" kindref="member">MultiOr::MultiOr</ref>(list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>listNodes)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>(nullptr,<sp/>nullptr)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;||&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref><sp/>=<sp/>listNodes;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="dd/d61/class_multi_or_1a17ce7a33d4fe548dca2db45a59202057" refkind="member"><highlight class="normal"><ref refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" kindref="member">MultiOr::MultiOr</ref>(shared_ptr&lt;Node&gt;<sp/>node)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>(nullptr,<sp/>nullptr)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;||&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>.push_back(node);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="dd/d61/class_multi_or_1a4f0161febe9e9fe9d4fc44708369de51" refkind="member"><highlight class="normal"><ref refid="dd/d61/class_multi_or_1a4f0161febe9e9fe9d4fc44708369de51" kindref="member">MultiOr::~MultiOr</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7" kindref="member">MultiOr::toString</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>return_str;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i-&gt;notation<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_str<sp/>+=<sp/>char(i-&gt;left-&gt;notation[0]<sp/>+<sp/>32);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_str<sp/>+=<sp/>i-&gt;notation;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_str;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dd/d61/class_multi_or_1a80405614a8a8db0992c35a70f36aa025" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="dd/d61/class_multi_or_1a80405614a8a8db0992c35a70f36aa025" kindref="member">MultiOr::toStringPrefix</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7" kindref="member">toString</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e" kindref="member">MultiOr::getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>(value<sp/>||<sp/>e-&gt;getValue(valList));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c" refkind="member"><highlight class="normal">shared_ptr&lt;Node&gt;<sp/><ref refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c" kindref="member">MultiOr::copy</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>tmplist;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmplist.push_back(e-&gt;copy());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_shared&lt;MultiOr&gt;(tmplist);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" refkind="member"><highlight class="normal"><ref refid="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" kindref="member">MultiOrNorm::MultiOrNorm</ref>(list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>listNodes)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref>(listNodes)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="d6/d2d/class_multi_or_norm_1a43f3ee64ab919f4c85ecdda2a92bef00" refkind="member"><highlight class="normal"><ref refid="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" kindref="member">MultiOrNorm::MultiOrNorm</ref>(shared_ptr&lt;Node&gt;<sp/>node)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref>(node)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="d6/d2d/class_multi_or_norm_1a8de0c4794574f93dd2131075943f4209" refkind="member"><highlight class="normal"><ref refid="d6/d2d/class_multi_or_norm_1a8de0c4794574f93dd2131075943f4209" kindref="member">MultiOrNorm::~MultiOrNorm</ref>()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" kindref="member">MultiOrNorm::toString</ref>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>return_str;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!first)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_str<sp/>+=<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_str<sp/>+=<sp/>i-&gt;toString();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(return_str.size()<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_str;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal"><sp/>+<sp/>return_str<sp/>+<sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" refkind="member"><highlight class="normal">shared_ptr&lt;Node&gt;<sp/><ref refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" kindref="member">MultiOrNorm::copy</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>tmplist;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmplist.push_back(e-&gt;copy());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_shared&lt;MultiOrNorm&gt;(tmplist);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/multior.cpp"/>
+  </compounddef>
+</doxygen>

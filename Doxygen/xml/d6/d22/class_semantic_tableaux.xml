@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d6/d22/class_semantic_tableaux" kind="class" language="C++" prot="public">
+    <compoundname>SemanticTableaux</compoundname>
+    <includes refid="d3/d01/semantictableaux_8h" local="no">semantictableaux.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d6/d22/class_semantic_tableaux_1a9fd70e5435a0fed98339fd3dad868e71" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SemanticTableaux::tautology</definition>
+        <argsstring></argsstring>
+        <name>tautology</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="18" column="1" bodyfile="src/proposition/tableaux/semantictableaux.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="d6/d22/class_semantic_tableaux_1a18a9f8fc5dce074c040564454fd710c3" compoundref="de/d3e/semantictableaux_8cpp" startline="30" endline="33">isTautology</referencedby>
+        <referencedby refid="d6/d22/class_semantic_tableaux_1ab41b0fa5d87d29ad807b410f18ce93a7" compoundref="de/d3e/semantictableaux_8cpp" startline="35" endline="85">generateProof</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d22/class_semantic_tableaux_1aff7d804483776b8517694f308a3071df" prot="private" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+        <definition>shared_ptr&lt;STNode &gt; SemanticTableaux::tableaux</definition>
+        <argsstring></argsstring>
+        <name>tableaux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="19" column="1" bodyfile="src/proposition/tableaux/semantictableaux.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="d6/d22/class_semantic_tableaux_1a10b854a82ce27c588d45d82895aa7a45" compoundref="de/d3e/semantictableaux_8cpp" startline="5" endline="9">SemanticTableaux</referencedby>
+        <referencedby refid="d6/d22/class_semantic_tableaux_1a78039805239590cd2c8bc411158f2b2d" compoundref="de/d3e/semantictableaux_8cpp" startline="15" endline="28">ExportProof</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d22/class_semantic_tableaux_1a10b854a82ce27c588d45d82895aa7a45" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SemanticTableaux::SemanticTableaux</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; tree=nullptr)</argsstring>
+        <name>SemanticTableaux</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>tree</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="12" column="1" bodyfile="src/proposition/tableaux/semantictableaux.cpp" bodystart="5" bodyend="9"/>
+        <references refid="d6/d22/class_semantic_tableaux_1ab41b0fa5d87d29ad807b410f18ce93a7" compoundref="de/d3e/semantictableaux_8cpp" startline="35" endline="85">generateProof</references>
+        <references refid="d6/d22/class_semantic_tableaux_1aff7d804483776b8517694f308a3071df" compoundref="d3/d01/semantictableaux_8h" startline="19">tableaux</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d22/class_semantic_tableaux_1a6c03c9108f2552c3756a5bdd6b6116f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SemanticTableaux::~SemanticTableaux</definition>
+        <argsstring>()</argsstring>
+        <name>~SemanticTableaux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="13" column="1" bodyfile="src/proposition/tableaux/semantictableaux.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d22/class_semantic_tableaux_1a78039805239590cd2c8bc411158f2b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SemanticTableaux::ExportProof</definition>
+        <argsstring>(string title, string filenname)</argsstring>
+        <name>ExportProof</name>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filenname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="14" column="1" bodyfile="src/proposition/tableaux/semantictableaux.cpp" bodystart="15" bodyend="28"/>
+        <references refid="d6/d22/class_semantic_tableaux_1aff7d804483776b8517694f308a3071df" compoundref="d3/d01/semantictableaux_8h" startline="19">tableaux</references>
+        <referencedby refid="dd/df8/class_tree_1ae235cdb84985c90fa56697a28b0a8d9e" compoundref="d1/d12/tree_8cpp" startline="111" endline="114">Tree::exportProof</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d22/class_semantic_tableaux_1a18a9f8fc5dce074c040564454fd710c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SemanticTableaux::isTautology</definition>
+        <argsstring>()</argsstring>
+        <name>isTautology</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="15" column="1" bodyfile="src/proposition/tableaux/semantictableaux.cpp" bodystart="30" bodyend="33"/>
+        <references refid="d6/d22/class_semantic_tableaux_1a9fd70e5435a0fed98339fd3dad868e71" compoundref="d3/d01/semantictableaux_8h" startline="18">tautology</references>
+        <referencedby refid="dd/df8/class_tree_1a22efa22748fa8d8a598e05ceb327dfd4" compoundref="d1/d12/tree_8cpp" startline="90" endline="94">Tree::isTautology</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d22/class_semantic_tableaux_1ab41b0fa5d87d29ad807b410f18ce93a7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SemanticTableaux::generateProof</definition>
+        <argsstring>(shared_ptr&lt; STNode &gt; root)</argsstring>
+        <name>generateProof</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/proposition/tableaux/semantictableaux.h" line="20" column="1" bodyfile="src/proposition/tableaux/semantictableaux.cpp" bodystart="35" bodyend="85"/>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="10">NN</references>
+        <references refid="d6/d22/class_semantic_tableaux_1a9fd70e5435a0fed98339fd3dad868e71" compoundref="d3/d01/semantictableaux_8h" startline="18">tautology</references>
+        <referencedby refid="d6/d22/class_semantic_tableaux_1a10b854a82ce27c588d45d82895aa7a45" compoundref="de/d3e/semantictableaux_8cpp" startline="5" endline="9">SemanticTableaux</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/proposition/tableaux/semantictableaux.h" line="10" column="1" bodyfile="src/proposition/tableaux/semantictableaux.h" bodystart="9" bodyend="22"/>
+    <listofallmembers>
+      <member refid="d6/d22/class_semantic_tableaux_1a78039805239590cd2c8bc411158f2b2d" prot="public" virt="non-virtual"><scope>SemanticTableaux</scope><name>ExportProof</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1ab41b0fa5d87d29ad807b410f18ce93a7" prot="private" virt="non-virtual"><scope>SemanticTableaux</scope><name>generateProof</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1a18a9f8fc5dce074c040564454fd710c3" prot="public" virt="non-virtual"><scope>SemanticTableaux</scope><name>isTautology</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1a10b854a82ce27c588d45d82895aa7a45" prot="public" virt="non-virtual"><scope>SemanticTableaux</scope><name>SemanticTableaux</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1aff7d804483776b8517694f308a3071df" prot="private" virt="non-virtual"><scope>SemanticTableaux</scope><name>tableaux</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1a9fd70e5435a0fed98339fd3dad868e71" prot="private" virt="non-virtual"><scope>SemanticTableaux</scope><name>tautology</name></member>
+      <member refid="d6/d22/class_semantic_tableaux_1a6c03c9108f2552c3756a5bdd6b6116f1" prot="public" virt="non-virtual"><scope>SemanticTableaux</scope><name>~SemanticTableaux</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

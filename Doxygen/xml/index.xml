@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="d0/dc9/class_and" kind="class"><name>And</name>
+    <member refid="d0/dc9/class_and_1a6058f4ed6168568b529e1e0750df8cf8" kind="function"><name>And</name></member>
+    <member refid="d0/dc9/class_and_1af7bc87f11ac21a32c28c194f3eb94650" kind="function"><name>~And</name></member>
+    <member refid="d0/dc9/class_and_1a9d2b965d8a1b80d0e2da9d6537601e14" kind="function"><name>getValue</name></member>
+    <member refid="d0/dc9/class_and_1a9b62ef9a38c6fe9ac96c958d46e30f7b" kind="function"><name>getSTRuleName</name></member>
+    <member refid="d0/dc9/class_and_1a790a8f5b095f664f0a879d2bf96c972d" kind="function"><name>nandify</name></member>
+    <member refid="d0/dc9/class_and_1a081ebf199fb2388773a19d2c2044e574" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f" kind="function"><name>cnfFilter</name></member>
+    <member refid="d0/dc9/class_and_1a370c86f44ee17b22208cdbc1f17a7b3f" kind="function"><name>cnfDistribution</name></member>
+    <member refid="d0/dc9/class_and_1a7560a861ae68050c2aa22e2392a46a15" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d5/da3/class_bi_implicate" kind="class"><name>BiImplicate</name>
+    <member refid="d5/da3/class_bi_implicate_1acd402fb9b2eef1b44361448038f20ddc" kind="function"><name>BiImplicate</name></member>
+    <member refid="d5/da3/class_bi_implicate_1ad3f12180788d7d207b2e385c2a89c35b" kind="function"><name>~BiImplicate</name></member>
+    <member refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" kind="function"><name>getValue</name></member>
+    <member refid="d5/da3/class_bi_implicate_1a3ca1a9b3fd1805b56b72def494179ea3" kind="function"><name>getSTRuleName</name></member>
+    <member refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" kind="function"><name>nandify</name></member>
+    <member refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" kind="function"><name>cnfFilter</name></member>
+    <member refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="dc/d0e/class_c_n_f" kind="class"><name>CNF</name>
+    <member refid="dc/d0e/class_c_n_f_1af775e3be36e475027355d21e9ba43166" kind="function"><name>CNF</name></member>
+    <member refid="dc/d0e/class_c_n_f_1acb13869409764d8abbea2e50910fd7bc" kind="function"><name>CNF</name></member>
+    <member refid="dc/d0e/class_c_n_f_1a7bce39709f41a431d486f988b32646de" kind="function"><name>~CNF</name></member>
+    <member refid="dc/d0e/class_c_n_f_1a029535415f1d5cf92c8023693ce7b40e" kind="function"><name>getDavidPutnam</name></member>
+    <member refid="dc/d0e/class_c_n_f_1abb762bfe4bc7bbccda81f8db332bafe3" kind="function"><name>getListVariable</name></member>
+    <member refid="dc/d0e/class_c_n_f_1a5232071e600e1bfbb76ad7d0e10d7d92" kind="function"><name>parse</name></member>
+    <member refid="dc/d0e/class_c_n_f_1af2c396e921388daa2e99b6fef25b6697" kind="function"><name>getMultiOr</name></member>
+    <member refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" kind="function"><name>getDavidPutnam</name></member>
+  </compound>
+  <compound refid="de/d16/class_exists" kind="class"><name>Exists</name>
+    <member refid="de/d16/class_exists_1ae51931aa14079e565a7b700b8f1d1fb1" kind="function"><name>Exists</name></member>
+    <member refid="de/d16/class_exists_1a12ebe07a95afddca068d6cbdd67508f2" kind="function"><name>~Exists</name></member>
+    <member refid="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068" kind="function"><name>toString</name></member>
+    <member refid="de/d16/class_exists_1aff7b8694345884d06bdd751e88fae041" kind="function"><name>getSTRuleName</name></member>
+    <member refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d8/dc5/class_for_all" kind="class"><name>ForAll</name>
+    <member refid="d8/dc5/class_for_all_1a2f654f00f8d997a89699dff8f1efd759" kind="function"><name>ForAll</name></member>
+    <member refid="d8/dc5/class_for_all_1a0c63e42814329a95378fe95f41a369fa" kind="function"><name>~ForAll</name></member>
+    <member refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85" kind="function"><name>toString</name></member>
+    <member refid="d8/dc5/class_for_all_1a97e03dcd8f51824fe629487847b7c4dc" kind="function"><name>getSTRuleName</name></member>
+    <member refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d1/df0/classhandler" kind="class"><name>handler</name>
+    <member refid="d1/df0/classhandler_1aea02e85ad5696302680d49a66263a2aa" kind="variable"><name>ofs</name></member>
+    <member refid="d1/df0/classhandler_1a0f44a69126e692e8bc8690539120be75" kind="function"><name>handler</name></member>
+    <member refid="d1/df0/classhandler_1a251fbf93fdf9eba4335c2d2b2f425f51" kind="function"><name>handler</name></member>
+    <member refid="d1/df0/classhandler_1a290cc764503dcc061a43c7be655ed512" kind="function"><name>~handler</name></member>
+    <member refid="d1/df0/classhandler_1a4d5c893a4bd43354effd040fd5946186" kind="function"><name>setStream</name></member>
+    <member refid="d1/df0/classhandler_1ae4a74a6e7ba909279833759b4cab2bcc" kind="function"><name>write</name></member>
+  </compound>
+  <compound refid="d5/d80/struct_i___c_n_f" kind="struct"><name>I_CNF</name>
+    <member refid="d5/d80/struct_i___c_n_f_1aa7adb25b5dbb1f4dcddaf56dab338add" kind="function"><name>solveNonJanus</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" kind="function"><name>resolution</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" kind="function"><name>nodeToMultiAnd</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" kind="function"><name>generateCNF</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1ae9f978965edae4ab57c692544cb72d01" kind="function"><name>isUseless</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1ac9fd631eda1871653b2d1fdcd55f18a5" kind="function"><name>findJanus</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" kind="function"><name>getUniqueList</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1a41a7be439cae3ed577a30b3f2742218e" kind="function"><name>isContain</name></member>
+    <member refid="d5/d80/struct_i___c_n_f_1a62586e691ebfb00696be6bf9710f4da4" kind="function"><name>mergeNode</name></member>
+  </compound>
+  <compound refid="de/d28/class_implicate" kind="class"><name>Implicate</name>
+    <member refid="de/d28/class_implicate_1a7386039d72650d3da8562144b1868722" kind="function"><name>Implicate</name></member>
+    <member refid="de/d28/class_implicate_1a8339c7a4895d95f6c06d7db5714ab8b3" kind="function"><name>~Implicate</name></member>
+    <member refid="de/d28/class_implicate_1a331e1a1fcbe378ef15a3a7f04b7034d5" kind="function"><name>getValue</name></member>
+    <member refid="de/d28/class_implicate_1a9f3b5d35f552a62ca4a98b4f608a2968" kind="function"><name>nandify</name></member>
+    <member refid="de/d28/class_implicate_1aa425e8cb25aec8dd2935346f61ebaefa" kind="function"><name>getSTRuleName</name></member>
+    <member refid="de/d28/class_implicate_1aca5eae3d47c318ba413787c7c3a674ce" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d" kind="function"><name>cnfFilter</name></member>
+    <member refid="de/d28/class_implicate_1a08cf8aa03589f7a34400a5f636f1256a" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d4/d8d/classlogging" kind="class"><name>logging</name>
+    <member refid="d4/d8d/classlogging_1a0bd664aa980c8b51e8ebd84c5f6a3901" kind="variable"><name>myHandler</name></member>
+    <member refid="d4/d8d/classlogging_1a9fc3278b328fdec4922315d85f772489" kind="function"><name>logging</name></member>
+    <member refid="d4/d8d/classlogging_1a38300200148601f298e30b8a84ad686c" kind="function"><name>logging</name></member>
+    <member refid="d4/d8d/classlogging_1aa50e430d72fd366e7f906b61242c658f" kind="function"><name>~logging</name></member>
+    <member refid="d4/d8d/classlogging_1a3df699bc82c58695050e68f28fa4bf39" kind="function"><name>setHandler</name></member>
+    <member refid="d4/d8d/classlogging_1aa15fabd099ea702ad39a8bb82e56d56c" kind="function"><name>info</name></member>
+  </compound>
+  <compound refid="d2/d2a/class_multi_and" kind="class"><name>MultiAnd</name>
+    <member refid="d2/d2a/class_multi_and_1af78c9976d483175359a7c372231b2ac3" kind="function"><name>MultiAnd</name></member>
+    <member refid="d2/d2a/class_multi_and_1a2fe5c4c9809102fc779016d608e3f57d" kind="function"><name>~MultiAnd</name></member>
+    <member refid="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178" kind="function"><name>toString</name></member>
+    <member refid="d2/d2a/class_multi_and_1a00dd6431f647c88e28d702dd2afb1c57" kind="function"><name>toStringPrefix</name></member>
+    <member refid="d2/d2a/class_multi_and_1a7730036f89cf27cddcf6d2efc293dd9d" kind="function"><name>getValue</name></member>
+    <member refid="d2/d2a/class_multi_and_1ad89e8cb08fe1e0793e2e16e837992de2" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d6/da5/class_multi_and_norm" kind="class"><name>MultiAndNorm</name>
+    <member refid="d6/da5/class_multi_and_norm_1aee4c9190024a62f701bd02155115fbf0" kind="function"><name>MultiAndNorm</name></member>
+    <member refid="d6/da5/class_multi_and_norm_1a3aec280d3f9c2df9ed0eb91e61f8bb4f" kind="function"><name>~MultiAndNorm</name></member>
+    <member refid="d6/da5/class_multi_and_norm_1a84940789d331007c430096a38f60d124" kind="function"><name>toString</name></member>
+    <member refid="d6/da5/class_multi_and_norm_1a77cbaf6920daa86d9ddc80b2a839a84f" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="dd/d61/class_multi_or" kind="class"><name>MultiOr</name>
+    <member refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" kind="function"><name>MultiOr</name></member>
+    <member refid="dd/d61/class_multi_or_1a17ce7a33d4fe548dca2db45a59202057" kind="function"><name>MultiOr</name></member>
+    <member refid="dd/d61/class_multi_or_1a4f0161febe9e9fe9d4fc44708369de51" kind="function"><name>~MultiOr</name></member>
+    <member refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7" kind="function"><name>toString</name></member>
+    <member refid="dd/d61/class_multi_or_1a80405614a8a8db0992c35a70f36aa025" kind="function"><name>toStringPrefix</name></member>
+    <member refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e" kind="function"><name>getValue</name></member>
+    <member refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d6/d2d/class_multi_or_norm" kind="class"><name>MultiOrNorm</name>
+    <member refid="d6/d2d/class_multi_or_norm_1ae11a281782c23c8a3675d6abc5b3bfbc" kind="function"><name>MultiOrNorm</name></member>
+    <member refid="d6/d2d/class_multi_or_norm_1a43f3ee64ab919f4c85ecdda2a92bef00" kind="function"><name>MultiOrNorm</name></member>
+    <member refid="d6/d2d/class_multi_or_norm_1a8de0c4794574f93dd2131075943f4209" kind="function"><name>~MultiOrNorm</name></member>
+    <member refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" kind="function"><name>toString</name></member>
+    <member refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d9/d44/class_n_and" kind="class"><name>NAnd</name>
+    <member refid="d9/d44/class_n_and_1a5e73ac719f793d02a10cd0fc6931808f" kind="function"><name>NAnd</name></member>
+    <member refid="d9/d44/class_n_and_1a472d8c586ec989b998d6b182ed581a96" kind="function"><name>~NAnd</name></member>
+    <member refid="d9/d44/class_n_and_1a9eb3a117e8d30f11ebe25e932d387265" kind="function"><name>getValue</name></member>
+    <member refid="d9/d44/class_n_and_1ae60ecc244dd83bfdcc7eada4957890d8" kind="function"><name>nandify</name></member>
+    <member refid="d9/d44/class_n_and_1a8570a747f7f4aec32bb962227749566f" kind="function"><name>getSTRuleName</name></member>
+    <member refid="d9/d44/class_n_and_1a3ccedba07752a2457a593035b33535e1" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" kind="function"><name>cnfFilter</name></member>
+    <member refid="d9/d44/class_n_and_1a3756b0f2696bf06664100c0b5c9d67b3" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="df/d45/class_negate" kind="class"><name>Negate</name>
+    <member refid="df/d45/class_negate_1adb1a956d1f152e24fada7b1a33b0331e" kind="function"><name>Negate</name></member>
+    <member refid="df/d45/class_negate_1a04d4e89273d5fcbfaad144df52e40041" kind="function"><name>~Negate</name></member>
+    <member refid="df/d45/class_negate_1adc2bf29215e329e60e44dbf6bf8a4c85" kind="function"><name>getValue</name></member>
+    <member refid="df/d45/class_negate_1a2dd4cada504739fea3583a5729044c71" kind="function"><name>nandify</name></member>
+    <member refid="df/d45/class_negate_1aab87b217ffd5c8ba404022a5f4cec220" kind="function"><name>toString</name></member>
+    <member refid="df/d45/class_negate_1ac881a233c5a1e6f7669ea8ff70eda8f7" kind="function"><name>getSTRuleName</name></member>
+    <member refid="df/d45/class_negate_1ad06cf6b9c1070a001919c58084990c0d" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="df/d45/class_negate_1a6aa803fea460f0a2a52399b778bfd268" kind="function"><name>cnfFilter</name></member>
+    <member refid="df/d45/class_negate_1a7cdd545814e819ef6b6ec735dda357aa" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="dc/d8f/class_node" kind="class"><name>Node</name>
+    <member refid="dc/d8f/class_node_1a59a543130a10c95f1e8642cf8c5645e8" kind="variable"><name>id</name></member>
+    <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" kind="variable"><name>isRulesReturned</name></member>
+    <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kind="variable"><name>left</name></member>
+    <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kind="variable"><name>right</name></member>
+    <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kind="variable"><name>variables</name></member>
+    <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kind="variable"><name>notation</name></member>
+    <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" kind="function"><name>orSimplify</name></member>
+    <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" kind="function"><name>andSimplify</name></member>
+    <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" kind="function"><name>Node</name></member>
+    <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" kind="function"><name>~Node</name></member>
+    <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" kind="function"><name>treeTraveler</name></member>
+    <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" kind="function"><name>toStringPrefix</name></member>
+    <member refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" kind="function"><name>toString</name></member>
+    <member refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2" kind="function"><name>getValue</name></member>
+    <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" kind="function"><name>nandify</name></member>
+    <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" kind="function"><name>getSTRuleName</name></member>
+    <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" kind="function"><name>setVariable</name></member>
+    <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" kind="function"><name>cnfFilter</name></member>
+    <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" kind="function"><name>cnfDistribution</name></member>
+    <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" kind="function"><name>getLeaf</name></member>
+    <member refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb" kind="function"><name>copy</name></member>
+    <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" kind="function"><name>containedSpecialNode</name></member>
+  </compound>
+  <compound refid="d8/d1b/class_or" kind="class"><name>Or</name>
+    <member refid="d8/d1b/class_or_1a3247e4bae89e48da60037469ba896128" kind="function"><name>Or</name></member>
+    <member refid="d8/d1b/class_or_1aea3ecd177d77f4478464d2def9c5618b" kind="function"><name>~Or</name></member>
+    <member refid="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9" kind="function"><name>getValue</name></member>
+    <member refid="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a" kind="function"><name>nandify</name></member>
+    <member refid="d8/d1b/class_or_1a0fd1f6086987f7b1fe9fab9a196c1839" kind="function"><name>getSTRuleName</name></member>
+    <member refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" kind="function"><name>getSTNodeChild</name></member>
+    <member refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" kind="function"><name>cnfFilter</name></member>
+    <member refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" kind="function"><name>cnfDistribution</name></member>
+    <member refid="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62" kind="function"><name>copy</name></member>
+    <member refid="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" kind="function"><name>getMultiOr</name></member>
+  </compound>
+  <compound refid="d5/d30/class_predicate" kind="class"><name>Predicate</name>
+    <member refid="d5/d30/class_predicate_1aae9f9c0874342d8439f6c7ccaa44d76c" kind="function"><name>Predicate</name></member>
+    <member refid="d5/d30/class_predicate_1a0ebfd4d64be4d59053157ca73e7bbd79" kind="function"><name>Predicate</name></member>
+    <member refid="d5/d30/class_predicate_1a0ba364e4092dee9b9c43e0c447f36de3" kind="function"><name>~Predicate</name></member>
+    <member refid="d5/d30/class_predicate_1a0572df9e18344e95ca1ce521d551a0ea" kind="function"><name>getStatement</name></member>
+    <member refid="d5/d30/class_predicate_1a68cb341b481a973037db8d4b369bd73f" kind="function"><name>getNode</name></member>
+    <member refid="d5/d30/class_predicate_1a5c43d5efe67d0fdeae29ec38267e5acb" kind="function"><name>parse</name></member>
+    <member refid="d5/d30/class_predicate_1ae2524ae4cd1e71a00984f6a49d717469" kind="function"><name>getListVariable</name></member>
+  </compound>
+  <compound refid="d1/dde/struct_reso" kind="struct"><name>Reso</name>
+    <member refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" kind="variable"><name>resolution</name></member>
+    <member refid="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" kind="variable"><name>subtituteSolution</name></member>
+  </compound>
+  <compound refid="d7/d88/structroot_logger" kind="struct"><name>rootLogger</name>
+    <member refid="d7/d88/structroot_logger_1a91e51e01c8b12e95891d79807b93a6f0" kind="variable"><name>log</name></member>
+    <member refid="d7/d88/structroot_logger_1a2b12bc69ec8a404d513d7db3ea856be5" kind="function"><name>setHandler</name></member>
+    <member refid="d7/d88/structroot_logger_1af163fa3b8e6f1c7d4a2d1dd9fe1594ce" kind="function"><name>info</name></member>
+  </compound>
+  <compound refid="d6/d54/class_rows" kind="class"><name>Rows</name>
+    <member refid="d6/d54/class_rows_1ac2cf1184df80a0fdab7da08e13c050ba" kind="variable"><name>elem_byte</name></member>
+    <member refid="d6/d54/class_rows_1a2b3d2fabf2107acdce437f8896a9d999" kind="variable"><name>value</name></member>
+    <member refid="d6/d54/class_rows_1a0bae45d3eb178a0b8fe253a9c447bbc1" kind="variable"><name>elem_str</name></member>
+    <member refid="d6/d54/class_rows_1acf35a12cc4ce4e4b0c61af3757321803" kind="variable"><name>checked</name></member>
+    <member refid="d6/d54/class_rows_1aa610ff44d051eededf3c25928987bb81" kind="function"><name>toBinString</name></member>
+    <member refid="d6/d54/class_rows_1a6c48a7781d187ab7908a772cd0df1a28" kind="function"><name>Rows</name></member>
+    <member refid="d6/d54/class_rows_1a22f5ff0d92c58ac650fd337d8f0a7894" kind="function"><name>toNode</name></member>
+    <member refid="d6/d54/class_rows_1a0c7d1d2c3af24b8de6c88885ad90d68e" kind="function"><name>is_match_pair</name></member>
+    <member refid="d6/d54/class_rows_1a1c7fca7d12a6195f1c68ca7f7b40559d" kind="function"><name>getValue</name></member>
+    <member refid="d6/d54/class_rows_1a7f0b421443b1c6141c8816a7bfd1ac75" kind="function"><name>setDontCare</name></member>
+    <member refid="d6/d54/class_rows_1ae448dbf8255ceeea29a21125433f9e42" kind="function"><name>getElem</name></member>
+    <member refid="d6/d54/class_rows_1af097985562c1e8137014839519898494" kind="function"><name>toString</name></member>
+    <member refid="d6/d54/class_rows_1a050e6e5b47e4096f1cdea7f7325fac8e" kind="function"><name>operator=</name></member>
+    <member refid="d6/d54/class_rows_1a234bd8fcbb772dad8a6e129c2ccd0e8b" kind="function"><name>operator==</name></member>
+    <member refid="d6/d54/class_rows_1ae8eb3bed11f3a6ac4721aa27e1489106" kind="function"><name>operator&lt;</name></member>
+  </compound>
+  <compound refid="d6/d22/class_semantic_tableaux" kind="class"><name>SemanticTableaux</name>
+    <member refid="d6/d22/class_semantic_tableaux_1a9fd70e5435a0fed98339fd3dad868e71" kind="variable"><name>tautology</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1aff7d804483776b8517694f308a3071df" kind="variable"><name>tableaux</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1a10b854a82ce27c588d45d82895aa7a45" kind="function"><name>SemanticTableaux</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1a6c03c9108f2552c3756a5bdd6b6116f1" kind="function"><name>~SemanticTableaux</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1a78039805239590cd2c8bc411158f2b2d" kind="function"><name>ExportProof</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1a18a9f8fc5dce074c040564454fd710c3" kind="function"><name>isTautology</name></member>
+    <member refid="d6/d22/class_semantic_tableaux_1ab41b0fa5d87d29ad807b410f18ce93a7" kind="function"><name>generateProof</name></member>
+  </compound>
+  <compound refid="d0/d52/class_simple_table" kind="class"><name>SimpleTable</name>
+    <member refid="d0/d52/class_simple_table_1a34c3e2eb7dcd3c05e22ea56f719913e2" kind="function"><name>getAllRowsGroup</name></member>
+    <member refid="d0/d52/class_simple_table_1a4d4e552c725f1306708a5918365f7d26" kind="function"><name>getQuineMcCluskey</name></member>
+    <member refid="d0/d52/class_simple_table_1ad94b85aed20f08c4513394cec5d11fe1" kind="function"><name>simplify</name></member>
+    <member refid="d0/d52/class_simple_table_1ae021726ae4be0f56813c3f1306c9097b" kind="function"><name>SimpleTable</name></member>
+    <member refid="d0/d52/class_simple_table_1a368bd0b80e902560f9cc0e7695a7a5d2" kind="function"><name>SimpleTable</name></member>
+    <member refid="d0/d52/class_simple_table_1afcdfe80e8f2ed145c0baa2cb15722a22" kind="function"><name>SimpleTable</name></member>
+    <member refid="d0/d52/class_simple_table_1a8f2eda31cbfffcafd9e12c7b55ca2dec" kind="function"><name>SimpleTable</name></member>
+  </compound>
+  <compound refid="d7/da3/class_statement" kind="class"><name>Statement</name>
+    <member refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" kind="function"><name>Statement</name></member>
+    <member refid="d7/da3/class_statement_1a6f4d56b4180183819b76f01209acb3d1" kind="function"><name>Statement</name></member>
+    <member refid="d7/da3/class_statement_1a4ca9db7feff843e91b1f2200fc77a784" kind="function"><name>~Statement</name></member>
+    <member refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" kind="function"><name>toString</name></member>
+    <member refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" kind="function"><name>setVariable</name></member>
+    <member refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" kind="function"><name>copy</name></member>
+    <member refid="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240" kind="function"><name>containedSpecialNode</name></member>
+  </compound>
+  <compound refid="d0/d75/class_s_t_node" kind="class"><name>STNode</name>
+    <member refid="d0/d75/class_s_t_node_1ad8a92733e77010b8aaac8ab0f82405f1" kind="variable"><name>id</name></member>
+    <member refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kind="variable"><name>left</name></member>
+    <member refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kind="variable"><name>right</name></member>
+    <member refid="d0/d75/class_s_t_node_1ac6db937d531b08614534af47cee8dace" kind="variable"><name>listVar</name></member>
+    <member refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kind="variable"><name>nodes</name></member>
+    <member refid="d0/d75/class_s_t_node_1a55d1f2a5254f3ef8ec9f0f5023177798" kind="function"><name>copyList</name></member>
+    <member refid="d0/d75/class_s_t_node_1adcdfca666c892461693ac42920fbc0df" kind="function"><name>STNode</name></member>
+    <member refid="d0/d75/class_s_t_node_1abc48151a02b70b445ef9c4e5066c1fe8" kind="function"><name>STNode</name></member>
+    <member refid="d0/d75/class_s_t_node_1a535f7a100908f02b166cb54124dfbea3" kind="function"><name>~STNode</name></member>
+    <member refid="d0/d75/class_s_t_node_1acb631ef4448c8faf7c88c9c61568ca0a" kind="function"><name>toString</name></member>
+    <member refid="d0/d75/class_s_t_node_1a1850972d568af9275b19b828522df434" kind="function"><name>treeTraveler</name></member>
+  </compound>
+  <compound refid="dd/df8/class_tree" kind="class"><name>Tree</name>
+    <member refid="dd/df8/class_tree_1a43a26e394162774b0e0614e6567f5fe1" kind="variable"><name>proposition</name></member>
+    <member refid="dd/df8/class_tree_1ae9dd5a4ebbf36cd6a952c78139221cad" kind="variable"><name>tableaux</name></member>
+    <member refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" kind="variable"><name>tree</name></member>
+    <member refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" kind="variable"><name>varList</name></member>
+    <member refid="dd/df8/class_tree_1a2a8e8236ffc2a6ba0ba580f4f0b01128" kind="variable"><name>prop_in</name></member>
+    <member refid="dd/df8/class_tree_1ad05978c3b3aaa0eefed672a5129c00a1" kind="function"><name>parse</name></member>
+    <member refid="dd/df8/class_tree_1a016c2300dfa5444a52e6e6db7be850d2" kind="function"><name>getStatement</name></member>
+    <member refid="dd/df8/class_tree_1a60a9b7d65fc663d2db005b01119efa73" kind="function"><name>getNode</name></member>
+    <member refid="dd/df8/class_tree_1a114a18872bc2535a73ceb0719cde7945" kind="function"><name>Tree</name></member>
+    <member refid="dd/df8/class_tree_1a6515b810a36ab46fa79b9dc9d426a8ff" kind="function"><name>Tree</name></member>
+    <member refid="dd/df8/class_tree_1abdc38545cf3f588725b5d8b8075b3866" kind="function"><name>~Tree</name></member>
+    <member refid="dd/df8/class_tree_1ad9bd7cd558397f596703e92fc47aa91f" kind="function"><name>getTree</name></member>
+    <member refid="dd/df8/class_tree_1a525967d14a17de0ad9c9072b025af1c3" kind="function"><name>getListVariable</name></member>
+    <member refid="dd/df8/class_tree_1a7d2c78122409858b2516b52514bd7fe8" kind="function"><name>getProposition</name></member>
+    <member refid="dd/df8/class_tree_1a22efa22748fa8d8a598e05ceb327dfd4" kind="function"><name>isTautology</name></member>
+    <member refid="dd/df8/class_tree_1abde731a55b92d402fbbd166a577cbe91" kind="function"><name>getValue</name></member>
+    <member refid="dd/df8/class_tree_1ae19f22cfa4b782b5c0a048592ea3e95f" kind="function"><name>exportGraph</name></member>
+    <member refid="dd/df8/class_tree_1ae235cdb84985c90fa56697a28b0a8d9e" kind="function"><name>exportProof</name></member>
+    <member refid="dd/df8/class_tree_1a9d7b51cc207222de02ccb59192454de5" kind="function"><name>getDavidPutnam</name></member>
+  </compound>
+  <compound refid="dc/d49/class_truth_table" kind="class"><name>TruthTable</name>
+    <member refid="dc/d49/class_truth_table_1a39ed5bd7c7af143af2bdc1d48eee669f" kind="variable"><name>trueRows</name></member>
+    <member refid="dc/d49/class_truth_table_1af585b18e1c5a1d4e456ae25c6d1ab6f9" kind="variable"><name>falseRows</name></member>
+    <member refid="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" kind="variable"><name>table</name></member>
+    <member refid="dc/d49/class_truth_table_1a58fc63ab16768b58accfe0448a4cd68c" kind="variable"><name>hash</name></member>
+    <member refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" kind="function"><name>generateTable</name></member>
+    <member refid="dc/d49/class_truth_table_1a1d7d8e978c1ab80e94f5433efc914f49" kind="function"><name>TruthTable</name></member>
+    <member refid="dc/d49/class_truth_table_1abab023791b3a72496ff56434fc0e02b4" kind="function"><name>TruthTable</name></member>
+    <member refid="dc/d49/class_truth_table_1afe78a848779c34a2c0eb23ecf1e6db6f" kind="function"><name>TruthTable</name></member>
+    <member refid="dc/d49/class_truth_table_1a1574928e406cb242a4f1abb6bc2924f3" kind="function"><name>~TruthTable</name></member>
+    <member refid="dc/d49/class_truth_table_1a3683cdc11d4f4735e449aa82c8095357" kind="function"><name>getTable</name></member>
+    <member refid="dc/d49/class_truth_table_1ae44f1c65f1d2e8c350eb7f17bd88f777" kind="function"><name>getHashCode</name></member>
+    <member refid="dc/d49/class_truth_table_1a9dcb8d74d39ebc1a8ada938f1ccbce97" kind="function"><name>getNormalize</name></member>
+  </compound>
+  <compound refid="d4/d72/class_value" kind="class"><name>Value</name>
+    <member refid="d4/d72/class_value_1a98e1dd185ea30f4e9343de03008fd622" kind="function"><name>Value</name></member>
+    <member refid="d4/d72/class_value_1a73578eb3c2fa9af8c62f836d1a3b0063" kind="function"><name>~Value</name></member>
+    <member refid="d4/d72/class_value_1ac956d02a49c773f5249cc31fb4293337" kind="function"><name>getValue</name></member>
+    <member refid="d4/d72/class_value_1aa774521b29b4f0c77eb6d57b5a6fb3a0" kind="function"><name>toString</name></member>
+    <member refid="d4/d72/class_value_1aaa2ddacd71ab25b50b06eee47e21289d" kind="function"><name>nandify</name></member>
+    <member refid="d4/d72/class_value_1a807844066d6d76e9b9f3eda03cef37b1" kind="function"><name>setVariable</name></member>
+    <member refid="d4/d72/class_value_1a56c458de6a68b9a25233e6fdcfa67760" kind="function"><name>cnfFilter</name></member>
+    <member refid="d4/d72/class_value_1a45518c11045a76300ad02cc93a0150c9" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="d2/d3c/class_variable" kind="class"><name>Variable</name>
+    <member refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" kind="function"><name>Variable</name></member>
+    <member refid="d2/d3c/class_variable_1af836f63543807d77dfca8caacd54b1a5" kind="function"><name>Variable</name></member>
+    <member refid="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" kind="function"><name>~Variable</name></member>
+    <member refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" kind="function"><name>getValue</name></member>
+    <member refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" kind="function"><name>toString</name></member>
+    <member refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" kind="function"><name>setVariable</name></member>
+    <member refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" kind="function"><name>copy</name></member>
+  </compound>
+  <compound refid="de/d24/struct_variable__v" kind="struct"><name>Variable_v</name>
+    <member refid="de/d24/struct_variable__v_1a52b714aff65f56f7e874e93b9467af98" kind="variable"><name>varName</name></member>
+    <member refid="de/d24/struct_variable__v_1abc7c0bc4aba6731c69007d7982d4f57a" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="d8/dcc/namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="d6/d79/cnf_8cpp" kind="file"><name>cnf.cpp</name>
+  </compound>
+  <compound refid="d1/d47/cnf_8h" kind="file"><name>cnf.h</name>
+  </compound>
+  <compound refid="dd/daf/logging_8cpp" kind="file"><name>logging.cpp</name>
+    <member refid="dd/daf/logging_8cpp_1af90a9d943a7fb800048cdfb29a177f30" kind="function"><name>NowTime</name></member>
+  </compound>
+  <compound refid="d5/d77/logging_8h" kind="file"><name>logging.h</name>
+    <member refid="d5/d77/logging_8h_1a809f816dd6df4e17499413cff1926fd4" kind="define"><name>INFO</name></member>
+    <member refid="d5/d77/logging_8h_1a9b7950453a79cd338475905367cb10c0" kind="define"><name>SET_LOGGING_HANDLER</name></member>
+    <member refid="d5/d77/logging_8h_1af90a9d943a7fb800048cdfb29a177f30" kind="function"><name>NowTime</name></member>
+  </compound>
+  <compound refid="dc/d62/and_8cpp" kind="file"><name>and.cpp</name>
+  </compound>
+  <compound refid="d5/d25/and_8h" kind="file"><name>and.h</name>
+  </compound>
+  <compound refid="d0/dbf/biimplicate_8cpp" kind="file"><name>biimplicate.cpp</name>
+  </compound>
+  <compound refid="dd/d69/biimplicate_8h" kind="file"><name>biimplicate.h</name>
+  </compound>
+  <compound refid="da/d46/exists_8cpp" kind="file"><name>exists.cpp</name>
+  </compound>
+  <compound refid="d1/dc4/exists_8h" kind="file"><name>exists.h</name>
+  </compound>
+  <compound refid="da/d09/forall_8cpp" kind="file"><name>forall.cpp</name>
+  </compound>
+  <compound refid="d2/dee/forall_8h" kind="file"><name>forall.h</name>
+  </compound>
+  <compound refid="dc/d93/implicate_8cpp" kind="file"><name>implicate.cpp</name>
+  </compound>
+  <compound refid="d0/d93/implicate_8h" kind="file"><name>implicate.h</name>
+  </compound>
+  <compound refid="db/d9c/multiand_8cpp" kind="file"><name>multiand.cpp</name>
+  </compound>
+  <compound refid="d9/d1d/multiand_8h" kind="file"><name>multiand.h</name>
+  </compound>
+  <compound refid="df/db6/multior_8cpp" kind="file"><name>multior.cpp</name>
+  </compound>
+  <compound refid="da/d4e/multior_8h" kind="file"><name>multior.h</name>
+  </compound>
+  <compound refid="db/d7a/nand_8cpp" kind="file"><name>nand.cpp</name>
+  </compound>
+  <compound refid="d6/df8/nand_8h" kind="file"><name>nand.h</name>
+  </compound>
+  <compound refid="df/db4/negate_8cpp" kind="file"><name>negate.cpp</name>
+  </compound>
+  <compound refid="d8/dff/negate_8h" kind="file"><name>negate.h</name>
+  </compound>
+  <compound refid="d7/d70/node_8cpp" kind="file"><name>node.cpp</name>
+  </compound>
+  <compound refid="d1/d77/node_8h" kind="file"><name>node.h</name>
+  </compound>
+  <compound refid="d1/da4/or_8cpp" kind="file"><name>or.cpp</name>
+  </compound>
+  <compound refid="df/d34/or_8h" kind="file"><name>or.h</name>
+  </compound>
+  <compound refid="d1/d48/statement_8cpp" kind="file"><name>statement.cpp</name>
+  </compound>
+  <compound refid="de/d93/statement_8h" kind="file"><name>statement.h</name>
+  </compound>
+  <compound refid="d2/dc0/value_8cpp" kind="file"><name>value.cpp</name>
+  </compound>
+  <compound refid="d4/d3f/value_8h" kind="file"><name>value.h</name>
+  </compound>
+  <compound refid="d0/d27/variable_8cpp" kind="file"><name>variable.cpp</name>
+  </compound>
+  <compound refid="d0/d30/notation_2variable_8h" kind="file"><name>variable.h</name>
+  </compound>
+  <compound refid="de/d99/_struct_2variable_8h" kind="file"><name>variable.h</name>
+  </compound>
+  <compound refid="db/d07/predicate_8cpp" kind="file"><name>predicate.cpp</name>
+  </compound>
+  <compound refid="df/da5/predicate_8h" kind="file"><name>predicate.h</name>
+  </compound>
+  <compound refid="d5/d32/proposition_2tableaux_2enum_8h" kind="file"><name>enum.h</name>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kind="enum"><name>RULES</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" kind="enumvalue"><name>ALPHA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kind="enumvalue"><name>DELTA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" kind="enumvalue"><name>BETA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kind="enumvalue"><name>GAMMA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" kind="enumvalue"><name>NN</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" kind="enumvalue"><name>ALPHA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" kind="enumvalue"><name>BETA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kind="enumvalue"><name>GAMMA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kind="enumvalue"><name>DELTA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a75bee44ae49a0cecbbab062cc74f53a7" kind="enumvalue"><name>NAN</name></member>
+  </compound>
+  <compound refid="d7/d37/_semantic_tableaux_2enum_8h" kind="file"><name>enum.h</name>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kind="enum"><name>RULES</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" kind="enumvalue"><name>ALPHA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kind="enumvalue"><name>DELTA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" kind="enumvalue"><name>BETA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kind="enumvalue"><name>GAMMA</name></member>
+    <member refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" kind="enumvalue"><name>NN</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a47e073572a47a01522b766b027f1a16c" kind="enumvalue"><name>ALPHA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8afbaa3fc38bba7fcfaffd6e5d346288c9" kind="enumvalue"><name>BETA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kind="enumvalue"><name>GAMMA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kind="enumvalue"><name>DELTA</name></member>
+    <member refid="d7/d37/_semantic_tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a75bee44ae49a0cecbbab062cc74f53a7" kind="enumvalue"><name>NAN</name></member>
+  </compound>
+  <compound refid="de/d3e/semantictableaux_8cpp" kind="file"><name>semantictableaux.cpp</name>
+  </compound>
+  <compound refid="d3/d01/semantictableaux_8h" kind="file"><name>semantictableaux.h</name>
+  </compound>
+  <compound refid="d6/db6/stnode_8cpp" kind="file"><name>stnode.cpp</name>
+  </compound>
+  <compound refid="d6/d13/stnode_8h" kind="file"><name>stnode.h</name>
+  </compound>
+  <compound refid="d1/d12/tree_8cpp" kind="file"><name>tree.cpp</name>
+  </compound>
+  <compound refid="d3/d09/tree_8h" kind="file"><name>tree.h</name>
+  </compound>
+  <compound refid="d0/d0c/rows_8cpp" kind="file"><name>rows.cpp</name>
+  </compound>
+  <compound refid="d0/dd4/rows_8h" kind="file"><name>rows.h</name>
+  </compound>
+  <compound refid="dd/dcd/simpletable_8cpp" kind="file"><name>simpletable.cpp</name>
+  </compound>
+  <compound refid="da/de0/simpletable_8h" kind="file"><name>simpletable.h</name>
+  </compound>
+  <compound refid="d9/d67/truthtable_8cpp" kind="file"><name>truthtable.cpp</name>
+  </compound>
+  <compound refid="d5/dbf/truthtable_8h" kind="file"><name>truthtable.h</name>
+  </compound>
+  <compound refid="d5/d60/utils_8h" kind="file"><name>utils.h</name>
+    <member refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" kind="function"><name>contains</name></member>
+    <member refid="d5/d60/utils_8h_1a8970db197c1beaf1ef3a2113d9bbdc3d" kind="function"><name>listReplaceAt</name></member>
+    <member refid="d5/d60/utils_8h_1abbb1158ccd7df4b617ce295a96f5ad09" kind="function"><name>listReplaceAt</name></member>
+    <member refid="d5/d60/utils_8h_1acbda3100e3c2692062ae38f95d108b7b" kind="function"><name>readList</name></member>
+    <member refid="d5/d60/utils_8h_1a6942e9ea7cd4b662731c77a44696c436" kind="function"><name>isContain</name></member>
+    <member refid="d5/d60/utils_8h_1a8d71663d0b75489bddd5398bb2ea5b20" kind="function"><name>isContain</name></member>
+    <member refid="d5/d60/utils_8h_1a82be88eefa252118106514b0d0898648" kind="function"><name>isContain</name></member>
+    <member refid="d5/d60/utils_8h_1a73a7b79a907c8abaab30ba094b1fd683" kind="function"><name>getUniqueString</name></member>
+  </compound>
+  <compound refid="dir_f7a7b8bdce8a0736a2eda0342bf34836" kind="dir"><name>src/cnf</name>
+  </compound>
+  <compound refid="dir_35ffec897c6b624b34b271f28510180f" kind="dir"><name>src/notation</name>
+  </compound>
+  <compound refid="dir_e3c9f68e4ea647936b4e2daec305fae7" kind="dir"><name>src/proposition</name>
+  </compound>
+  <compound refid="dir_7d80c2fda53c1b45d1b78d30ae14e8d9" kind="dir"><name>src/SemanticTableaux</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_d93a34de34a574cf430f2bf2140b6780" kind="dir"><name>src/Struct</name>
+  </compound>
+  <compound refid="dir_20706930dc76f634e133f76dc3cfb728" kind="dir"><name>src/table</name>
+  </compound>
+  <compound refid="dir_f4afe086f098c4a9e1dcccec2ac89983" kind="dir"><name>src/proposition/tableaux</name>
+  </compound>
+</doxygenindex>

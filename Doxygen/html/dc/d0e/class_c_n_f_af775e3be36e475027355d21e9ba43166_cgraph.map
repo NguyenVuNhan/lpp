@@ -1,0 +1,5 @@
+<map id="CNF::CNF" name="CNF::CNF">
+<area shape="rect" id="node2" href="$d5/d80/struct_i___c_n_f.html#afedf64bb258fd48ea0f811a9f571f0f0" title="generate CNF form based on originTree, originTree will be changed, to prevent lost data..." alt="" coords="148,5,295,32"/>
+<area shape="rect" id="node3" href="$d5/d80/struct_i___c_n_f.html#ac0c5ce2bd3edadb60de923b4259cc10b" title="Convert node to MultiAnd, remove douplicate element and sort element This function are being used aft..." alt="" coords="140,56,303,83"/>
+<area shape="rect" id="node4" href="$d5/d80/struct_i___c_n_f.html#ad417af0f07b5e7035c3671dcc3e9f798" title="get unique list of node " alt="" coords="351,56,500,83"/>
+</map>

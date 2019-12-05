@@ -1,0 +1,21 @@
+<map id="src/proposition/predicate.cpp" name="src/proposition/predicate.cpp">
+<area shape="rect" id="node3" href="$df/da5/predicate_8h.html" title="predicate.h" alt="" coords="155,80,242,107"/>
+<area shape="rect" id="node17" href="$d5/d25/and_8h.html" title="../notation/and.h" alt="" coords="935,155,1051,181"/>
+<area shape="rect" id="node18" href="$dd/d69/biimplicate_8h.html" title="../notation/biimplicate.h" alt="" coords="997,229,1155,256"/>
+<area shape="rect" id="node19" href="$d1/dc4/exists_8h.html" title="../notation/exists.h" alt="" coords="1143,155,1273,181"/>
+<area shape="rect" id="node20" href="$d2/dee/forall_8h.html" title="../notation/forall.h" alt="" coords="1245,229,1368,256"/>
+<area shape="rect" id="node21" href="$d0/d93/implicate_8h.html" title="../notation/implicate.h" alt="" coords="228,155,375,181"/>
+<area shape="rect" id="node22" href="$d6/df8/nand_8h.html" title="../notation/nand.h" alt="" coords="413,229,536,256"/>
+<area shape="rect" id="node23" href="$d8/dff/negate_8h.html" title="../notation/negate.h" alt="" coords="390,80,525,107"/>
+<area shape="rect" id="node24" href="$df/d34/or_8h.html" title="../notation/or.h" alt="" coords="611,155,717,181"/>
+<area shape="rect" id="node26" href="$d4/d3f/value_8h.html" title="../notation/value.h" alt="" coords="601,80,727,107"/>
+<area shape="rect" id="node27" href="$d0/d30/notation_2variable_8h.html" title="../notation/variable.h" alt="" coords="751,80,891,107"/>
+<area shape="rect" id="node28" href="$de/d93/statement_8h.html" title="../notation/statement.h" alt="" coords="915,80,1069,107"/>
+<area shape="rect" id="node4" href="$d3/d09/tree_8h.html" title="tree.h" alt="" coords="149,155,203,181"/>
+<area shape="rect" id="node5" href="$d1/d77/node_8h.html" title="../notation/node.h" alt="" coords="563,304,685,331"/>
+<area shape="rect" id="node11" href="$d6/d13/stnode_8h.html" title="../proposition/tableaux\l/stnode.h" alt="" coords="118,379,269,420"/>
+<area shape="rect" id="node16" href="$d3/d01/semantictableaux_8h.html" title="tableaux/semantictableaux.h" alt="" coords="99,229,287,256"/>
+<area shape="rect" id="node10" href="$d5/d32/proposition_2tableaux_2enum_8h.html" title="../proposition/tableaux\l/enum.h" alt="" coords="423,379,574,420"/>
+<area shape="rect" id="node13" href="$d5/d60/utils_8h.html" title="../../utils.h" alt="" coords="193,468,274,495"/>
+<area shape="rect" id="node25" href="$da/d4e/multior_8h.html" title="multior.h" alt="" coords="661,229,733,256"/>
+</map>

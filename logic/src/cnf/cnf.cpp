@@ -294,24 +294,24 @@ shared_ptr<Node> I_CNF::generateCNF(shared_ptr<Node> originTree)
 bool I_CNF::findJanus(shared_ptr<Node> node)
 {
     string singleNode = "";
-        for(auto e : node->variables)
-        {
-            if(e->variables.size() == 1)
-                singleNode += e->toString();
-        }
+    for(auto e : node->variables)
+    {
+        if(e->variables.size() == 1)
+            singleNode += e->toString();
+    }
 
-        for(auto c : singleNode)
-            if('a' <= c && c <= 'z')
-            {
-                if(singleNode.find(char(toupper(c))) != string::npos)
-                    return true;
-            }
-            else
-            {
-                if(singleNode.find(char(tolower(c))) != string::npos)
-                    return true;
-            }
-        return false;
+    for(auto c : singleNode)
+        if('a' <= c && c <= 'z')
+        {
+            if(singleNode.find(char(toupper(c))) != string::npos)
+                return true;
+        }
+        else
+        {
+            if(singleNode.find(char(tolower(c))) != string::npos)
+                return true;
+        }
+    return false;
 }
 
 void I_CNF::getUniqueList(list<shared_ptr<Node> > &l)

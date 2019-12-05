@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="de/d99/_struct_2variable_8h" kind="file" language="C++">
+    <compoundname>variable.h</compoundname>
+    <includes local="no">QString</includes>
+    <incdepgraph>
+      <node id="615">
+        <label>src/Struct/variable.h</label>
+        <link refid="de/d99/_struct_2variable_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="de/d24/struct_variable__v" prot="public">Variable_v</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STRUCT_VARIABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRUCT_VARIABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="de/d24/struct_variable__v" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/d24/struct_variable__v" kindref="compound">Variable_v</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="de/d24/struct_variable__v_1a52b714aff65f56f7e874e93b9467af98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QChar<sp/><ref refid="de/d24/struct_variable__v_1a52b714aff65f56f7e874e93b9467af98" kindref="member">varName</ref>;</highlight></codeline>
+<codeline lineno="9" refid="de/d24/struct_variable__v_1abc7c0bc4aba6731c69007d7982d4f57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QChar<sp/><ref refid="de/d24/struct_variable__v_1abc7c0bc4aba6731c69007d7982d4f57a" kindref="member">value</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>STRUCT_VARIABLE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/Struct/variable.h"/>
+  </compounddef>
+</doxygen>

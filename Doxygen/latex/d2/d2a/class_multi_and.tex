@@ -1,0 +1,160 @@
+\hypertarget{class_multi_and}{}\section{Multi\+And Class Reference}
+\label{class_multi_and}\index{Multi\+And@{Multi\+And}}
+
+
+{\ttfamily \#include $<$multiand.\+h$>$}
+
+
+
+Inheritance diagram for Multi\+And\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{db/dd3/class_multi_and__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Multi\+And\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d2/d92/class_multi_and__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_multi_and_af78c9976d483175359a7c372231b2ac3}{Multi\+And} (list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ list\+Nodes=list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$())
+\item 
+\hyperlink{class_multi_and_a2fe5c4c9809102fc779016d608e3f57d}{$\sim$\+Multi\+And} () override
+\item 
+virtual string \hyperlink{class_multi_and_a035299de4f81beb44a9a5df63b0d5178}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+string \hyperlink{class_multi_and_a00dd6431f647c88e28d702dd2afb1c57}{to\+String\+Prefix} () override
+\begin{DoxyCompactList}\small\item\em get proposition prefix formular \end{DoxyCompactList}\item 
+bool \hyperlink{class_multi_and_a7730036f89cf27cddcf6d2efc293dd9d}{get\+Value} (string val\+List) override
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_multi_and_ad89e8cb08fe1e0793e2e16e837992de2}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_multi_and_af78c9976d483175359a7c372231b2ac3}\label{class_multi_and_af78c9976d483175359a7c372231b2ac3}} 
+\index{Multi\+And@{Multi\+And}!Multi\+And@{Multi\+And}}
+\index{Multi\+And@{Multi\+And}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{Multi\+And()}{MultiAnd()}}
+{\footnotesize\ttfamily Multi\+And\+::\+Multi\+And (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$}]{list\+Nodes = {\ttfamily list$<$shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$~$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_multi_and_a2fe5c4c9809102fc779016d608e3f57d}\label{class_multi_and_a2fe5c4c9809102fc779016d608e3f57d}} 
+\index{Multi\+And@{Multi\+And}!````~Multi\+And@{$\sim$\+Multi\+And}}
+\index{````~Multi\+And@{$\sim$\+Multi\+And}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{$\sim$\+Multi\+And()}{~MultiAnd()}}
+{\footnotesize\ttfamily Multi\+And\+::$\sim$\+Multi\+And (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_multi_and_ad89e8cb08fe1e0793e2e16e837992de2}\label{class_multi_and_ad89e8cb08fe1e0793e2e16e837992de2}} 
+\index{Multi\+And@{Multi\+And}!copy@{copy}}
+\index{copy@{copy}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Multi\+And\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+
+
+Reimplemented in \hyperlink{class_multi_and_norm_a77cbaf6920daa86d9ddc80b2a839a84f}{Multi\+And\+Norm}.
+
+\mbox{\Hypertarget{class_multi_and_a7730036f89cf27cddcf6d2efc293dd9d}\label{class_multi_and_a7730036f89cf27cddcf6d2efc293dd9d}} 
+\index{Multi\+And@{Multi\+And}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Multi\+And\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{Node}.
+
+\mbox{\Hypertarget{class_multi_and_a035299de4f81beb44a9a5df63b0d5178}\label{class_multi_and_a035299de4f81beb44a9a5df63b0d5178}} 
+\index{Multi\+And@{Multi\+And}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Multi\+And\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+Reimplemented in \hyperlink{class_multi_and_norm_a84940789d331007c430096a38f60d124}{Multi\+And\+Norm}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d2/d2a/class_multi_and_a035299de4f81beb44a9a5df63b0d5178_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_multi_and_a00dd6431f647c88e28d702dd2afb1c57}\label{class_multi_and_a00dd6431f647c88e28d702dd2afb1c57}} 
+\index{Multi\+And@{Multi\+And}!to\+String\+Prefix@{to\+String\+Prefix}}
+\index{to\+String\+Prefix@{to\+String\+Prefix}!Multi\+And@{Multi\+And}}
+\subsubsection{\texorpdfstring{to\+String\+Prefix()}{toStringPrefix()}}
+{\footnotesize\ttfamily string Multi\+And\+::to\+String\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition prefix formular 
+
+\begin{DoxyReturn}{Returns}
+string of prefix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a815b062345cf2bb42717bd16dc99ea27}{Node}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d2/d2a/class_multi_and_a00dd6431f647c88e28d702dd2afb1c57_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{multiand_8h}{multiand.\+h}\item 
+src/notation/\hyperlink{multiand_8cpp}{multiand.\+cpp}\end{DoxyCompactItemize}

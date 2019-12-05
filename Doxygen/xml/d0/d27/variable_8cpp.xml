@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d0/d27/variable_8cpp" kind="file" language="C++">
+    <compoundname>variable.cpp</compoundname>
+    <includes refid="d0/d30/notation_2variable_8h" local="yes">variable.h</includes>
+    <includes refid="d6/df8/nand_8h" local="yes">nand.h</includes>
+    <includes refid="d4/d3f/value_8h" local="yes">value.h</includes>
+    <incdepgraph>
+      <node id="586">
+        <label>list</label>
+      </node>
+      <node id="589">
+        <label>iomanip</label>
+      </node>
+      <node id="582">
+        <label>string</label>
+      </node>
+      <node id="581">
+        <label>fstream</label>
+      </node>
+      <node id="578">
+        <label>variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="588" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="585">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="592" relation="include">
+        </childnode>
+      </node>
+      <node id="583">
+        <label>array</label>
+      </node>
+      <node id="580">
+        <label>iostream</label>
+      </node>
+      <node id="584">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="592">
+        <label>value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="591">
+        <label>nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="588">
+        <label>algorithm</label>
+      </node>
+      <node id="579">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d30/notation_2variable_8h" kindref="compound">variable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d6/df8/nand_8h" kindref="compound">nand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d4/d3f/value_8h" kindref="compound">value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" refkind="member"><highlight class="normal"><ref refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" kindref="member">Variable::Variable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>notate)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>(nullptr,<sp/>nullptr)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/>notate;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d2/d3c/class_variable_1af836f63543807d77dfca8caacd54b1a5" refkind="member"><highlight class="normal"><ref refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" kindref="member">Variable::Variable</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>notate)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>(nullptr,<sp/>nullptr)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/>string(&amp;notate,<sp/>1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" refkind="member"><highlight class="normal"><ref refid="d2/d3c/class_variable_1a0c619221ab7f65166baf4555c356d83c" kindref="member">Variable::~Variable</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" kindref="member">Variable::getValue</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>valList)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>valList.at(valList.find(<ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref>)<sp/>+<sp/>1)<sp/>==<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" kindref="member">Variable::toString</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" kindref="member">Variable::setVariable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fromVariable,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>toVariable)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>==<sp/>fromVariable)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/>toVariable;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" refkind="member"><highlight class="normal">shared_ptr&lt;Node&gt;<sp/><ref refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" kindref="member">Variable::copy</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_shared&lt;Variable&gt;(<ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/variable.cpp"/>
+  </compounddef>
+</doxygen>

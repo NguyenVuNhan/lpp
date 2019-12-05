@@ -1,0 +1,58 @@
+.TH "handler" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+handler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logging\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBhandler\fP ()"
+.br
+.ti -1c
+.RI "\fBhandler\fP (std::string fn)"
+.br
+.ti -1c
+.RI "virtual \fB~handler\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetStream\fP (std::string fn)"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (std::string msg)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::ofstream \fBofs\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "handler::handler ()\fC [explicit]\fP"
+
+.SS "handler::handler (std::string fn)\fC [explicit]\fP"
+
+.SS "handler::~handler ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void handler::setStream (std::string fn)"
+
+.SS "void handler::write (std::string msg)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::ofstream handler::ofs\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

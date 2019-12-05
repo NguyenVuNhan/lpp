@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d1/df0/classhandler" kind="class" language="C++" prot="public">
+    <compoundname>handler</compoundname>
+    <includes refid="d5/d77/logging_8h" local="no">logging.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d1/df0/classhandler_1aea02e85ad5696302680d49a66263a2aa" prot="protected" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream handler::ofs</definition>
+        <argsstring></argsstring>
+        <name>ofs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="26" column="1" bodyfile="src/logging.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/df0/classhandler_1a0f44a69126e692e8bc8690539120be75" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>handler::handler</definition>
+        <argsstring>()</argsstring>
+        <name>handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="19" column="1" bodyfile="src/logging.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df0/classhandler_1a251fbf93fdf9eba4335c2d2b2f425f51" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>handler::handler</definition>
+        <argsstring>(std::string fn)</argsstring>
+        <name>handler</name>
+        <param>
+          <type>std::string</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="20" column="1" bodyfile="src/logging.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df0/classhandler_1a290cc764503dcc061a43c7be655ed512" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>handler::~handler</definition>
+        <argsstring>()</argsstring>
+        <name>~handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="21" column="1" bodyfile="src/logging.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df0/classhandler_1a4d5c893a4bd43354effd040fd5946186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handler::setStream</definition>
+        <argsstring>(std::string fn)</argsstring>
+        <name>setStream</name>
+        <param>
+          <type>std::string</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="22" column="1" bodyfile="src/logging.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/df0/classhandler_1ae4a74a6e7ba909279833759b4cab2bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void handler::write</definition>
+        <argsstring>(std::string msg)</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logging.h" line="23" column="1" bodyfile="src/logging.cpp" bodystart="55" bodyend="58"/>
+        <referencedby refid="d4/d8d/classlogging_1aa15fabd099ea702ad39a8bb82e56d56c" compoundref="dd/daf/logging_8cpp" startline="22" endline="26">logging::info</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/logging.h" line="17" column="1" bodyfile="src/logging.h" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="d1/df0/classhandler_1a0f44a69126e692e8bc8690539120be75" prot="public" virt="non-virtual"><scope>handler</scope><name>handler</name></member>
+      <member refid="d1/df0/classhandler_1a251fbf93fdf9eba4335c2d2b2f425f51" prot="public" virt="non-virtual"><scope>handler</scope><name>handler</name></member>
+      <member refid="d1/df0/classhandler_1aea02e85ad5696302680d49a66263a2aa" prot="protected" virt="non-virtual"><scope>handler</scope><name>ofs</name></member>
+      <member refid="d1/df0/classhandler_1a4d5c893a4bd43354effd040fd5946186" prot="public" virt="non-virtual"><scope>handler</scope><name>setStream</name></member>
+      <member refid="d1/df0/classhandler_1ae4a74a6e7ba909279833759b4cab2bcc" prot="public" virt="virtual"><scope>handler</scope><name>write</name></member>
+      <member refid="d1/df0/classhandler_1a290cc764503dcc061a43c7be655ed512" prot="public" virt="virtual"><scope>handler</scope><name>~handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

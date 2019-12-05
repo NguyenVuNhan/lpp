@@ -1,0 +1,149 @@
+\hypertarget{class_s_t_node}{}\section{S\+T\+Node Class Reference}
+\label{class_s_t_node}\index{S\+T\+Node@{S\+T\+Node}}
+
+
+{\ttfamily \#include $<$stnode.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_t_node_adcdfca666c892461693ac42920fbc0df}{S\+T\+Node} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ root=nullptr)
+\item 
+\hyperlink{class_s_t_node_abc48151a02b70b445ef9c4e5066c1fe8}{S\+T\+Node} (list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \&node\+List, list$<$ string $>$ other\+List\+Var=list$<$ string $>$())
+\item 
+\hyperlink{class_s_t_node_a535f7a100908f02b166cb54124dfbea3}{$\sim$\+S\+T\+Node} ()
+\item 
+string \hyperlink{class_s_t_node_acb631ef4448c8faf7c88c9c61568ca0a}{to\+String} ()
+\item 
+void \hyperlink{class_s_t_node_a1850972d568af9275b19b828522df434}{tree\+Traveler} (ofstream \&out, int root\+Id=-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ \hyperlink{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}{left}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_s_t_node}{S\+T\+Node} $>$ \hyperlink{class_s_t_node_a66d06118063fb739058f91c75b725e27}{right}
+\item 
+list$<$ string $>$ \hyperlink{class_s_t_node_ac6db937d531b08614534af47cee8dace}{list\+Var}
+\item 
+list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \hyperlink{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}{nodes}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_s_t_node_a55d1f2a5254f3ef8ec9f0f5023177798}{copy\+List} (list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$$>$ \&other)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_s_t_node_ad8a92733e77010b8aaac8ab0f82405f1}{id} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_t_node_adcdfca666c892461693ac42920fbc0df}\label{class_s_t_node_adcdfca666c892461693ac42920fbc0df}} 
+\index{S\+T\+Node@{S\+T\+Node}!S\+T\+Node@{S\+T\+Node}}
+\index{S\+T\+Node@{S\+T\+Node}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{S\+T\+Node()}{STNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily S\+T\+Node\+::\+S\+T\+Node (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{root = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_s_t_node_abc48151a02b70b445ef9c4e5066c1fe8}\label{class_s_t_node_abc48151a02b70b445ef9c4e5066c1fe8}} 
+\index{S\+T\+Node@{S\+T\+Node}!S\+T\+Node@{S\+T\+Node}}
+\index{S\+T\+Node@{S\+T\+Node}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{S\+T\+Node()}{STNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily S\+T\+Node\+::\+S\+T\+Node (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ $>$ \&}]{node\+List,  }\item[{list$<$ string $>$}]{other\+List\+Var = {\ttfamily list$<$string$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d0/d75/class_s_t_node_abc48151a02b70b445ef9c4e5066c1fe8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_t_node_a535f7a100908f02b166cb54124dfbea3}\label{class_s_t_node_a535f7a100908f02b166cb54124dfbea3}} 
+\index{S\+T\+Node@{S\+T\+Node}!````~S\+T\+Node@{$\sim$\+S\+T\+Node}}
+\index{````~S\+T\+Node@{$\sim$\+S\+T\+Node}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{$\sim$\+S\+T\+Node()}{~STNode()}}
+{\footnotesize\ttfamily S\+T\+Node\+::$\sim$\+S\+T\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_t_node_a55d1f2a5254f3ef8ec9f0f5023177798}\label{class_s_t_node_a55d1f2a5254f3ef8ec9f0f5023177798}} 
+\index{S\+T\+Node@{S\+T\+Node}!copy\+List@{copy\+List}}
+\index{copy\+List@{copy\+List}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{copy\+List()}{copyList()}}
+{\footnotesize\ttfamily void S\+T\+Node\+::copy\+List (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$$>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d0/d75/class_s_t_node_a55d1f2a5254f3ef8ec9f0f5023177798_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_t_node_acb631ef4448c8faf7c88c9c61568ca0a}\label{class_s_t_node_acb631ef4448c8faf7c88c9c61568ca0a}} 
+\index{S\+T\+Node@{S\+T\+Node}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string S\+T\+Node\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d0/d75/class_s_t_node_acb631ef4448c8faf7c88c9c61568ca0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_t_node_a1850972d568af9275b19b828522df434}\label{class_s_t_node_a1850972d568af9275b19b828522df434}} 
+\index{S\+T\+Node@{S\+T\+Node}!tree\+Traveler@{tree\+Traveler}}
+\index{tree\+Traveler@{tree\+Traveler}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{tree\+Traveler()}{treeTraveler()}}
+{\footnotesize\ttfamily void S\+T\+Node\+::tree\+Traveler (\begin{DoxyParamCaption}\item[{ofstream \&}]{out,  }\item[{int}]{root\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d0/d75/class_s_t_node_a1850972d568af9275b19b828522df434_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_s_t_node_ad8a92733e77010b8aaac8ab0f82405f1}\label{class_s_t_node_ad8a92733e77010b8aaac8ab0f82405f1}} 
+\index{S\+T\+Node@{S\+T\+Node}!id@{id}}
+\index{id@{id}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int S\+T\+Node\+::id = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}\label{class_s_t_node_a19ba8bab4660bdeee0e897687b451a8b}} 
+\index{S\+T\+Node@{S\+T\+Node}!left@{left}}
+\index{left@{left}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_s_t_node}{S\+T\+Node}$>$ S\+T\+Node\+::left}
+
+\mbox{\Hypertarget{class_s_t_node_ac6db937d531b08614534af47cee8dace}\label{class_s_t_node_ac6db937d531b08614534af47cee8dace}} 
+\index{S\+T\+Node@{S\+T\+Node}!list\+Var@{list\+Var}}
+\index{list\+Var@{list\+Var}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{list\+Var}{listVar}}
+{\footnotesize\ttfamily list$<$string$>$ S\+T\+Node\+::list\+Var}
+
+\mbox{\Hypertarget{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}\label{class_s_t_node_a370cb3b8a6bcd2e488a27d47be4e0920}} 
+\index{S\+T\+Node@{S\+T\+Node}!nodes@{nodes}}
+\index{nodes@{nodes}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily list$<$shared\+\_\+ptr$<$\hyperlink{class_node}{Node}$>$ $>$ S\+T\+Node\+::nodes}
+
+\mbox{\Hypertarget{class_s_t_node_a66d06118063fb739058f91c75b725e27}\label{class_s_t_node_a66d06118063fb739058f91c75b725e27}} 
+\index{S\+T\+Node@{S\+T\+Node}!right@{right}}
+\index{right@{right}!S\+T\+Node@{S\+T\+Node}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$\hyperlink{class_s_t_node}{S\+T\+Node}$>$ S\+T\+Node\+::right}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/proposition/tableaux/\hyperlink{stnode_8h}{stnode.\+h}\item 
+src/proposition/tableaux/\hyperlink{stnode_8cpp}{stnode.\+cpp}\end{DoxyCompactItemize}

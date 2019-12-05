@@ -1,0 +1,91 @@
+.TH "STNode" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+STNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stnode\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSTNode\fP (shared_ptr< \fBNode\fP > root=nullptr)"
+.br
+.ti -1c
+.RI "\fBSTNode\fP (list< shared_ptr< \fBNode\fP > > &nodeList, list< string > otherListVar=list< string >())"
+.br
+.ti -1c
+.RI "\fB~STNode\fP ()"
+.br
+.ti -1c
+.RI "string \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "void \fBtreeTraveler\fP (ofstream &out, int rootId=\-1)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "shared_ptr< \fBSTNode\fP > \fBleft\fP"
+.br
+.ti -1c
+.RI "shared_ptr< \fBSTNode\fP > \fBright\fP"
+.br
+.ti -1c
+.RI "list< string > \fBlistVar\fP"
+.br
+.ti -1c
+.RI "list< shared_ptr< \fBNode\fP > > \fBnodes\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcopyList\fP (list< shared_ptr< \fBNode\fP >> &other)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBid\fP = \-1"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "STNode::STNode (shared_ptr< \fBNode\fP > root = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "STNode::STNode (list< shared_ptr< \fBNode\fP > > & nodeList, list< string > otherListVar = \fClist<string>()\fP)\fC [explicit]\fP"
+
+.SS "STNode::~STNode ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void STNode::copyList (list< shared_ptr< \fBNode\fP >> & other)\fC [private]\fP"
+
+.SS "string STNode::toString ()"
+
+.SS "void STNode::treeTraveler (ofstream & out, int rootId = \fC\-1\fP)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int STNode::id = \-1\fC [private]\fP"
+
+.SS "shared_ptr<\fBSTNode\fP> STNode::left"
+
+.SS "list<string> STNode::listVar"
+
+.SS "list<shared_ptr<\fBNode\fP> > STNode::nodes"
+
+.SS "shared_ptr<\fBSTNode\fP> STNode::right"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

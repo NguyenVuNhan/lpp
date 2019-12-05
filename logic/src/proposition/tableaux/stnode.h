@@ -25,7 +25,16 @@ public:
     explicit STNode(shared_ptr<Node> root = nullptr);
     explicit STNode(list<shared_ptr<Node> > &nodeList, list<string> otherListVar = list<string>());
     ~STNode();
+    /*!
+     * \brief get list of nodes (string)
+     * \return list of nodes (string)
+     */
     string toString();
+    /*!
+     * \brief travel STNode tree and produce a graph
+     * \param out File output stream
+     * \param rootId Parrent Id, equal to -1 by default if there is no parent
+     */
     void treeTraveler(ofstream &out, int rootId = -1);
 };
 

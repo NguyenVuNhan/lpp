@@ -12,9 +12,13 @@ public:
 
     // Node interface
 public:
+    //! @copydoc Node::toString()
     string toString() override;
+    //! @copydoc Node::toStringPrefix()
     string toStringPrefix() override;
+    //! @copydoc Node::getValue(string)
     bool getValue(string valList) override;
+    //! @copydoc Node::copy()
     shared_ptr<Node> copy() override;
 };
 
@@ -25,7 +29,9 @@ public:
     explicit MultiOrNorm(shared_ptr<Node> node = nullptr);
     ~MultiOrNorm() override;
 public:
+    //! @copydoc Node::toString()
     string toString() override;
+    //! @copydoc Node::copy()
     shared_ptr<Node> copy() override;
 };
 

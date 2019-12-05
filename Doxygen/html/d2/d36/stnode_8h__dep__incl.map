@@ -1,0 +1,45 @@
+<map id="src/proposition/tableaux/stnode.h" name="src/proposition/tableaux/stnode.h">
+<area shape="rect" id="node2" href="$d1/d77/node_8h.html" title="src/notation/node.h" alt="" coords="2075,95,2208,121"/>
+<area shape="rect" id="node9" href="$d3/d09/tree_8h.html" title="src/proposition/tree.h" alt="" coords="3579,259,3723,285"/>
+<area shape="rect" id="node17" href="$d3/d01/semantictableaux_8h.html" title="src/proposition/tableaux\l/semantictableaux.h" alt="" coords="2764,169,2924,211"/>
+<area shape="rect" id="node32" href="$d6/db6/stnode_8cpp.html" title="src/proposition/tableaux\l/stnode.cpp" alt="" coords="5,333,165,375"/>
+<area shape="rect" id="node3" href="$d9/d1d/multiand_8h.html" title="src/notation/multiand.h" alt="" coords="3384,259,3539,285"/>
+<area shape="rect" id="node19" href="$da/d4e/multior_8h.html" title="src/notation/multior.h" alt="" coords="2343,177,2487,203"/>
+<area shape="rect" id="node20" href="$df/d34/or_8h.html" title="src/notation/or.h" alt="" coords="1503,259,1619,285"/>
+<area shape="rect" id="node22" href="$d7/d70/node_8cpp.html" title="src/notation/node.cpp" alt="" coords="467,341,613,367"/>
+<area shape="rect" id="node25" href="$d8/dff/negate_8h.html" title="src/notation/negate.h" alt="" coords="1644,259,1788,285"/>
+<area shape="rect" id="node33" href="$d0/d30/notation_2variable_8h.html" title="src/notation/variable.h" alt="" coords="2983,259,3134,285"/>
+<area shape="rect" id="node35" href="$d5/d25/and_8h.html" title="src/notation/and.h" alt="" coords="1050,259,1177,285"/>
+<area shape="rect" id="node36" href="$d6/df8/nand_8h.html" title="src/notation/nand.h" alt="" coords="1223,259,1356,285"/>
+<area shape="rect" id="node37" href="$d4/d3f/value_8h.html" title="src/notation/value.h" alt="" coords="820,259,956,285"/>
+<area shape="rect" id="node39" href="$dd/d69/biimplicate_8h.html" title="src/notation/biimplicate.h" alt="" coords="1813,259,1979,285"/>
+<area shape="rect" id="node40" href="$d1/dc4/exists_8h.html" title="src/notation/exists.h" alt="" coords="3158,259,3298,285"/>
+<area shape="rect" id="node41" href="$d2/dee/forall_8h.html" title="src/notation/forall.h" alt="" coords="2825,259,2959,285"/>
+<area shape="rect" id="node42" href="$d0/d93/implicate_8h.html" title="src/notation/implicate.h" alt="" coords="2004,259,2161,285"/>
+<area shape="rect" id="node43" href="$de/d93/statement_8h.html" title="src/notation/statement.h" alt="" coords="2120,177,2283,203"/>
+<area shape="rect" id="node4" href="$d1/d47/cnf_8h.html" title="Conjunction normal form solver. " alt="" coords="3621,341,3715,367"/>
+<area shape="rect" id="node6" href="$db/d9c/multiand_8cpp.html" title="src/notation/multiand.cpp" alt="" coords="3377,341,3545,367"/>
+<area shape="rect" id="node7" href="$d1/d12/tree_8cpp.html" title="src/proposition/tree.cpp" alt="" coords="2154,341,2313,367"/>
+<area shape="rect" id="node8" href="$d0/d0c/rows_8cpp.html" title="src/table/rows.cpp" alt="" coords="3397,423,3526,449"/>
+<area shape="rect" id="node5" href="$d6/d79/cnf_8cpp.html" title="src/cnf/cnf.cpp" alt="" coords="2937,423,3047,449"/>
+<area shape="rect" id="node10" href="$df/da5/predicate_8h.html" title="src/proposition/predicate.h" alt="" coords="3739,341,3914,367"/>
+<area shape="rect" id="node12" href="$d0/dd4/rows_8h.html" title="src/table/rows.h" alt="" coords="3939,341,4053,367"/>
+<area shape="rect" id="node13" href="$d5/dbf/truthtable_8h.html" title="src/table/truthtable.h" alt="" coords="3925,423,4067,449"/>
+<area shape="rect" id="node11" href="$db/d07/predicate_8cpp.html" title="src/proposition/predicate.cpp" alt="" coords="2281,423,2471,449"/>
+<area shape="rect" id="node14" href="$da/de0/simpletable_8h.html" title="src/table/simpletable.h" alt="" coords="3919,497,4073,524"/>
+<area shape="rect" id="node16" href="$d9/d67/truthtable_8cpp.html" title="src/table/truthtable.cpp" alt="" coords="3175,497,3329,524"/>
+<area shape="rect" id="node15" href="$dd/dcd/simpletable_8cpp.html" title="src/table/simpletable.cpp" alt="" coords="3913,572,4079,599"/>
+<area shape="rect" id="node18" href="$de/d3e/semantictableaux_8cpp.html" title="src/proposition/tableaux\l/semantictableaux.cpp" alt="" coords="2489,333,2649,375"/>
+<area shape="rect" id="node24" href="$df/db6/multior_8cpp.html" title="src/notation/multior.cpp" alt="" coords="2490,259,2649,285"/>
+<area shape="rect" id="node21" href="$dc/d62/and_8cpp.html" title="src/notation/and.cpp" alt="" coords="1043,341,1183,367"/>
+<area shape="rect" id="node23" href="$d1/da4/or_8cpp.html" title="src/notation/or.cpp" alt="" coords="1396,341,1527,367"/>
+<area shape="rect" id="node26" href="$d0/dbf/biimplicate_8cpp.html" title="src/notation/biimplicate.cpp" alt="" coords="1652,341,1833,367"/>
+<area shape="rect" id="node27" href="$da/d46/exists_8cpp.html" title="src/notation/exists.cpp" alt="" coords="2996,341,3151,367"/>
+<area shape="rect" id="node28" href="$da/d09/forall_8cpp.html" title="src/notation/forall.cpp" alt="" coords="2825,341,2972,367"/>
+<area shape="rect" id="node29" href="$dc/d93/implicate_8cpp.html" title="src/notation/implicate.cpp" alt="" coords="1857,341,2028,367"/>
+<area shape="rect" id="node30" href="$db/d7a/nand_8cpp.html" title="src/notation/nand.cpp" alt="" coords="637,341,784,367"/>
+<area shape="rect" id="node31" href="$df/db4/negate_8cpp.html" title="src/notation/negate.cpp" alt="" coords="809,341,967,367"/>
+<area shape="rect" id="node34" href="$d0/d27/variable_8cpp.html" title="src/notation/variable.cpp" alt="" coords="1207,341,1371,367"/>
+<area shape="rect" id="node38" href="$d2/dc0/value_8cpp.html" title="src/notation/value.cpp" alt="" coords="241,341,391,367"/>
+<area shape="rect" id="node44" href="$d1/d48/statement_8cpp.html" title="src/notation/statement.cpp" alt="" coords="2237,259,2414,285"/>
+</map>

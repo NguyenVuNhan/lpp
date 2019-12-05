@@ -1,0 +1,111 @@
+.TH "Rows" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Rows
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rows\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRows\fP (uintmax_t \fBelem_str\fP, bool \fBvalue\fP, uintmax_t strLen=2)"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBtoNode\fP (list< string > label)"
+.br
+.ti -1c
+.RI "int \fBis_match_pair\fP (const \fBRows\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBgetValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDontCare\fP (uint pos)"
+.br
+.ti -1c
+.RI "string \fBgetElem\fP ()"
+.br
+.ti -1c
+.RI "string \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBRows\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBRows\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBRows\fP &other)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBelem_str\fP"
+.br
+.ti -1c
+.RI "bool \fBchecked\fP = false"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBtoBinString\fP (uintmax_t i, uintmax_t strLen)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uintmax_t \fBelem_byte\fP"
+.br
+.ti -1c
+.RI "bool \fBvalue\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Rows::Rows (uintmax_t elem_str, bool value, uintmax_t strLen = \fC2\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "string Rows::getElem ()"
+
+.SS "bool Rows::getValue ()"
+
+.SS "int Rows::is_match_pair (const \fBRows\fP & other)"
+
+.SS "bool Rows::operator< (const \fBRows\fP & other)"
+
+.SS "void Rows::operator= (const \fBRows\fP & other)"
+
+.SS "bool Rows::operator== (const \fBRows\fP & other)"
+
+.SS "void Rows::setDontCare (uint pos)"
+
+.SS "string Rows::toBinString (uintmax_t i, uintmax_t strLen)\fC [private]\fP"
+
+.SS "shared_ptr< \fBNode\fP > Rows::toNode (list< string > label)"
+
+.SS "string Rows::toString ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool Rows::checked = false"
+
+.SS "uintmax_t Rows::elem_byte\fC [private]\fP"
+
+.SS "string Rows::elem_str"
+
+.SS "bool Rows::value\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="da/de0/simpletable_8h" kind="file" language="C++">
+    <compoundname>simpletable.h</compoundname>
+    <includes refid="d5/dbf/truthtable_8h" local="yes">truthtable.h</includes>
+    <includedby refid="dd/dcd/simpletable_8cpp" local="yes">src/table/simpletable.cpp</includedby>
+    <incdepgraph>
+      <node id="949">
+        <label>list</label>
+      </node>
+      <node id="941">
+        <label>../proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+      </node>
+      <node id="952">
+        <label>iomanip</label>
+      </node>
+      <node id="955">
+        <label>rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>stdint.h</label>
+      </node>
+      <node id="940">
+        <label>truthtable.h</label>
+        <link refid="d5/dbf/truthtable_8h"/>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="945">
+        <label>string</label>
+      </node>
+      <node id="944">
+        <label>fstream</label>
+      </node>
+      <node id="954">
+        <label>tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+      </node>
+      <node id="950">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+      </node>
+      <node id="948">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="946">
+        <label>array</label>
+      </node>
+      <node id="957">
+        <label>math.h</label>
+      </node>
+      <node id="943">
+        <label>iostream</label>
+      </node>
+      <node id="947">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="939">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="940" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>algorithm</label>
+      </node>
+      <node id="942">
+        <label>../notation/node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="959">
+        <label>src/table/simpletable.cpp</label>
+        <link refid="dd/dcd/simpletable_8cpp"/>
+      </node>
+      <node id="958">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="959" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d0/d52/class_simple_table" prot="public">SimpleTable</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SIMPLETABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIMPLETABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/dbf/truthtable_8h" kindref="compound">truthtable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d0/d52/class_simple_table" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d0/d52/class_simple_table" kindref="compound">SimpleTable</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="dc/d49/class_truth_table" kindref="compound">TruthTable</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;list&lt;Rows&gt;&gt;<sp/><ref refid="d0/d52/class_simple_table_1a34c3e2eb7dcd3c05e22ea56f719913e2" kindref="member">getAllRowsGroup</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;Rows&gt;<sp/><ref refid="d0/d52/class_simple_table_1a4d4e552c725f1306708a5918365f7d26" kindref="member">getQuineMcCluskey</ref>(list&lt;list&lt;Rows&gt;&gt;<sp/>rowsGroup);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d52/class_simple_table_1ad94b85aed20f08c4513394cec5d11fe1" kindref="member">simplify</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d52/class_simple_table_1ae021726ae4be0f56813c3f1306c9097b" kindref="member">SimpleTable</ref>(<ref refid="dd/df8/class_tree" kindref="compound">Tree</ref><sp/>root);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d52/class_simple_table_1ae021726ae4be0f56813c3f1306c9097b" kindref="member">SimpleTable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>prop=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d52/class_simple_table_1ae021726ae4be0f56813c3f1306c9097b" kindref="member">SimpleTable</ref>(shared_ptr&lt;Node&gt;<sp/>root);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d52/class_simple_table_1ae021726ae4be0f56813c3f1306c9097b" kindref="member">SimpleTable</ref>(<ref refid="dc/d49/class_truth_table" kindref="compound">TruthTable</ref><sp/>truthTable);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SIMPLETABLE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/table/simpletable.h"/>
+  </compounddef>
+</doxygen>

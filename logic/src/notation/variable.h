@@ -12,9 +12,13 @@ public:
 
     // Node interface
 public:
+    //! @copydoc Node::getValue(string)
     bool getValue(string valList) override;
+    //! @copydoc Node::toString()
     string toString() override;
+    //! @copydoc Node::setVariable(string,string)
     void setVariable(string fromVariable, string toVariable) override;
+    //! @copydoc Node::copy()
     shared_ptr<Node> copy() override;
 };
 

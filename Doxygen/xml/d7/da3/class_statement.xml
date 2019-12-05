@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d7/da3/class_statement" kind="class" language="C++" prot="public">
+    <compoundname>Statement</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes refid="de/d93/statement_8h" local="no">statement.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Statement::Statement</definition>
+        <argsstring>(string notate, list&lt; shared_ptr&lt; Node &gt; &gt; listNodes)</argsstring>
+        <name>Statement</name>
+        <param>
+          <type>string</type>
+          <declname>notate</declname>
+        </param>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;</type>
+          <declname>listNodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="9" column="1" bodyfile="src/notation/statement.cpp" bodystart="3" bodyend="8"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a6f4d56b4180183819b76f01209acb3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Statement::Statement</definition>
+        <argsstring>(char notate, list&lt; shared_ptr&lt; Node &gt; &gt; listNodes)</argsstring>
+        <name>Statement</name>
+        <param>
+          <type>char</type>
+          <declname>notate</declname>
+        </param>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;</type>
+          <declname>listNodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="10" column="1" bodyfile="src/notation/statement.cpp" bodystart="10" bodyend="15"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a4ca9db7feff843e91b1f2200fc77a784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Statement::~Statement</definition>
+        <argsstring>() override</argsstring>
+        <name>~Statement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="11" column="1" bodyfile="src/notation/statement.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Statement::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0">toString</reimplements>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="15" column="1" bodyfile="src/notation/statement.cpp" bodystart="22" bodyend="31"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Statement::setVariable</definition>
+        <argsstring>(string fromVariable, string toVariable) override</argsstring>
+        <name>setVariable</name>
+        <reimplements refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f">setVariable</reimplements>
+        <param>
+          <type>string</type>
+          <declname>fromVariable</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>toVariable</declname>
+        </param>
+        <briefdescription>
+<para>change variable name recursively </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fromVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- variable name to change </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new variable name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="16" column="1" bodyfile="src/notation/statement.cpp" bodystart="33" bodyend="43"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Statement::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="17" column="1" bodyfile="src/notation/statement.cpp" bodystart="45" bodyend="51"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">Node::variables</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Statement::containedSpecialNode</definition>
+        <argsstring>() override</argsstring>
+        <name>containedSpecialNode</name>
+        <reimplements refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e">containedSpecialNode</reimplements>
+        <briefdescription>
+<para>containedSpecialNode </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/statement.h" line="18" column="1" bodyfile="src/notation/statement.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="134">
+        <label>Statement</label>
+        <link refid="d7/da3/class_statement"/>
+        <childnode refid="135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="135">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="137">
+        <label>Statement</label>
+        <link refid="d7/da3/class_statement"/>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="138">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="139" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/statement.h" line="7" column="1" bodyfile="src/notation/statement.h" bodystart="6" bodyend="19"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>Statement</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>Statement</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>Statement</scope><name>cnfFilter</name></member>
+      <member refid="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240" prot="public" virt="virtual"><scope>Statement</scope><name>containedSpecialNode</name></member>
+      <member refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" prot="public" virt="virtual"><scope>Statement</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>Statement</scope><name>getLeaf</name></member>
+      <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" virt="virtual"><scope>Statement</scope><name>getSTNodeChild</name></member>
+      <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" virt="virtual"><scope>Statement</scope><name>getSTRuleName</name></member>
+      <member refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2" prot="public" virt="virtual"><scope>Statement</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>Statement</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>Statement</scope><name>left</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>Statement</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>Statement</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>Statement</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>Statement</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>Statement</scope><name>right</name></member>
+      <member refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" prot="public" virt="virtual"><scope>Statement</scope><name>setVariable</name></member>
+      <member refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" prot="public" virt="non-virtual"><scope>Statement</scope><name>Statement</name></member>
+      <member refid="d7/da3/class_statement_1a6f4d56b4180183819b76f01209acb3d1" prot="public" virt="non-virtual"><scope>Statement</scope><name>Statement</name></member>
+      <member refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" prot="public" virt="virtual"><scope>Statement</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>Statement</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>Statement</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>Statement</scope><name>variables</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>Statement</scope><name>~Node</name></member>
+      <member refid="d7/da3/class_statement_1a4ca9db7feff843e91b1f2200fc77a784" prot="public" virt="non-virtual"><scope>Statement</scope><name>~Statement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

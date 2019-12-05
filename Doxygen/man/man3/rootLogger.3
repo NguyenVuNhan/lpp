@@ -1,0 +1,41 @@
+.TH "rootLogger" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rootLogger
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logging\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBsetHandler\fP (\fBhandler\fP *newHandler)"
+.br
+.ti -1c
+.RI "static void \fBinfo\fP (std::string message)"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBlogging\fP \fBlog\fP = \fBlogging\fP(new \fBhandler\fP('root\&.log'))"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void rootLogger::info (std::string message)\fC [static]\fP"
+
+.SS "void rootLogger::setHandler (\fBhandler\fP * newHandler)\fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBlogging\fP rootLogger::log = \fBlogging\fP(new \fBhandler\fP('root\&.log'))\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

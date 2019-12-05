@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="da/d09/forall_8cpp" kind="file" language="C++">
+    <compoundname>forall.cpp</compoundname>
+    <includes refid="d2/dee/forall_8h" local="yes">forall.h</includes>
+    <includes refid="d8/dff/negate_8h" local="yes">negate.h</includes>
+    <includes refid="d0/d30/notation_2variable_8h" local="yes">variable.h</includes>
+    <incdepgraph>
+      <node id="177">
+        <label>list</label>
+      </node>
+      <node id="180">
+        <label>iomanip</label>
+      </node>
+      <node id="182">
+        <label>negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>string</label>
+      </node>
+      <node id="168">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>fstream</label>
+      </node>
+      <node id="183">
+        <label>variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="178">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>array</label>
+      </node>
+      <node id="171">
+        <label>iostream</label>
+      </node>
+      <node id="175">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="169">
+        <label>forall.h</label>
+        <link refid="d2/dee/forall_8h"/>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>algorithm</label>
+      </node>
+      <node id="170">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/dee/forall_8h" kindref="compound">forall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/dff/negate_8h" kindref="compound">negate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d30/notation_2variable_8h" kindref="compound">variable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d8/dc5/class_for_all_1a2f654f00f8d997a89699dff8f1efd759" refkind="member"><highlight class="normal"><ref refid="d8/dc5/class_for_all_1a2f654f00f8d997a89699dff8f1efd759" kindref="member">ForAll::ForAll</ref>(shared_ptr&lt;Node&gt;<sp/>l,<sp/>shared_ptr&lt;Node&gt;<sp/>r)<sp/>:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>(l,<sp/>r)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;!&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d8/dc5/class_for_all_1a0c63e42814329a95378fe95f41a369fa" refkind="member"><highlight class="normal"><ref refid="d8/dc5/class_for_all_1a0c63e42814329a95378fe95f41a369fa" kindref="member">ForAll::~ForAll</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85" kindref="member">ForAll::toString</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;(!&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kindref="member">left</ref>-&gt;toString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.(&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;toString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;))&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d8/dc5/class_for_all_1a97e03dcd8f51824fe629487847b7c4dc" refkind="member"><highlight class="normal"><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref><sp/><ref refid="d8/dc5/class_for_all_1a97e03dcd8f51824fe629487847b7c4dc" kindref="member">ForAll::getSTRuleName</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isNegation)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" kindref="member">DELTA</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" kindref="member">isRulesReturned</ref>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" kindref="member">GAMMA</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" kindref="member">NN</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" kindref="member">ForAll::getSTNodeChild</ref>(shared_ptr&lt;STNode&gt;<sp/>root,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isNegation)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>root-&gt;left<sp/>=<sp/>make_shared&lt;STNode&gt;(root-&gt;nodes,<sp/>root-&gt;listVar);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isNegation)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>newVar;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newVar<sp/>=<sp/><ref refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kindref="member">left</ref>-&gt;notation;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newVar<sp/>+=<sp/>to_string(i++);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" kindref="member">contains</ref>(root-&gt;listVar,<sp/>newVar));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>proposition;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;containedSpecialNode())</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition<sp/>=<sp/>make_shared&lt;Negate&gt;(<ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;copy());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition<sp/>=<sp/><sp/>make_shared&lt;Negate&gt;(<ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition-&gt;setVariable(<ref refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kindref="member">left</ref>-&gt;notation,<sp/>newVar);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listReplaceAt&lt;Node&gt;(root-&gt;left-&gt;nodes,<sp/>proposition,<sp/>pos);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root-&gt;left-&gt;listVar.push_back(newVar);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" kindref="member">isRulesReturned</ref>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>tmp_list_l;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>tmp<sp/>=<sp/><ref refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" kindref="member">copy</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp-&gt;isRulesReturned<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_list_l.push_back(tmp);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>var<sp/>:<sp/>root-&gt;listVar)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;Node&gt;<sp/>proposition<sp/>=<sp/><ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;containedSpecialNode())</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition<sp/>=<sp/><ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;copy();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition<sp/>=<sp/><ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proposition-&gt;setVariable(<ref refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kindref="member">left</ref>-&gt;notation,<sp/>var);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_list_l.push_back(proposition);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listReplaceAt&lt;Node&gt;(root-&gt;left-&gt;nodes,<sp/>tmp_list_l,<sp/>pos);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" refkind="member"><highlight class="normal">shared_ptr&lt;Node&gt;<sp/><ref refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" kindref="member">ForAll::copy</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_shared&lt;ForAll&gt;(<ref refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" kindref="member">left</ref>-&gt;copy(),<sp/><ref refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" kindref="member">right</ref>-&gt;copy());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/forall.cpp"/>
+  </compounddef>
+</doxygen>

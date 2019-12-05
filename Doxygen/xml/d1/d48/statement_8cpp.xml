@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d1/d48/statement_8cpp" kind="file" language="C++">
+    <compoundname>statement.cpp</compoundname>
+    <includes refid="de/d93/statement_8h" local="yes">statement.h</includes>
+    <incdepgraph>
+      <node id="518">
+        <label>list</label>
+      </node>
+      <node id="521">
+        <label>iomanip</label>
+      </node>
+      <node id="514">
+        <label>string</label>
+      </node>
+      <node id="510">
+        <label>statement.h</label>
+        <link refid="de/d93/statement_8h"/>
+        <childnode refid="511" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>fstream</label>
+      </node>
+      <node id="519">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>../proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>src/notation/statement.cpp</label>
+        <link refid="d1/d48/statement_8cpp"/>
+        <childnode refid="510" relation="include">
+        </childnode>
+      </node>
+      <node id="515">
+        <label>array</label>
+      </node>
+      <node id="512">
+        <label>iostream</label>
+      </node>
+      <node id="516">
+        <label>../proposition/tableaux/enum.h</label>
+        <link refid="d5/d32/proposition_2tableaux_2enum_8h"/>
+      </node>
+      <node id="520">
+        <label>algorithm</label>
+      </node>
+      <node id="511">
+        <label>node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+      </node>
+      <node id="522">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d93/statement_8h" kindref="compound">statement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" refkind="member"><highlight class="normal"><ref refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" kindref="member">Statement::Statement</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>notate,<sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>listNodes)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref><sp/>=<sp/>listNodes;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/>notate;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="d7/da3/class_statement_1a6f4d56b4180183819b76f01209acb3d1" refkind="member"><highlight class="normal"><ref refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" kindref="member">Statement::Statement</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>notate,<sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>listNodes)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref><sp/>=<sp/>listNodes;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref><sp/>=<sp/>string(&amp;notate,<sp/>1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d7/da3/class_statement_1a4ca9db7feff843e91b1f2200fc77a784" refkind="member"><highlight class="normal"><ref refid="d7/da3/class_statement_1a4ca9db7feff843e91b1f2200fc77a784" kindref="member">Statement::~Statement</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" kindref="member">Statement::toString</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>returnString<sp/>=<sp/><ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;variable<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>returnString<sp/>+=<sp/>variable-&gt;notation;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>returnString;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" kindref="member">Statement::setVariable</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fromVariable,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>toVariable)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;variable<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(variable-&gt;notation<sp/>==<sp/>fromVariable)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>variable-&gt;notation<sp/>=<sp/>toVariable;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" refkind="member"><highlight class="normal">shared_ptr&lt;Node&gt;<sp/><ref refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" kindref="member">Statement::copy</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>tmplist;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>:<sp/><ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">variables</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmplist.push_back(e-&gt;copy());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_shared&lt;Statement&gt;(<ref refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" kindref="member">notation</ref>,<sp/>tmplist);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240" kindref="member">Statement::containedSpecialNode</ref>()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/notation/statement.cpp"/>
+  </compounddef>
+</doxygen>

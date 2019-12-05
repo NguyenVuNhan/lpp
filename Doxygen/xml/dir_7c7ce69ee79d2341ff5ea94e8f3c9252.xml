@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_7c7ce69ee79d2341ff5ea94e8f3c9252" kind="dir">
+    <compoundname>notation</compoundname>
+    <innerfile refid="dc/d62/and_8cpp">and.cpp</innerfile>
+    <innerfile refid="d5/d25/and_8h">and.h</innerfile>
+    <innerfile refid="d0/dbf/biimplicate_8cpp">biimplicate.cpp</innerfile>
+    <innerfile refid="dd/d69/biimplicate_8h">biimplicate.h</innerfile>
+    <innerfile refid="da/d46/exists_8cpp">exists.cpp</innerfile>
+    <innerfile refid="d1/dc4/exists_8h">exists.h</innerfile>
+    <innerfile refid="da/d09/forall_8cpp">forall.cpp</innerfile>
+    <innerfile refid="d2/dee/forall_8h">forall.h</innerfile>
+    <innerfile refid="dc/d93/implicate_8cpp">implicate.cpp</innerfile>
+    <innerfile refid="d0/d93/implicate_8h">implicate.h</innerfile>
+    <innerfile refid="db/d9c/multiand_8cpp">multiand.cpp</innerfile>
+    <innerfile refid="d9/d1d/multiand_8h">multiand.h</innerfile>
+    <innerfile refid="df/db6/multior_8cpp">multior.cpp</innerfile>
+    <innerfile refid="da/d4e/multior_8h">multior.h</innerfile>
+    <innerfile refid="db/d7a/nand_8cpp">nand.cpp</innerfile>
+    <innerfile refid="d6/df8/nand_8h">nand.h</innerfile>
+    <innerfile refid="df/db4/negate_8cpp">negate.cpp</innerfile>
+    <innerfile refid="d8/dff/negate_8h">negate.h</innerfile>
+    <innerfile refid="d7/d70/node_8cpp">node.cpp</innerfile>
+    <innerfile refid="d1/d77/node_8h">node.h</innerfile>
+    <innerfile refid="d1/da4/or_8cpp">or.cpp</innerfile>
+    <innerfile refid="df/d34/or_8h">or.h</innerfile>
+    <innerfile refid="d1/d48/statement_8cpp">statement.cpp</innerfile>
+    <innerfile refid="de/d93/statement_8h">statement.h</innerfile>
+    <innerfile refid="d2/dc0/value_8cpp">value.cpp</innerfile>
+    <innerfile refid="d4/d3f/value_8h">value.h</innerfile>
+    <innerfile refid="d0/d27/variable_8cpp">variable.cpp</innerfile>
+    <innerfile refid="d0/d30/notation_2variable_8h">variable.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="notation/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+.TH "src/logging.h" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/logging.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <list>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBhandler\fP"
+.br
+.ti -1c
+.RI "class \fBlogging\fP"
+.br
+.ti -1c
+.RI "struct \fBrootLogger\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBINFO\fP(message)   \fBrootLogger::info\fP(message);"
+.br
+.ti -1c
+.RI "#define \fBSET_LOGGING_HANDLER\fP(newHandler)   \fBrootLogger::setHandler\fP(newHandler);"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBNowTime\fP ()"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define INFO(message)   \fBrootLogger::info\fP(message);"
+
+.SS "#define SET_LOGGING_HANDLER(newHandler)   \fBrootLogger::setHandler\fP(newHandler);"
+
+.SH "Function Documentation"
+.PP 
+.SS "std::string NowTime ()\fC [inline]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

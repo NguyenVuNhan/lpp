@@ -1,0 +1,349 @@
+.TH "Node" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Node
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <node\&.h>\fP
+.PP
+Inherits enable_shared_from_this< Node >\&.
+.PP
+Inherited by \fBAnd\fP, \fBBiImplicate\fP, \fBExists\fP, \fBForAll\fP, \fBImplicate\fP, \fBMultiAnd\fP, \fBMultiOr\fP, \fBNAnd\fP, \fBNegate\fP, \fBOr\fP, \fBStatement\fP, \fBValue\fP, and \fBVariable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNode\fP (shared_ptr< \fBNode\fP > \fBleft\fP=nullptr, shared_ptr< \fBNode\fP > \fBright\fP=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~Node\fP ()"
+.br
+.ti -1c
+.RI "void \fBtreeTraveler\fP (ofstream &out, int rootId=\-1)"
+.br
+.RI "travel tree and produce a graph "
+.ti -1c
+.RI "virtual string \fBtoStringPrefix\fP ()"
+.br
+.RI "get proposition prefix formular "
+.ti -1c
+.RI "virtual string \fBtoString\fP ()"
+.br
+.RI "get proposition infix formular "
+.ti -1c
+.RI "virtual bool \fBgetValue\fP (string valList)"
+.br
+.RI "get proposition value "
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBnandify\fP (bool isNegation=false)"
+.br
+.RI "nandify proposition "
+.ti -1c
+.RI "virtual \fBRULES\fP \fBgetSTRuleName\fP (bool isNegation=false)"
+.br
+.RI "get semantic taubleux rule name "
+.ti -1c
+.RI "virtual void \fBgetSTNodeChild\fP (shared_ptr< \fBSTNode\fP > root, long pos, bool isNegation=false)"
+.br
+.RI "get semantic taubleaux node child (\fBSTNode\&.left\fP and \fBSTNode\&.right\fP) "
+.ti -1c
+.RI "virtual void \fBsetVariable\fP (string fromVariable, string toVariable)"
+.br
+.RI "change variable name recursively "
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBcnfFilter\fP (bool isNegation=false)"
+.br
+.RI "in this function node will be "
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBcnfDistribution\fP ()"
+.br
+.RI "cnf distribution - this function will be called after setVariable "
+.ti -1c
+.RI "virtual void \fBgetLeaf\fP (list< shared_ptr< \fBNode\fP >> &listNode)"
+.br
+.RI "get leaf of current \fBNode\fP "
+.ti -1c
+.RI "virtual shared_ptr< \fBNode\fP > \fBcopy\fP ()"
+.br
+.RI "deep copy node "
+.ti -1c
+.RI "virtual bool \fBcontainedSpecialNode\fP ()"
+.br
+.RI "containedSpecialNode "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisRulesReturned\fP = false"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBleft\fP = nullptr"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBright\fP = nullptr"
+.br
+.ti -1c
+.RI "list< shared_ptr< \fBNode\fP > > \fBvariables\fP"
+.br
+.ti -1c
+.RI "string \fBnotation\fP = '1'"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBorSimplify\fP (shared_ptr< \fBNode\fP > l, shared_ptr< \fBNode\fP > r)"
+.br
+.ti -1c
+.RI "shared_ptr< \fBNode\fP > \fBandSimplify\fP (shared_ptr< \fBNode\fP > l, shared_ptr< \fBNode\fP > r)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBid\fP = \-1"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Node::Node (shared_ptr< \fBNode\fP > left = \fCnullptr\fP, shared_ptr< \fBNode\fP > right = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "Node::~Node ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "shared_ptr< \fBNode\fP > Node::andSimplify (shared_ptr< \fBNode\fP > l, shared_ptr< \fBNode\fP > r)\fC [protected]\fP"
+
+.SS "shared_ptr< \fBNode\fP > Node::cnfDistribution ()\fC [virtual]\fP"
+
+.PP
+cnf distribution - this function will be called after setVariable 
+.PP
+\fBReturns:\fP
+.RS 4
+node that applied distribution rule 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBAnd\fP, and \fBOr\fP\&.
+.SS "shared_ptr< \fBNode\fP > Node::cnfFilter (bool isNegation = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+in this function node will be 
+.IP "\(bu" 2
+Remove bi-implicate
+.IP "\(bu" 2
+Remove implicate
+.IP "\(bu" 2
+Doing the morgan 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIisNegation\fP - check if this node parent is Negation 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+node has been cnf filtered 
+.RE
+.PP
+
+.PP
+
+.PP
+Reimplemented in \fBAnd\fP, \fBNegate\fP, \fBOr\fP, \fBBiImplicate\fP, \fBImplicate\fP, \fBNAnd\fP, and \fBValue\fP\&.
+.SS "bool Node::containedSpecialNode ()\fC [virtual]\fP"
+
+.PP
+containedSpecialNode 
+.PP
+\fBReturns:\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented in \fBStatement\fP\&.
+.SS "shared_ptr< \fBNode\fP > Node::copy ()\fC [virtual]\fP"
+
+.PP
+deep copy node 
+.PP
+\fBReturns:\fP
+.RS 4
+a deep copy of node 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMultiOrNorm\fP, \fBAnd\fP, \fBMultiAndNorm\fP, \fBOr\fP, \fBNegate\fP, \fBBiImplicate\fP, \fBImplicate\fP, \fBNAnd\fP, \fBValue\fP, \fBMultiOr\fP, \fBVariable\fP, \fBExists\fP, \fBForAll\fP, \fBMultiAnd\fP, and \fBStatement\fP\&.
+.SS "void Node::getLeaf (list< shared_ptr< \fBNode\fP >> & listNode)\fC [virtual]\fP"
+
+.PP
+get leaf of current \fBNode\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlistNode\fP - empty list of shared_ptr<Node> 
+.br
+\fIlistNode\fP - list of shared_ptr<Node> 
+.RE
+.PP
+
+.SS "void Node::getSTNodeChild (shared_ptr< \fBSTNode\fP > root, long pos, bool isNegation = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+get semantic taubleaux node child (\fBSTNode\&.left\fP and \fBSTNode\&.right\fP) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIroot\fP - \fBSTNode\fP 
+.br
+\fIroot\fP - \fBSTNode\fP contains child 
+.br
+\fIpos\fP - position of child \fBNode\fP of \fBSTNode::nodes\fP list 
+.br
+\fIisNegation\fP - check if this node parent is Negation 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBAnd\fP, \fBNegate\fP, \fBOr\fP, \fBBiImplicate\fP, \fBImplicate\fP, \fBNAnd\fP, \fBExists\fP, and \fBForAll\fP\&.
+.SS "\fBRULES\fP Node::getSTRuleName (bool isNegation = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+get semantic taubleux rule name 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIisNegation\fP - check if this node parent is Negation 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+RULES - semantic taubleaux rule name 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBAnd\fP, \fBNegate\fP, \fBOr\fP, \fBImplicate\fP, \fBNAnd\fP, \fBBiImplicate\fP, \fBExists\fP, and \fBForAll\fP\&.
+.SS "bool Node::getValue (string valList)\fC [virtual]\fP"
+
+.PP
+get proposition value 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalList\fP - string contains proposition variable and their value\&. 
+.br
+ e\&.g\&. 'A1B0C1' 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+proposition value 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMultiOr\fP, \fBMultiAnd\fP, \fBAnd\fP, \fBOr\fP, \fBVariable\fP, \fBBiImplicate\fP, \fBImplicate\fP, \fBNAnd\fP, \fBNegate\fP, and \fBValue\fP\&.
+.SS "shared_ptr< \fBNode\fP > Node::nandify (bool isNegation = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+nandify proposition 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIisNegation\fP - check if this node parent is Negation 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+nandified tree 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBAnd\fP, \fBBiImplicate\fP, \fBOr\fP, \fBValue\fP, \fBImplicate\fP, \fBNAnd\fP, and \fBNegate\fP\&.
+.SS "shared_ptr< \fBNode\fP > Node::orSimplify (shared_ptr< \fBNode\fP > l, shared_ptr< \fBNode\fP > r)\fC [protected]\fP"
+
+.SS "void Node::setVariable (string fromVariable, string toVariable)\fC [virtual]\fP"
+
+.PP
+change variable name recursively 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfromVariable\fP - variable name to change 
+.br
+\fItoVariable\fP - new variable name 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBValue\fP, \fBVariable\fP, and \fBStatement\fP\&.
+.SS "string Node::toString ()\fC [virtual]\fP"
+
+.PP
+get proposition infix formular 
+.PP
+\fBReturns:\fP
+.RS 4
+string of infix proposition 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMultiOrNorm\fP, \fBMultiAndNorm\fP, \fBNegate\fP, \fBVariable\fP, \fBMultiOr\fP, \fBStatement\fP, \fBValue\fP, \fBExists\fP, \fBForAll\fP, and \fBMultiAnd\fP\&.
+.SS "string Node::toStringPrefix ()\fC [virtual]\fP"
+
+.PP
+get proposition prefix formular 
+.PP
+\fBReturns:\fP
+.RS 4
+string of prefix proposition 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMultiOr\fP, and \fBMultiAnd\fP\&.
+.SS "void Node::treeTraveler (ofstream & out, int rootId = \fC\-1\fP)"
+
+.PP
+travel tree and produce a graph 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIout\fP File output stream 
+.br
+\fIrootId\fP Parrent Id, equal to -1 by default if there is no parent 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int Node::id = \-1\fC [private]\fP"
+
+.SS "bool Node::isRulesReturned = false"
+
+.SS "shared_ptr<\fBNode\fP> Node::left = nullptr"
+
+.SS "string Node::notation = '1'"
+
+.SS "shared_ptr<\fBNode\fP> Node::right = nullptr"
+
+.SS "list<shared_ptr<\fBNode\fP> > Node::variables"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

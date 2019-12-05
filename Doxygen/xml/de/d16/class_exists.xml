@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="de/d16/class_exists" kind="class" language="C++" prot="public">
+    <compoundname>Exists</compoundname>
+    <basecompoundref refid="dc/d8f/class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+    <includes refid="d1/dc4/exists_8h" local="no">exists.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d16/class_exists_1ae51931aa14079e565a7b700b8f1d1fb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Exists::Exists</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; l=nullptr, shared_ptr&lt; Node &gt; r=nullptr)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>l</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>r</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="9" column="1" bodyfile="src/notation/exists.cpp" bodystart="5" bodyend="9"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">Node::notation</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d16/class_exists_1a12ebe07a95afddca068d6cbdd67508f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Exists::~Exists</definition>
+        <argsstring>() override</argsstring>
+        <name>~Exists</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="10" column="1" bodyfile="src/notation/exists.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Exists::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0">toString</reimplements>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="14" column="1" bodyfile="src/notation/exists.cpp" bodystart="16" bodyend="19"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d16/class_exists_1aff7b8694345884d06bdd751e88fae041" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref></type>
+        <definition>RULES Exists::getSTRuleName</definition>
+        <argsstring>(bool isNegation) override</argsstring>
+        <name>getSTRuleName</name>
+        <reimplements refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072">getSTRuleName</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleux rule name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RULES - semantic taubleaux rule name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="15" column="1" bodyfile="src/notation/exists.cpp" bodystart="21" bodyend="33"/>
+        <references refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" compoundref="d1/d77/node_8h" startline="25">Node::isRulesReturned</references>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a61da26d1c3aae463f51b6fc2a99370eb" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="9">GAMMA</references>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="10">NN</references>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a826f7fa03272bd9a96356f099b8904dc" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="7">DELTA</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Exists::getSTNodeChild</definition>
+        <argsstring>(shared_ptr&lt; STNode &gt; root, long pos, bool isNegation) override</argsstring>
+        <name>getSTNodeChild</name>
+        <reimplements refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c">getSTNodeChild</reimplements>
+        <param>
+          <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+        </param>
+        <briefdescription>
+<para>get semantic taubleaux node child (<ref refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kindref="member">STNode.left</ref> and <ref refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kindref="member">STNode.right</ref>) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> contains child </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- position of child <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> of <ref refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kindref="member">STNode::nodes</ref> list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="16" column="1" bodyfile="src/notation/exists.cpp" bodystart="35" bodyend="85"/>
+        <references refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" compoundref="d1/d77/node_8h" startline="25">Node::isRulesReturned</references>
+        <references refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" compoundref="da/d46/exists_8cpp" startline="88" endline="91">copy</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="d5/d60/utils_8h_1a0dff2108971135c5c8b92f417761e6b7" compoundref="d5/d60/utils_8h" startline="14" endline="18">contains</references>
+      </memberdef>
+      <memberdef kind="function" id="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Exists::copy</definition>
+        <argsstring>() override</argsstring>
+        <name>copy</name>
+        <reimplements refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb">copy</reimplements>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/exists.h" line="17" column="1" bodyfile="src/notation/exists.cpp" bodystart="88" bodyend="91"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">Node::left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">Node::right</references>
+        <referencedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" compoundref="da/d46/exists_8cpp" startline="35" endline="85">getSTNodeChild</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="20">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Exists</label>
+        <link refid="de/d16/class_exists"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="24">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="23">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Exists</label>
+        <link refid="de/d16/class_exists"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/exists.h" line="7" column="1" bodyfile="src/notation/exists.h" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>Exists</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>Exists</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>Exists</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>Exists</scope><name>containedSpecialNode</name></member>
+      <member refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" prot="public" virt="virtual"><scope>Exists</scope><name>copy</name></member>
+      <member refid="de/d16/class_exists_1ae51931aa14079e565a7b700b8f1d1fb1" prot="public" virt="non-virtual"><scope>Exists</scope><name>Exists</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>Exists</scope><name>getLeaf</name></member>
+      <member refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" prot="public" virt="virtual"><scope>Exists</scope><name>getSTNodeChild</name></member>
+      <member refid="de/d16/class_exists_1aff7b8694345884d06bdd751e88fae041" prot="public" virt="virtual"><scope>Exists</scope><name>getSTRuleName</name></member>
+      <member refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2" prot="public" virt="virtual"><scope>Exists</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>Exists</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>Exists</scope><name>left</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>Exists</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>Exists</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>Exists</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>Exists</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>Exists</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>Exists</scope><name>setVariable</name></member>
+      <member refid="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068" prot="public" virt="virtual"><scope>Exists</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>Exists</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>Exists</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>Exists</scope><name>variables</name></member>
+      <member refid="de/d16/class_exists_1a12ebe07a95afddca068d6cbdd67508f2" prot="public" virt="non-virtual"><scope>Exists</scope><name>~Exists</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>Exists</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

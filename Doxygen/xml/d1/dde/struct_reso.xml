@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d1/dde/struct_reso" kind="struct" language="C++" prot="public">
+    <compoundname>Reso</compoundname>
+    <includes refid="d1/d47/cnf_8h" local="no">cnf.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" prot="public" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt;Node&gt; Reso::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <initializer>= make_shared&lt;<ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref>&gt;()</initializer>
+        <briefdescription>
+<para>resolution </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="19" column="1" bodyfile="src/cnf/cnf.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">I_CNF::resolution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" prot="public" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt;Node&gt; Reso::subtituteSolution</definition>
+        <argsstring></argsstring>
+        <name>subtituteSolution</name>
+        <initializer>= make_shared&lt;<ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref>&gt;()</initializer>
+        <briefdescription>
+<para>subtitute resolution </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="23" column="1" bodyfile="src/cnf/cnf.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">I_CNF::resolution</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="d1/dde/struct_reso" kindref="compound">Reso</ref> struct. </para>    </briefdescription>
+    <detaileddescription>
+<para>Contain resolution and SubtituteResolution </para>    </detaileddescription>
+    <location file="src/cnf/cnf.h" line="15" column="1" bodyfile="src/cnf/cnf.h" bodystart="14" bodyend="24"/>
+    <listofallmembers>
+      <member refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" prot="public" virt="non-virtual"><scope>Reso</scope><name>resolution</name></member>
+      <member refid="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" prot="public" virt="non-virtual"><scope>Reso</scope><name>subtituteSolution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

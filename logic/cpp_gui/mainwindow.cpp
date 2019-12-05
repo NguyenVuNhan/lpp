@@ -1,14 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "../src/table/simpletable.h"
+#include <QTextCursor>
+#include <QMetaType>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    appHandler *h = new appHandler("logic.log", this);
+    qRegisterMetaType<std::string>();
+    connect(h, &appHandler::addStatus, this, &MainWindow::onAddStatus);
+    SET_LOGGING_HANDLER(h)
     ui->setupUi(this);
+    qRegisterMetaType<QTextCursor>("QTextCursor");
 
-    SET_LOGGING_HANDLER(new appHandler("logic.log", this))
     INFO("Initiallize")
 
     ui->tb_prefix->setReadOnly(true);
@@ -24,9 +29,69 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::addStatus(string message)
+void MainWindow::get_CNF_thread(Tree* tree, resultHandler &rh)
 {
-    ui->te_log->appendPlainText(QString::fromStdString(message));
+    INFO("Generating CNF")
+    CNF cnf(tree->getTree());
+    rh.cnf = QString::fromStdString(cnf.getProposition());
+    TruthTable cnf_table(cnf.getTree());
+    rh.hex.append("CNF table hash\t\t: " + QString::fromStdString(cnf_table.getHashCode()));
+    SimpleTable cnf_simplified_table(cnf_table);
+    rh.hex.append("CNF simple table hash\t\t: " + QString::fromStdString(cnf_simplified_table.getHashCode()));
+    rh.satisfiable = QString::fromStdString(cnf.getDavidPutnam());
+}
+
+void MainWindow::get_tautology_thread(Tree *tree, resultHandler &rh)
+{
+    INFO("Getting tautology")
+    if(tree->isTautology())
+    {
+        rh.tautology = true;
+    }
+}
+
+void MainWindow::get_table_thread(Tree *tree, resultHandler &rh)
+{
+    INFO("Generating table")
+    TruthTable table(tree->getTree());
+    rh.truthTable.append(ui->tb_variables->toPlainText() + 'v');
+    for(Rows r : table.getTable())
+    {
+        rh.truthTable.append(QString::fromStdString(r.toString()));
+    }
+    rh.hex.append("Truth table hash\t\t: " + QString::fromStdString(table.getHashCode()));
+
+    INFO("Generating simple table")
+    SimpleTable s_table(table);
+    rh.simpleTable.append(ui->tb_variables->toPlainText() + 'v');
+    for(Rows r : s_table.getTable())
+    {
+        rh.simpleTable.append(QString::fromStdString(r.toString()));
+    }
+    rh.hex.append("Simplified table hash\t\t: " + QString::fromStdString(s_table.getHashCode()));
+
+    std::thread t_normalize(&MainWindow::get_normalize_thread, this, table, std::ref(rh));
+    t_normalize.join();
+
+    std::thread t_s_normalize(&MainWindow::get_normalize_thread, this, s_table, std::ref(rh));
+    t_s_normalize.join();
+}
+
+void MainWindow::get_normalize_thread(TruthTable table, resultHandler &rh)
+{
+    INFO("Generating dnf")
+    Tree dnf_normal = table.getNormalize();
+    rh.dnf_normal = QString::fromStdString(dnf_normal.getProposition());
+    TruthTable dnf_normal_table(dnf_normal);
+    rh.hex.append("DNF norm hash\t\t: " + QString::fromStdString(dnf_normal_table.getHashCode()));
+}
+
+void MainWindow::get_s_normalize_thread(SimpleTable table, resultHandler &rh)
+{
+    Tree dnf_simple = table.getNormalize();
+    rh.dnf_simple = QString::fromStdString(dnf_simple.getProposition());
+    TruthTable dnf_simple_table(dnf_simple);
+    rh.hex.append("DNF simplified hash\t\t: " + QString::fromStdString(dnf_simple_table.getHashCode()));
 }
 
 void MainWindow::on_btnParse_clicked()
@@ -37,6 +102,7 @@ void MainWindow::on_btnParse_clicked()
     if(input == tmpInput)
     {
         ui->btnParse->setEnabled(true);
+        this->setEnabled(true);
         return;
     }
     reset();
@@ -48,16 +114,14 @@ void MainWindow::on_btnParse_clicked()
     {
         tree = new Predicate(input);
         ui->tb_prefix->setText(QString::fromStdString(tree->getProposition()));
-        if(tree->isTautology())
-        {
-            ui->btn_showProof->setVisible(true);
-        }
+        std::thread t_tautology(&MainWindow::get_tautology_thread, this, tree, std::ref(rh));
         string tmpStr = "";
         for(string str : tree->getListVariable())
         {
             tmpStr += str + ' ';
         }
         ui->tb_variables->setText(QString::fromStdString(tmpStr));
+        t_tautology.join();
     }
     else
     {
@@ -78,6 +142,7 @@ void MainWindow::on_btnParse_clicked()
             ui->te_hex->appendPlainText("------------------------------------------------");
         }
         // -------------------------------------------------------------------
+        ui->tb_prefix->setText(QString::fromStdString(tree->getProposition()));
         string tmpStr = "";
         for(string str : tree->getListVariable())
         {
@@ -85,54 +150,34 @@ void MainWindow::on_btnParse_clicked()
         }
         ui->tb_variables->setText(QString::fromStdString(tmpStr));
         // -------------------------------------------------------------------
-        CNF cnf(tree->getTree());
-        ui->tb_cnf->setText(QString::fromStdString(cnf.getProposition()));
-        TruthTable cnf_table(cnf.getTree());
-        ui->te_hex->appendPlainText("CNF table hash\t\t: " + QString::fromStdString(cnf_table.getHashCode()));
-        TruthTable cnf_simplified_table(cnf_table);
-        ui->te_hex->appendPlainText("CNF simple table hash\t: " + QString::fromStdString(cnf_simplified_table.getHashCode()));
-        ui->tb_satisfiable->setText(QString::fromStdString(cnf.getDavidPutnam()));
-        ui->tb_prefix->setText(QString::fromStdString(tree->getProposition()));
+        std::thread t_cnf(&MainWindow::get_CNF_thread, this, tree, std::ref(rh));
         // -------------------------------------------------------------------
-        if(tree->isTautology())
-        {
-            ui->btn_showProof->setVisible(true);
-        }
+        std::thread t_tautology(&MainWindow::get_tautology_thread, this, tree, std::ref(rh));
         // -------------------------------------------------------------------
-        TruthTable table(tree->getTree());
-        showTable(*ui->te_truthtable, table.getTable());
-        ui->te_hex->appendPlainText("Truth table hash\t\t: " + QString::fromStdString(table.getHashCode()));
-        SimpleTable s_table(table);
-        showTable(*ui->te_simpletable, s_table.getTable());
-        ui->te_hex->appendPlainText("Simplified table hash\t\t: " + QString::fromStdString(s_table.getHashCode()));
-        ui->te_hex->appendPlainText("------------------------------------------------");
-        // -------------------------------------------------------------------
-        Tree dnf_normal = table.getNormalize();
-        ui->tb_dnf_normal->setText(QString::fromStdString(dnf_normal.getProposition()));
-        TruthTable dnf_normal_table(dnf_normal);
-        ui->te_hex->appendPlainText("DNF norm hash\t\t: " + QString::fromStdString(dnf_normal_table.getHashCode()));
-        Tree dnf_simple = s_table.getNormalize();
-        ui->tb_dnf_simple->setText(QString::fromStdString(dnf_simple.getProposition()));
-        TruthTable dnf_simple_table(dnf_simple);
-        ui->te_hex->appendPlainText("DNF simplified hash\t\t: " + QString::fromStdString(dnf_simple_table.getHashCode()));
+        std::thread t_table(&MainWindow::get_table_thread, this, tree, std::ref(rh));
+
+        t_cnf.join();
+        t_tautology.join();
+        t_table.join();
     }
 
+    ui->tb_cnf->setText(rh.cnf);
+    ui->tb_satisfiable->setText(rh.satisfiable);
+    ui->tb_dnf_normal->setText(rh.dnf_normal);
+    ui->tb_dnf_simple->setText(rh.dnf_simple);
+    for (QString e : rh.hex) {
+        ui->te_hex->appendPlainText(e);
+    }
+    for (QString e : rh.truthTable) {
+        ui->te_truthtable->appendPlainText(e);
+    }
+    for (QString e : rh.simpleTable) {
+        ui->te_simpletable->appendPlainText(e);
+    }
+
+    ui->btn_showProof->setVisible(rh.tautology);
     ui->btnParse->setEnabled(true);
     this->setEnabled(true);
-}
-
-string MainWindow::QStringtoString(QString str)
-{
-    return str.toUtf8().constData();
-}
-
-void MainWindow::showTable(QPlainTextEdit &te, list<Rows> table_rows)
-{
-    te.appendPlainText(ui->tb_variables->toPlainText() + 'v');
-    for(Rows r : table_rows)
-    {
-        te.appendPlainText(QString::fromStdString(r.toString()));
-    }
 }
 
 void MainWindow::reset()
@@ -152,6 +197,31 @@ void MainWindow::reset()
     ui->tb_satisfiable->clear();
 
     ui->btn_showProof->setVisible(false);
+
+    rh = resultHandler();
+}
+
+void MainWindow::onAddStatus(string message)
+{
+    ui->te_log->appendPlainText(QString::fromStdString(message));
+}
+
+void MainWindow::ui_set_tb_cnf(QString msg)
+{
+    rh.cnf = msg;
+    qDebug() << msg;
+}
+
+void MainWindow::ui_set_te_hex(QString msg)
+{
+    rh.hex.append(msg);
+    qDebug() << msg;
+}
+
+void MainWindow::ui_set_tb_satisfiable(QString msg)
+{
+    rh.satisfiable = msg;
+    qDebug() << msg;
 }
 
 void MainWindow::on_btn_showProof_clicked()
@@ -168,16 +238,12 @@ void MainWindow::on_btn_exportGraph_clicked()
     system("eog ../LPP.dot.png");
 }
 
-appHandler::appHandler(string fn, MainWindow *w)
-    : handler(fn)
-    , _w(w)
-{
-
-}
+appHandler::appHandler(string fn, QObject *parent)
+    : QObject(parent)
+    , handler(fn) { }
 
 void appHandler::write(string msg)
 {
-    _w->addStatus(msg);
+    emit addStatus(msg);
     ofs << msg;
 }
-

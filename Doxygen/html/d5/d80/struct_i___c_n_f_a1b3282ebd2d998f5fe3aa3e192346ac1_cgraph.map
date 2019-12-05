@@ -1,0 +1,5 @@
+<map id="I_CNF::resolution" name="I_CNF::resolution">
+<area shape="rect" id="node2" href="$d5/d80/struct_i___c_n_f.html#a41a7be439cae3ed577a30b3f2742218e" title="check if node contain variable v " alt="" coords="376,5,500,32"/>
+<area shape="rect" id="node3" href="$d5/d80/struct_i___c_n_f.html#a62586e691ebfb00696be6bf9710f4da4" title="merge two Node::variables list. " alt="" coords="185,31,321,57"/>
+<area shape="rect" id="node4" href="$d5/d80/struct_i___c_n_f.html#ad417af0f07b5e7035c3671dcc3e9f798" title="get unique list of node " alt="" coords="179,81,328,108"/>
+</map>

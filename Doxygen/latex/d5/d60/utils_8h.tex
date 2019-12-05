@@ -1,0 +1,84 @@
+\hypertarget{utils_8h}{}\section{src/utils.h File Reference}
+\label{utils_8h}\index{src/utils.\+h@{src/utils.\+h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d29/utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d4c/utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T  = string$>$ }\\bool \hyperlink{utils_8h_a0dff2108971135c5c8b92f417761e6b7}{contains} (list$<$ T $>$ \&list\+Of\+Elements, const T \&element)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{utils_8h_a8970db197c1beaf1ef3a2113d9bbdc3d}{list\+Replace\+At} (list$<$ shared\+\_\+ptr$<$ T $>$ $>$ \&main\+List, list$<$ shared\+\_\+ptr$<$ T $>$$>$ \&tmp\+List, long pos)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{utils_8h_abbb1158ccd7df4b617ce295a96f5ad09}{list\+Replace\+At} (list$<$ shared\+\_\+ptr$<$ T $>$ $>$ \&main\+List, shared\+\_\+ptr$<$ T $>$ tmp\+Elem, long pos)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{utils_8h_acbda3100e3c2692062ae38f95d108b7b}{read\+List} (list$<$ T $>$ l1, uint pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_a0dff2108971135c5c8b92f417761e6b7}\label{utils_8h_a0dff2108971135c5c8b92f417761e6b7}} 
+\index{utils.\+h@{utils.\+h}!contains@{contains}}
+\index{contains@{contains}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T  = string$>$ \\
+bool contains (\begin{DoxyParamCaption}\item[{list$<$ T $>$ \&}]{list\+Of\+Elements,  }\item[{const T \&}]{element }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d60/utils_8h_a0dff2108971135c5c8b92f417761e6b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_a8970db197c1beaf1ef3a2113d9bbdc3d}\label{utils_8h_a8970db197c1beaf1ef3a2113d9bbdc3d}} 
+\index{utils.\+h@{utils.\+h}!list\+Replace\+At@{list\+Replace\+At}}
+\index{list\+Replace\+At@{list\+Replace\+At}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{list\+Replace\+At()}{listReplaceAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void list\+Replace\+At (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ T $>$ $>$ \&}]{main\+List,  }\item[{list$<$ shared\+\_\+ptr$<$ T $>$$>$ \&}]{tmp\+List,  }\item[{long}]{pos }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{d5/d60/utils_8h_a8970db197c1beaf1ef3a2113d9bbdc3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8h_abbb1158ccd7df4b617ce295a96f5ad09}\label{utils_8h_abbb1158ccd7df4b617ce295a96f5ad09}} 
+\index{utils.\+h@{utils.\+h}!list\+Replace\+At@{list\+Replace\+At}}
+\index{list\+Replace\+At@{list\+Replace\+At}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{list\+Replace\+At()}{listReplaceAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void list\+Replace\+At (\begin{DoxyParamCaption}\item[{list$<$ shared\+\_\+ptr$<$ T $>$ $>$ \&}]{main\+List,  }\item[{shared\+\_\+ptr$<$ T $>$}]{tmp\+Elem,  }\item[{long}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utils_8h_acbda3100e3c2692062ae38f95d108b7b}\label{utils_8h_acbda3100e3c2692062ae38f95d108b7b}} 
+\index{utils.\+h@{utils.\+h}!read\+List@{read\+List}}
+\index{read\+List@{read\+List}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{read\+List()}{readList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T read\+List (\begin{DoxyParamCaption}\item[{list$<$ T $>$}]{l1,  }\item[{uint}]{pos }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{d5/d60/utils_8h_acbda3100e3c2692062ae38f95d108b7b_icgraph}
+\end{center}
+\end{figure}

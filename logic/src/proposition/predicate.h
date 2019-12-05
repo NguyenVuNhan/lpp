@@ -10,7 +10,7 @@ public:
     Predicate(shared_ptr<Node> tree=nullptr);
     ~Predicate() override;
 
-protected:
+private:
     shared_ptr<Node> getStatement(string prop, unsigned int &pos) override;
     shared_ptr<Node> getNode(char notation) override;
     shared_ptr<Node> parse(string prop, unsigned int &pos) override;

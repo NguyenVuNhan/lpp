@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dc/d49/class_truth_table" kind="class" language="C++" prot="public">
+    <compoundname>TruthTable</compoundname>
+    <basecompoundref refid="dd/df8/class_tree" prot="public" virt="non-virtual">Tree</basecompoundref>
+    <derivedcompoundref refid="d0/d52/class_simple_table" prot="public" virt="non-virtual">SimpleTable</derivedcompoundref>
+    <includes refid="d5/dbf/truthtable_8h" local="no">truthtable.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d49/class_truth_table_1a39ed5bd7c7af143af2bdc1d48eee669f" prot="private" static="no" mutable="no">
+        <type>list&lt; <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &gt;</type>
+        <definition>list&lt;Rows&gt; TruthTable::trueRows</definition>
+        <argsstring></argsstring>
+        <name>trueRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="10" column="1" bodyfile="src/table/truthtable.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d49/class_truth_table_1af585b18e1c5a1d4e456ae25c6d1ab6f9" prot="private" static="no" mutable="no">
+        <type>list&lt; <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &gt;</type>
+        <definition>list&lt;Rows&gt; TruthTable::falseRows</definition>
+        <argsstring></argsstring>
+        <name>falseRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="11" column="1" bodyfile="src/table/truthtable.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" prot="protected" static="no" mutable="no">
+        <type>list&lt; <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &gt;</type>
+        <definition>list&lt;Rows&gt; TruthTable::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="16" column="1" bodyfile="src/table/truthtable.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="d0/d52/class_simple_table_1ad94b85aed20f08c4513394cec5d11fe1" compoundref="dd/dcd/simpletable_8cpp" startline="28" endline="40">SimpleTable::simplify</referencedby>
+        <referencedby refid="d0/d52/class_simple_table_1a34c3e2eb7dcd3c05e22ea56f719913e2" compoundref="dd/dcd/simpletable_8cpp" startline="42" endline="67">SimpleTable::getAllRowsGroup</referencedby>
+        <referencedby refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</referencedby>
+        <referencedby refid="dc/d49/class_truth_table_1a3683cdc11d4f4735e449aa82c8095357" compoundref="d9/d67/truthtable_8cpp" startline="57" endline="60">getTable</referencedby>
+        <referencedby refid="dc/d49/class_truth_table_1a9dcb8d74d39ebc1a8ada938f1ccbce97" compoundref="d9/d67/truthtable_8cpp" startline="69" endline="82">getNormalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d49/class_truth_table_1a58fc63ab16768b58accfe0448a4cd68c" prot="protected" static="no" mutable="no">
+        <type>uintmax_t</type>
+        <definition>uintmax_t TruthTable::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="17" column="1" bodyfile="src/table/truthtable.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="d0/d52/class_simple_table_1ad94b85aed20f08c4513394cec5d11fe1" compoundref="dd/dcd/simpletable_8cpp" startline="28" endline="40">SimpleTable::simplify</referencedby>
+        <referencedby refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</referencedby>
+        <referencedby refid="dc/d49/class_truth_table_1ae44f1c65f1d2e8c350eb7f17bd88f777" compoundref="d9/d67/truthtable_8cpp" startline="62" endline="67">getHashCode</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TruthTable::generateTable</definition>
+        <argsstring>()</argsstring>
+        <name>generateTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="13" column="1" bodyfile="src/table/truthtable.cpp" bodystart="6" bodyend="32"/>
+        <references refid="dd/df8/class_tree_1a525967d14a17de0ad9c9072b025af1c3" compoundref="d1/d12/tree_8cpp" startline="52" endline="76">Tree::getListVariable</references>
+        <references refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" compoundref="d3/d09/tree_8h" startline="17">Tree::varList</references>
+        <references refid="dd/df8/class_tree_1abde731a55b92d402fbbd166a577cbe91" compoundref="d1/d12/tree_8cpp" startline="85" endline="88">Tree::getValue</references>
+        <references refid="dc/d49/class_truth_table_1a39ed5bd7c7af143af2bdc1d48eee669f" compoundref="d5/dbf/truthtable_8h" startline="10">trueRows</references>
+        <references refid="dc/d49/class_truth_table_1af585b18e1c5a1d4e456ae25c6d1ab6f9" compoundref="d5/dbf/truthtable_8h" startline="11">falseRows</references>
+        <references refid="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" compoundref="d5/dbf/truthtable_8h" startline="16">table</references>
+        <references refid="dc/d49/class_truth_table_1a58fc63ab16768b58accfe0448a4cd68c" compoundref="d5/dbf/truthtable_8h" startline="17">hash</references>
+        <referencedby refid="dc/d49/class_truth_table_1a1d7d8e978c1ab80e94f5433efc914f49" compoundref="d9/d67/truthtable_8cpp" startline="34" endline="38">TruthTable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d49/class_truth_table_1a1d7d8e978c1ab80e94f5433efc914f49" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TruthTable::TruthTable</definition>
+        <argsstring>(Tree otherTree)</argsstring>
+        <name>TruthTable</name>
+        <param>
+          <type><ref refid="dd/df8/class_tree" kindref="compound">Tree</ref></type>
+          <declname>otherTree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="20" column="1" bodyfile="src/table/truthtable.cpp" bodystart="34" bodyend="38"/>
+        <references refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1abab023791b3a72496ff56434fc0e02b4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TruthTable::TruthTable</definition>
+        <argsstring>(string prop=&quot;&quot;)</argsstring>
+        <name>TruthTable</name>
+        <param>
+          <type>string</type>
+          <declname>prop</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="21" column="1" bodyfile="src/table/truthtable.cpp" bodystart="40" bodyend="44"/>
+        <references refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1afe78a848779c34a2c0eb23ecf1e6db6f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TruthTable::TruthTable</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; otherTree)</argsstring>
+        <name>TruthTable</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>otherTree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="22" column="1" bodyfile="src/table/truthtable.cpp" bodystart="46" bodyend="50"/>
+        <references refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" compoundref="d9/d67/truthtable_8cpp" startline="6" endline="32">generateTable</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1a1574928e406cb242a4f1abb6bc2924f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TruthTable::~TruthTable</definition>
+        <argsstring>()</argsstring>
+        <name>~TruthTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="23" column="1" bodyfile="src/table/truthtable.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1a3683cdc11d4f4735e449aa82c8095357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list&lt; <ref refid="d6/d54/class_rows" kindref="compound">Rows</ref> &gt;</type>
+        <definition>list&lt; Rows &gt; TruthTable::getTable</definition>
+        <argsstring>()</argsstring>
+        <name>getTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="25" column="1" bodyfile="src/table/truthtable.cpp" bodystart="57" bodyend="60"/>
+        <references refid="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" compoundref="d5/dbf/truthtable_8h" startline="16">table</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1ae44f1c65f1d2e8c350eb7f17bd88f777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string TruthTable::getHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>getHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="26" column="1" bodyfile="src/table/truthtable.cpp" bodystart="62" bodyend="67"/>
+        <references refid="dc/d49/class_truth_table_1a58fc63ab16768b58accfe0448a4cd68c" compoundref="d5/dbf/truthtable_8h" startline="17">hash</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d49/class_truth_table_1a9dcb8d74d39ebc1a8ada938f1ccbce97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dd/df8/class_tree" kindref="compound">Tree</ref></type>
+        <definition>Tree TruthTable::getNormalize</definition>
+        <argsstring>()</argsstring>
+        <name>getNormalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/table/truthtable.h" line="27" column="1" bodyfile="src/table/truthtable.cpp" bodystart="69" bodyend="82"/>
+        <references refid="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" compoundref="d5/dbf/truthtable_8h" startline="16">table</references>
+        <references refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" compoundref="d3/d09/tree_8h" startline="17">Tree::varList</references>
+        <references refid="dd/df8/class_tree_1a114a18872bc2535a73ceb0719cde7945" compoundref="d1/d12/tree_8cpp" startline="19" endline="33">Tree::Tree</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="151">
+        <label>SimpleTable</label>
+        <link refid="d0/d52/class_simple_table"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>TruthTable</label>
+        <link refid="dc/d49/class_truth_table"/>
+        <childnode refid="150" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>Tree</label>
+        <link refid="dd/df8/class_tree"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="152">
+        <label>TruthTable</label>
+        <link refid="dc/d49/class_truth_table"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>Tree</label>
+        <link refid="dd/df8/class_tree"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>tableaux</edgelabel>
+        </childnode>
+      </node>
+      <node id="154">
+        <label>SemanticTableaux</label>
+        <link refid="d6/d22/class_semantic_tableaux"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/table/truthtable.h" line="8" column="1" bodyfile="src/table/truthtable.h" bodystart="7" bodyend="29"/>
+    <listofallmembers>
+      <member refid="dd/df8/class_tree_1ae19f22cfa4b782b5c0a048592ea3e95f" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>exportGraph</name></member>
+      <member refid="dd/df8/class_tree_1ae235cdb84985c90fa56697a28b0a8d9e" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>exportProof</name></member>
+      <member refid="dc/d49/class_truth_table_1af585b18e1c5a1d4e456ae25c6d1ab6f9" prot="private" virt="non-virtual"><scope>TruthTable</scope><name>falseRows</name></member>
+      <member refid="dc/d49/class_truth_table_1ab113db56063be5ecf661ebc7fc439aee" prot="private" virt="non-virtual"><scope>TruthTable</scope><name>generateTable</name></member>
+      <member refid="dd/df8/class_tree_1a9d7b51cc207222de02ccb59192454de5" prot="public" virt="virtual"><scope>TruthTable</scope><name>getDavidPutnam</name></member>
+      <member refid="dc/d49/class_truth_table_1ae44f1c65f1d2e8c350eb7f17bd88f777" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getHashCode</name></member>
+      <member refid="dd/df8/class_tree_1a525967d14a17de0ad9c9072b025af1c3" prot="public" virt="virtual"><scope>TruthTable</scope><name>getListVariable</name></member>
+      <member refid="dd/df8/class_tree_1a60a9b7d65fc663d2db005b01119efa73" prot="protected" virt="virtual"><scope>TruthTable</scope><name>getNode</name></member>
+      <member refid="dc/d49/class_truth_table_1a9dcb8d74d39ebc1a8ada938f1ccbce97" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getNormalize</name></member>
+      <member refid="dd/df8/class_tree_1a7d2c78122409858b2516b52514bd7fe8" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getProposition</name></member>
+      <member refid="dd/df8/class_tree_1a016c2300dfa5444a52e6e6db7be850d2" prot="protected" virt="virtual"><scope>TruthTable</scope><name>getStatement</name></member>
+      <member refid="dc/d49/class_truth_table_1a3683cdc11d4f4735e449aa82c8095357" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getTable</name></member>
+      <member refid="dd/df8/class_tree_1ad9bd7cd558397f596703e92fc47aa91f" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getTree</name></member>
+      <member refid="dd/df8/class_tree_1abde731a55b92d402fbbd166a577cbe91" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>getValue</name></member>
+      <member refid="dc/d49/class_truth_table_1a58fc63ab16768b58accfe0448a4cd68c" prot="protected" virt="non-virtual"><scope>TruthTable</scope><name>hash</name></member>
+      <member refid="dd/df8/class_tree_1a22efa22748fa8d8a598e05ceb327dfd4" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>isTautology</name></member>
+      <member refid="dd/df8/class_tree_1a2a8e8236ffc2a6ba0ba580f4f0b01128" prot="protected" virt="non-virtual"><scope>TruthTable</scope><name>prop_in</name></member>
+      <member refid="dc/d49/class_truth_table_1a6b3635efcbbc292d0dc62406fbdbe9e5" prot="protected" virt="non-virtual"><scope>TruthTable</scope><name>table</name></member>
+      <member refid="dd/df8/class_tree_1a114a18872bc2535a73ceb0719cde7945" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>Tree</name></member>
+      <member refid="dd/df8/class_tree_1a6515b810a36ab46fa79b9dc9d426a8ff" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>Tree</name></member>
+      <member refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" prot="protected" virt="non-virtual"><scope>TruthTable</scope><name>tree</name></member>
+      <member refid="dc/d49/class_truth_table_1a39ed5bd7c7af143af2bdc1d48eee669f" prot="private" virt="non-virtual"><scope>TruthTable</scope><name>trueRows</name></member>
+      <member refid="dc/d49/class_truth_table_1a1d7d8e978c1ab80e94f5433efc914f49" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>TruthTable</name></member>
+      <member refid="dc/d49/class_truth_table_1abab023791b3a72496ff56434fc0e02b4" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>TruthTable</name></member>
+      <member refid="dc/d49/class_truth_table_1afe78a848779c34a2c0eb23ecf1e6db6f" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>TruthTable</name></member>
+      <member refid="dd/df8/class_tree_1a38bca58f3aef44e939f69f092037af50" prot="protected" virt="non-virtual"><scope>TruthTable</scope><name>varList</name></member>
+      <member refid="dd/df8/class_tree_1abdc38545cf3f588725b5d8b8075b3866" prot="public" virt="virtual"><scope>TruthTable</scope><name>~Tree</name></member>
+      <member refid="dc/d49/class_truth_table_1a1574928e406cb242a4f1abb6bc2924f3" prot="public" virt="non-virtual"><scope>TruthTable</scope><name>~TruthTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

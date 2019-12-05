@@ -1,0 +1,917 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dc/d8f/class_node" kind="class" language="C++" prot="public">
+    <compoundname>Node</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">enable_shared_from_this&lt; Node &gt;</basecompoundref>
+    <derivedcompoundref refid="d0/dc9/class_and" prot="public" virt="non-virtual">And</derivedcompoundref>
+    <derivedcompoundref refid="d5/da3/class_bi_implicate" prot="public" virt="non-virtual">BiImplicate</derivedcompoundref>
+    <derivedcompoundref refid="de/d16/class_exists" prot="public" virt="non-virtual">Exists</derivedcompoundref>
+    <derivedcompoundref refid="d8/dc5/class_for_all" prot="public" virt="non-virtual">ForAll</derivedcompoundref>
+    <derivedcompoundref refid="de/d28/class_implicate" prot="public" virt="non-virtual">Implicate</derivedcompoundref>
+    <derivedcompoundref refid="d2/d2a/class_multi_and" prot="public" virt="non-virtual">MultiAnd</derivedcompoundref>
+    <derivedcompoundref refid="dd/d61/class_multi_or" prot="public" virt="non-virtual">MultiOr</derivedcompoundref>
+    <derivedcompoundref refid="d9/d44/class_n_and" prot="public" virt="non-virtual">NAnd</derivedcompoundref>
+    <derivedcompoundref refid="df/d45/class_negate" prot="public" virt="non-virtual">Negate</derivedcompoundref>
+    <derivedcompoundref refid="d8/d1b/class_or" prot="public" virt="non-virtual">Or</derivedcompoundref>
+    <derivedcompoundref refid="d7/da3/class_statement" prot="public" virt="non-virtual">Statement</derivedcompoundref>
+    <derivedcompoundref refid="d4/d72/class_value" prot="public" virt="non-virtual">Value</derivedcompoundref>
+    <derivedcompoundref refid="d2/d3c/class_variable" prot="public" virt="non-virtual">Variable</derivedcompoundref>
+    <includes refid="d1/d77/node_8h" local="no">node.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dc/d8f/class_node_1a59a543130a10c95f1e8642cf8c5645e8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Node::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="18" column="1" bodyfile="src/notation/node.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Node::isRulesReturned</definition>
+        <argsstring></argsstring>
+        <name>isRulesReturned</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="25" column="1" bodyfile="src/notation/node.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="de/d16/class_exists_1aff7b8694345884d06bdd751e88fae041" compoundref="da/d46/exists_8cpp" startline="21" endline="33">Exists::getSTRuleName</referencedby>
+        <referencedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" compoundref="da/d46/exists_8cpp" startline="35" endline="85">Exists::getSTNodeChild</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a97e03dcd8f51824fe629487847b7c4dc" compoundref="da/d09/forall_8cpp" startline="21" endline="33">ForAll::getSTRuleName</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" compoundref="da/d09/forall_8cpp" startline="35" endline="82">ForAll::getSTNodeChild</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt;Node&gt; Node::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="26" column="1" bodyfile="src/notation/node.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="d0/dc9/class_and_1a9d2b965d8a1b80d0e2da9d6537601e14" compoundref="dc/d62/and_8cpp" startline="17" endline="20">And::getValue</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a790a8f5b095f664f0a879d2bf96c972d" compoundref="dc/d62/and_8cpp" startline="30" endline="45">And::nandify</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a081ebf199fb2388773a19d2c2044e574" compoundref="dc/d62/and_8cpp" startline="47" endline="64">And::getSTNodeChild</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f" compoundref="dc/d62/and_8cpp" startline="66" endline="76">And::cnfFilter</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a370c86f44ee17b22208cdbc1f17a7b3f" compoundref="dc/d62/and_8cpp" startline="78" endline="86">And::cnfDistribution</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a7560a861ae68050c2aa22e2392a46a15" compoundref="dc/d62/and_8cpp" startline="88" endline="91">And::copy</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" compoundref="d0/dbf/biimplicate_8cpp" startline="15" endline="18">BiImplicate::getValue</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" compoundref="d0/dbf/biimplicate_8cpp" startline="25" endline="33">BiImplicate::nandify</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" compoundref="d0/dbf/biimplicate_8cpp" startline="35" endline="63">BiImplicate::getSTNodeChild</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" compoundref="d0/dbf/biimplicate_8cpp" startline="65" endline="77">BiImplicate::cnfFilter</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" compoundref="d0/dbf/biimplicate_8cpp" startline="79" endline="82">BiImplicate::copy</referencedby>
+        <referencedby refid="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068" compoundref="da/d46/exists_8cpp" startline="16" endline="19">Exists::toString</referencedby>
+        <referencedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" compoundref="da/d46/exists_8cpp" startline="35" endline="85">Exists::getSTNodeChild</referencedby>
+        <referencedby refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" compoundref="da/d46/exists_8cpp" startline="88" endline="91">Exists::copy</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85" compoundref="da/d09/forall_8cpp" startline="16" endline="19">ForAll::toString</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" compoundref="da/d09/forall_8cpp" startline="35" endline="82">ForAll::getSTNodeChild</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" compoundref="da/d09/forall_8cpp" startline="85" endline="88">ForAll::copy</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a331e1a1fcbe378ef15a3a7f04b7034d5" compoundref="dc/d93/implicate_8cpp" startline="15" endline="18">Implicate::getValue</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a9f3b5d35f552a62ca4a98b4f608a2968" compoundref="dc/d93/implicate_8cpp" startline="20" endline="25">Implicate::nandify</referencedby>
+        <referencedby refid="de/d28/class_implicate_1aca5eae3d47c318ba413787c7c3a674ce" compoundref="dc/d93/implicate_8cpp" startline="39" endline="56">Implicate::getSTNodeChild</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d" compoundref="dc/d93/implicate_8cpp" startline="58" endline="68">Implicate::cnfFilter</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a08cf8aa03589f7a34400a5f636f1256a" compoundref="dc/d93/implicate_8cpp" startline="70" endline="73">Implicate::copy</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a3ccedba07752a2457a593035b33535e1" compoundref="db/d7a/nand_8cpp" startline="25" endline="42">NAnd::getSTNodeChild</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" compoundref="db/d7a/nand_8cpp" startline="44" endline="54">NAnd::cnfFilter</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a3756b0f2696bf06664100c0b5c9d67b3" compoundref="db/d7a/nand_8cpp" startline="56" endline="59">NAnd::copy</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a9eb3a117e8d30f11ebe25e932d387265" compoundref="db/d7a/nand_8cpp" startline="61" endline="64">NAnd::getValue</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1ae60ecc244dd83bfdcc7eada4957890d8" compoundref="db/d7a/nand_8cpp" startline="66" endline="101">NAnd::nandify</referencedby>
+        <referencedby refid="df/d45/class_negate_1adc2bf29215e329e60e44dbf6bf8a4c85" compoundref="df/db4/negate_8cpp" startline="15" endline="18">Negate::getValue</referencedby>
+        <referencedby refid="df/d45/class_negate_1a2dd4cada504739fea3583a5729044c71" compoundref="df/db4/negate_8cpp" startline="20" endline="30">Negate::nandify</referencedby>
+        <referencedby refid="df/d45/class_negate_1aab87b217ffd5c8ba404022a5f4cec220" compoundref="df/db4/negate_8cpp" startline="32" endline="35">Negate::toString</referencedby>
+        <referencedby refid="df/d45/class_negate_1ac881a233c5a1e6f7669ea8ff70eda8f7" compoundref="df/db4/negate_8cpp" startline="37" endline="47">Negate::getSTRuleName</referencedby>
+        <referencedby refid="df/d45/class_negate_1ad06cf6b9c1070a001919c58084990c0d" compoundref="df/db4/negate_8cpp" startline="49" endline="59">Negate::getSTNodeChild</referencedby>
+        <referencedby refid="df/d45/class_negate_1a6aa803fea460f0a2a52399b778bfd268" compoundref="df/db4/negate_8cpp" startline="61" endline="71">Negate::cnfFilter</referencedby>
+        <referencedby refid="df/d45/class_negate_1a7cdd545814e819ef6b6ec735dda357aa" compoundref="df/db4/negate_8cpp" startline="73" endline="76">Negate::copy</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" compoundref="d7/d70/node_8cpp" startline="26" endline="43">getLeaf</referencedby>
+        <referencedby refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" compoundref="d7/d70/node_8cpp" startline="51" endline="62">containedSpecialNode</referencedby>
+        <referencedby refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" compoundref="d7/d70/node_8cpp" startline="114" endline="119">~Node</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" compoundref="d7/d70/node_8cpp" startline="121" endline="138">treeTraveler</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" compoundref="d7/d70/node_8cpp" startline="140" endline="151">toStringPrefix</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" compoundref="d7/d70/node_8cpp" startline="153" endline="156">toString</referencedby>
+        <referencedby refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" compoundref="d7/d70/node_8cpp" startline="183" endline="189">setVariable</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9" compoundref="d1/da4/or_8cpp" startline="16" endline="19">Or::getValue</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a" compoundref="d1/da4/or_8cpp" startline="21" endline="29">Or::nandify</referencedby>
+        <referencedby refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" compoundref="d1/da4/or_8cpp" startline="43" endline="60">Or::getSTNodeChild</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" compoundref="d1/da4/or_8cpp" startline="62" endline="72">Or::cnfFilter</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" compoundref="d1/da4/or_8cpp" startline="74" endline="106">Or::cnfDistribution</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62" compoundref="d1/da4/or_8cpp" startline="108" endline="111">Or::copy</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" compoundref="d1/da4/or_8cpp" startline="113" endline="153">Or::getMultiOr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt;Node&gt; Node::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="27" column="1" bodyfile="src/notation/node.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="d0/dc9/class_and_1a9d2b965d8a1b80d0e2da9d6537601e14" compoundref="dc/d62/and_8cpp" startline="17" endline="20">And::getValue</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a790a8f5b095f664f0a879d2bf96c972d" compoundref="dc/d62/and_8cpp" startline="30" endline="45">And::nandify</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a081ebf199fb2388773a19d2c2044e574" compoundref="dc/d62/and_8cpp" startline="47" endline="64">And::getSTNodeChild</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f" compoundref="dc/d62/and_8cpp" startline="66" endline="76">And::cnfFilter</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a370c86f44ee17b22208cdbc1f17a7b3f" compoundref="dc/d62/and_8cpp" startline="78" endline="86">And::cnfDistribution</referencedby>
+        <referencedby refid="d0/dc9/class_and_1a7560a861ae68050c2aa22e2392a46a15" compoundref="dc/d62/and_8cpp" startline="88" endline="91">And::copy</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58" compoundref="d0/dbf/biimplicate_8cpp" startline="15" endline="18">BiImplicate::getValue</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518" compoundref="d0/dbf/biimplicate_8cpp" startline="25" endline="33">BiImplicate::nandify</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7" compoundref="d0/dbf/biimplicate_8cpp" startline="35" endline="63">BiImplicate::getSTNodeChild</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" compoundref="d0/dbf/biimplicate_8cpp" startline="65" endline="77">BiImplicate::cnfFilter</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31" compoundref="d0/dbf/biimplicate_8cpp" startline="79" endline="82">BiImplicate::copy</referencedby>
+        <referencedby refid="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068" compoundref="da/d46/exists_8cpp" startline="16" endline="19">Exists::toString</referencedby>
+        <referencedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6" compoundref="da/d46/exists_8cpp" startline="35" endline="85">Exists::getSTNodeChild</referencedby>
+        <referencedby refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4" compoundref="da/d46/exists_8cpp" startline="88" endline="91">Exists::copy</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85" compoundref="da/d09/forall_8cpp" startline="16" endline="19">ForAll::toString</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f" compoundref="da/d09/forall_8cpp" startline="35" endline="82">ForAll::getSTNodeChild</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402" compoundref="da/d09/forall_8cpp" startline="85" endline="88">ForAll::copy</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a331e1a1fcbe378ef15a3a7f04b7034d5" compoundref="dc/d93/implicate_8cpp" startline="15" endline="18">Implicate::getValue</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a9f3b5d35f552a62ca4a98b4f608a2968" compoundref="dc/d93/implicate_8cpp" startline="20" endline="25">Implicate::nandify</referencedby>
+        <referencedby refid="de/d28/class_implicate_1aca5eae3d47c318ba413787c7c3a674ce" compoundref="dc/d93/implicate_8cpp" startline="39" endline="56">Implicate::getSTNodeChild</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d" compoundref="dc/d93/implicate_8cpp" startline="58" endline="68">Implicate::cnfFilter</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a08cf8aa03589f7a34400a5f636f1256a" compoundref="dc/d93/implicate_8cpp" startline="70" endline="73">Implicate::copy</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a3ccedba07752a2457a593035b33535e1" compoundref="db/d7a/nand_8cpp" startline="25" endline="42">NAnd::getSTNodeChild</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" compoundref="db/d7a/nand_8cpp" startline="44" endline="54">NAnd::cnfFilter</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a3756b0f2696bf06664100c0b5c9d67b3" compoundref="db/d7a/nand_8cpp" startline="56" endline="59">NAnd::copy</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a9eb3a117e8d30f11ebe25e932d387265" compoundref="db/d7a/nand_8cpp" startline="61" endline="64">NAnd::getValue</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1ae60ecc244dd83bfdcc7eada4957890d8" compoundref="db/d7a/nand_8cpp" startline="66" endline="101">NAnd::nandify</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" compoundref="d7/d70/node_8cpp" startline="26" endline="43">getLeaf</referencedby>
+        <referencedby refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" compoundref="d7/d70/node_8cpp" startline="51" endline="62">containedSpecialNode</referencedby>
+        <referencedby refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" compoundref="d7/d70/node_8cpp" startline="114" endline="119">~Node</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" compoundref="d7/d70/node_8cpp" startline="121" endline="138">treeTraveler</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" compoundref="d7/d70/node_8cpp" startline="140" endline="151">toStringPrefix</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" compoundref="d7/d70/node_8cpp" startline="153" endline="156">toString</referencedby>
+        <referencedby refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" compoundref="d7/d70/node_8cpp" startline="183" endline="189">setVariable</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9" compoundref="d1/da4/or_8cpp" startline="16" endline="19">Or::getValue</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a" compoundref="d1/da4/or_8cpp" startline="21" endline="29">Or::nandify</referencedby>
+        <referencedby refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59" compoundref="d1/da4/or_8cpp" startline="43" endline="60">Or::getSTNodeChild</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" compoundref="d1/da4/or_8cpp" startline="62" endline="72">Or::cnfFilter</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552" compoundref="d1/da4/or_8cpp" startline="74" endline="106">Or::cnfDistribution</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62" compoundref="d1/da4/or_8cpp" startline="108" endline="111">Or::copy</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a1d32e059bdc6ff80fb4798c90553e2cb" compoundref="d1/da4/or_8cpp" startline="113" endline="153">Or::getMultiOr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" static="no" mutable="no">
+        <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt;</type>
+        <definition>list&lt;shared_ptr&lt;Node&gt; &gt; Node::variables</definition>
+        <argsstring></argsstring>
+        <name>variables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="28" column="1" bodyfile="src/notation/node.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="d2/d2a/class_multi_and_1af78c9976d483175359a7c372231b2ac3" compoundref="db/d9c/multiand_8cpp" startline="3" endline="8">MultiAnd::MultiAnd</referencedby>
+        <referencedby refid="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178" compoundref="db/d9c/multiand_8cpp" startline="15" endline="27">MultiAnd::toString</referencedby>
+        <referencedby refid="d2/d2a/class_multi_and_1a7730036f89cf27cddcf6d2efc293dd9d" compoundref="db/d9c/multiand_8cpp" startline="34" endline="42">MultiAnd::getValue</referencedby>
+        <referencedby refid="d2/d2a/class_multi_and_1ad89e8cb08fe1e0793e2e16e837992de2" compoundref="db/d9c/multiand_8cpp" startline="44" endline="50">MultiAnd::copy</referencedby>
+        <referencedby refid="d6/da5/class_multi_and_norm_1a84940789d331007c430096a38f60d124" compoundref="db/d9c/multiand_8cpp" startline="63" endline="79">MultiAndNorm::toString</referencedby>
+        <referencedby refid="d6/da5/class_multi_and_norm_1a77cbaf6920daa86d9ddc80b2a839a84f" compoundref="db/d9c/multiand_8cpp" startline="81" endline="87">MultiAndNorm::copy</referencedby>
+        <referencedby refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" compoundref="df/db6/multior_8cpp" startline="3" endline="8">MultiOr::MultiOr</referencedby>
+        <referencedby refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7" compoundref="df/db6/multior_8cpp" startline="22" endline="34">MultiOr::toString</referencedby>
+        <referencedby refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e" compoundref="df/db6/multior_8cpp" startline="41" endline="49">MultiOr::getValue</referencedby>
+        <referencedby refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c" compoundref="df/db6/multior_8cpp" startline="51" endline="57">MultiOr::copy</referencedby>
+        <referencedby refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3" compoundref="df/db6/multior_8cpp" startline="77" endline="93">MultiOrNorm::toString</referencedby>
+        <referencedby refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5" compoundref="df/db6/multior_8cpp" startline="95" endline="101">MultiOrNorm::copy</referencedby>
+        <referencedby refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" compoundref="d7/d70/node_8cpp" startline="114" endline="119">~Node</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" compoundref="d7/d70/node_8cpp" startline="121" endline="138">treeTraveler</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" compoundref="d1/d48/statement_8cpp" startline="3" endline="8">Statement::Statement</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" compoundref="d1/d48/statement_8cpp" startline="22" endline="31">Statement::toString</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126" compoundref="d1/d48/statement_8cpp" startline="33" endline="43">Statement::setVariable</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" compoundref="d1/d48/statement_8cpp" startline="45" endline="51">Statement::copy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Node::notation</definition>
+        <argsstring></argsstring>
+        <name>notation</name>
+        <initializer>= &quot;1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="29" column="1" bodyfile="src/notation/node.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="d0/dc9/class_and_1a6058f4ed6168568b529e1e0750df8cf8" compoundref="dc/d62/and_8cpp" startline="7" endline="11">And::And</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1acd402fb9b2eef1b44361448038f20ddc" compoundref="d0/dbf/biimplicate_8cpp" startline="5" endline="9">BiImplicate::BiImplicate</referencedby>
+        <referencedby refid="de/d16/class_exists_1ae51931aa14079e565a7b700b8f1d1fb1" compoundref="da/d46/exists_8cpp" startline="5" endline="9">Exists::Exists</referencedby>
+        <referencedby refid="d8/dc5/class_for_all_1a2f654f00f8d997a89699dff8f1efd759" compoundref="da/d09/forall_8cpp" startline="5" endline="9">ForAll::ForAll</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a7386039d72650d3da8562144b1868722" compoundref="dc/d93/implicate_8cpp" startline="5" endline="9">Implicate::Implicate</referencedby>
+        <referencedby refid="d2/d2a/class_multi_and_1af78c9976d483175359a7c372231b2ac3" compoundref="db/d9c/multiand_8cpp" startline="3" endline="8">MultiAnd::MultiAnd</referencedby>
+        <referencedby refid="dd/d61/class_multi_or_1a55dd7025f9f40187496f481f252e33dc" compoundref="df/db6/multior_8cpp" startline="3" endline="8">MultiOr::MultiOr</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a5e73ac719f793d02a10cd0fc6931808f" compoundref="db/d7a/nand_8cpp" startline="6" endline="10">NAnd::NAnd</referencedby>
+        <referencedby refid="df/d45/class_negate_1adb1a956d1f152e24fada7b1a33b0331e" compoundref="df/db4/negate_8cpp" startline="5" endline="9">Negate::Negate</referencedby>
+        <referencedby refid="df/d45/class_negate_1aab87b217ffd5c8ba404022a5f4cec220" compoundref="df/db4/negate_8cpp" startline="32" endline="35">Negate::toString</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" compoundref="d7/d70/node_8cpp" startline="26" endline="43">getLeaf</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb" compoundref="d7/d70/node_8cpp" startline="45" endline="49">copy</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" compoundref="d7/d70/node_8cpp" startline="121" endline="138">treeTraveler</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" compoundref="d7/d70/node_8cpp" startline="140" endline="151">toStringPrefix</referencedby>
+        <referencedby refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" compoundref="d7/d70/node_8cpp" startline="153" endline="156">toString</referencedby>
+        <referencedby refid="d8/d1b/class_or_1a3247e4bae89e48da60037469ba896128" compoundref="d1/da4/or_8cpp" startline="6" endline="10">Or::Or</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a63f078944310c19057bdd7c25aa1b5a3" compoundref="d1/d48/statement_8cpp" startline="3" endline="8">Statement::Statement</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881" compoundref="d1/d48/statement_8cpp" startline="22" endline="31">Statement::toString</referencedby>
+        <referencedby refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d" compoundref="d1/d48/statement_8cpp" startline="45" endline="51">Statement::copy</referencedby>
+        <referencedby refid="d4/d72/class_value_1a98e1dd185ea30f4e9343de03008fd622" compoundref="d2/dc0/value_8cpp" startline="3" endline="7">Value::Value</referencedby>
+        <referencedby refid="d4/d72/class_value_1ac956d02a49c773f5249cc31fb4293337" compoundref="d2/dc0/value_8cpp" startline="14" endline="17">Value::getValue</referencedby>
+        <referencedby refid="d4/d72/class_value_1aa774521b29b4f0c77eb6d57b5a6fb3a0" compoundref="d2/dc0/value_8cpp" startline="19" endline="22">Value::toString</referencedby>
+        <referencedby refid="d4/d72/class_value_1a56c458de6a68b9a25233e6fdcfa67760" compoundref="d2/dc0/value_8cpp" startline="34" endline="44">Value::cnfFilter</referencedby>
+        <referencedby refid="d4/d72/class_value_1a45518c11045a76300ad02cc93a0150c9" compoundref="d2/dc0/value_8cpp" startline="46" endline="49">Value::copy</referencedby>
+        <referencedby refid="d2/d3c/class_variable_1a98f05310666fc839abb59fd8599cf21c" compoundref="d0/d27/variable_8cpp" startline="5" endline="9">Variable::Variable</referencedby>
+        <referencedby refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2" compoundref="d0/d27/variable_8cpp" startline="21" endline="24">Variable::getValue</referencedby>
+        <referencedby refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc" compoundref="d0/d27/variable_8cpp" startline="26" endline="29">Variable::toString</referencedby>
+        <referencedby refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557" compoundref="d0/d27/variable_8cpp" startline="31" endline="35">Variable::setVariable</referencedby>
+        <referencedby refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe" compoundref="d0/d27/variable_8cpp" startline="37" endline="40">Variable::copy</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::orSimplify</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; l, shared_ptr&lt; Node &gt; r)</argsstring>
+        <name>orSimplify</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="21" column="1" bodyfile="src/notation/node.cpp" bodystart="64" bodyend="83"/>
+        <referencedby refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f" compoundref="dc/d62/and_8cpp" startline="66" endline="76">And::cnfFilter</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" compoundref="d0/dbf/biimplicate_8cpp" startline="65" endline="77">BiImplicate::cnfFilter</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d" compoundref="dc/d93/implicate_8cpp" startline="58" endline="68">Implicate::cnfFilter</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" compoundref="db/d7a/nand_8cpp" startline="44" endline="54">NAnd::cnfFilter</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" compoundref="d1/da4/or_8cpp" startline="62" endline="72">Or::cnfFilter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::andSimplify</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; l, shared_ptr&lt; Node &gt; r)</argsstring>
+        <name>andSimplify</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="22" column="1" bodyfile="src/notation/node.cpp" bodystart="85" bodyend="105"/>
+        <referencedby refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f" compoundref="dc/d62/and_8cpp" startline="66" endline="76">And::cnfFilter</referencedby>
+        <referencedby refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3" compoundref="d0/dbf/biimplicate_8cpp" startline="65" endline="77">BiImplicate::cnfFilter</referencedby>
+        <referencedby refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d" compoundref="dc/d93/implicate_8cpp" startline="58" endline="68">Implicate::cnfFilter</referencedby>
+        <referencedby refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587" compoundref="db/d7a/nand_8cpp" startline="44" endline="54">NAnd::cnfFilter</referencedby>
+        <referencedby refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa" compoundref="d1/da4/or_8cpp" startline="62" endline="72">Or::cnfFilter</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Node::Node</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; left=nullptr, shared_ptr&lt; Node &gt; right=nullptr)</argsstring>
+        <name>Node</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>left</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>right</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="31" column="1" bodyfile="src/notation/node.cpp" bodystart="107" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Node::~Node</definition>
+        <argsstring>()</argsstring>
+        <name>~Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="32" column="1" bodyfile="src/notation/node.cpp" bodystart="114" bodyend="119"/>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">variables</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Node::treeTraveler</definition>
+        <argsstring>(ofstream &amp;out, int rootId=-1)</argsstring>
+        <name>treeTraveler</name>
+        <param>
+          <type>ofstream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rootId</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>travel tree and produce a graph </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rootId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parrent Id, equal to -1 by default if there is no parent </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="38" column="1" bodyfile="src/notation/node.cpp" bodystart="121" bodyend="138"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">notation</references>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+        <references refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" compoundref="d1/d77/node_8h" startline="28">variables</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Node::toStringPrefix</definition>
+        <argsstring>()</argsstring>
+        <name>toStringPrefix</name>
+        <reimplementedby refid="d2/d2a/class_multi_and_1a00dd6431f647c88e28d702dd2afb1c57">toStringPrefix</reimplementedby>
+        <reimplementedby refid="dd/d61/class_multi_or_1a80405614a8a8db0992c35a70f36aa025">toStringPrefix</reimplementedby>
+        <briefdescription>
+<para>get proposition prefix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of prefix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="43" column="1" bodyfile="src/notation/node.cpp" bodystart="140" bodyend="151"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">notation</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string Node::toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <reimplementedby refid="d2/d2a/class_multi_and_1a035299de4f81beb44a9a5df63b0d5178">toString</reimplementedby>
+        <reimplementedby refid="d8/dc5/class_for_all_1a086dc15d85fe4874c477c72a40577b85">toString</reimplementedby>
+        <reimplementedby refid="de/d16/class_exists_1a8eda64d4fd60158c15b38f64a4596068">toString</reimplementedby>
+        <reimplementedby refid="d4/d72/class_value_1aa774521b29b4f0c77eb6d57b5a6fb3a0">toString</reimplementedby>
+        <reimplementedby refid="d7/da3/class_statement_1a0e9ec611dc39c53ed01cf0f877db9881">toString</reimplementedby>
+        <reimplementedby refid="dd/d61/class_multi_or_1ade4d5f7db13aca1020dba2396ef00dd7">toString</reimplementedby>
+        <reimplementedby refid="d2/d3c/class_variable_1a5b0b0e25200631521dc5bbc8df22acdc">toString</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1aab87b217ffd5c8ba404022a5f4cec220">toString</reimplementedby>
+        <reimplementedby refid="d6/da5/class_multi_and_norm_1a84940789d331007c430096a38f60d124">toString</reimplementedby>
+        <reimplementedby refid="d6/d2d/class_multi_or_norm_1ad70e2ca31478183da21ee1995964c2c3">toString</reimplementedby>
+        <briefdescription>
+<para>get proposition infix formular </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string of infix proposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="48" column="1" bodyfile="src/notation/node.cpp" bodystart="153" bodyend="156"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">notation</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Node::getValue</definition>
+        <argsstring>(string valList)</argsstring>
+        <name>getValue</name>
+        <reimplementedby refid="d4/d72/class_value_1ac956d02a49c773f5249cc31fb4293337">getValue</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1adc2bf29215e329e60e44dbf6bf8a4c85">getValue</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1a9eb3a117e8d30f11ebe25e932d387265">getValue</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1a331e1a1fcbe378ef15a3a7f04b7034d5">getValue</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1ac7cb17f1414705f9a1d9df83793b0d58">getValue</reimplementedby>
+        <reimplementedby refid="d2/d3c/class_variable_1a2830553ab8b852a004c613a626fa6eb2">getValue</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1a9ede00ef8120ad4aee9f69049628ead9">getValue</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a9d2b965d8a1b80d0e2da9d6537601e14">getValue</reimplementedby>
+        <reimplementedby refid="d2/d2a/class_multi_and_1a7730036f89cf27cddcf6d2efc293dd9d">getValue</reimplementedby>
+        <reimplementedby refid="dd/d61/class_multi_or_1a7146240d304444ee0da5c949c584971e">getValue</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>valList</declname>
+        </param>
+        <briefdescription>
+<para>get proposition value </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string contains proposition variable and their value. <linebreak/>
+ e.g. &quot;A1B0C1&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proposition value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="55" column="1" bodyfile="src/notation/node.cpp" bodystart="158" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::nandify</definition>
+        <argsstring>(bool isNegation=false)</argsstring>
+        <name>nandify</name>
+        <reimplementedby refid="df/d45/class_negate_1a2dd4cada504739fea3583a5729044c71">nandify</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1ae60ecc244dd83bfdcc7eada4957890d8">nandify</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1a9f3b5d35f552a62ca4a98b4f608a2968">nandify</reimplementedby>
+        <reimplementedby refid="d4/d72/class_value_1aaa2ddacd71ab25b50b06eee47e21289d">nandify</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1a1fc17643b67383ec7be340d278c8e60a">nandify</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1aa77f25616aa7a47ae4007d661ad60518">nandify</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a790a8f5b095f664f0a879d2bf96c972d">nandify</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>nandify proposition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>nandified tree </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="61" column="1" bodyfile="src/notation/node.cpp" bodystart="165" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8" kindref="member">RULES</ref></type>
+        <definition>RULES Node::getSTRuleName</definition>
+        <argsstring>(bool isNegation=false)</argsstring>
+        <name>getSTRuleName</name>
+        <reimplementedby refid="d8/dc5/class_for_all_1a97e03dcd8f51824fe629487847b7c4dc">getSTRuleName</reimplementedby>
+        <reimplementedby refid="de/d16/class_exists_1aff7b8694345884d06bdd751e88fae041">getSTRuleName</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1a3ca1a9b3fd1805b56b72def494179ea3">getSTRuleName</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1a8570a747f7f4aec32bb962227749566f">getSTRuleName</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1aa425e8cb25aec8dd2935346f61ebaefa">getSTRuleName</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1a0fd1f6086987f7b1fe9fab9a196c1839">getSTRuleName</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1ac881a233c5a1e6f7669ea8ff70eda8f7">getSTRuleName</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a9b62ef9a38c6fe9ac96c958d46e30f7b">getSTRuleName</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>get semantic taubleux rule name </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RULES - semantic taubleaux rule name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="67" column="1" bodyfile="src/notation/node.cpp" bodystart="173" bodyend="176"/>
+        <references refid="d5/d32/proposition_2tableaux_2enum_8h_1a70c93904c6a27d228050f922eb4fc3b8a23cd01df78f1e9c938f643fec963284f" compoundref="d5/d32/proposition_2tableaux_2enum_8h" startline="10">NN</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Node::getSTNodeChild</definition>
+        <argsstring>(shared_ptr&lt; STNode &gt; root, long pos, bool isNegation=false)</argsstring>
+        <name>getSTNodeChild</name>
+        <reimplementedby refid="d8/dc5/class_for_all_1a847b6ce62d4e04ce7487b2cc1b49164f">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="de/d16/class_exists_1ad60177b343503d1ee8bdda801c2d32d6">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1a3ccedba07752a2457a593035b33535e1">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1aca5eae3d47c318ba413787c7c3a674ce">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1a7ecc298b799d533b4bf19b3912932fc7">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1aeedae2f08d30d4e9dcae30916aa27c59">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1ad06cf6b9c1070a001919c58084990c0d">getSTNodeChild</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a081ebf199fb2388773a19d2c2044e574">getSTNodeChild</reimplementedby>
+        <param>
+          <type>shared_ptr&lt; <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> &gt;</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>get semantic taubleaux node child (<ref refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kindref="member">STNode.left</ref> and <ref refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kindref="member">STNode.right</ref>) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref> contains child </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- position of child <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> of <ref refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kindref="member">STNode::nodes</ref> list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="75" column="1" bodyfile="src/notation/node.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Node::setVariable</definition>
+        <argsstring>(string fromVariable, string toVariable)</argsstring>
+        <name>setVariable</name>
+        <reimplementedby refid="d7/da3/class_statement_1a96d67118f27e64d72b189d837103a126">setVariable</reimplementedby>
+        <reimplementedby refid="d2/d3c/class_variable_1a6290fe9c9e63b4c0a980de1333902557">setVariable</reimplementedby>
+        <reimplementedby refid="d4/d72/class_value_1a807844066d6d76e9b9f3eda03cef37b1">setVariable</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>fromVariable</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>toVariable</declname>
+        </param>
+        <briefdescription>
+<para>change variable name recursively </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fromVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- variable name to change </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- new variable name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="81" column="1" bodyfile="src/notation/node.cpp" bodystart="183" bodyend="189"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::cnfFilter</definition>
+        <argsstring>(bool isNegation=false)</argsstring>
+        <name>cnfFilter</name>
+        <reimplementedby refid="d4/d72/class_value_1a56c458de6a68b9a25233e6fdcfa67760">cnfFilter</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1a2df64f0858e90841201a2acaf50ac587">cnfFilter</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1a84e18887eae8891eec583aafaf2bf63d">cnfFilter</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1a3f79e7340ff831b0bb927d8a70414ac3">cnfFilter</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1ad8a208aee185d567ede5c92f39796faa">cnfFilter</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1a6aa803fea460f0a2a52399b778bfd268">cnfFilter</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a18ea23cd682dce93808c34ea0243897f">cnfFilter</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>isNegation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>in this function node will be </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Remove bi-implicate</para></listitem><listitem><para>Remove implicate</para></listitem><listitem><para>Doing the morgan <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- check if this node parent is Negation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>node has been cnf filtered </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="90" column="1" bodyfile="src/notation/node.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::cnfDistribution</definition>
+        <argsstring>()</argsstring>
+        <name>cnfDistribution</name>
+        <reimplementedby refid="d8/d1b/class_or_1ae49bee04503f31d32750ecf8671e5552">cnfDistribution</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a370c86f44ee17b22208cdbc1f17a7b3f">cnfDistribution</reimplementedby>
+        <briefdescription>
+<para>cnf distribution - this function will be called after setVariable </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>node that applied distribution rule </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="95" column="1" bodyfile="src/notation/node.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Node::getLeaf</definition>
+        <argsstring>(list&lt; shared_ptr&lt; Node &gt;&gt; &amp;listNode)</argsstring>
+        <name>getLeaf</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;&gt; &amp;</type>
+          <declname>listNode</declname>
+        </param>
+        <briefdescription>
+<para>get leaf of current <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">listNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- empty list of shared_ptr&lt;Node&gt; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">listNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- list of shared_ptr&lt;Node&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="101" column="1" bodyfile="src/notation/node.cpp" bodystart="26" bodyend="43"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">notation</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; Node::copy</definition>
+        <argsstring>()</argsstring>
+        <name>copy</name>
+        <reimplementedby refid="d7/da3/class_statement_1a7d8bac78c76a6cf7265495da5b16935d">copy</reimplementedby>
+        <reimplementedby refid="d2/d2a/class_multi_and_1ad89e8cb08fe1e0793e2e16e837992de2">copy</reimplementedby>
+        <reimplementedby refid="d8/dc5/class_for_all_1ae9b3918a9cd0870a20b80db2288fe402">copy</reimplementedby>
+        <reimplementedby refid="de/d16/class_exists_1a135277d9bfed780d4ea493ef355055d4">copy</reimplementedby>
+        <reimplementedby refid="d2/d3c/class_variable_1af8d66ea58702db286b80632de320eafe">copy</reimplementedby>
+        <reimplementedby refid="dd/d61/class_multi_or_1a9a81647d40f86c825fdb1513f1b3f30c">copy</reimplementedby>
+        <reimplementedby refid="d4/d72/class_value_1a45518c11045a76300ad02cc93a0150c9">copy</reimplementedby>
+        <reimplementedby refid="d9/d44/class_n_and_1a3756b0f2696bf06664100c0b5c9d67b3">copy</reimplementedby>
+        <reimplementedby refid="de/d28/class_implicate_1a08cf8aa03589f7a34400a5f636f1256a">copy</reimplementedby>
+        <reimplementedby refid="d5/da3/class_bi_implicate_1a41c9d9c53bf05cdde330ec8df07fde31">copy</reimplementedby>
+        <reimplementedby refid="df/d45/class_negate_1a7cdd545814e819ef6b6ec735dda357aa">copy</reimplementedby>
+        <reimplementedby refid="d8/d1b/class_or_1a35728ed23db1ec805267d8d244629a62">copy</reimplementedby>
+        <reimplementedby refid="d6/da5/class_multi_and_norm_1a77cbaf6920daa86d9ddc80b2a839a84f">copy</reimplementedby>
+        <reimplementedby refid="d0/dc9/class_and_1a7560a861ae68050c2aa22e2392a46a15">copy</reimplementedby>
+        <reimplementedby refid="d6/d2d/class_multi_or_norm_1a030bc7807678c834b467daa7a3a8dab5">copy</reimplementedby>
+        <briefdescription>
+<para>deep copy node </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a deep copy of node </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="106" column="1" bodyfile="src/notation/node.cpp" bodystart="45" bodyend="49"/>
+        <references refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" compoundref="d1/d77/node_8h" startline="29">notation</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Node::containedSpecialNode</definition>
+        <argsstring>()</argsstring>
+        <name>containedSpecialNode</name>
+        <reimplementedby refid="d7/da3/class_statement_1a482a663d073d2601fa1759a5e651c240">containedSpecialNode</reimplementedby>
+        <briefdescription>
+<para>containedSpecialNode </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/notation/node.h" line="111" column="1" bodyfile="src/notation/node.cpp" bodystart="51" bodyend="62"/>
+        <references refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" compoundref="d1/d77/node_8h" startline="26">left</references>
+        <references refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" compoundref="d1/d77/node_8h" startline="27">right</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="95">
+        <label>MultiAndNorm</label>
+        <link refid="d6/da5/class_multi_and_norm"/>
+        <childnode refid="94" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>Negate</label>
+        <link refid="df/d45/class_negate"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>Statement</label>
+        <link refid="d7/da3/class_statement"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>ForAll</label>
+        <link refid="d8/dc5/class_for_all"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="97">
+        <label>MultiOrNorm</label>
+        <link refid="d6/d2d/class_multi_or_norm"/>
+        <childnode refid="96" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>And</label>
+        <link refid="d0/dc9/class_and"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>Or</label>
+        <link refid="d8/d1b/class_or"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>MultiAnd</label>
+        <link refid="d2/d2a/class_multi_and"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>BiImplicate</label>
+        <link refid="d5/da3/class_bi_implicate"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>Implicate</label>
+        <link refid="de/d28/class_implicate"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>Variable</label>
+        <link refid="d2/d3c/class_variable"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>Exists</label>
+        <link refid="de/d16/class_exists"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>Value</label>
+        <link refid="d4/d72/class_value"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>NAnd</label>
+        <link refid="d9/d44/class_n_and"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>MultiOr</label>
+        <link refid="dd/d61/class_multi_or"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="105">
+        <label>enable_shared_from_this&lt; Node &gt;</label>
+      </node>
+      <node id="104">
+        <label>Node</label>
+        <link refid="dc/d8f/class_node"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/notation/node.h" line="16" column="1" bodyfile="src/notation/node.h" bodystart="15" bodyend="112"/>
+    <listofallmembers>
+      <member refid="dc/d8f/class_node_1afd9769d942984448aa8e541ada73b289" prot="protected" virt="non-virtual"><scope>Node</scope><name>andSimplify</name></member>
+      <member refid="dc/d8f/class_node_1ae68e5138f0c1a6c79912e21bc8f39d48" prot="public" virt="virtual"><scope>Node</scope><name>cnfDistribution</name></member>
+      <member refid="dc/d8f/class_node_1ab5b01fd3c4efe0f2eaf7fc41653359b7" prot="public" virt="virtual"><scope>Node</scope><name>cnfFilter</name></member>
+      <member refid="dc/d8f/class_node_1ac76ac1cc0fd7376ca329f3e8279ebe1e" prot="public" virt="virtual"><scope>Node</scope><name>containedSpecialNode</name></member>
+      <member refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb" prot="public" virt="virtual"><scope>Node</scope><name>copy</name></member>
+      <member refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" prot="public" virt="virtual"><scope>Node</scope><name>getLeaf</name></member>
+      <member refid="dc/d8f/class_node_1a1009cb6d84206c2b5eaa86580da59a7c" prot="public" virt="virtual"><scope>Node</scope><name>getSTNodeChild</name></member>
+      <member refid="dc/d8f/class_node_1a25b6581950988c2536a392a6874c8072" prot="public" virt="virtual"><scope>Node</scope><name>getSTRuleName</name></member>
+      <member refid="dc/d8f/class_node_1afd0c2045f3955e02e3aa1e2e987f10b2" prot="public" virt="virtual"><scope>Node</scope><name>getValue</name></member>
+      <member refid="dc/d8f/class_node_1a59a543130a10c95f1e8642cf8c5645e8" prot="private" virt="non-virtual"><scope>Node</scope><name>id</name></member>
+      <member refid="dc/d8f/class_node_1a9b7777ab2a657b4a901b3578bbf68831" prot="public" virt="non-virtual"><scope>Node</scope><name>isRulesReturned</name></member>
+      <member refid="dc/d8f/class_node_1a978574f2c08939cfef1041041eb9c5be" prot="public" virt="non-virtual"><scope>Node</scope><name>left</name></member>
+      <member refid="dc/d8f/class_node_1a3b2e192b59b7e72908af7903c5a4e5c1" prot="public" virt="virtual"><scope>Node</scope><name>nandify</name></member>
+      <member refid="dc/d8f/class_node_1aade5a3c528aedf9de57dd1efc83d76cb" prot="public" virt="non-virtual"><scope>Node</scope><name>Node</name></member>
+      <member refid="dc/d8f/class_node_1a0178acf2d687a5535122e4cdb1e8e079" prot="public" virt="non-virtual"><scope>Node</scope><name>notation</name></member>
+      <member refid="dc/d8f/class_node_1a92e887aab236cfc28d81bdf0fdb9379f" prot="protected" virt="non-virtual"><scope>Node</scope><name>orSimplify</name></member>
+      <member refid="dc/d8f/class_node_1af68a851484bce64ed9463a50025df424" prot="public" virt="non-virtual"><scope>Node</scope><name>right</name></member>
+      <member refid="dc/d8f/class_node_1ae9bb2ba5b99e08fcd6f9aff0814a740f" prot="public" virt="virtual"><scope>Node</scope><name>setVariable</name></member>
+      <member refid="dc/d8f/class_node_1a0746502074a232243dcac3b96f3ce2d0" prot="public" virt="virtual"><scope>Node</scope><name>toString</name></member>
+      <member refid="dc/d8f/class_node_1a815b062345cf2bb42717bd16dc99ea27" prot="public" virt="virtual"><scope>Node</scope><name>toStringPrefix</name></member>
+      <member refid="dc/d8f/class_node_1a068e821ecc21903e5b3430e36493f390" prot="public" virt="non-virtual"><scope>Node</scope><name>treeTraveler</name></member>
+      <member refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" prot="public" virt="non-virtual"><scope>Node</scope><name>variables</name></member>
+      <member refid="dc/d8f/class_node_1aa0840c3cb5c7159be6d992adecd2097c" prot="public" virt="virtual"><scope>Node</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

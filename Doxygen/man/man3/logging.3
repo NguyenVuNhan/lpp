@@ -1,0 +1,58 @@
+.TH "logging" 3 "Sun Nov 24 2019" "Version 1.0" "Logic" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+logging
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logging\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlogging\fP ()"
+.br
+.ti -1c
+.RI "\fBlogging\fP (\fBhandler\fP *h)"
+.br
+.ti -1c
+.RI "\fB~logging\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetHandler\fP (\fBhandler\fP *newHandler)"
+.br
+.ti -1c
+.RI "void \fBinfo\fP (std::string message)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBhandler\fP * \fBmyHandler\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "logging::logging ()"
+
+.SS "logging::logging (\fBhandler\fP * h)"
+
+.SS "logging::~logging ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void logging::info (std::string message)"
+
+.SS "void logging::setHandler (\fBhandler\fP * newHandler)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBhandler\fP* logging::myHandler\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Logic from the source code\&.

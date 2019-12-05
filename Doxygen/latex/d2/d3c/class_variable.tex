@@ -1,0 +1,150 @@
+\hypertarget{class_variable}{}\section{Variable Class Reference}
+\label{class_variable}\index{Variable@{Variable}}
+
+
+{\ttfamily \#include $<$variable.\+h$>$}
+
+
+
+Inheritance diagram for Variable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d5/d6a/class_variable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Variable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{d3/d52/class_variable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_variable_a98f05310666fc839abb59fd8599cf21c}{Variable} (string notate)
+\item 
+\hyperlink{class_variable_af836f63543807d77dfca8caacd54b1a5}{Variable} (char notate)
+\item 
+\hyperlink{class_variable_a0c619221ab7f65166baf4555c356d83c}{$\sim$\+Variable} () override
+\item 
+bool \hyperlink{class_variable_a2830553ab8b852a004c613a626fa6eb2}{get\+Value} (string val\+List) override
+\begin{DoxyCompactList}\small\item\em get proposition value \end{DoxyCompactList}\item 
+string \hyperlink{class_variable_a5b0b0e25200631521dc5bbc8df22acdc}{to\+String} () override
+\begin{DoxyCompactList}\small\item\em get proposition infix formular \end{DoxyCompactList}\item 
+void \hyperlink{class_variable_a6290fe9c9e63b4c0a980de1333902557}{set\+Variable} (string from\+Variable, string to\+Variable) override
+\begin{DoxyCompactList}\small\item\em change variable name recursively \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_variable_af8d66ea58702db286b80632de320eafe}{copy} () override
+\begin{DoxyCompactList}\small\item\em deep copy node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_variable_a98f05310666fc839abb59fd8599cf21c}\label{class_variable_a98f05310666fc839abb59fd8599cf21c}} 
+\index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{Variable()}{Variable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Variable\+::\+Variable (\begin{DoxyParamCaption}\item[{string}]{notate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_variable_af836f63543807d77dfca8caacd54b1a5}\label{class_variable_af836f63543807d77dfca8caacd54b1a5}} 
+\index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{Variable()}{Variable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Variable\+::\+Variable (\begin{DoxyParamCaption}\item[{char}]{notate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_variable_a0c619221ab7f65166baf4555c356d83c}\label{class_variable_a0c619221ab7f65166baf4555c356d83c}} 
+\index{Variable@{Variable}!````~Variable@{$\sim$\+Variable}}
+\index{````~Variable@{$\sim$\+Variable}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{$\sim$\+Variable()}{~Variable()}}
+{\footnotesize\ttfamily Variable\+::$\sim$\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_variable_af8d66ea58702db286b80632de320eafe}\label{class_variable_af8d66ea58702db286b80632de320eafe}} 
+\index{Variable@{Variable}!copy@{copy}}
+\index{copy@{copy}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Variable\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+deep copy node 
+
+\begin{DoxyReturn}{Returns}
+a deep copy of node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0d22a418a622a24852610fd51910c5eb}{Node}.
+
+\mbox{\Hypertarget{class_variable_a2830553ab8b852a004c613a626fa6eb2}\label{class_variable_a2830553ab8b852a004c613a626fa6eb2}} 
+\index{Variable@{Variable}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{get\+Value()}{getValue()}}
+{\footnotesize\ttfamily bool Variable\+::get\+Value (\begin{DoxyParamCaption}\item[{string}]{val\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+List} & -\/ string contains proposition variable and their value. ~\newline
+ e.\+g. \char`\"{}\+A1\+B0\+C1\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+proposition value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_afd0c2045f3955e02e3aa1e2e987f10b2}{Node}.
+
+\mbox{\Hypertarget{class_variable_a6290fe9c9e63b4c0a980de1333902557}\label{class_variable_a6290fe9c9e63b4c0a980de1333902557}} 
+\index{Variable@{Variable}!set\+Variable@{set\+Variable}}
+\index{set\+Variable@{set\+Variable}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{set\+Variable()}{setVariable()}}
+{\footnotesize\ttfamily void Variable\+::set\+Variable (\begin{DoxyParamCaption}\item[{string}]{from\+Variable,  }\item[{string}]{to\+Variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+change variable name recursively 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Variable} & -\/ variable name to change \\
+\hline
+{\em to\+Variable} & -\/ new variable name \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_node_ae9bb2ba5b99e08fcd6f9aff0814a740f}{Node}.
+
+\mbox{\Hypertarget{class_variable_a5b0b0e25200631521dc5bbc8df22acdc}\label{class_variable_a5b0b0e25200631521dc5bbc8df22acdc}} 
+\index{Variable@{Variable}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Variable@{Variable}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily string Variable\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get proposition infix formular 
+
+\begin{DoxyReturn}{Returns}
+string of infix proposition 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_node_a0746502074a232243dcac3b96f3ce2d0}{Node}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/notation/\hyperlink{notation_2variable_8h}{variable.\+h}\item 
+src/notation/\hyperlink{variable_8cpp}{variable.\+cpp}\end{DoxyCompactItemize}

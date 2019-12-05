@@ -1,0 +1,150 @@
+\hypertarget{class_predicate}{}\section{Predicate Class Reference}
+\label{class_predicate}\index{Predicate@{Predicate}}
+
+
+{\ttfamily \#include $<$predicate.\+h$>$}
+
+
+
+Inheritance diagram for Predicate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{d1/d1c/class_predicate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Predicate\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{d8/d59/class_predicate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_predicate_aae9f9c0874342d8439f6c7ccaa44d76c}{Predicate} (string prop=\char`\"{}\char`\"{})
+\item 
+\hyperlink{class_predicate_a0ebfd4d64be4d59053157ca73e7bbd79}{Predicate} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a9c0875a8767528453814b8e3daf8f9af}{tree}=nullptr)
+\item 
+\hyperlink{class_predicate_a0ba364e4092dee9b9c43e0c447f36de3}{$\sim$\+Predicate} () override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_predicate_a0572df9e18344e95ca1ce521d551a0ea}{get\+Statement} (string prop, unsigned int \&pos) override
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_predicate_a68cb341b481a973037db8d4b369bd73f}{get\+Node} (char notation) override
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb}{parse} (string prop, unsigned int \&pos) override
+\item 
+list$<$ string $>$ \hyperlink{class_predicate_ae2524ae4cd1e71a00984f6a49d717469}{get\+List\+Variable} () override
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_predicate_aae9f9c0874342d8439f6c7ccaa44d76c}\label{class_predicate_aae9f9c0874342d8439f6c7ccaa44d76c}} 
+\index{Predicate@{Predicate}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{Predicate()}{Predicate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Predicate\+::\+Predicate (\begin{DoxyParamCaption}\item[{string}]{prop = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d30/class_predicate_aae9f9c0874342d8439f6c7ccaa44d76c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_predicate_a0ebfd4d64be4d59053157ca73e7bbd79}\label{class_predicate_a0ebfd4d64be4d59053157ca73e7bbd79}} 
+\index{Predicate@{Predicate}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{Predicate()}{Predicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Predicate\+::\+Predicate (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{tree = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_predicate_a0ba364e4092dee9b9c43e0c447f36de3}\label{class_predicate_a0ba364e4092dee9b9c43e0c447f36de3}} 
+\index{Predicate@{Predicate}!````~Predicate@{$\sim$\+Predicate}}
+\index{````~Predicate@{$\sim$\+Predicate}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{$\sim$\+Predicate()}{~Predicate()}}
+{\footnotesize\ttfamily Predicate\+::$\sim$\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_predicate_ae2524ae4cd1e71a00984f6a49d717469}\label{class_predicate_ae2524ae4cd1e71a00984f6a49d717469}} 
+\index{Predicate@{Predicate}!get\+List\+Variable@{get\+List\+Variable}}
+\index{get\+List\+Variable@{get\+List\+Variable}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{get\+List\+Variable()}{getListVariable()}}
+{\footnotesize\ttfamily list$<$ string $>$ Predicate\+::get\+List\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_tree_a525967d14a17de0ad9c9072b025af1c3}{Tree}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{d5/d30/class_predicate_ae2524ae4cd1e71a00984f6a49d717469_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_predicate_a68cb341b481a973037db8d4b369bd73f}\label{class_predicate_a68cb341b481a973037db8d4b369bd73f}} 
+\index{Predicate@{Predicate}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{get\+Node()}{getNode()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Predicate\+::get\+Node (\begin{DoxyParamCaption}\item[{char}]{notation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_tree_a60a9b7d65fc663d2db005b01119efa73}{Tree}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d30/class_predicate_a68cb341b481a973037db8d4b369bd73f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_predicate_a0572df9e18344e95ca1ce521d551a0ea}\label{class_predicate_a0572df9e18344e95ca1ce521d551a0ea}} 
+\index{Predicate@{Predicate}!get\+Statement@{get\+Statement}}
+\index{get\+Statement@{get\+Statement}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{get\+Statement()}{getStatement()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Predicate\+::get\+Statement (\begin{DoxyParamCaption}\item[{string}]{prop,  }\item[{unsigned int \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_tree_a016c2300dfa5444a52e6e6db7be850d2}{Tree}.
+
+\mbox{\Hypertarget{class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb}\label{class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb}} 
+\index{Predicate@{Predicate}!parse@{parse}}
+\index{parse@{parse}!Predicate@{Predicate}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ Predicate\+::parse (\begin{DoxyParamCaption}\item[{string}]{prop,  }\item[{unsigned int \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_tree_ad05978c3b3aaa0eefed672a5129c00a1}{Tree}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d5/d30/class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d5/d30/class_predicate_a5c43d5efe67d0fdeae29ec38267e5acb_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/proposition/\hyperlink{predicate_8h}{predicate.\+h}\item 
+src/proposition/\hyperlink{predicate_8cpp}{predicate.\+cpp}\end{DoxyCompactItemize}

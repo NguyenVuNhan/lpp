@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d5/d80/struct_i___c_n_f" kind="struct" language="C++" prot="public">
+    <compoundname>I_CNF</compoundname>
+    <derivedcompoundref refid="dc/d0e/class_c_n_f" prot="protected" virt="non-virtual">CNF</derivedcompoundref>
+    <includes refid="d1/d47/cnf_8h" local="no">cnf.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1aa7adb25b5dbb1f4dcddaf56dab338add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string I_CNF::solveNonJanus</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node, char v)</argsstring>
+        <name>solveNonJanus</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Solve non-janus based on MulitiAnd node and variable v. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref> <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> pointer to find janus </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- node will be filter out if janus have found </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- String represent for current variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String contains founded janus <linebreak/>
+ Emplty string if janus not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="39" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="159" bodyend="194"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">CNF::getDavidPutnam</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/dde/struct_reso" kindref="compound">Reso</ref></type>
+        <definition>Reso I_CNF::resolution</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node, char v)</argsstring>
+        <name>resolution</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Resolution based on MulitiAnd node and variable v. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d1/dde/struct_reso" kindref="compound">Reso</ref>, contain node Resolution and Subtitute Resolution </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="46" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="196" bodyend="242"/>
+        <references refid="d5/d80/struct_i___c_n_f_1a41a7be439cae3ed577a30b3f2742218e" compoundref="d6/d79/cnf_8cpp" startline="336" endline="342">isContain</references>
+        <references refid="d1/dde/struct_reso_1abed916813c2db4251c02a16d0c893f32" compoundref="d1/d47/cnf_8h" startline="19">Reso::resolution</references>
+        <references refid="d5/d80/struct_i___c_n_f_1a62586e691ebfb00696be6bf9710f4da4" compoundref="d6/d79/cnf_8cpp" startline="344" endline="365">mergeNode</references>
+        <references refid="d1/dde/struct_reso_1a05bb25e26bbb88ef723dae77656fb0d4" compoundref="d1/d47/cnf_8h" startline="23">Reso::subtituteSolution</references>
+        <references refid="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" compoundref="d6/d79/cnf_8cpp" startline="317" endline="334">getUniqueList</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">CNF::getDavidPutnam</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; I_CNF::nodeToMultiAnd</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node)</argsstring>
+        <name>nodeToMultiAnd</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Convert node to <ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref>, remove douplicate element and sort element This function are being used after generateCNF. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- node to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d2/d2a/class_multi_and" kindref="compound">MultiAnd</ref> node, with deep of 3 </para></simplesect>
+<simplesect kind="see"><para><ref refid="dc/d8f/class_node_1a73ccf66e577caa428163477f3b4cfe4d" kindref="member">Node::getLeaf</ref>, <ref refid="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" kindref="member">I_CNF::generateCNF</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="61" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="264" bodyend="285"/>
+        <references refid="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" compoundref="d6/d79/cnf_8cpp" startline="317" endline="334">getUniqueList</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1af775e3be36e475027355d21e9ba43166" compoundref="d6/d79/cnf_8cpp" startline="9" endline="16">CNF::CNF</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; I_CNF::generateCNF</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; originTree)</argsstring>
+        <name>generateCNF</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>originTree</declname>
+        </param>
+        <briefdescription>
+<para>generate <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> form based on originTree, originTree will be changed, to prevent lost data, use deep copy of <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>originTree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> pointer, origin tree to convert to <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref> tree </para></simplesect>
+<simplesect kind="see"><para><ref refid="dc/d8f/class_node_1a0d22a418a622a24852610fd51910c5eb" kindref="member">Node::copy</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="69" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="287" bodyend="292"/>
+        <references refid="dd/df8/class_tree_1a9c0875a8767528453814b8e3daf8f9af" compoundref="d3/d09/tree_8h" startline="16">Tree::tree</references>
+        <referencedby refid="dc/d0e/class_c_n_f_1af775e3be36e475027355d21e9ba43166" compoundref="d6/d79/cnf_8cpp" startline="9" endline="16">CNF::CNF</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1ae9f978965edae4ab57c692544cb72d01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool I_CNF::isUseless</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node)</argsstring>
+        <name>isUseless</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Check if node is useless. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref> node </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True - if node is useless <linebreak/>
+ False - if node is not useless </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="53" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="244" bodyend="262"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">CNF::getDavidPutnam</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1ac9fd631eda1871653b2d1fdcd55f18a5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool I_CNF::findJanus</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node)</argsstring>
+        <name>findJanus</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Check if <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> contains Janus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> pointer to check for Janus </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True - If Janus found <linebreak/>
+ False - If Janus not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="77" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="294" bodyend="315"/>
+        <referencedby refid="dc/d0e/class_c_n_f_1a0ae7d61f4d57fca35ff619af3300e63c" compoundref="d6/d79/cnf_8cpp" startline="101" endline="157">CNF::getDavidPutnam</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void I_CNF::getUniqueList</definition>
+        <argsstring>(list&lt; shared_ptr&lt; Node &gt; &gt; &amp;l)</argsstring>
+        <name>getUniqueList</name>
+        <param>
+          <type>list&lt; shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt; &gt; &amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>get unique list of node </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- list of node contains douplicate member </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- list of node contains unique member only </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="83" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="317" bodyend="334"/>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">resolution</referencedby>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" compoundref="d6/d79/cnf_8cpp" startline="264" endline="285">nodeToMultiAnd</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1a41a7be439cae3ed577a30b3f2742218e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool I_CNF::isContain</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; nodes, string v)</argsstring>
+        <name>isContain</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>nodes</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>check if node contain variable v </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="dc/d8f/class_node" kindref="compound">Node</ref>, node to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- String, variable v </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True - if node contains variable v <linebreak/>
+ False - if node does not contains variable v </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="92" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="336" bodyend="342"/>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">resolution</referencedby>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a62586e691ebfb00696be6bf9710f4da4" compoundref="d6/d79/cnf_8cpp" startline="344" endline="365">mergeNode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d80/struct_i___c_n_f_1a62586e691ebfb00696be6bf9710f4da4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>shared_ptr&lt; Node &gt; I_CNF::mergeNode</definition>
+        <argsstring>(shared_ptr&lt; Node &gt; node1, shared_ptr&lt; Node &gt; node2, string v, string not_v)</argsstring>
+        <name>mergeNode</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node1</declname>
+        </param>
+        <param>
+          <type>shared_ptr&lt; <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node2</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>not_v</declname>
+        </param>
+        <briefdescription>
+<para>merge two <ref refid="dc/d8f/class_node_1a350b631f3a9192bfa23bc266f6b8da02" kindref="member">Node::variables</ref> list. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function use for <ref refid="dd/d61/class_multi_or" kindref="compound">MultiOr</ref>, used by <ref refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" kindref="member">I_CNF::resolution</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- first node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>node2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string of variable v, upper case </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>not_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string of variable v, lowercase </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>merged <ref refid="dc/d8f/class_node" kindref="compound">Node</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cnf/cnf.h" line="102" column="1" bodyfile="src/cnf/cnf.cpp" bodystart="344" bodyend="365"/>
+        <references refid="d5/d80/struct_i___c_n_f_1a41a7be439cae3ed577a30b3f2742218e" compoundref="d6/d79/cnf_8cpp" startline="336" endline="342">isContain</references>
+        <referencedby refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" compoundref="d6/d79/cnf_8cpp" startline="196" endline="242">resolution</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The Public interface of <ref refid="dc/d0e/class_c_n_f" kindref="compound">CNF</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="34">
+        <label>CNF</label>
+        <link refid="dc/d0e/class_c_n_f"/>
+        <childnode refid="33" relation="protected-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>I_CNF</label>
+        <link refid="d5/d80/struct_i___c_n_f"/>
+      </node>
+    </inheritancegraph>
+    <location file="src/cnf/cnf.h" line="30" column="1" bodyfile="src/cnf/cnf.h" bodystart="29" bodyend="103"/>
+    <listofallmembers>
+      <member refid="d5/d80/struct_i___c_n_f_1ac9fd631eda1871653b2d1fdcd55f18a5" prot="protected" virt="non-virtual"><scope>I_CNF</scope><name>findJanus</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1afedf64bb258fd48ea0f811a9f571f0f0" prot="public" virt="non-virtual"><scope>I_CNF</scope><name>generateCNF</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ad417af0f07b5e7035c3671dcc3e9f798" prot="protected" virt="non-virtual"><scope>I_CNF</scope><name>getUniqueList</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1a41a7be439cae3ed577a30b3f2742218e" prot="private" virt="non-virtual"><scope>I_CNF</scope><name>isContain</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ae9f978965edae4ab57c692544cb72d01" prot="public" virt="non-virtual"><scope>I_CNF</scope><name>isUseless</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1a62586e691ebfb00696be6bf9710f4da4" prot="private" virt="non-virtual"><scope>I_CNF</scope><name>mergeNode</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1ac0c5ce2bd3edadb60de923b4259cc10b" prot="public" virt="non-virtual"><scope>I_CNF</scope><name>nodeToMultiAnd</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1a1b3282ebd2d998f5fe3aa3e192346ac1" prot="public" virt="non-virtual"><scope>I_CNF</scope><name>resolution</name></member>
+      <member refid="d5/d80/struct_i___c_n_f_1aa7adb25b5dbb1f4dcddaf56dab338add" prot="public" virt="non-virtual"><scope>I_CNF</scope><name>solveNonJanus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

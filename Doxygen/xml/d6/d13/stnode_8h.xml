@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="d6/d13/stnode_8h" kind="file" language="C++">
+    <compoundname>stnode.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">list</includes>
+    <includes refid="d5/d60/utils_8h" local="yes">../../utils.h</includes>
+    <includedby refid="d1/d77/node_8h" local="yes">src/notation/node.h</includedby>
+    <includedby refid="d3/d09/tree_8h" local="yes">src/proposition/tree.h</includedby>
+    <includedby refid="d3/d01/semantictableaux_8h" local="yes">src/proposition/tableaux/semantictableaux.h</includedby>
+    <includedby refid="d6/db6/stnode_8cpp" local="yes">src/proposition/tableaux/stnode.cpp</includedby>
+    <incdepgraph>
+      <node id="772">
+        <label>list</label>
+      </node>
+      <node id="775">
+        <label>iomanip</label>
+      </node>
+      <node id="771">
+        <label>fstream</label>
+      </node>
+      <node id="773">
+        <label>../../utils.h</label>
+        <link refid="d5/d60/utils_8h"/>
+        <childnode refid="774" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="770" relation="include">
+        </childnode>
+      </node>
+      <node id="769">
+        <label>src/proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="770" relation="include">
+        </childnode>
+        <childnode refid="771" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="773" relation="include">
+        </childnode>
+      </node>
+      <node id="770">
+        <label>iostream</label>
+      </node>
+      <node id="774">
+        <label>algorithm</label>
+      </node>
+      <node id="776">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="800">
+        <label>src/notation/multior.cpp</label>
+        <link refid="df/db6/multior_8cpp"/>
+      </node>
+      <node id="802">
+        <label>src/notation/biimplicate.cpp</label>
+        <link refid="d0/dbf/biimplicate_8cpp"/>
+      </node>
+      <node id="785">
+        <label>src/proposition/tree.h</label>
+        <link refid="d3/d09/tree_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="799">
+        <label>src/notation/or.cpp</label>
+        <link refid="d1/da4/or_8cpp"/>
+      </node>
+      <node id="788">
+        <label>src/table/rows.h</label>
+        <link refid="d0/dd4/rows_8h"/>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="796">
+        <label>src/notation/or.h</label>
+        <link refid="df/d34/or_8h"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="794">
+        <label>src/proposition/tableaux/semantictableaux.cpp</label>
+        <link refid="de/d3e/semantictableaux_8cpp"/>
+      </node>
+      <node id="795">
+        <label>src/notation/multior.h</label>
+        <link refid="da/d4e/multior_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+      </node>
+      <node id="801">
+        <label>src/notation/negate.h</label>
+        <link refid="d8/dff/negate_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>src/table/simpletable.cpp</label>
+        <link refid="dd/dcd/simpletable_8cpp"/>
+      </node>
+      <node id="789">
+        <label>src/table/truthtable.h</label>
+        <link refid="d5/dbf/truthtable_8h"/>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+      </node>
+      <node id="819">
+        <label>src/notation/statement.h</label>
+        <link refid="de/d93/statement_8h"/>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="804">
+        <label>src/notation/forall.cpp</label>
+        <link refid="da/d09/forall_8cpp"/>
+      </node>
+      <node id="814">
+        <label>src/notation/value.cpp</label>
+        <link refid="d2/dc0/value_8cpp"/>
+      </node>
+      <node id="793">
+        <label>src/proposition/tableaux/semantictableaux.h</label>
+        <link refid="d3/d01/semantictableaux_8h"/>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+      </node>
+      <node id="797">
+        <label>src/notation/and.cpp</label>
+        <link refid="dc/d62/and_8cpp"/>
+      </node>
+      <node id="809">
+        <label>src/notation/variable.h</label>
+        <link refid="d0/d30/notation_2variable_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>src/notation/multiand.h</label>
+        <link refid="d9/d1d/multiand_8h"/>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>src/proposition/predicate.h</label>
+        <link refid="df/da5/predicate_8h"/>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="792">
+        <label>src/table/truthtable.cpp</label>
+        <link refid="d9/d67/truthtable_8cpp"/>
+      </node>
+      <node id="780">
+        <label>src/cnf/cnf.h</label>
+        <link refid="d1/d47/cnf_8h"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>src/cnf/cnf.cpp</label>
+        <link refid="d6/d79/cnf_8cpp"/>
+      </node>
+      <node id="777">
+        <label>src/proposition/tableaux/stnode.h</label>
+        <link refid="d6/d13/stnode_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>src/notation/and.h</label>
+        <link refid="d5/d25/and_8h"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="820">
+        <label>src/notation/statement.cpp</label>
+        <link refid="d1/d48/statement_8cpp"/>
+      </node>
+      <node id="798">
+        <label>src/notation/node.cpp</label>
+        <link refid="d7/d70/node_8cpp"/>
+      </node>
+      <node id="810">
+        <label>src/notation/variable.cpp</label>
+        <link refid="d0/d27/variable_8cpp"/>
+      </node>
+      <node id="782">
+        <label>src/notation/multiand.cpp</label>
+        <link refid="db/d9c/multiand_8cpp"/>
+      </node>
+      <node id="808">
+        <label>src/proposition/tableaux/stnode.cpp</label>
+        <link refid="d6/db6/stnode_8cpp"/>
+      </node>
+      <node id="818">
+        <label>src/notation/implicate.h</label>
+        <link refid="d0/d93/implicate_8h"/>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="803">
+        <label>src/notation/exists.cpp</label>
+        <link refid="da/d46/exists_8cpp"/>
+      </node>
+      <node id="807">
+        <label>src/notation/negate.cpp</label>
+        <link refid="df/db4/negate_8cpp"/>
+      </node>
+      <node id="787">
+        <label>src/proposition/predicate.cpp</label>
+        <link refid="db/d07/predicate_8cpp"/>
+      </node>
+      <node id="817">
+        <label>src/notation/forall.h</label>
+        <link refid="d2/dee/forall_8h"/>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>src/proposition/tree.cpp</label>
+        <link refid="d1/d12/tree_8cpp"/>
+      </node>
+      <node id="815">
+        <label>src/notation/biimplicate.h</label>
+        <link refid="dd/d69/biimplicate_8h"/>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="816">
+        <label>src/notation/exists.h</label>
+        <link refid="d1/dc4/exists_8h"/>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="813">
+        <label>src/notation/value.h</label>
+        <link refid="d4/d3f/value_8h"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="814" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="790">
+        <label>src/table/simpletable.h</label>
+        <link refid="da/de0/simpletable_8h"/>
+        <childnode refid="791" relation="include">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>src/table/rows.cpp</label>
+        <link refid="d0/d0c/rows_8cpp"/>
+      </node>
+      <node id="806">
+        <label>src/notation/nand.cpp</label>
+        <link refid="db/d7a/nand_8cpp"/>
+      </node>
+      <node id="812">
+        <label>src/notation/nand.h</label>
+        <link refid="d6/df8/nand_8h"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>src/notation/node.h</label>
+        <link refid="d1/d77/node_8h"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+        <childnode refid="813" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+      </node>
+      <node id="805">
+        <label>src/notation/implicate.cpp</label>
+        <link refid="dc/d93/implicate_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d0/d75/class_s_t_node" prot="public">STNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STNODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STNODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="d8/dcc/namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/d8f/class_node" kindref="compound">Node</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d0/d75/class_s_t_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="d0/d75/class_s_t_node_1ad8a92733e77010b8aaac8ab0f82405f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>copyList(list&lt;shared_ptr&lt;Node&gt;&gt;<sp/>&amp;other);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;STNode&gt;<sp/><ref refid="d0/d75/class_s_t_node_1a19ba8bab4660bdeee0e897687b451a8b" kindref="member">left</ref>;</highlight></codeline>
+<codeline lineno="21" refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;STNode&gt;<sp/><ref refid="d0/d75/class_s_t_node_1a66d06118063fb739058f91c75b725e27" kindref="member">right</ref>;</highlight></codeline>
+<codeline lineno="22" refid="d0/d75/class_s_t_node_1ac6db937d531b08614534af47cee8dace" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;string&gt;<sp/><ref refid="d0/d75/class_s_t_node_1ac6db937d531b08614534af47cee8dace" kindref="member">listVar</ref>;</highlight></codeline>
+<codeline lineno="23" refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;shared_ptr&lt;Node&gt;&gt;<sp/><ref refid="d0/d75/class_s_t_node_1a370cb3b8a6bcd2e488a27d47be4e0920" kindref="member">nodes</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref>(shared_ptr&lt;Node&gt;<sp/>root<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref>(list&lt;shared_ptr&lt;Node&gt;<sp/>&gt;<sp/>&amp;nodeList,<sp/>list&lt;string&gt;<sp/>otherListVar<sp/>=<sp/>list&lt;string&gt;());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="d0/d75/class_s_t_node" kindref="compound">STNode</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>toString();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>treeTraveler(ofstream<sp/>&amp;out,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rootId<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>STNODE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/proposition/tableaux/stnode.h"/>
+  </compounddef>
+</doxygen>

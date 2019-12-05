@@ -1,0 +1,255 @@
+\hypertarget{class_c_n_f}{}\section{C\+NF Class Reference}
+\label{class_c_n_f}\index{C\+NF@{C\+NF}}
+
+
+The \hyperlink{class_c_n_f}{C\+NF} class.  
+
+
+
+
+{\ttfamily \#include $<$cnf.\+h$>$}
+
+
+
+Inheritance diagram for C\+NF\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{d2/d91/class_c_n_f__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+NF\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d3/d9e/class_c_n_f__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_n_f_af775e3be36e475027355d21e9ba43166}{C\+NF} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ other\+Tree)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_n_f}{C\+NF} constructor, generate \hyperlink{class_c_n_f}{C\+NF} of normal tree. \end{DoxyCompactList}\item 
+\hyperlink{class_c_n_f_acb13869409764d8abbea2e50910fd7bc}{C\+NF} (string prop=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_n_f}{C\+NF} constructor, parse a \hyperlink{class_c_n_f}{C\+NF} tree. \end{DoxyCompactList}\item 
+\hyperlink{class_c_n_f_a7bce39709f41a431d486f988b32646de}{$\sim$\+C\+NF} () override
+\item 
+string \hyperlink{class_c_n_f_a029535415f1d5cf92c8023693ce7b40e}{get\+David\+Putnam} () override
+\begin{DoxyCompactList}\small\item\em get David Putnam \end{DoxyCompactList}\item 
+list$<$ string $>$ \hyperlink{class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3}{get\+List\+Variable} () override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_c_n_f_a5232071e600e1bfbb76ad7d0e10d7d92}{parse} (string prop)
+\begin{DoxyCompactList}\small\item\em parse cnf proposition \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_c_n_f_af2c396e921388daa2e99b6fef25b6697}{get\+Multi\+Or} (string prop)
+\begin{DoxyCompactList}\small\item\em get \hyperlink{class_multi_or}{Multi\+Or} base on proposition \end{DoxyCompactList}\item 
+void \hyperlink{class_c_n_f_a0ae7d61f4d57fca35ff619af3300e63c}{get\+David\+Putnam} (shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ \hyperlink{class_tree_a9c0875a8767528453814b8e3daf8f9af}{tree}, uint pos, string \&result)
+\begin{DoxyCompactList}\small\item\em get David Putnam, this function is used by a public function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_c_n_f}{C\+NF} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_n_f_af775e3be36e475027355d21e9ba43166}\label{class_c_n_f_af775e3be36e475027355d21e9ba43166}} 
+\index{C\+NF@{C\+NF}!C\+NF@{C\+NF}}
+\index{C\+NF@{C\+NF}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{C\+N\+F()}{CNF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily C\+N\+F\+::\+C\+NF (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{other\+Tree }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_c_n_f}{C\+NF} constructor, generate \hyperlink{class_c_n_f}{C\+NF} of normal tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Tree} & -\/ tree to be convert to cnf form \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_af775e3be36e475027355d21e9ba43166_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_acb13869409764d8abbea2e50910fd7bc}\label{class_c_n_f_acb13869409764d8abbea2e50910fd7bc}} 
+\index{C\+NF@{C\+NF}!C\+NF@{C\+NF}}
+\index{C\+NF@{C\+NF}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{C\+N\+F()}{CNF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily C\+N\+F\+::\+C\+NF (\begin{DoxyParamCaption}\item[{string}]{prop = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_c_n_f}{C\+NF} constructor, parse a \hyperlink{class_c_n_f}{C\+NF} tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ proposition \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_acb13869409764d8abbea2e50910fd7bc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_a7bce39709f41a431d486f988b32646de}\label{class_c_n_f_a7bce39709f41a431d486f988b32646de}} 
+\index{C\+NF@{C\+NF}!````~C\+NF@{$\sim$\+C\+NF}}
+\index{````~C\+NF@{$\sim$\+C\+NF}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+N\+F()}{~CNF()}}
+{\footnotesize\ttfamily C\+N\+F\+::$\sim$\+C\+NF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_n_f_a029535415f1d5cf92c8023693ce7b40e}\label{class_c_n_f_a029535415f1d5cf92c8023693ce7b40e}} 
+\index{C\+NF@{C\+NF}!get\+David\+Putnam@{get\+David\+Putnam}}
+\index{get\+David\+Putnam@{get\+David\+Putnam}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{get\+David\+Putnam()}{getDavidPutnam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string C\+N\+F\+::get\+David\+Putnam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get David Putnam 
+
+\begin{DoxyReturn}{Returns}
+string, showing David Putnam result 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tree_a9d7b51cc207222de02ccb59192454de5}{Tree}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_a029535415f1d5cf92c8023693ce7b40e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{dc/d0e/class_c_n_f_a029535415f1d5cf92c8023693ce7b40e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_a0ae7d61f4d57fca35ff619af3300e63c}\label{class_c_n_f_a0ae7d61f4d57fca35ff619af3300e63c}} 
+\index{C\+NF@{C\+NF}!get\+David\+Putnam@{get\+David\+Putnam}}
+\index{get\+David\+Putnam@{get\+David\+Putnam}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{get\+David\+Putnam()}{getDavidPutnam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+N\+F\+::get\+David\+Putnam (\begin{DoxyParamCaption}\item[{shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$}]{tree,  }\item[{uint}]{pos,  }\item[{string \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get David Putnam, this function is used by a public function 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tree} & -\/ cnf tree \\
+\hline
+ & {\em pos} & -\/ current variable position \\
+\hline
+\mbox{\tt out}  & {\em result} & -\/ string, represent Devaid Putname result \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_a0ae7d61f4d57fca35ff619af3300e63c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3}\label{class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3}} 
+\index{C\+NF@{C\+NF}!get\+List\+Variable@{get\+List\+Variable}}
+\index{get\+List\+Variable@{get\+List\+Variable}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{get\+List\+Variable()}{getListVariable()}}
+{\footnotesize\ttfamily list$<$ string $>$ C\+N\+F\+::get\+List\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_tree_a525967d14a17de0ad9c9072b025af1c3}{Tree}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{dc/d0e/class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_abb762bfe4bc7bbccda81f8db332bafe3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_af2c396e921388daa2e99b6fef25b6697}\label{class_c_n_f_af2c396e921388daa2e99b6fef25b6697}} 
+\index{C\+NF@{C\+NF}!get\+Multi\+Or@{get\+Multi\+Or}}
+\index{get\+Multi\+Or@{get\+Multi\+Or}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{get\+Multi\+Or()}{getMultiOr()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ C\+N\+F\+::get\+Multi\+Or (\begin{DoxyParamCaption}\item[{string}]{prop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get \hyperlink{class_multi_or}{Multi\+Or} base on proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ cnf string of proposition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_multi_or}{Multi\+Or} represent proposition 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d0e/class_c_n_f_af2c396e921388daa2e99b6fef25b6697_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_n_f_a5232071e600e1bfbb76ad7d0e10d7d92}\label{class_c_n_f_a5232071e600e1bfbb76ad7d0e10d7d92}} 
+\index{C\+NF@{C\+NF}!parse@{parse}}
+\index{parse@{parse}!C\+NF@{C\+NF}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \hyperlink{class_node}{Node} $>$ C\+N\+F\+::parse (\begin{DoxyParamCaption}\item[{string}]{prop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+parse cnf proposition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ cnf string of proposition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_multi_and}{Multi\+And} represent proposition 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{dc/d0e/class_c_n_f_a5232071e600e1bfbb76ad7d0e10d7d92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{dc/d0e/class_c_n_f_a5232071e600e1bfbb76ad7d0e10d7d92_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cnf/\hyperlink{cnf_8h}{cnf.\+h}\item 
+src/cnf/\hyperlink{cnf_8cpp}{cnf.\+cpp}\end{DoxyCompactItemize}

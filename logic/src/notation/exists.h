@@ -11,9 +11,13 @@ public:
 
     // Node interface
 public:
+    //! @copydoc Node::getValue(string)
     string toString() override;
+    //! @copydoc Node::getSTRuleName(bool)
     RULES getSTRuleName(bool isNegation) override;
+    //! @copydoc Node::getSTNodeChild(shared_ptr<STNode>,long,bool)
     void getSTNodeChild(shared_ptr<STNode> root, long pos, bool isNegation) override;
+    //! @copydoc Node::copy()
     shared_ptr<Node> copy() override;
 };
 
